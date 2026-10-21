@@ -1,0 +1,88 @@
+{
+  "name": "Jan's Magic Mirror modules",
+  "modules": [
+    {
+      "type": "pegelstand",
+      "name": {
+        "de": "Pegelstand",
+        "en": "River level",
+        "es": "Nivel del río"
+      },
+      "description": {
+        "de": "Wasserstand eines Pegels an Bundeswasserstraßen (PEGELONLINE), z. B. Mainz am Rhein, mit Trend.",
+        "en": "Water level of a gauge on German federal waterways (PEGELONLINE), e.g. Mainz on the Rhine, with trend.",
+        "es": "Nivel de agua de una estación en las vías navegables federales de Alemania (PEGELONLINE), con tendencia."
+      },
+      "version": "1.0.2",
+      "author": "Jan",
+      "zip": "pegelstand.zip"
+    },
+    {
+      "type": "musicassistant",
+      "name": {
+        "de": "Music Assistant",
+        "en": "Music Assistant",
+        "es": "Music Assistant"
+      },
+      "description": {
+        "de": "Was gerade auf deinem Music-Assistant-Server läuft: Titel, Interpret, Album, Cover, Fortschritt und was als Nächstes kommt. Nachbau von MMM-MusicAssistant.",
+        "en": "What's playing on your Music Assistant server: title, artist, album, cover, progress and what's up next. Rebuild of MMM-MusicAssistant.",
+        "es": "Lo que suena en tu servidor Music Assistant: título, artista, álbum, portada, progreso y lo siguiente. Versión de MMM-MusicAssistant."
+      },
+      "version": "1.0.0",
+      "author": "Jan · inspired by egeekial/MMM-MusicAssistant",
+      "url": "https://github.com/egeekial/MMM-MusicAssistant",
+      "zip": "musicassistant.zip"
+    },
+    {
+      "type": "webuntis",
+      "name": {
+        "de": "WebUntis Stundenplan",
+        "en": "WebUntis timetable",
+        "es": "Horario WebUntis"
+      },
+      "description": {
+        "de": "Stundenplan der nächsten Schultage mit Vertretungen und Ausfällen, dazu Prüfungen, Hausaufgaben und Mitteilungen aus WebUntis. Nachbau von MMM-Webuntis. Kein offizielles Untis-Produkt.",
+        "en": "Timetable for the next school days with substitutions and cancellations, plus exams, homework and messages from WebUntis. Rebuild of MMM-Webuntis. Not an official Untis product.",
+        "es": "Horario de los próximos días lectivos con sustituciones y cancelaciones, además de exámenes, deberes y avisos de WebUntis. Versión de MMM-Webuntis. No es un producto oficial de Untis."
+      },
+      "version": "1.0.0",
+      "author": "Jan · inspired by HeikoGr/MMM-Webuntis",
+      "url": "https://github.com/HeikoGr/MMM-Webuntis",
+      "zip": "webuntis.zip"
+    },
+    {
+      "type": "wifi",
+      "name": {
+        "de": "WLAN für Gäste",
+        "en": "Guest Wi-Fi",
+        "es": "Wi-Fi para invitados"
+      },
+      "description": {
+        "de": "Zeigt Netzwerkname, Passwort und einen QR-Code, mit dem sich Gäste per Handykamera ins WLAN einwählen. Nachbau von MMM-WiFiPassword.",
+        "en": "Shows network name, password and a QR code guests scan with their phone camera to join your Wi-Fi. Rebuild of MMM-WiFiPassword.",
+        "es": "Muestra el nombre de la red, la contraseña y un código QR que los invitados escanean con la cámara para conectarse al Wi-Fi. Versión de MMM-WiFiPassword."
+      },
+      "version": "1.0.0",
+      "author": "Jan · inspired by TeraTech/MMM-WiFiPassword",
+      "url": "https://github.com/TeraTech/MMM-WiFiPassword",
+      "zip": "wifi.zip"
+    },
+    {
+      "type": "jellyfin",
+      "name": {
+        "de": "Jellyfin: läuft gerade",
+        "en": "Jellyfin: now playing",
+        "es": "Jellyfin: en reproducción"
+      },
+      "description": {
+        "de": "Was gerade auf deinem Jellyfin-Server läuft: Musik, Film, Serienfolge oder Live-TV mit Cover, Fortschritt und was als Nächstes kommt. Kein offizielles Jellyfin-Produkt.",
+        "en": "What's playing on your Jellyfin server: music, movie, episode or live TV with cover, progress and what's up next. Not an official Jellyfin product.",
+        "es": "Lo que se reproduce en tu servidor Jellyfin: música, película, episodio o TV en directo con portada, progreso y lo siguiente. No es un producto oficial de Jellyfin."
+      },
+      "version": "1.0.0",
+      "author": "Jan",
+      "zip": "jellyfin.zip"
+    }
+  ]
+}

@@ -1,0 +1,151 @@
+{
+  "Name": "WebPageButtonPlugin",
+  "Author": "Jan",
+  "Description": "GPIO button control for web pages: a short press opens the first configured page full screen on top of the slideshow, each further short press switches to the next page (in tabs), a long press closes the browser. Optionally the pages can also switch automatically after a set time. YouTube links are shown as a full-screen player.",
+  "Version": "0.9.4",
+  "DisplayName": "Web Page Button",
+  "ManifestVersion": 1,
+  "IconPath": null,
+  "Enabled": false,
+  "ApiVersion": 2,
+  "Settings": [
+    {
+      "Name": "GpioPin",
+      "Type": "string",
+      "Description": "BCM pin number of your button, e.g. 20. Empty after installation: enter a pin that is not used by another plugin or device. A change takes effect within a few seconds.",
+      "DefaultValue": "",
+      "Value": ""
+    },
+    {
+      "Name": "Urls",
+      "Type": "string",
+      "Description": "Address(es) of the web pages. Write several pages one after the other, separated by a space or a semicolon, e.g. http://192.168.1.10:8123 https://example.com. The first short press shows the first page, each further press the next one.",
+      "DefaultValue": "https://example.com",
+      "Value": "https://example.com"
+    },
+    {
+      "Name": "LongPressSeconds",
+      "Type": "number",
+      "Description": "Hold time in seconds from which a press counts as long and closes the browser.",
+      "DefaultValue": 2,
+      "Value": 2
+    },
+    {
+      "Name": "CloseAfterLastPage",
+      "Type": "boolean",
+      "Description": "When active, the switch after the last page (by button or timer) closes the browser. When off, it starts again with the first page.",
+      "DefaultValue": false,
+      "Value": false
+    },
+    {
+      "Name": "AutoSwitch",
+      "Type": "boolean",
+      "Description": "Automatic switching, off by default. When active, the next page is shown automatically after AutoSwitchSeconds. When off, pages only change with the button.",
+      "DefaultValue": false,
+      "Value": false
+    },
+    {
+      "Name": "AutoSwitchSeconds",
+      "Type": "number",
+      "Description": "Only used when AutoSwitch is active: seconds after which the next page is shown (minimum 5). The button always works and restarts the timer.",
+      "DefaultValue": 30,
+      "Value": 30
+    },
+    {
+      "Name": "UseTabs",
+      "Type": "boolean",
+      "Description": "When active (default), Chromium keeps every page in its own tab and switching is instant. When off, the browser is restarted for every switch. Restart the plugin after changing it.",
+      "DefaultValue": true,
+      "Value": true
+    },
+    {
+      "Name": "PreloadNext",
+      "Type": "boolean",
+      "Description": "When active (default), the page that comes next is loaded in a background tab while you look at the current one, so the switch is instant and shows fresh content. Needs UseTabs. Pages that autoplay sound will play it in the background while they load; turn this off for such pages.",
+      "DefaultValue": true,
+      "Value": true
+    },
+    {
+      "Name": "PreloadMaxAgeSeconds",
+      "Type": "number",
+      "Description": "A prepared page that was loaded longer ago than this is reloaded in the background. 0 = reload the next page every time it comes up next (always freshest, more load on the Pi).",
+      "DefaultValue": 180,
+      "Value": 180
+    },
+    {
+      "Name": "YouTubeFullscreen",
+      "Type": "boolean",
+      "Description": "When active (default), YouTube links (watch, youtu.be, shorts, live, playlist) are shown as a full-screen player that starts automatically. A small local page (localhost only) is used so that YouTube accepts the player. Turn off to open the normal YouTube page.",
+      "DefaultValue": true,
+      "Value": true
+    },
+    {
+      "Name": "DisplayServer",
+      "Type": "string",
+      "Description": "Display server used by the browser window: wayland (default), x11 or auto.",
+      "DefaultValue": "wayland",
+      "Value": "wayland"
+    },
+    {
+      "Name": "BrowserCommand",
+      "Type": "string",
+      "Description": "Optional browser executable. Empty = detect chromium, chromium-browser, google-chrome or firefox automatically.",
+      "DefaultValue": "",
+      "Value": ""
+    },
+    {
+      "Name": "ExtraBrowserArgs",
+      "Type": "string",
+      "Description": "Optional additional command line arguments for the browser.",
+      "DefaultValue": "",
+      "Value": ""
+    }
+  ],
+  "OverlayPlugins": [],
+  "Services": [
+    {
+      "type": "background",
+      "id": "WebPageButtonPlugin.Background",
+      "friendlyName": "Web Page Button Runtime",
+      "description": "Monitors the GPIO button and shows, switches or closes the web page window.",
+      "events": null,
+      "eventParameters": null
+    }
+  ],
+  "OverlayDesigns": null,
+  "AdvancedSettings": {
+    "Enabled": true,
+    "Label": "About & support",
+    "Description": "Report a problem, ask a question or buy Jan a coffee.",
+    "RequiresReady": false
+  },
+  "Actions": [],
+  "Compatibility": {
+    "MinHostVersion": null,
+    "MaxHostVersionExclusive": null,
+    "MinPluginPlatformRevision": 6,
+    "MaxPluginPlatformRevisionExclusive": null,
+    "Architectures": [
+      "arm64",
+      "x64"
+    ],
+    "RequiredFeatures": [
+      "permission-declarations-v1",
+      "advanced-settings",
+      "sse-events"
+    ]
+  },
+  "Permissions": [
+    {
+      "id": "background-execution",
+      "reason": "Permanently monitors the GPIO button in the background.",
+      "scope": null
+    },
+    {
+      "id": "advanced-ui",
+      "reason": "Shows the About & support page with the issue link and the coffee button.",
+      "scope": null
+    }
+  ],
+  "Links": null
+}

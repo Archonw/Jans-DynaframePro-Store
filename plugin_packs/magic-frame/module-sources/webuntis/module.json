@@ -1,0 +1,255 @@
+{
+ "type": "webuntis",
+ "name": {
+  "de": "WebUntis Stundenplan",
+  "en": "WebUntis timetable",
+  "es": "Horario WebUntis"
+ },
+ "description": {
+  "de": "Stundenplan der nächsten Schultage mit Vertretungen und Ausfällen, dazu Prüfungen, Hausaufgaben und Mitteilungen aus WebUntis. Nachbau von MMM-Webuntis. Kein offizielles Untis-Produkt.",
+  "en": "Timetable for the next school days with substitutions and cancellations, plus exams, homework and messages from WebUntis. Rebuild of MMM-Webuntis. Not an official Untis product.",
+  "es": "Horario de los próximos días lectivos con sustituciones y cancelaciones, además de exámenes, deberes y avisos de WebUntis. Versión de MMM-Webuntis. No es un producto oficial de Untis."
+ },
+ "version": "1.0.0",
+ "author": "Jan · inspired by HeikoGr/MMM-Webuntis",
+ "url": "https://github.com/HeikoGr/MMM-Webuntis",
+ "region": "top_right",
+ "script": "module.js",
+ "style": "module.css",
+ "fetch": "fetch.py",
+ "every": 600,
+ "visibleOnly": true,
+ "fields": [
+  {
+   "key": "login",
+   "kind": "select",
+   "default": "qr",
+   "label": {
+    "de": "Anmeldung",
+    "en": "Login",
+    "es": "Inicio de sesión"
+   },
+   "options": [
+    {
+     "value": "qr",
+     "label": {
+      "de": "QR-Code aus Untis Mobile (empfohlen)",
+      "en": "QR code from Untis Mobile (recommended)",
+      "es": "Código QR de Untis Mobile (recomendado)"
+     }
+    },
+    {
+     "value": "password",
+     "label": {
+      "de": "Benutzername und Passwort",
+      "en": "Username and password",
+      "es": "Usuario y contraseña"
+     }
+    }
+   ]
+  },
+  {
+   "key": "qrcode",
+   "kind": "secret",
+   "default": "",
+   "showIf": {
+    "login": "qr"
+   },
+   "label": {
+    "de": "Text des QR-Codes (beginnt mit untis://)",
+    "en": "QR code text (starts with untis://)",
+    "es": "Texto del código QR (empieza por untis://)"
+   },
+   "hint": {
+    "de": "Im Browser bei WebUntis anmelden, Profil → Freigaben → Untis Mobile: „Anzeigen“. Den QR-Code mit einer QR-App lesen und den Text hier einfügen.",
+    "en": "Log in to WebUntis in a browser, Profile → Sharing → Untis Mobile: “Display”. Read the QR code with a QR app and paste its text here.",
+    "es": "Inicia sesión en WebUntis en el navegador, Perfil → Compartir → Untis Mobile: «Mostrar». Lee el código QR con una app y pega aquí el texto."
+   }
+  },
+  {
+   "key": "server",
+   "kind": "text",
+   "default": "",
+   "showIf": {
+    "login": "password"
+   },
+   "label": {
+    "de": "Server",
+    "en": "Server",
+    "es": "Servidor"
+   },
+   "hint": {
+    "de": "z. B. meineschule.webuntis.com",
+    "en": "e.g. myschool.webuntis.com",
+    "es": "p. ej. micolegio.webuntis.com"
+   }
+  },
+  {
+   "key": "school",
+   "kind": "text",
+   "default": "",
+   "showIf": {
+    "login": "password"
+   },
+   "label": {
+    "de": "Schule",
+    "en": "School",
+    "es": "Colegio"
+   },
+   "hint": {
+    "de": "Schulname wie bei der Anmeldung",
+    "en": "School name as used for login",
+    "es": "Nombre del colegio como al iniciar sesión"
+   }
+  },
+  {
+   "key": "username",
+   "kind": "text",
+   "default": "",
+   "showIf": {
+    "login": "password"
+   },
+   "label": {
+    "de": "Benutzername",
+    "en": "Username",
+    "es": "Usuario"
+   }
+  },
+  {
+   "key": "password",
+   "kind": "secret",
+   "default": "",
+   "showIf": {
+    "login": "password"
+   },
+   "label": {
+    "de": "Passwort",
+    "en": "Password",
+    "es": "Contraseña"
+   }
+  },
+  {
+   "key": "student",
+   "kind": "text",
+   "default": "",
+   "label": {
+    "de": "Kind (bei Eltern-Zugang)",
+    "en": "Child (parent accounts)",
+    "es": "Hijo/a (cuentas de padres)"
+   },
+   "hint": {
+    "de": "Vorname reicht. Leer = das erste Kind. Für mehrere Kinder das Modul mehrmals hinzufügen.",
+    "en": "First name is enough. Empty = the first child. Add the module once per child.",
+    "es": "Basta el nombre. Vacío = el primer hijo. Añade el módulo una vez por hijo."
+   }
+  },
+  {
+   "key": "days",
+   "kind": "select",
+   "default": "1",
+   "label": {
+    "de": "Stundenplan",
+    "en": "Timetable",
+    "es": "Horario"
+   },
+   "options": [
+    {
+     "value": "0",
+     "label": {
+      "de": "nicht zeigen",
+      "en": "don't show",
+      "es": "no mostrar"
+     }
+    },
+    {
+     "value": "1",
+     "label": {
+      "de": "nächster Schultag",
+      "en": "next school day",
+      "es": "próximo día lectivo"
+     }
+    },
+    {
+     "value": "2",
+     "label": {
+      "de": "2 Schultage",
+      "en": "2 school days",
+      "es": "2 días lectivos"
+     }
+    },
+    {
+     "value": "3",
+     "label": {
+      "de": "3 Schultage",
+      "en": "3 school days",
+      "es": "3 días lectivos"
+     }
+    }
+   ]
+  },
+  {
+   "key": "showTeacher",
+   "kind": "bool",
+   "default": true,
+   "label": {
+    "de": "Lehrkraft zeigen",
+    "en": "Show teacher",
+    "es": "Mostrar profesor"
+   }
+  },
+  {
+   "key": "showRoom",
+   "kind": "bool",
+   "default": true,
+   "label": {
+    "de": "Raum zeigen",
+    "en": "Show room",
+    "es": "Mostrar aula"
+   }
+  },
+  {
+   "key": "exams",
+   "kind": "number",
+   "default": 21,
+   "min": 0,
+   "max": 90,
+   "label": {
+    "de": "Prüfungen (Tage voraus)",
+    "en": "Exams (days ahead)",
+    "es": "Exámenes (días)"
+   },
+   "hint": {
+    "de": "0 = aus",
+    "en": "0 = off",
+    "es": "0 = no"
+   }
+  },
+  {
+   "key": "homework",
+   "kind": "number",
+   "default": 7,
+   "min": 0,
+   "max": 30,
+   "label": {
+    "de": "Hausaufgaben (Tage voraus)",
+    "en": "Homework (days ahead)",
+    "es": "Deberes (días)"
+   },
+   "hint": {
+    "de": "0 = aus",
+    "en": "0 = off",
+    "es": "0 = no"
+   }
+  },
+  {
+   "key": "messages",
+   "kind": "bool",
+   "default": false,
+   "label": {
+    "de": "Mitteilungen des Tages zeigen",
+    "en": "Show messages of the day",
+    "es": "Mostrar avisos del día"
+   }
+  }
+ ]
+}

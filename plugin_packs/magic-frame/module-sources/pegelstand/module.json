@@ -1,0 +1,73 @@
+{
+  "type": "pegelstand",
+  "name": {
+    "de": "Pegelstand",
+    "en": "River level",
+    "es": "Nivel del río"
+  },
+  "description": {
+    "de": "Wasserstand eines Pegels an Bundeswasserstraßen (PEGELONLINE), z. B. Mainz am Rhein, mit Trend.",
+    "en": "Water level of a gauge on German federal waterways (PEGELONLINE), e.g. Mainz on the Rhine, with trend.",
+    "es": "Nivel de agua de una estación en las vías navegables federales de Alemania (PEGELONLINE), p. ej. Maguncia en el Rin, con tendencia."
+  },
+  "version": "1.0.2",
+  "author": "Jan",
+  "url": "https://github.com/Archonw/Jans-DynaframePro-Store/blob/main/plugin_packs/magic-frame/MODULES.md",
+  "region": "top_right",
+  "script": "module.js",
+  "fetch": "fetch.py",
+  "every": 900,
+  "fields": [
+    {
+      "key": "station",
+      "kind": "text",
+      "default": "MAINZ",
+      "label": {
+        "de": "Pegel (Name, z. B. MAINZ, KÖLN, DRESDEN)",
+        "en": "Gauge (name, e.g. MAINZ, KÖLN, DRESDEN)",
+        "es": "Estación (nombre, p. ej. MAINZ, KÖLN)"
+      },
+      "hint": {
+        "de": "Alle Pegel: pegelonline.wsv.de",
+        "en": "All gauges: pegelonline.wsv.de",
+        "es": "Todas las estaciones: pegelonline.wsv.de"
+      }
+    },
+    {
+      "key": "size",
+      "kind": "select",
+      "default": "medium",
+      "label": {
+        "de": "Größe",
+        "en": "Size",
+        "es": "Tamaño"
+      },
+      "options": [
+        {
+          "value": "small",
+          "label": {
+            "de": "klein",
+            "en": "small",
+            "es": "pequeño"
+          }
+        },
+        {
+          "value": "medium",
+          "label": {
+            "de": "mittel",
+            "en": "medium",
+            "es": "mediano"
+          }
+        },
+        {
+          "value": "large",
+          "label": {
+            "de": "groß",
+            "en": "large",
+            "es": "grande"
+          }
+        }
+      ]
+    }
+  ]
+}

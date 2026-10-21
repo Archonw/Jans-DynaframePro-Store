@@ -1,0 +1,27 @@
+/* Music Assistant */
+.ma-box { position: relative; display: flex; gap: calc(1.6 * var(--u)); align-items: center; text-align: left;
+  max-width: calc(60 * var(--u)); }
+.region.right .ma-box { margin-left: auto; flex-direction: row-reverse; text-align: right; }
+.region.center .ma-box, .region.bar .ma-box { margin: 0 auto; }
+.ma-cover { flex: none; object-fit: cover; border-radius: calc(0.6 * var(--u)); background: #111; }
+.ma-cover-small .ma-cover { width: calc(9 * var(--u)); height: calc(9 * var(--u)); }
+.ma-cover-medium .ma-cover { width: calc(13 * var(--u)); height: calc(13 * var(--u)); }
+.ma-cover-large .ma-cover { width: calc(19 * var(--u)); height: calc(19 * var(--u)); }
+.ma-info { min-width: 0; flex: 1 1 auto; }
+.ma-title, .ma-artist, .ma-next { overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; }
+.ma-artist, .ma-next { -webkit-line-clamp: 1; }
+.ma-paused .ma-title, .ma-paused .ma-cover { opacity: .6; }
+.ma-progress { margin-top: calc(0.8 * var(--u)); }
+.ma-track { height: calc(0.5 * var(--u)); background: var(--line); border-radius: 99px; overflow: hidden; }
+.ma-fill { height: 100%; width: 0; background: var(--bright); transition: width 1s linear; }
+.ma-times { display: flex; justify-content: space-between; margin-top: calc(0.2 * var(--u)); }
+.ma-next { margin-top: calc(0.6 * var(--u)); }
+/* Cover groß mit unscharfem Hintergrund */
+.ma-background { flex-direction: column; align-items: stretch; padding: calc(1.6 * var(--u)); border-radius: calc(1 * var(--u));
+  overflow: hidden; width: calc(30 * var(--u)); background: #111; }
+.region.right .ma-background { flex-direction: column; }
+.ma-background .ma-cover { width: 100%; height: auto; aspect-ratio: 1; position: relative; }
+.ma-background .ma-info { position: relative; }
+.ma-bg { position: absolute; inset: -20%; background-size: cover; background-position: center; filter: blur(28px) brightness(.45);
+  transform: translateZ(0); }

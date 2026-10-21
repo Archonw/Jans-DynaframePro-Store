@@ -1,0 +1,231 @@
+{
+  "version": "2.0",
+  "generated": "2026-10-21T14:48:23Z",
+  "store": {
+    "name": "Jan's Store",
+    "author": "Jan",
+    "description": "Dynaframe Plugins made by AI - Please note: I used AI exclusively to create this; I am not a coder and cannot check the code for potential vulnerabilities.",
+    "website": "https://github.com/Archonw/Jans-DynaframePro-Store"
+  },
+  "packs": [
+    {
+      "id": "playlist-button",
+      "type": "plugin",
+      "title": "Playlist Button",
+      "author": "Jan",
+      "description": "GPIO button to select playlists via an overlay menu",
+      "version": "1.6.3",
+      "updated": "2026-10-21T14:48:23Z",
+      "thumbnails": [
+        "plugin_packs/playlist-button/thumb.webp"
+      ],
+      "download_url": "plugin_packs/playlist-button/playlist-button.zip",
+      "size": 25514,
+      "checksum": "33d3d8ed3e2f19c4e4692d039ceb0f87e21228f34f068b80e1f051c26a5912e1"
+    },
+    {
+      "id": "webpage-button",
+      "type": "plugin",
+      "title": "Web Page Button",
+      "author": "Jan",
+      "description": "GPIO button that opens a web page full screen on top of the slideshow and closes it again with the next press",
+      "version": "0.9.5",
+      "updated": "2026-10-21T14:48:23Z",
+      "thumbnails": [
+        "plugin_packs/Webpages/thumb.webp"
+      ],
+      "download_url": "plugin_packs/Webpages/webpages.zip",
+      "size": 29058,
+      "checksum": "d66f001fb4a926146c45323f1d86d46346636a6b91f360cf9d21fecaed36f60e"
+    },
+    {
+      "id": "jellyfin-now-playing",
+      "type": "plugin",
+      "title": "Jellyfin Now Playing",
+      "author": "Jan",
+      "description": "Shows the cover of the movie, series or album a chosen Jellyfin user is watching right now.",
+      "version": "0.3.6",
+      "updated": "2026-10-21T14:48:23Z",
+      "thumbnails": [
+        "plugin_packs/jellyfin/thumb-v2.webp"
+      ],
+      "download_url": "plugin_packs/jellyfin/JellyfinNowPlaying.zip",
+      "size": 16974,
+      "checksum": "545550c098267f224bedc2857970f45ba475ec286cf261e8c8134737d27df894"
+    },
+    {
+      "id": "fussball-live",
+      "type": "integration",
+      "title": "Fußball Live",
+      "author": "Jan",
+      "description": "Live scores, matchdays and tables for Bundesliga, Champions League, English, Scottish and Spanish leagues and cups, the World Cup and more. Installs the plugin together with its scene and can show it over the running playlist every few minutes. Pick your club to show its crest in the background and its colours as accent. German, English or Spanish.",
+      "version": "0.4.4",
+      "updated": "2026-10-21T14:48:23Z",
+      "thumbnails": [
+        "plugin_packs/fussball-live/thumb-hero.webp",
+        "plugin_packs/fussball-live/thumb-landscape.webp",
+        "plugin_packs/fussball-live/thumb-bl1.webp",
+        "plugin_packs/fussball-live/thumb-bl2.webp",
+        "plugin_packs/fussball-live/thumb-ucl.webp"
+      ],
+      "download_url": "plugin_packs/fussball-live/FussballLive.zip",
+      "size": 88214,
+      "checksum": "81d0a583d02551666383ebf379acc0dc1df0b416b2cb4e2c72182e89e672b1c1"
+    },
+    {
+      "id": "american-football-live",
+      "type": "integration",
+      "title": "American Football Live",
+      "author": "Jan",
+      "description": "Live scores, weeks and standings for the NFL, College Football (Top 25, SEC, Big Ten, Big 12, ACC), UFL and CFL. Installs the plugin together with its scene and can show it over the running playlist every few minutes or on a touchdown. Pick your team to show its logo in the background and its colours as accent. German, English or Spanish.",
+      "version": "0.2.5",
+      "updated": "2026-10-21T14:48:23Z",
+      "thumbnails": [
+        "plugin_packs/american-football-live/thumb-hero.webp",
+        "plugin_packs/american-football-live/thumb-landscape.webp",
+        "plugin_packs/american-football-live/thumb-portrait.webp"
+      ],
+      "download_url": "plugin_packs/american-football-live/AmericanFootballLive.zip",
+      "size": 80653,
+      "checksum": "cf5d970b1147bfc220b12fe4645c56de699e62054c007c9809826dc4b995cb6d"
+    },
+    {
+      "id": "world-map-live",
+      "type": "integration",
+      "title": "World Map Live",
+      "author": "Jan",
+      "description": "A calm world map with borders, day and night and the day-night line that shows real aircraft, ships, lightning strikes and the ISS live: aircraft from the OpenSky Network (no account needed), ships from AISStream.io (free API key), lightning from the volunteer network Blitzortung.org, the ISS orbit from CelesTrak. Whole world or Europe, DACH, North America, East Asia. German, English or Spanish.",
+      "version": "0.3.5",
+      "updated": "2026-10-21T14:48:23Z",
+      "thumbnails": [
+        "plugin_packs/world-map-live/thumb.webp"
+      ],
+      "download_url": "plugin_packs/world-map-live/WorldMapLive.zip",
+      "size": 159618,
+      "checksum": "f2ef4e67e0d7079cdd0d8d8f964eda3c2e639711dd9aa05615cda787bd5b11f7"
+    },
+    {
+      "id": "biathlon-live",
+      "type": "integration",
+      "title": "Biathlon Live",
+      "author": "Jan",
+      "description": "Biathlon results with shooting, live standings during a race, schedule, next venue and World Cup standings from the IBU (biathlonresults.com): World Cup, World Championships, IBU Cup and more. A rebuild of the MagicMirror module MMM-Biathlon by 2hdlockness. Installs the plugin together with its scene and can show it over the running playlist every few minutes, at race start or when a result is in. Pick your nation to highlight its athletes. German, English or Spanish.",
+      "version": "0.1.1",
+      "updated": "2026-10-21T14:48:23Z",
+      "thumbnails": [
+        "plugin_packs/biathlon-live/thumb.webp",
+        "plugin_packs/biathlon-live/thumb-landscape.webp",
+        "plugin_packs/biathlon-live/thumb-live.webp",
+        "plugin_packs/biathlon-live/thumb-portrait.webp"
+      ],
+      "download_url": "plugin_packs/biathlon-live/BiathlonLive.zip",
+      "size": 214495,
+      "checksum": "a6316bd8856b728c3db6384eeca18bd207bc84ca8bbdfac4095ca2978ae72a59"
+    },
+    {
+      "id": "travel-map",
+      "type": "integration",
+      "title": "Travel Map",
+      "author": "Jan",
+      "description": "A world map in the style of an old globe, studded with push pins where your photos were taken. The places come from the photos' GPS data: a DynaFrame playlist, the whole DynaFrame media library (plus extra folders such as a mounted NAS) or your Immich server (all photos or an album). Every collection gets its own pin colour and shape (push pin, thumbtack, flag, long pin); close pins are merged. The pins go in one by one in the order the photos were taken, then a photo is shown at its pin now and then with place and date. Oval world map or three globes, or only the area with pins. German, English or Spanish.",
+      "version": "0.1.13",
+      "updated": "2026-10-21T14:48:23Z",
+      "thumbnails": [
+        "plugin_packs/travel-map/thumb.webp"
+      ],
+      "download_url": "plugin_packs/travel-map/TravelMap.zip",
+      "size": 370536,
+      "checksum": "24808c635472c691a23d6260dde33a01f5897d873d75c07808a61bf18271a473"
+    },
+    {
+      "id": "magic-frame",
+      "type": "integration",
+      "title": "Dynaframe's Magic Mirror",
+      "author": "Jan",
+      "description": "Inspired by MagicMirror² (github.com/MagicMirrorOrg/MagicMirror): pick modules and place each one top, bottom, left, right or centre. More modules (Guest Wi-Fi QR, WebUntis, Music Assistant, Jellyfin, river level) from the built-in module catalog. Build your own or port MagicMirror² modules, also with an AI: https://github.com/Archonw/Jans-DynaframePro-Store/blob/main/plugin_packs/magic-frame/MODULES.md",
+      "version": "0.2.7",
+      "updated": "2026-10-21T14:48:23Z",
+      "thumbnails": [
+        "plugin_packs/magic-frame/thumb.webp"
+      ],
+      "download_url": "plugin_packs/magic-frame/MagicFrame.zip",
+      "size": 87895,
+      "checksum": "681203fb8fb3a145ed31e6d3c0f5068492bba9d5b2f0a9b374d66db804fb4e84"
+    },
+    {
+      "id": "magic-mirror-module-pegelstand",
+      "type": "magic-mirror-module",
+      "title": "Magic Mirror module: River level",
+      "author": "Jan",
+      "description": "Module for Dynaframe's Magic Mirror (install that first). Water level of a gauge on German federal waterways (PEGELONLINE) with trend. Does not appear under Plugins. Guide for building or porting modules: https://github.com/Archonw/Jans-DynaframePro-Store/blob/main/plugin_packs/magic-frame/MODULES.md",
+      "version": "1.0.3",
+      "updated": "2026-10-21T14:48:23Z",
+      "thumbnails": [
+        "plugin_packs/magic-frame/thumbs/pegelstand.webp"
+      ],
+      "download_url": "plugin_packs/magic-frame/modules/pegelstand.zip",
+      "size": 2485,
+      "checksum": "83d3f23aff2632dd64d9b83b3234b6f44545c872c92b89ed2e872a3819705876"
+    },
+    {
+      "id": "magic-mirror-module-wifi",
+      "type": "magic-mirror-module",
+      "title": "Magic Mirror module: Guest Wi-Fi",
+      "author": "Jan",
+      "description": "Module for Dynaframe's Magic Mirror (install that first). Network name, password and a QR code guests scan to join your Wi-Fi. Inspired by MMM-WiFiPassword. Does not appear under Plugins. Guide for building or porting modules: https://github.com/Archonw/Jans-DynaframePro-Store/blob/main/plugin_packs/magic-frame/MODULES.md",
+      "version": "1.0.2",
+      "updated": "2026-10-20T15:08:25Z",
+      "thumbnails": [
+        "plugin_packs/magic-frame/thumbs/wifi.webp"
+      ],
+      "download_url": "plugin_packs/magic-frame/modules/wifi.zip",
+      "size": 10971,
+      "checksum": "ce0b6707f6f48c931be9682d3dfba7af031d71995f618fb42ca58924dd0d29d7"
+    },
+    {
+      "id": "magic-mirror-module-webuntis",
+      "type": "magic-mirror-module",
+      "title": "Magic Mirror module: WebUntis timetable",
+      "author": "Jan",
+      "description": "Module for Dynaframe's Magic Mirror (install that first). Next school days with substitutions and cancellations, exams, homework and messages from WebUntis. Inspired by MMM-Webuntis; not an official Untis product. Does not appear under Plugins. Guide for building or porting modules: https://github.com/Archonw/Jans-DynaframePro-Store/blob/main/plugin_packs/magic-frame/MODULES.md",
+      "version": "1.0.2",
+      "updated": "2026-10-20T15:08:25Z",
+      "thumbnails": [
+        "plugin_packs/magic-frame/thumbs/webuntis.webp"
+      ],
+      "download_url": "plugin_packs/magic-frame/modules/webuntis.zip",
+      "size": 12115,
+      "checksum": "82ce57feb82b7e696b7322340cfd92e0e39a9f99582df841126121c048e1668b"
+    },
+    {
+      "id": "magic-mirror-module-musicassistant",
+      "type": "magic-mirror-module",
+      "title": "Magic Mirror module: Music Assistant",
+      "author": "Jan",
+      "description": "Module for Dynaframe's Magic Mirror (install that first). What's playing on your Music Assistant server with cover, progress and up next. Inspired by MMM-MusicAssistant. Does not appear under Plugins. Guide for building or porting modules: https://github.com/Archonw/Jans-DynaframePro-Store/blob/main/plugin_packs/magic-frame/MODULES.md",
+      "version": "1.0.2",
+      "updated": "2026-10-20T15:08:25Z",
+      "thumbnails": [
+        "plugin_packs/magic-frame/thumbs/musicassistant.webp"
+      ],
+      "download_url": "plugin_packs/magic-frame/modules/musicassistant.zip",
+      "size": 7883,
+      "checksum": "2a30f26813b400b54f0b1902d9662dd9318aede5426f15a3f2b3a96669b4cff8"
+    },
+    {
+      "id": "magic-mirror-module-jellyfin",
+      "type": "magic-mirror-module",
+      "title": "Magic Mirror module: Jellyfin now playing",
+      "author": "Jan",
+      "description": "Module for Dynaframe's Magic Mirror (install that first). What's playing on your Jellyfin server: music, movie, episode or live TV with cover, progress and up next. Not an official Jellyfin product. Does not appear under Plugins. Guide for building or porting modules: https://github.com/Archonw/Jans-DynaframePro-Store/blob/main/plugin_packs/magic-frame/MODULES.md",
+      "version": "1.0.0",
+      "updated": "2026-10-20T20:09:18Z",
+      "thumbnails": [
+        "plugin_packs/magic-frame/thumbs/jellyfin.webp"
+      ],
+      "download_url": "plugin_packs/magic-frame/modules/jellyfin.zip",
+      "size": 7436,
+      "checksum": "60907f28d6ebf19c6688f54cab0efbb585ec72341398ef022aada4e3abb9eea8"
+    }
+  ]
+}

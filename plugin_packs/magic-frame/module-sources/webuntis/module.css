@@ -1,0 +1,24 @@
+/* WebUntis Stundenplan */
+.wu-box { display: flex; flex-direction: column; gap: calc(1.6 * var(--u)); text-align: left; width: max-content; max-width: 100%; }
+.region.right .wu-box { margin-left: auto; }
+.region.center .wu-box, .region.bar .wu-box { margin: 0 auto; }
+.wu-dayname, .wu-title { color: var(--bright); border-bottom: 1px solid var(--line); padding-bottom: calc(0.3 * var(--u));
+  margin-bottom: calc(0.4 * var(--u)); }
+.wu-title { color: var(--normal); text-transform: uppercase; letter-spacing: .06em; font-size: calc(1.5 * var(--u)); }
+.wu-table, .wu-list { border-collapse: collapse; width: 100%; }
+.wu-table td, .wu-list td { padding: calc(0.25 * var(--u)) calc(1.2 * var(--u)) calc(0.25 * var(--u)) 0; vertical-align: top; }
+.wu-table td:last-child, .wu-list td:last-child { padding-right: 0; }
+.wu-time, .wu-when { color: var(--dimmed); white-space: nowrap; }
+.wu-subject .wu-name { color: var(--bright); }
+.wu-teacher, .wu-room { white-space: nowrap; }
+.wu-room { text-align: right; }
+.wu-note { color: var(--accent); }
+.wu-changed { color: var(--accent); }
+.wu-irregular .wu-name { color: var(--accent); }
+.wu-cancelled .wu-name, .wu-cancelled .wu-teacher, .wu-cancelled .wu-room { text-decoration: line-through; color: var(--dimmed); }
+.wu-cancelled .wu-note { color: var(--bad); }
+.wu-now .wu-time { color: var(--bright); }
+.wu-now td:first-child { box-shadow: inset calc(0.4 * var(--u)) 0 0 var(--bright); padding-left: calc(0.9 * var(--u)); }
+.wu-text { color: var(--normal); }
+.wu-message + .wu-message { margin-top: calc(0.8 * var(--u)); }
+.wu-holiday { color: var(--accent); }

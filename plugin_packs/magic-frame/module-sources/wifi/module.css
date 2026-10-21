@@ -1,0 +1,15 @@
+/* WLAN für Gäste. Größen an --u wie die Szene (1/100 der kürzeren Bildschirmseite). */
+.wf-box { display: inline-flex; gap: calc(1.5 * var(--u)); align-items: center; text-align: left; }
+.wf-v { flex-direction: column; align-items: flex-start; }
+.region.right .wf-v { align-items: flex-end; text-align: right; }
+.region.center .wf-v, .region.bar .wf-v { align-items: center; text-align: center; }
+.wf-qr { flex: none; }
+.wf-qr svg { display: block; width: 100%; height: 100%; border-radius: calc(0.6 * var(--u)); }
+.wf-small .wf-qr { width: calc(12 * var(--u)); height: calc(12 * var(--u)); }
+.wf-medium .wf-qr { width: calc(18 * var(--u)); height: calc(18 * var(--u)); }
+.wf-large .wf-qr { width: calc(25 * var(--u)); height: calc(25 * var(--u)); }
+.wf-xlarge .wf-qr { width: calc(34 * var(--u)); height: calc(34 * var(--u)); }
+.wf-row { line-height: 1.35; }
+.wf-row .dimmed { margin-right: 0.4em; }
+.wf-value { overflow-wrap: anywhere; }
+.wf-hint { margin-top: calc(0.6 * var(--u)); }
