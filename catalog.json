@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "generated": "2026-10-21T14:48:23Z",
+  "generated": "2026-10-21T22:25:11Z",
   "store": {
     "name": "Jan's Store",
     "author": "Jan",
@@ -110,8 +110,8 @@
       "title": "Biathlon Live",
       "author": "Jan",
       "description": "Biathlon results with shooting, live standings during a race, schedule, next venue and World Cup standings from the IBU (biathlonresults.com): World Cup, World Championships, IBU Cup and more. A rebuild of the MagicMirror module MMM-Biathlon by 2hdlockness. Installs the plugin together with its scene and can show it over the running playlist every few minutes, at race start or when a result is in. Pick your nation to highlight its athletes. German, English or Spanish.",
-      "version": "0.1.1",
-      "updated": "2026-10-21T14:48:23Z",
+      "version": "0.1.2",
+      "updated": "2026-10-21T22:25:11Z",
       "thumbnails": [
         "plugin_packs/biathlon-live/thumb.webp",
         "plugin_packs/biathlon-live/thumb-landscape.webp",
@@ -119,8 +119,8 @@
         "plugin_packs/biathlon-live/thumb-portrait.webp"
       ],
       "download_url": "plugin_packs/biathlon-live/BiathlonLive.zip",
-      "size": 214495,
-      "checksum": "a6316bd8856b728c3db6384eeca18bd207bc84ca8bbdfac4095ca2978ae72a59"
+      "size": 214705,
+      "checksum": "25a3718b6d620a35f965ff077c1e9416cb0a42309cc440bb41700d4f3d131331"
     },
     {
       "id": "travel-map",
