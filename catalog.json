@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "generated": "2026-10-22T07:57:57Z",
+  "generated": "2026-10-22T11:42:20Z",
   "store": {
     "name": "Jan's Store",
     "author": "Jan",
@@ -128,14 +128,14 @@
       "title": "Travel Map",
       "author": "Jan",
       "description": "A world map in the style of an old globe, studded with push pins where your photos were taken. The places come from the photos' GPS data: a DynaFrame playlist, the whole DynaFrame media library (plus extra folders such as a mounted NAS) or your Immich server (all photos or an album). Every collection gets its own pin colour and shape (push pin, thumbtack, flag, long pin); close pins are merged. The pins go in one by one in the order the photos were taken, then a photo is shown at its pin now and then with place and date. Oval world map or three globes, or only the area with pins. German, English or Spanish.",
-      "version": "0.1.19",
-      "updated": "2026-10-22T07:57:57Z",
+      "version": "0.1.20",
+      "updated": "2026-10-22T11:42:20Z",
       "thumbnails": [
         "plugin_packs/travel-map/thumb.webp"
       ],
       "download_url": "plugin_packs/travel-map/TravelMap.zip",
-      "size": 1611112,
-      "checksum": "b373b4cfe2624d9d361f9a6935f5d446c74ac8da471ed521755552746e6bd527"
+      "size": 1611181,
+      "checksum": "493ffca10e38e51c22f0b46d078414619857086e72cd38e08a65bbea34267be8"
     },
     {
       "id": "magic-frame",
