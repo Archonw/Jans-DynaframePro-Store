@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "generated": "2026-10-22T21:56:01Z",
+  "generated": "2026-10-22T22:34:46Z",
   "store": {
     "name": "Jan's Store",
     "author": "Jan",
@@ -143,14 +143,14 @@
       "title": "Dynaframe's Magic Mirror",
       "author": "Jan",
       "description": "Inspired by MagicMirror² (github.com/MagicMirrorOrg/MagicMirror): pick modules and place each one top, bottom, left, right or centre. More modules (Guest Wi-Fi QR, WebUntis, Music Assistant, Jellyfin, river level) from the built-in module catalog. Build your own or port MagicMirror² modules, also with an AI: https://github.com/Archonw/Jans-DynaframePro-Store/blob/main/plugin_packs/magic-frame/MODULES.md",
-      "version": "0.2.7",
-      "updated": "2026-10-21T14:48:23Z",
+      "version": "0.2.8",
+      "updated": "2026-10-22T22:34:46Z",
       "thumbnails": [
         "plugin_packs/magic-frame/thumb.webp"
       ],
       "download_url": "plugin_packs/magic-frame/MagicFrame.zip",
-      "size": 87895,
-      "checksum": "681203fb8fb3a145ed31e6d3c0f5068492bba9d5b2f0a9b374d66db804fb4e84"
+      "size": 92034,
+      "checksum": "ce6c38823c0269ddfec200e04ab5fdbd6259790b64c9336bd6631afff39ec584"
     },
     {
       "id": "magic-mirror-module-pegelstand",
