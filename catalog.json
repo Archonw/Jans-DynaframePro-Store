@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "generated": "2026-10-22T21:54:30Z",
+  "generated": "2026-10-22T21:56:01Z",
   "store": {
     "name": "Jan's Store",
     "author": "Jan",
@@ -78,16 +78,16 @@
       "title": "American Football Live",
       "author": "Jan",
       "description": "Live scores, weeks and standings for the NFL, College Football (Top 25, SEC, Big Ten, Big 12, ACC), UFL and CFL. Installs the plugin together with its scene and can show it over the running playlist every few minutes or on a touchdown. Pick your team to show its logo in the background and its colours as accent. German, English or Spanish.",
-      "version": "0.2.5",
-      "updated": "2026-10-21T14:48:23Z",
+      "version": "0.2.6",
+      "updated": "2026-10-22T21:56:01Z",
       "thumbnails": [
         "plugin_packs/american-football-live/thumb-hero.webp",
         "plugin_packs/american-football-live/thumb-landscape.webp",
         "plugin_packs/american-football-live/thumb-portrait.webp"
       ],
       "download_url": "plugin_packs/american-football-live/AmericanFootballLive.zip",
-      "size": 80653,
-      "checksum": "cf5d970b1147bfc220b12fe4645c56de699e62054c007c9809826dc4b995cb6d"
+      "size": 80424,
+      "checksum": "e72c5316a8a99c81b28d2cbb992d2042e19b342b63c9148a2104695ee7f6c39d"
     },
     {
       "id": "world-map-live",
@@ -110,8 +110,8 @@
       "title": "Biathlon Live",
       "author": "Jan",
       "description": "Biathlon results with shooting, live standings during a race, schedule, next venue and World Cup standings from the IBU (biathlonresults.com): World Cup, World Championships, IBU Cup and more. A rebuild of the MagicMirror module MMM-Biathlon by 2hdlockness. Installs the plugin together with its scene and can show it over the running playlist every few minutes, at race start or when a result is in. Pick your nation to highlight its athletes. German, English or Spanish.",
-      "version": "0.1.2",
-      "updated": "2026-10-21T22:25:11Z",
+      "version": "0.1.3",
+      "updated": "2026-10-22T21:56:01Z",
       "thumbnails": [
         "plugin_packs/biathlon-live/thumb.webp",
         "plugin_packs/biathlon-live/thumb-landscape.webp",
@@ -119,8 +119,8 @@
         "plugin_packs/biathlon-live/thumb-portrait.webp"
       ],
       "download_url": "plugin_packs/biathlon-live/BiathlonLive.zip",
-      "size": 214705,
-      "checksum": "25a3718b6d620a35f965ff077c1e9416cb0a42309cc440bb41700d4f3d131331"
+      "size": 214470,
+      "checksum": "fd9ed45a8bfe4fd82314645afa0c5ff5e9a5e6f6b05330d4b22d6775ee6a95c9"
     },
     {
       "id": "travel-map",
