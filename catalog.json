@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "generated": "2026-10-22T23:22:41Z",
+  "generated": "2026-10-24T12:58:11Z",
   "store": {
     "name": "Jan's Store",
     "author": "Jan",
@@ -142,7 +142,7 @@
       "type": "integration",
       "title": "Dynaframe's Magic Mirror",
       "author": "Jan",
-      "description": "Inspired by MagicMirror² (github.com/MagicMirrorOrg/MagicMirror): pick modules and place each one top, bottom, left, right or centre. More modules (Guest Wi-Fi QR, WebUntis, Music Assistant, Jellyfin, river level) from the built-in module catalog. Build your own or port MagicMirror² modules, also with an AI: https://github.com/Archonw/Jans-DynaframePro-Store/blob/main/plugin_packs/magic-frame/MODULES.md",
+      "description": "Inspired by MagicMirror² (github.com/MagicMirrorOrg/MagicMirror); not an official MagicMirror² project. pick modules and place each one top, bottom, left, right or centre. More modules (Guest Wi-Fi QR, WebUntis, Music Assistant, Jellyfin, river level) from the built-in module catalog. Build your own or port MagicMirror² modules, also with an AI: https://github.com/Archonw/Jans-DynaframePro-Store/blob/main/plugin_packs/magic-frame/MODULES.md",
       "version": "0.3.1",
       "updated": "2026-10-22T23:22:41Z",
       "thumbnails": [
