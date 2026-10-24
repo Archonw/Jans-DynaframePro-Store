@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "generated": "2026-10-24T12:58:11Z",
+  "generated": "2026-10-24T13:13:21Z",
   "store": {
     "name": "Jan's Store",
     "author": "Jan",
@@ -59,8 +59,8 @@
       "title": "Fußball Live",
       "author": "Jan",
       "description": "Live scores, matchdays and tables for Bundesliga, Champions League, English, Scottish and Spanish leagues and cups, the World Cup and more. Installs the plugin together with its scene and can show it over the running playlist every few minutes. Pick your club to show its crest in the background and its colours as accent. German, English or Spanish.",
-      "version": "0.4.5",
-      "updated": "2026-10-22T21:54:30Z",
+      "version": "0.4.6",
+      "updated": "2026-10-24T13:13:21Z",
       "thumbnails": [
         "plugin_packs/fussball-live/thumb-hero.webp",
         "plugin_packs/fussball-live/thumb-landscape.webp",
@@ -69,8 +69,8 @@
         "plugin_packs/fussball-live/thumb-ucl.webp"
       ],
       "download_url": "plugin_packs/fussball-live/FussballLive.zip",
-      "size": 88031,
-      "checksum": "07ddef057b721f2569976cd2e37a91805166fd1e38db7c1c06001488b24cbb7d"
+      "size": 88394,
+      "checksum": "68cdf6937f6f6e4d3ccf5713d231cfe5ef2f5e10850e874947faba71b94eeff4"
     },
     {
       "id": "american-football-live",
