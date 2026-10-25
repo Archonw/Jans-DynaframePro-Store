@@ -29,7 +29,7 @@ Integrations bring their own scene and can show themselves over the running slid
 | <img src="plugin_packs/biathlon-live/thumb.webp" width="220"> | **Biathlon Live** | Results with shooting, live standings during a race, schedule and World Cup standings from the IBU. Highlights the athletes of your nation. |
 | <img src="plugin_packs/world-map-live/thumb.webp" width="220"> | **World Map Live** | A calm world map with the day-night line and live aircraft, ships, lightning strikes and the ISS. Whole world or a region. |
 | <img src="plugin_packs/travel-map/thumb.webp" width="220"> | **Travel Map** | An old-globe style world map with push pins where your photos were taken, from a playlist, the media library, a NAS folder or Immich. Shows a photo at its pin now and then. |
-| <img src="plugin_packs/phone-photos/thumb-foto-cast.webp" width="220"> | **Foto Cast** | Show the photo you are looking at on your iPhone or Android phone on the frame right away: from the share menu or the frame's phone page. Afterwards your playlist carries on. |
+| <img src="plugin_packs/foto-cast/thumb-foto-cast.webp" width="220"> | **Foto Cast** | Show the photo you are looking at on your iPhone or Android phone on the frame right away: from the share menu or the frame's phone page. Afterwards your playlist carries on. |
 | <img src="plugin_packs/magic-frame/thumb.webp" width="220"> | **Dynaframe's Magic Mirror** | Inspired by MagicMirror²: place modules such as clock, weather, calendar, news or Home Assistant around the screen. More modules below. |
 
 ### Plugins

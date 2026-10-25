@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "generated": "2026-10-25T11:04:07Z",
+  "generated": "2026-10-25T11:06:20Z",
   "store": {
     "name": "Jan's Store",
     "author": "Jan",
@@ -146,9 +146,9 @@
       "version": "0.1.3",
       "updated": "2026-10-25T11:04:07Z",
       "thumbnails": [
-        "plugin_packs/phone-photos/thumb-foto-cast.webp"
+        "plugin_packs/foto-cast/thumb-foto-cast.webp"
       ],
-      "download_url": "plugin_packs/phone-photos/PhonePhotos.zip",
+      "download_url": "plugin_packs/foto-cast/FotoCast.zip",
       "size": 87185,
       "checksum": "5f9c958db83b5153d9506e40af96949e92aee6db5cfe3602213489d642b8f044"
     },
