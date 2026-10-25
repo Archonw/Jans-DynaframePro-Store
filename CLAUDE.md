@@ -28,6 +28,6 @@ Vor dem Veröffentlichen prüfen, dass in keiner ZIP noch `Dynaframe-Stuff`, `Dy
 2. Pack-Eintrag in `catalog.json` übernehmen, Pfade ohne `DynaframPro/Jans-store/`.
 3. `size` und `checksum` (SHA-256) zur ZIP passend setzen, `updated` und `generated` aktualisieren.
 4. Jede Änderung braucht eine **höhere Version** als die im öffentlichen Store, in `catalog.json` **und** in `dynaframe-package.json`/`manifest.json` in der ZIP. Sonst sehen Frames kein Update.
-5. `download_url` immer **relativ** zum Katalog. Absolute URLs (z. B. GitHub-Releases) akzeptiert der DynaFrame-Store nicht (getestet am 21.10.2026).
+5. `download_url` zeigt auf ein **GitHub Release** des jeweiligen Repos (`https://github.com/<repo>/releases/download/<pack-id>-<version>/<Zip>.zip`), damit Downloads gezählt werden (seit 25.10.2026, getestet). Die ZIP trotzdem nach `plugin_packs/` committen: der Workflow `Pack-Releases` legt bei jedem Push auf `main` das fehlende Release aus der ZIP an (passend zu `size`/`checksum`) und korrigiert `download_url` selbst, auch wenn sie noch relativ ist oder aus dem Test-Store kopiert wurde. Darum nie eine ZIP bei gleicher Version austauschen: ein bestehendes Release wird nicht überschrieben. Zahlen: `python3 tools/downloads.py [owner/repo]`.
 6. Magic-Mirror-Module zusätzlich in `plugin_packs/magic-frame/modules/catalog.json` eintragen bzw. Version erhöhen.
 7. Direkt auf `main` committen und pushen.

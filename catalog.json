@@ -19,7 +19,7 @@
       "thumbnails": [
         "plugin_packs/playlist-button/thumb.webp"
       ],
-      "download_url": "plugin_packs/playlist-button/playlist-button.zip",
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/playlist-button-1.6.3/playlist-button.zip",
       "size": 25514,
       "checksum": "33d3d8ed3e2f19c4e4692d039ceb0f87e21228f34f068b80e1f051c26a5912e1"
     },
@@ -34,7 +34,7 @@
       "thumbnails": [
         "plugin_packs/Webpages/thumb.webp"
       ],
-      "download_url": "plugin_packs/Webpages/webpages.zip",
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/webpage-button-0.9.5/webpages.zip",
       "size": 29058,
       "checksum": "d66f001fb4a926146c45323f1d86d46346636a6b91f360cf9d21fecaed36f60e"
     },
@@ -49,7 +49,7 @@
       "thumbnails": [
         "plugin_packs/jellyfin/thumb-v2.webp"
       ],
-      "download_url": "plugin_packs/jellyfin/JellyfinNowPlaying.zip",
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/jellyfin-now-playing-0.3.7/JellyfinNowPlaying.zip",
       "size": 17562,
       "checksum": "295bbb9251982aa0d9eddeef9484b5cb59bc359f2017c873281f68f890996eea"
     },
@@ -68,7 +68,7 @@
         "plugin_packs/fussball-live/thumb-bl2.webp",
         "plugin_packs/fussball-live/thumb-ucl.webp"
       ],
-      "download_url": "plugin_packs/fussball-live/FussballLive.zip",
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/fussball-live-0.4.9/FussballLive.zip",
       "size": 90169,
       "checksum": "a62d307a15935c0f380f0a7bd2ae7074cd45479cf982988eed5918601c1fe86f"
     },
@@ -85,7 +85,7 @@
         "plugin_packs/american-football-live/thumb-landscape.webp",
         "plugin_packs/american-football-live/thumb-portrait.webp"
       ],
-      "download_url": "plugin_packs/american-football-live/AmericanFootballLive.zip",
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/american-football-live-0.2.9/AmericanFootballLive.zip",
       "size": 82499,
       "checksum": "78c3143a898f94b2f3207f8795c61ce8c61e03c41a1b50a9554d2e806640b792"
     },
@@ -100,7 +100,7 @@
       "thumbnails": [
         "plugin_packs/world-map-live/thumb.webp"
       ],
-      "download_url": "plugin_packs/world-map-live/WorldMapLive.zip",
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/world-map-live-0.3.5/WorldMapLive.zip",
       "size": 159618,
       "checksum": "f2ef4e67e0d7079cdd0d8d8f964eda3c2e639711dd9aa05615cda787bd5b11f7"
     },
@@ -118,7 +118,7 @@
         "plugin_packs/biathlon-live/thumb-live.webp",
         "plugin_packs/biathlon-live/thumb-portrait.webp"
       ],
-      "download_url": "plugin_packs/biathlon-live/BiathlonLive.zip",
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/biathlon-live-0.1.4/BiathlonLive.zip",
       "size": 214894,
       "checksum": "4dfbd769357301d6a781da5e9b42091797c9869ccdf947616a2e5b3fb2911190"
     },
@@ -133,7 +133,7 @@
       "thumbnails": [
         "plugin_packs/travel-map/thumb.webp"
       ],
-      "download_url": "plugin_packs/travel-map/TravelMap.zip",
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/travel-map-0.1.20/TravelMap.zip",
       "size": 1611181,
       "checksum": "493ffca10e38e51c22f0b46d078414619857086e72cd38e08a65bbea34267be8"
     },
@@ -148,7 +148,7 @@
       "thumbnails": [
         "plugin_packs/foto-cast/thumb-foto-cast.webp"
       ],
-      "download_url": "plugin_packs/foto-cast/FotoCast.zip",
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/phone-photos-0.1.3/FotoCast.zip",
       "size": 87185,
       "checksum": "5f9c958db83b5153d9506e40af96949e92aee6db5cfe3602213489d642b8f044"
     },
@@ -163,7 +163,7 @@
       "thumbnails": [
         "plugin_packs/youtube-cast/thumb.webp"
       ],
-      "download_url": "plugin_packs/youtube-cast/YouTubeCast.zip",
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/youtube-cast-0.1.1/YouTubeCast.zip",
       "size": 87704,
       "checksum": "3538eee1651947097b3165de7c4fec7b598b34cc5dd59c727983d70cb19d9298"
     },
@@ -178,7 +178,7 @@
       "thumbnails": [
         "plugin_packs/magic-frame/thumb.webp"
       ],
-      "download_url": "plugin_packs/magic-frame/MagicFrame.zip",
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/magic-frame-0.6.8/MagicFrame.zip",
       "size": 157220,
       "checksum": "d868078006edeb518a6e5b28d03b1d7df7da027723110c5ed63e6e1cda587a7e"
     },
@@ -193,7 +193,7 @@
       "thumbnails": [
         "plugin_packs/magic-frame/thumbs/pegelstand.webp"
       ],
-      "download_url": "plugin_packs/magic-frame/modules/pegelstand.zip",
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/magic-mirror-module-pegelstand-1.0.3/pegelstand.zip",
       "size": 2485,
       "checksum": "83d3f23aff2632dd64d9b83b3234b6f44545c872c92b89ed2e872a3819705876"
     },
@@ -208,7 +208,7 @@
       "thumbnails": [
         "plugin_packs/magic-frame/thumbs/wifi.webp"
       ],
-      "download_url": "plugin_packs/magic-frame/modules/wifi.zip",
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/magic-mirror-module-wifi-1.0.2/wifi.zip",
       "size": 10971,
       "checksum": "ce0b6707f6f48c931be9682d3dfba7af031d71995f618fb42ca58924dd0d29d7"
     },
@@ -223,7 +223,7 @@
       "thumbnails": [
         "plugin_packs/magic-frame/thumbs/webuntis.webp"
       ],
-      "download_url": "plugin_packs/magic-frame/modules/webuntis.zip",
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/magic-mirror-module-webuntis-1.0.2/webuntis.zip",
       "size": 12115,
       "checksum": "82ce57feb82b7e696b7322340cfd92e0e39a9f99582df841126121c048e1668b"
     },
@@ -238,7 +238,7 @@
       "thumbnails": [
         "plugin_packs/magic-frame/thumbs/musicassistant.webp"
       ],
-      "download_url": "plugin_packs/magic-frame/modules/musicassistant.zip",
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/magic-mirror-module-musicassistant-1.0.2/musicassistant.zip",
       "size": 7883,
       "checksum": "2a30f26813b400b54f0b1902d9662dd9318aede5426f15a3f2b3a96669b4cff8"
     },
@@ -253,7 +253,7 @@
       "thumbnails": [
         "plugin_packs/magic-frame/thumbs/jellyfin.webp"
       ],
-      "download_url": "plugin_packs/magic-frame/modules/jellyfin.zip",
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/magic-mirror-module-jellyfin-1.0.0/jellyfin.zip",
       "size": 7436,
       "checksum": "60907f28d6ebf19c6688f54cab0efbb585ec72341398ef022aada4e3abb9eea8"
     }

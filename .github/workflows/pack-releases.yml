@@ -1,0 +1,23 @@
+# Legt für jedes Pack, dessen download_url im Katalog auf ein GitHub Release
+# zeigt, das Release an und lädt die ZIP aus plugin_packs/<id>/ hoch.
+# Grund: GitHub zählt Downloads von Release-Assets (download_count).
+name: Pack-Releases
+
+on:
+  push:
+    branches: [main]
+    paths: ["catalog.json", "plugin_packs/**"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  releases:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fehlende Releases anlegen
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 tools/pack_releases.py
