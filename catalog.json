@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "generated": "2026-10-25T10:41:50Z",
+  "generated": "2026-10-25T11:04:07Z",
   "store": {
     "name": "Jan's Store",
     "author": "Jan",
@@ -140,17 +140,17 @@
     {
       "id": "phone-photos",
       "type": "integration",
-      "title": "Phone Photos",
+      "title": "Foto Cast",
       "author": "Jan",
       "description": "Show the photo you are looking at on your phone on the frame right away, on iPhone and Android without an extra app: from the share menu of the Photos app (iPhone shortcut), from an Android share app, or from the frame's phone page (QR code). The photo fills the screen for a few minutes, several photos take turns, then your playlist carries on. German, English or Spanish.",
-      "version": "0.1.2",
-      "updated": "2026-10-25T10:41:50Z",
+      "version": "0.1.3",
+      "updated": "2026-10-25T11:04:07Z",
       "thumbnails": [
-        "plugin_packs/phone-photos/thumb.webp"
+        "plugin_packs/phone-photos/thumb-foto-cast.webp"
       ],
       "download_url": "plugin_packs/phone-photos/PhonePhotos.zip",
-      "size": 87101,
-      "checksum": "2968af4d96c0981b8288202c9b623aaa63cfa9a87de21fd14aba4e14c716b290"
+      "size": 87185,
+      "checksum": "5f9c958db83b5153d9506e40af96949e92aee6db5cfe3602213489d642b8f044"
     },
     {
       "id": "magic-frame",
