@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "generated": "2026-10-25T10:28:57Z",
+  "generated": "2026-10-25T10:40:29Z",
   "store": {
     "name": "Jan's Store",
     "author": "Jan",
@@ -136,6 +136,21 @@
       "download_url": "plugin_packs/travel-map/TravelMap.zip",
       "size": 1611181,
       "checksum": "493ffca10e38e51c22f0b46d078414619857086e72cd38e08a65bbea34267be8"
+    },
+    {
+      "id": "phone-photos",
+      "type": "integration",
+      "title": "Phone Photos",
+      "author": "Jan",
+      "description": "Show the photo you are looking at on your phone on the frame right away, on iPhone and Android without an extra app: from the share menu of the Photos app (iPhone shortcut), from an Android share app, or from the frame's phone page (QR code). The photo fills the screen for a few minutes, several photos take turns, then your playlist carries on. German, English or Spanish.",
+      "version": "0.1.1",
+      "updated": "2026-10-25T10:40:29Z",
+      "thumbnails": [
+        "plugin_packs/phone-photos/thumb.webp"
+      ],
+      "download_url": "plugin_packs/phone-photos/PhonePhotos.zip",
+      "size": 86668,
+      "checksum": "1896a7c7a8299c88e613134fbe8447953c3114130bb300612e4ef89de4be6f44"
     },
     {
       "id": "magic-frame",
