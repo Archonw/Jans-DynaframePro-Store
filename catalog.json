@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "generated": "2026-10-25T13:27:26Z",
+  "generated": "2026-10-25T21:46:27Z",
   "store": {
     "name": "Jan's Store",
     "author": "Jan",
@@ -142,15 +142,15 @@
       "type": "integration",
       "title": "Foto Cast",
       "author": "Jan",
-      "description": "Show the photo you are looking at on your phone on the frame right away, on iPhone and Android without an extra app: from the share menu of the Photos app (iPhone shortcut), from an Android share app, or from the frame's phone page (QR code). The photo fills the screen for a few minutes, several photos take turns, then your playlist carries on. German, English or Spanish.",
-      "version": "0.1.3",
-      "updated": "2026-10-25T11:04:07Z",
+      "description": "Show the photo or video you are looking at on your phone on the frame right away, on iPhone and Android without an extra app: from the share menu of the Photos app or WhatsApp (iPhone shortcut), from an Android share app, or from the frame's phone page (QR code). Photos fill the screen for a few minutes, videos play once with sound, several take turns, then your playlist carries on. German, English or Spanish.",
+      "version": "0.3.0",
+      "updated": "2026-10-25T21:46:27Z",
       "thumbnails": [
         "plugin_packs/foto-cast/thumb-foto-cast.webp"
       ],
-      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/phone-photos-0.1.3/FotoCast.zip",
-      "size": 87185,
-      "checksum": "5f9c958db83b5153d9506e40af96949e92aee6db5cfe3602213489d642b8f044"
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/phone-photos-0.3.0/FotoCast.zip",
+      "size": 96172,
+      "checksum": "c93675e16d6533aa335951a692247b6906093850c565a2c1768b4acef7b3728a"
     },
     {
       "id": "youtube-cast",
