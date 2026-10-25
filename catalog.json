@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "generated": "2026-10-24T16:01:37Z",
+  "generated": "2026-10-25T09:16:24Z",
   "store": {
     "name": "Jan's Store",
     "author": "Jan",
@@ -59,8 +59,8 @@
       "title": "Fußball Live",
       "author": "Jan",
       "description": "Live scores, matchdays and tables for Bundesliga, Champions League, English, Scottish and Spanish leagues and cups, the World Cup and more. Installs the plugin together with its scene and can show it over the running playlist every few minutes. Pick your club to show its crest in the background and its colours as accent. German, English or Spanish.",
-      "version": "0.4.8",
-      "updated": "2026-10-24T15:31:11Z",
+      "version": "0.4.9",
+      "updated": "2026-10-25T09:16:24Z",
       "thumbnails": [
         "plugin_packs/fussball-live/thumb-hero.webp",
         "plugin_packs/fussball-live/thumb-landscape.webp",
@@ -69,8 +69,8 @@
         "plugin_packs/fussball-live/thumb-ucl.webp"
       ],
       "download_url": "plugin_packs/fussball-live/FussballLive.zip",
-      "size": 89974,
-      "checksum": "1606e4cbc6dd69b872ec013d0fe05bde14406b8c13e13d83edc21d208802223a"
+      "size": 90169,
+      "checksum": "a62d307a15935c0f380f0a7bd2ae7074cd45479cf982988eed5918601c1fe86f"
     },
     {
       "id": "american-football-live",
@@ -78,16 +78,16 @@
       "title": "American Football Live",
       "author": "Jan",
       "description": "Live scores, weeks and standings for the NFL, College Football (Top 25, SEC, Big Ten, Big 12, ACC), UFL and CFL. Installs the plugin together with its scene and can show it over the running playlist every few minutes or on a touchdown. Pick your team to show its logo in the background and its colours as accent. German, English or Spanish.",
-      "version": "0.2.8",
-      "updated": "2026-10-24T15:31:11Z",
+      "version": "0.2.9",
+      "updated": "2026-10-25T09:16:24Z",
       "thumbnails": [
         "plugin_packs/american-football-live/thumb-hero.webp",
         "plugin_packs/american-football-live/thumb-landscape.webp",
         "plugin_packs/american-football-live/thumb-portrait.webp"
       ],
       "download_url": "plugin_packs/american-football-live/AmericanFootballLive.zip",
-      "size": 82307,
-      "checksum": "b73b872ef04cdd22aadfa76eb8be56c97b45efa96f482a12930b094abd50b9a9"
+      "size": 82499,
+      "checksum": "78c3143a898f94b2f3207f8795c61ce8c61e03c41a1b50a9554d2e806640b792"
     },
     {
       "id": "world-map-live",
