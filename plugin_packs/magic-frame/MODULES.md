@@ -2,7 +2,7 @@
 
 This guide is complete on its own: you can hand it to an AI assistant together with a module of the original [MagicMirror²](https://github.com/MagicMirrorOrg/MagicMirror) (its GitHub link or files) and ask it to rebuild that module for Dynaframe's Magic Mirror. See [Porting a MagicMirror² module](#porting-a-magicmirror-module) below.
 
-A Dynaframe's Magic Mirror module is a folder with up to four files:
+A Dynaframe's Magic Mirror module is a folder with up to four files (a [skin](#skins) for the whole scene works the same way; to make a module fit the fields of skins see [Widgets](#widgets-modules-in-the-fields-of-a-skin)):
 
 ```
 magicframe/
@@ -102,9 +102,100 @@ Dynaframe's Magic Mirror imports this file in its own Python process and calls `
 
 Use only the Python standard library and `requests` (and `icalendar`, which Dynaframe's Magic Mirror already has): your plugin's own requirements may live in a different environment.
 
+## Widgets: modules in the fields of a skin
+
+A skin (see below) has fields instead of regions, and users choose what goes in each field: something the skin supplies itself (clock, date, weather at their location …) or one of their modules. A module can appear in a field in two ways:
+
+- **normal view** (widget type `module`): the module's own `render` draws into the field, scaled down. Every module can do this, nothing to add; a skin only offers it in fields big enough for it.
+- **as a widget type**: the module hands over its data in a fixed shape, and the skin draws it in its own style (LCD digits, coloured blocks …). Name the types in `module.json` and return the data from `widget(type, ctx)` in `module.js`:
+
+  ```json
+  "widgets": ["nowplaying"]
+  ```
+  ```js
+  window.MagicFrame.register("yourname.player", {
+    widget(type, ctx) {          // ctx as in render; return null while there is no data
+      const d = ctx.data;
+      return d && { title: d.track, artist: d.artist, cover: d.image, progress: d.position / d.length };
+    },
+    render(el, ctx) { … },
+  });
+  ```
+
+Widget types and their data (fields in [] may be left out):
+
+| Type | Data |
+|---|---|
+| `time`, `analog`, `date`, `year`, `weekdays`, `wifi` | none (drawn from the clock) |
+| `countdown` | `{[target: epoch seconds], [name]}` |
+| `weather`, `sunrise`, `sunset`, `weatherpicture` | `{current: {temp, code (WMO), isDay}, sunrise, sunset, [max], [min], imperial}` |
+| `forecast` | `{daily: [{day, code, max, min, [pop]}], imperial}` |
+| `picture` | `{url}` |
+| `headlines` | `{items: [{title, [source], [at]}]}` (shown one after the other) |
+| `list` | `{[title], items: [{title, [info], [badge], [icon]}], [empty]}` |
+| `values` | `{items: [{label, value, [icon]}]}` |
+| `text` | `{text, [icon]}` |
+| `nowplaying` | `{title, [artist], [cover], [progress 0..1], [playing]}` |
+
+`icon` is one of the scene's icon names (`ctx.h.icon`). The types are just names: a module may bring a new one, with `"widgetNames": {"yourname.score": {"en": "Score", "de": "Spielstand"}}` in `module.json`, and a skin that knows it can offer it. A new type needs a drawing: in a skin (`widgets` in `registerSkin`) or for all skins with `window.MagicFrame.registerWidget(type, {render(el, data, ctx), tick?(el, data, ctx)})`. The standard drawings are in `dynamic/widgets.js` of the plugin package.
+
+## Skins
+
+A skin redesigns the whole scene: the built-in skins "Retro LCD" and "Colour grid" are fixed layouts of fields, and users choose on the plugin page under **Look (skin)** what goes in each field. The modules' regions don't matter while a skin is on.
+
+A skin is packaged, installed and published exactly like a module (same folder, same catalog, ZIP link or store entry). Its `module.json`:
+
+```json
+{
+  "type": "yourname.retro",
+  "kind": "skin",
+  "name": {"de": "Retro", "en": "Retro", "es": "Retro"},
+  "description": {"en": "…"},
+  "version": "1.0.0",
+  "fetch": "fetch.py", "every": 600, "place": true,
+  "own": ["time", "date", "weather"],
+  "slots": [
+    {"id": "big", "name": {"en": "Big field"}, "default": "skin:time",
+     "accepts": ["time", "date", "weather", "headlines", "text", "nowplaying", "module"]},
+    {"id": "small", "name": {"en": "Small field"}, "default": "skin:weather", "accepts": ["weather", "date", "values"]}
+  ],
+  "fields": [
+    {"key": "color", "kind": "select", "default": "green", "label": {"en": "Colour"},
+     "options": [{"value": "green", "label": {"en": "Green"}}, {"value": "blue", "label": {"en": "Blue"}}]}
+  ]
+}
+```
+
+- `"kind": "skin"` makes it a skin. It has no `region` and no automatic `header` field. The names `standard`, `lcd` and `mosaic` are taken.
+- `slots`: the fields. `accepts` lists the widget types that fit (add `module` only where a normal module view has room). `default` is `skin:<type>` (something the skin supplies) or empty. Optional `max` (1 to 4, from 0.6.1): how many entries the field takes; the user then gets that many choices and the field splits into sub-fields stacked top to bottom (`.wmulti > .wslot`, each its own container). The value is then a comma list like `k1:list,skin:forecast`; `ctx.slot` is the field id and `ctx.part` the position. Style the split with `.your-skin .wmulti` if needed. Text size per field (from 0.6.3): set `"sizes": true` at the top of `module.json` to let users pick 50–200 % for every field, or `"size": true`/`false` on a single slot to allow or forbid it there. The core scales the field's content (`.wslot[data-scale]`, CSS variable `--wscale`); lists drop rows that no longer fit.
+- `own`: the types the skin supplies itself, from its own data: whatever its `fetch.py` returns (same as for modules) or nothing for clocks. The built-in skins fetch the weather at the user's location.
+- `module.js` registers with `registerSkin`. `render` draws the layout with one element per field, `data-slot="<id>"`, and optionally `data-caption="<id>"` for a label; the core fills the fields and keeps them up to date:
+
+  ```js
+  (function () {
+    const { esc } = window.MagicFrame.helpers;
+    window.MagicFrame.registerSkin("yourname.retro", {
+      render(root, ctx) {
+        root.innerHTML = `<div class="yourname-retro c-${esc(ctx.config.color)}">
+          <div class="big" data-slot="big"></div><div class="small" data-slot="small"></div></div>`;
+      },
+      widgets: {                 // optional: your own look for some types
+        time: { render(el, data, ctx) { … }, tick(el, data, ctx) { … } },
+      },
+    });
+  })();
+  ```
+- `ctx` in `render` has `config`, `data` (from your `fetch.py`), `error`, `lang`, `clock24`, `place`, `image` (the image under Background, or empty) and the helpers in `ctx.h`, including `clockParts(date, clock24)`, `analogSvg()`, `setHands(svg, date)`, `weatherScene(weather)`, `shortDate(date)`, `weekday(date)`.
+- Widget `ctx` has `slot`, `type`, `source` (`skin` or a module id), `config` (the skin's settings), `moduleConfig` (the module's settings, if it comes from a module), `title`, `caption(text)`, `lang`, `clock24`, `image` and `h`.
+- Give each field its colours with CSS variables: `--w-ink` (text), `--w-dim` (secondary), `--w-accent`, `--w-bg`. The standard widgets size themselves to the field (each field is a CSS size container). Some frames run an older Chromium without container queries; the core then rewrites `cqh`/`cqw`/`cqmin`/`cqmax` and simple `@container (aspect-ratio …)`, `(width …)`, `(height …)` rules in all loaded stylesheets, so stick to those. Scope your CSS under your own root class (`.yourname-retro …`); lay out with CSS grid and `vmin` units and add an `@media (orientation: landscape)` variant: frames run in portrait and landscape.
+- Own widget types: name them under `widgetNames` (`{"stardate": {"de": "Sternzeit", "en": "Stardate"}}`), list them in `own` and `accepts`, and draw them with `widgets` in `registerSkin` or with `MagicFrame.registerWidget(type, renderer)` (then other skins can use them too).
+- Fonts: add-ons can only bring `.js`, `.css` and `.py` files, so embed a font in `module.css` as a `data:font/woff2;base64,…` URL (only fonts whose licence allows it, e.g. SIL OFL; ship the licence text in the ZIP).
+- `ctx` in `fetch.py` has `ctx["weather"]()` (from 0.6.0): the weather at the user's location in the shape the weather widgets need, the same the built-in skins use.
+- The built-in skins in `dynamic/skins.js` and `dynamic/skins.css` of the plugin package are complete examples. A complete add-on skin is "Starship console" (`bordcomputer`) in [module-sources/bordcomputer](https://github.com/Archonw/Jans-DynaframePro-Store/tree/main/plugin_packs/magic-frame/module-sources/bordcomputer).
+
 ## Packaging and publishing
 
-Put the files in one folder named `magicframe-<type>/` and zip that folder. The same ZIP works for all three ways in: as a ZIP link, in a module catalog and as a store entry. To offer an update, raise `version` in `module.json` and in your catalog or store entry.
+Put the files in one folder named `magicframe-<type>/` and zip that folder. The same ZIP works for all four ways in: as a ZIP link, as a ZIP file uploaded on the plugin page (**Install ZIP file**, from 0.6.0), in a module catalog and as a store entry. To offer an update, raise `version` in `module.json` and in your catalog or store entry.
 
 A store entry in a DynaFrame store `catalog.json` looks like this (`size` in bytes and `checksum` as SHA-256 of the ZIP):
 
