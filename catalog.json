@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "generated": "2026-10-25T21:46:27Z",
+  "generated": "2026-10-25T21:00:00Z",
   "store": {
     "name": "Jan's Store",
     "author": "Jan",
@@ -40,18 +40,20 @@
     },
     {
       "id": "jellyfin-now-playing",
-      "type": "plugin",
+      "type": "integration",
       "title": "Jellyfin Now Playing",
       "author": "Jan",
-      "description": "Shows the cover of the movie, series or album a chosen Jellyfin user is watching right now.",
-      "version": "0.3.7",
-      "updated": "2026-10-24T16:01:37Z",
+      "description": "Shows what a chosen Jellyfin user is watching or listening to, on the whole screen, for as long as it plays: cover, backdrop, title, episode, year, genres, plot and progress. Installs the plugin together with its scene. All settings on its own plugin page, in German, English or Spanish.",
+      "version": "0.4.2",
+      "updated": "2026-10-25T21:00:00Z",
       "thumbnails": [
-        "plugin_packs/jellyfin/thumb-v2.webp"
+        "plugin_packs/jellyfin/thumb-v2.webp",
+        "plugin_packs/jellyfin/thumb-film.webp",
+        "plugin_packs/jellyfin/thumb-serie-hoch.webp"
       ],
-      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/jellyfin-now-playing-0.3.7/JellyfinNowPlaying.zip",
-      "size": 17562,
-      "checksum": "295bbb9251982aa0d9eddeef9484b5cb59bc359f2017c873281f68f890996eea"
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/jellyfin-now-playing-0.4.2/JellyfinNowPlaying.zip",
+      "size": 77044,
+      "checksum": "b63064f83ac4380c6bf730c45ce54a09ec61cb3617eda81a942c6992be7d5e77"
     },
     {
       "id": "fussball-live",
