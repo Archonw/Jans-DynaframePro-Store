@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "generated": "2026-10-25T11:06:20Z",
+  "generated": "2026-10-25T11:11:25Z",
   "store": {
     "name": "Jan's Store",
     "author": "Jan",
@@ -151,6 +151,21 @@
       "download_url": "plugin_packs/foto-cast/FotoCast.zip",
       "size": 87185,
       "checksum": "5f9c958db83b5153d9506e40af96949e92aee6db5cfe3602213489d642b8f044"
+    },
+    {
+      "id": "youtube-cast",
+      "type": "integration",
+      "title": "YouTube Cast",
+      "author": "Jan",
+      "description": "Cast YouTube videos from your phone to the frame, like to a TV: tap the cast button in the YouTube app and choose the frame (Android and iPhone, on the same Wi-Fi or once linked with a TV code). The app becomes the remote for pause, seek and volume. Links can also be sent from a phone page or the iPhone share menu. Afterwards your playlist carries on. German, English or Spanish.",
+      "version": "0.1.1",
+      "updated": "2026-10-25T11:11:25Z",
+      "thumbnails": [
+        "plugin_packs/youtube-cast/thumb.webp"
+      ],
+      "download_url": "plugin_packs/youtube-cast/YouTubeCast.zip",
+      "size": 87704,
+      "checksum": "3538eee1651947097b3165de7c4fec7b598b34cc5dd59c727983d70cb19d9298"
     },
     {
       "id": "magic-frame",
