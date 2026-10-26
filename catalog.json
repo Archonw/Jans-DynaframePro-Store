@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "generated": "2026-10-25T21:00:00Z",
+  "generated": "2026-10-26T23:17:02Z",
   "store": {
     "name": "Jan's Store",
     "author": "Jan",
@@ -258,6 +258,21 @@
       "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/magic-mirror-module-jellyfin-1.0.0/jellyfin.zip",
       "size": 7436,
       "checksum": "60907f28d6ebf19c6688f54cab0efbb585ec72341398ef022aada4e3abb9eea8"
+    },
+    {
+      "id": "settings-backup",
+      "type": "plugin",
+      "title": "Settings Backup",
+      "author": "Jan",
+      "description": "Saves the settings of all your plugins and scenes to one file and puts them back, on this frame or on another one. Missing stores are added and missing packs installed from the stores they came from, plugins without a store travel with their code, and settings take effect right away. With a password the file is encrypted and also carries API keys and passwords; without one they are left out. Every restore can be undone. German, English or Spanish.",
+      "version": "0.3.1",
+      "updated": "2026-10-26T23:17:02Z",
+      "thumbnails": [
+        "plugin_packs/settings-backup/thumb.webp"
+      ],
+      "download_url": "plugin_packs/settings-backup/SettingsBackup.zip",
+      "size": 56119,
+      "checksum": "e08afa7693a552de126dd01395314012c9f8a65d1ec74381dd0ae59d75af7e92"
     }
   ]
 }
