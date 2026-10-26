@@ -270,7 +270,7 @@
       "thumbnails": [
         "plugin_packs/settings-backup/thumb.webp"
       ],
-      "download_url": "plugin_packs/settings-backup/SettingsBackup.zip",
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/settings-backup-0.3.1/SettingsBackup.zip",
       "size": 56119,
       "checksum": "e08afa7693a552de126dd01395314012c9f8a65d1ec74381dd0ae59d75af7e92"
     }
