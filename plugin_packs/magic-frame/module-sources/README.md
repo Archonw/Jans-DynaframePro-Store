@@ -4,6 +4,7 @@ Unpacked sources of the add-on modules for Dynaframe's Magic Mirror, as examples
 
 | Folder | What it shows | Rebuild of |
 |---|---|---|
+| `homeassistant` | values, house status, room climate, presence and bin collection from Home Assistant in one module with a view per instance; one login shared via `ctx["shared"]`, rooms from HA areas via `/api/template` | |
 | `wifi` | network name, password and a QR code; the QR library is bundled into `module.js` (`module.src.js` + `lib/`, built with `build.sh`) | MMM-WiFiPassword |
 | `webuntis` | timetable, exams, homework; QR or password login in `fetch.py` | MMM-Webuntis |
 | `musicassistant` | now playing via a WebSocket written with the Python standard library | MMM-MusicAssistant |

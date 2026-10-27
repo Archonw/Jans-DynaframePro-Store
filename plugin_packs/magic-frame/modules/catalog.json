@@ -2,6 +2,22 @@
   "name": "Jan's Magic Mirror modules",
   "modules": [
     {
+      "type": "homeassistant",
+      "name": {
+        "de": "Home Assistant",
+        "en": "Home Assistant",
+        "es": "Home Assistant"
+      },
+      "description": {
+        "de": "Alles aus Home Assistant in einem Modul, je Platz eine Ansicht: Werte beliebiger Entitäten, Haus-Status (nur offene Fenster, Schlösser, Melder, leere Akkus), Raumklima je Raum, Anwesenheit und Müllabfuhr (auch per ICS-Link ohne Home Assistant). Adresse und Token nur einmal eintragen. Kein offizielles Produkt von Home Assistant. Braucht Dynaframe's Magic Mirror 0.7.0 oder neuer.",
+        "en": "Everything from Home Assistant in one module, one view per spot: values of any entities, house status (only open windows, locks, alarms, low batteries), climate per room, presence and bin collection (also from an ICS link without Home Assistant). Enter address and token only once. Not an official Home Assistant product. Needs Dynaframe's Magic Mirror 0.7.0 or newer.",
+        "es": "Todo de Home Assistant en un módulo, una vista por sitio: valores de cualquier entidad, estado de la casa (solo ventanas abiertas, cerraduras, alarmas, baterías bajas), clima por habitación, presencia y recogida de basura (también con enlace ICS sin Home Assistant). Dirección y token solo una vez. No es un producto oficial de Home Assistant. Necesita Dynaframe's Magic Mirror 0.7.0 o posterior."
+      },
+      "version": "1.0.0",
+      "author": "Jan",
+      "zip": "homeassistant.zip"
+    },
+    {
       "type": "pegelstand",
       "name": {
         "de": "Pegelstand",

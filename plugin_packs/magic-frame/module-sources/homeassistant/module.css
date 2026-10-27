@@ -1,0 +1,56 @@
+/* Home Assistant (Zusatzmodul) */
+.ha td { padding: calc(.3 * var(--u)) 0; vertical-align: middle; }
+.ha .name { text-align: left; padding-right: calc(1.5 * var(--u)); }
+.ha .state { text-align: right; white-space: nowrap; }
+.ha tr.alert .state, .ha tr.alert .sym { color: var(--accent); }
+.ha .sym { width: 1.2em; padding-right: calc(.8 * var(--u)); color: #999; text-align: center; }
+body.light-bg .ha .sym { color: #666; }
+
+/* Haus-Status */
+.ha-ok { display: flex; align-items: center; gap: calc(.8 * var(--u)); }
+.ha-ok .ic { color: #6fcf97; font-size: 1.3em; }
+.ha-alerts .sym, .ha-alerts .state { color: var(--accent); }
+.ha-alerts tr.k-safety .sym, .ha-alerts tr.k-safety .state { color: var(--bad); }
+.ha-alerts tr.k-battery .sym, .ha-alerts tr.k-battery .state { color: var(--normal); }
+.ha-alerts .state .xsmall { font-size: .75em; }
+
+/* Raumklima */
+.ha-tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(calc(15 * var(--u)), 1fr)); gap: calc(1 * var(--u));
+  max-width: calc(70 * var(--u)); }
+.region.right .ha-tiles { margin-left: auto; }
+.region.center .ha-tiles, .region.bar .ha-tiles { margin: 0 auto; }
+.ha-tile { padding: calc(1 * var(--u)) calc(1.2 * var(--u)); border: 1px solid var(--line); border-radius: calc(.8 * var(--u));
+  text-align: left; }
+.ha-tile .ha-temp { font-size: calc(4.2 * var(--u)); margin: calc(.3 * var(--u)) 0; }
+.ha-tile .ha-room { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.ha-tile .ha-room .heat { color: #f2994a; }
+.ha-extra { display: flex; gap: calc(1 * var(--u)); flex-wrap: wrap; }
+.ha-climate-list .extra { padding-left: calc(1.2 * var(--u)); white-space: nowrap; }
+.ha-climate-list .extra span + span { margin-left: calc(.8 * var(--u)); }
+.ha .warn, .ha-tile .warn { color: var(--accent); }
+.ha .bad, .ha-tile .bad { color: var(--bad); }
+
+/* Anwesenheit */
+.ha-people { display: flex; gap: calc(1.6 * var(--u)); flex-wrap: wrap; }
+.region.right .ha-people { justify-content: flex-end; }
+.region.center .ha-people, .region.bar .ha-people { justify-content: center; }
+.ha-person { text-align: center; width: calc(8 * var(--u)); }
+.ha-face { display: inline-flex; align-items: center; justify-content: center; overflow: hidden; border-radius: 50%;
+  width: calc(6.5 * var(--u)); height: calc(6.5 * var(--u)); background: #333; color: #fff; font-size: calc(2.4 * var(--u));
+  box-shadow: 0 0 0 calc(.35 * var(--u)) var(--line); margin-bottom: calc(.5 * var(--u)); }
+.ha-face img { width: 100%; height: 100%; object-fit: cover; }
+.home .ha-face { box-shadow: 0 0 0 calc(.35 * var(--u)) #6fcf97; }
+.away .ha-face { opacity: .45; filter: grayscale(1); }
+.ha-people-list .ha-face { width: calc(3.4 * var(--u)); height: calc(3.4 * var(--u)); font-size: calc(1.4 * var(--u)); margin: 0; }
+.ha-people-list tr.away .name, .ha-people-list tr.away .state { color: var(--dimmed); }
+
+/* Müllabfuhr */
+.ha-waste .when { width: 1%; text-align: left; padding-right: calc(2 * var(--u)); white-space: nowrap; }
+.ha-waste .bins { text-align: left; }
+.ha-waste tr.soon .bins { color: var(--bright); }
+.ha-bin { display: inline-flex; align-items: center; gap: calc(.4 * var(--u)); margin-right: calc(1.2 * var(--u)); }
+.ha-bin .ic { font-size: 1.2em; }
+
+/* In der Mitte und in den Leisten nicht über die ganze Breite ziehen */
+.region.center table.ha, .region.bar table.ha { width: auto; margin: 0 auto; min-width: 40%; }
+.region.center .ha-ok, .region.bar .ha-ok { justify-content: center; }

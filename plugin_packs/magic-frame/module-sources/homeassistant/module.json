@@ -1,0 +1,454 @@
+{
+ "type": "homeassistant",
+ "name": {
+  "de": "Home Assistant",
+  "en": "Home Assistant",
+  "es": "Home Assistant"
+ },
+ "description": {
+  "de": "Alles aus Home Assistant in einem Modul, je Platz eine Ansicht: Werte beliebiger Entitäten, Haus-Status (nur offene Fenster, Schlösser, Melder, leere Akkus), Raumklima je Raum, Anwesenheit und Müllabfuhr (auch per ICS-Link ohne Home Assistant). Adresse und Token nur einmal eintragen. Kein offizielles Produkt von Home Assistant. Braucht Dynaframe's Magic Mirror 0.7.0 oder neuer.",
+  "en": "Everything from Home Assistant in one module, one view per spot: values of any entities, house status (only open windows, locks, alarms, low batteries), climate per room, presence and bin collection (also from an ICS link without Home Assistant). Enter address and token only once. Not an official Home Assistant product. Needs Dynaframe's Magic Mirror 0.7.0 or newer.",
+  "es": "Todo de Home Assistant en un módulo, una vista por sitio: valores de cualquier entidad, estado de la casa (solo ventanas abiertas, cerraduras, alarmas, baterías bajas), clima por habitación, presencia y recogida de basura (también con enlace ICS sin Home Assistant). Dirección y token solo una vez. No es un producto oficial de Home Assistant. Necesita Dynaframe's Magic Mirror 0.7.0 o posterior."
+ },
+ "version": "1.0.0",
+ "author": "Jan",
+ "region": "middle_left",
+ "script": "module.js",
+ "style": "module.css",
+ "fetch": "fetch.py",
+ "every": 30,
+ "visibleOnly": true,
+ "widgets": [
+  "values",
+  "list",
+  "text"
+ ],
+ "fields": [
+  {
+   "key": "view",
+   "kind": "select",
+   "default": "values",
+   "label": {
+    "de": "Ansicht",
+    "en": "View",
+    "es": "Vista"
+   },
+   "options": [
+    {
+     "value": "values",
+     "label": {
+      "de": "Werte",
+      "en": "Values",
+      "es": "Valores"
+     }
+    },
+    {
+     "value": "status",
+     "label": {
+      "de": "Haus-Status (nur Auffälliges)",
+      "en": "House status (only what needs attention)",
+      "es": "Estado de la casa (solo lo importante)"
+     }
+    },
+    {
+     "value": "climate",
+     "label": {
+      "de": "Raumklima",
+      "en": "Room climate",
+      "es": "Clima interior"
+     }
+    },
+    {
+     "value": "presence",
+     "label": {
+      "de": "Anwesenheit",
+      "en": "Presence",
+      "es": "Presencia"
+     }
+    },
+    {
+     "value": "waste",
+     "label": {
+      "de": "Müllabfuhr",
+      "en": "Bin collection",
+      "es": "Recogida de basura"
+     }
+    }
+   ]
+  },
+  {
+   "key": "source",
+   "kind": "select",
+   "default": "ha",
+   "label": {
+    "de": "Termine aus",
+    "en": "Dates from",
+    "es": "Fechas de"
+   },
+   "showIf": {
+    "view": "waste"
+   },
+   "options": [
+    {
+     "value": "ha",
+     "label": {
+      "de": "Home Assistant",
+      "en": "Home Assistant",
+      "es": "Home Assistant"
+     }
+    },
+    {
+     "value": "ics",
+     "label": {
+      "de": "ICS-Link vom Abfallkalender",
+      "en": "ICS link from the waste calendar",
+      "es": "enlace ICS del calendario de basura"
+     }
+    }
+   ]
+  },
+  {
+   "key": "urls",
+   "kind": "textarea",
+   "default": "",
+   "label": {
+    "de": "ICS-Link (einer pro Zeile)",
+    "en": "ICS link (one per line)",
+    "es": "Enlace ICS (uno por línea)"
+   },
+   "showIf": {
+    "view": "waste",
+    "source": "ics"
+   },
+   "hint": {
+    "de": "Den Link gibt es meist auf der Seite deines Entsorgers oder deiner Stadt unter „Abfuhrkalender“ → „iCal“ oder „Kalender abonnieren“.",
+    "en": "Your waste company or town usually offers it under “collection calendar” → “iCal” or “subscribe”.",
+    "es": "Suele estar en la web de tu ayuntamiento o empresa de recogida como «iCal» o «suscribirse»."
+   }
+  },
+  {
+   "key": "url",
+   "kind": "text",
+   "default": "",
+   "label": {
+    "de": "Adresse von Home Assistant",
+    "en": "Home Assistant address",
+    "es": "Dirección de Home Assistant"
+   },
+   "hint": {
+    "de": "z. B. http://homeassistant.local:8123. Nur bei einem Home-Assistant-Modul nötig, die anderen übernehmen Adresse und Token.",
+    "en": "e.g. http://homeassistant.local:8123. Only needed in one Home Assistant module, the others use its address and token.",
+    "es": "p. ej. http://homeassistant.local:8123. Solo hace falta en un módulo de Home Assistant; los demás usan su dirección y token."
+   }
+  },
+  {
+   "key": "token",
+   "kind": "secret",
+   "default": "",
+   "label": {
+    "de": "Langzeit-Zugangstoken",
+    "en": "Long-lived access token",
+    "es": "Token de acceso de larga duración"
+   },
+   "hint": {
+    "de": "In Home Assistant: Profil → Sicherheit → „Token erstellen“. Leer lassen, wenn ein anderes Home-Assistant-Modul schon eins hat.",
+    "en": "In Home Assistant: Profile → Security → “Create token”. Leave empty if another Home Assistant module already has one.",
+    "es": "En Home Assistant: Perfil → Seguridad → «Crear token». Déjalo vacío si otro módulo de Home Assistant ya tiene uno."
+   }
+  },
+  {
+   "key": "entities",
+   "kind": "textarea",
+   "default": "",
+   "picker": "homeassistant",
+   "label": {
+    "de": "Entitäten (eine pro Zeile)",
+    "en": "Entities (one per line)",
+    "es": "Entidades (una por línea)"
+   },
+   "hint": {
+    "de": "Werte: „sensor.wohnzimmer_temperatur“ oder mit eigenem Namen „Wohnzimmer = sensor.wohnzimmer_temperatur“. Haus-Status: leer = automatisch alle Fenster, Türen, Schlösser, Melder und Akkus; eigene Regeln wie „CO₂ Büro = sensor.buero_co2 > 1000“ oder „lock.haustuer != locked“. Anwesenheit: leer = alle Personen. Müllabfuhr: Kalender oder Sensoren, leer = alles mit Abfall, Müll oder Tonne im Namen.",
+    "en": "Values: “sensor.living_room_temperature” or with your own name “Living room = sensor.living_room_temperature”. House status: empty = all windows, doors, locks, alarms and batteries automatically; own rules like “Office CO₂ = sensor.office_co2 > 1000” or “lock.front_door != locked”. Presence: empty = everyone. Bin collection: calendars or sensors, empty = anything with waste, trash or bin in its name.",
+    "es": "Valores: «sensor.salon_temperatura» o con nombre propio «Salón = sensor.salon_temperatura». Estado de la casa: vacío = todas las ventanas, puertas, cerraduras, detectores y baterías; reglas propias como «CO₂ oficina = sensor.oficina_co2 > 1000» o «lock.puerta != locked». Presencia: vacío = todas las personas. Basura: calendarios o sensores; vacío = todo con basura o residuos en el nombre."
+   }
+  },
+  {
+   "key": "icons",
+   "kind": "bool",
+   "default": true,
+   "label": {
+    "de": "Symbole zeigen",
+    "en": "Show icons",
+    "es": "Mostrar iconos"
+   },
+   "showIf": {
+    "view": "values"
+   }
+  },
+  {
+   "key": "ignore",
+   "kind": "text",
+   "default": "",
+   "showIf": {
+    "view": "status"
+   },
+   "label": {
+    "de": "Nicht beachten (Wörter oder Entitäten, mit Komma)",
+    "en": "Ignore (words or entities, comma-separated)",
+    "es": "Ignorar (palabras o entidades, separadas por comas)"
+   },
+   "hint": {
+    "de": "z. B. Dachfenster, Gartentor",
+    "en": "e.g. skylight, garden gate",
+    "es": "p. ej. claraboya, puerta del jardín"
+   }
+  },
+  {
+   "key": "battery",
+   "kind": "number",
+   "default": 20,
+   "min": 1,
+   "max": 100,
+   "showIf": {
+    "view": "status"
+   },
+   "label": {
+    "de": "Akku melden unter … %",
+    "en": "Report batteries below … %",
+    "es": "Avisar baterías por debajo de … %"
+   }
+  },
+  {
+   "key": "whenOk",
+   "kind": "select",
+   "default": "text",
+   "showIf": {
+    "view": "status"
+   },
+   "label": {
+    "de": "Wenn alles in Ordnung ist",
+    "en": "When all is fine",
+    "es": "Cuando todo está bien"
+   },
+   "options": [
+    {
+     "value": "text",
+     "label": {
+      "de": "„Alles in Ordnung“ zeigen",
+      "en": "show “All good”",
+      "es": "mostrar «Todo en orden»"
+     }
+    },
+    {
+     "value": "hide",
+     "label": {
+      "de": "Modul ausblenden",
+      "en": "hide the module",
+      "es": "ocultar el módulo"
+     }
+    }
+   ]
+  },
+  {
+   "key": "okText",
+   "kind": "text",
+   "default": "",
+   "showIf": {
+    "view": "status"
+   },
+   "label": {
+    "de": "Eigener Text für „Alles in Ordnung“",
+    "en": "Own text for “All good”",
+    "es": "Texto propio para «Todo en orden»"
+   }
+  },
+  {
+   "key": "since",
+   "kind": "bool",
+   "default": true,
+   "showIf": {
+    "view": "status"
+   },
+   "label": {
+    "de": "Seit wann zeigen",
+    "en": "Show since when",
+    "es": "Mostrar desde cuándo"
+   }
+  },
+  {
+   "key": "rooms",
+   "kind": "textarea",
+   "default": "",
+   "showIf": {
+    "view": "climate"
+   },
+   "label": {
+    "de": "Räume (leer = automatisch)",
+    "en": "Rooms (empty = automatic)",
+    "es": "Habitaciones (vacío = automático)"
+   },
+   "hint": {
+    "de": "Eine Zeile je Raum: „Wohnzimmer = sensor.wz_temperatur, sensor.wz_feuchte“. Leer: alle Bereiche in Home Assistant mit Temperatursensor oder Thermostat.",
+    "en": "One line per room: “Living room = sensor.lr_temperature, sensor.lr_humidity”. Empty: all Home Assistant areas with a temperature sensor or thermostat.",
+    "es": "Una línea por habitación: «Salón = sensor.salon_temperatura, sensor.salon_humedad». Vacío: todas las áreas con sensor de temperatura o termostato."
+   }
+  },
+  {
+   "key": "layout",
+   "kind": "select",
+   "default": "tiles",
+   "showIf": {
+    "view": "climate"
+   },
+   "label": {
+    "de": "Darstellung",
+    "en": "Layout",
+    "es": "Presentación"
+   },
+   "options": [
+    {
+     "value": "tiles",
+     "label": {
+      "de": "Kacheln",
+      "en": "tiles",
+      "es": "fichas"
+     }
+    },
+    {
+     "value": "list",
+     "label": {
+      "de": "Liste",
+      "en": "list",
+      "es": "lista"
+     }
+    }
+   ]
+  },
+  {
+   "key": "humidity",
+   "kind": "bool",
+   "default": true,
+   "showIf": {
+    "view": "climate"
+   },
+   "label": {
+    "de": "Luftfeuchte zeigen",
+    "en": "Show humidity",
+    "es": "Mostrar humedad"
+   }
+  },
+  {
+   "key": "co2",
+   "kind": "bool",
+   "default": true,
+   "showIf": {
+    "view": "climate"
+   },
+   "label": {
+    "de": "CO₂ zeigen (falls vorhanden)",
+    "en": "Show CO₂ (if available)",
+    "es": "Mostrar CO₂ (si existe)"
+   }
+  },
+  {
+   "key": "people",
+   "kind": "select",
+   "default": "avatars",
+   "showIf": {
+    "view": "presence"
+   },
+   "label": {
+    "de": "Darstellung",
+    "en": "Layout",
+    "es": "Presentación"
+   },
+   "options": [
+    {
+     "value": "avatars",
+     "label": {
+      "de": "Bilder nebeneinander",
+      "en": "pictures side by side",
+      "es": "fotos en fila"
+     }
+    },
+    {
+     "value": "list",
+     "label": {
+      "de": "Liste",
+      "en": "list",
+      "es": "lista"
+     }
+    }
+   ]
+  },
+  {
+   "key": "pictures",
+   "kind": "bool",
+   "default": true,
+   "showIf": {
+    "view": "presence"
+   },
+   "label": {
+    "de": "Profilbilder aus Home Assistant",
+    "en": "Profile pictures from Home Assistant",
+    "es": "Fotos de perfil de Home Assistant"
+   }
+  },
+  {
+   "key": "onlyHome",
+   "kind": "bool",
+   "default": false,
+   "showIf": {
+    "view": "presence"
+   },
+   "label": {
+    "de": "Nur Anwesende zeigen",
+    "en": "Only show people at home",
+    "es": "Mostrar solo a los que están en casa"
+   }
+  },
+  {
+   "key": "count",
+   "kind": "number",
+   "default": 3,
+   "min": 1,
+   "max": 10,
+   "showIf": {
+    "view": "waste"
+   },
+   "label": {
+    "de": "Höchstens … Termine",
+    "en": "At most … dates",
+    "es": "Como máximo … fechas"
+   }
+  },
+  {
+   "key": "days",
+   "kind": "number",
+   "default": 14,
+   "min": 1,
+   "max": 60,
+   "showIf": {
+    "view": "waste"
+   },
+   "label": {
+    "de": "Tage im Voraus",
+    "en": "Days ahead",
+    "es": "Días por adelantado"
+   }
+  },
+  {
+   "key": "onlySoon",
+   "kind": "bool",
+   "default": false,
+   "showIf": {
+    "view": "waste"
+   },
+   "label": {
+    "de": "Nur zeigen, wenn heute oder morgen etwas abgeholt wird",
+    "en": "Only show when something is collected today or tomorrow",
+    "es": "Mostrar solo si hay recogida hoy o mañana"
+   }
+  }
+ ]
+}
