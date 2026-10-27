@@ -1,0 +1,126 @@
+/* Bordcomputer-Skin für Dynaframe's Magic Mirror. Schrift: Antonio (SIL Open Font License,
+   Vernon Adams), eingebettet, weil Zusätze nur js/css/py mitbringen dürfen.
+   Alles unter .bc, damit nichts in andere Skins oder Module läuft. */
+@font-face { font-family: "BC Antonio"; font-weight: 400; font-display: block; src: url("data:font/woff2;base64,@@ANTONIO400@@") format("woff2"); }
+@font-face { font-family: "BC Antonio"; font-weight: 700; font-display: block; src: url("data:font/woff2;base64,@@ANTONIO700@@") format("woff2"); }
+
+.bc {
+  --c1: #ff9c00; --c2: #cc99cc; --c3: #ffcc99; --c4: #9999ff; --c5: #cc6666; --c6: #ffaa90; --text: #ff9c00; --soft: #ffcc99;
+  --side: 15vmin; --bar: 2.6vmin; --gap: .9vmin; --r: 5vmin; --pad: 2.4vmin;
+  --w-ink: var(--soft); --w-dim: color-mix(in srgb, var(--soft) 55%, transparent); --w-accent: var(--c1); --w-bg: #000;
+  position: absolute; inset: 0; background: #000; color: var(--soft); overflow: hidden;
+  font-family: "BC Antonio", "Antonio", "Oswald", "Roboto Condensed", "Arial Narrow", sans-serif; text-transform: uppercase;
+  display: grid; grid-template-rows: minmax(0, 1fr) minmax(0, 2.6fr); gap: var(--gap); padding: 2.2vmin;
+}
+.bc.pal-blue { --c1: #6688ee; --c2: #99ccff; --c3: #aaccee; --c4: #5566cc; --c5: #cc99cc; --c6: #88bbdd; --text: #99ccff; --soft: #cfe3ff; }
+.bc.pal-red { --c1: #dd4444; --c2: #ff7766; --c3: #ffaa99; --c4: #aa3333; --c5: #ff5555; --c6: #cc6655; --text: #ff6655; --soft: #ffc2b8; }
+
+/* Rahmen: links die Säule aus Balken, an einem Ende der Bogen in die waagrechte Leiste */
+.bc .frame { position: relative; display: grid; grid-template-columns: var(--side) minmax(0, 1fr); column-gap: var(--pad); min-height: 0; }
+.bc .side { display: flex; flex-direction: column; gap: var(--gap); min-height: 0; }
+.bc .pill { flex: 1 1 0; min-height: 0; background: var(--c); display: flex; align-items: flex-end; justify-content: flex-end;
+  padding: 0 .9vmin .5vmin; color: #000; font-size: 2.1vmin; letter-spacing: .04em; overflow: hidden; transition: filter .3s; }
+.bc .pill.big { flex-grow: 2.2; }
+.bc .pill.on { filter: brightness(1.35); }
+.bc .pill.cap { flex: 0 0 4vmin; border-radius: 0 0 0 2vmin; }
+
+/* Bogen am Ende der Säule: Ecke, Verbindung zur Leiste und die runde Innenecke */
+.bc .elbow { position: relative; flex: 0 0 calc(var(--bar) + var(--r)); }
+.bc .elbow .ec { position: absolute; left: 0; top: 0; bottom: 0; width: var(--side); background: var(--c); }
+.bc .elbow .eb { position: absolute; left: var(--side); width: calc(var(--pad) + 1px); height: var(--bar); background: var(--c); }
+.bc .elbow .ei { position: absolute; left: var(--side); width: var(--r); height: var(--r); background: var(--c); }
+.bc .elbow .ei::after { content: ""; position: absolute; inset: 0; background: #000; }
+.bc .elbow.down .ec { border-radius: 0 0 0 calc(var(--r) * 1.6); }
+.bc .elbow.down .eb { bottom: 0; } .bc .elbow.down .ei { bottom: var(--bar); } .bc .elbow.down .ei::after { border-bottom-left-radius: var(--r); }
+.bc .elbow.up .ec { border-radius: calc(var(--r) * 1.6) 0 0 0; }
+.bc .elbow.up .eb { top: 0; } .bc .elbow.up .ei { top: var(--bar); } .bc .elbow.up .ei::after { border-top-left-radius: var(--r); }
+.bc .elbow .num { position: absolute; left: 0; width: var(--side); padding: 0 .9vmin; color: #000; font-size: 2.1vmin; text-align: right; }
+.bc .elbow.down .num { top: .5vmin; } .bc .elbow.up .num { bottom: .5vmin; }
+
+/* Die Leiste: farbige Stücke mit schwarzen Fugen, am Ende rund */
+.bc .rail { position: absolute; left: calc(var(--side) + var(--pad)); right: 0; height: var(--bar); display: flex; gap: var(--gap); z-index: 1; }
+.bc .upper .rail { bottom: 0; } .bc .lower .rail { top: 0; }
+.bc .rail i { display: block; height: 100%; background: var(--c); flex: var(--f, 1) 1 0; min-width: 0; }
+.bc .rail i:first-child { margin-left: -1px; }
+.bc .rail i:last-child { border-radius: 0 var(--bar) var(--bar) 0; flex: 0 0 calc(var(--bar) * 1.6); }
+
+/* Inhalt */
+.bc .body { position: relative; min-width: 0; min-height: 0; display: grid; gap: var(--pad); }
+.bc .upper .body { padding-bottom: calc(var(--bar) + var(--pad)); grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr);
+  grid-template-rows: auto minmax(0, 1fr); grid-template-areas: "title title" "time info"; row-gap: .6vmin; }
+.bc .lower .body { padding-top: calc(var(--bar) + var(--pad)); grid-template-columns: minmax(0, 2.2fr) minmax(0, 1fr);
+  grid-template-rows: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, .42fr);
+  grid-template-areas: "main a" "main b" "main c" "ticker ticker"; }
+.bc .title { grid-area: title; justify-self: end; color: var(--text); font-size: 6.4vmin; line-height: .9; letter-spacing: .02em; white-space: nowrap; }
+.bc .s-time { grid-area: time; } .bc .s-info { grid-area: info; } .bc .s-main { grid-area: main; }
+.bc .s-a { grid-area: a; } .bc .s-b { grid-area: b; } .bc .s-c { grid-area: c; } .bc .s-ticker { grid-area: ticker; }
+
+/* Ein Feld: kleine Beschriftung über einer Linie in der Farbe des Felds */
+.bc .panel { display: flex; flex-direction: column; min-width: 0; min-height: 0; gap: .5vmin; }
+.bc .panel > header { display: flex; align-items: center; gap: .8vmin; flex: none; height: 2.6vmin; }
+.bc .panel > header::before { content: ""; width: 3.2vmin; height: 100%; background: var(--c); border-radius: 1.3vmin 0 0 1.3vmin; }
+.bc .panel > header::after { content: ""; flex: 1; height: .5vmin; background: var(--c); opacity: .55; }
+.bc .panel > header span { color: var(--c); font-size: 2.3vmin; letter-spacing: .05em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 70%; }
+.bc .panel > header span:empty { display: none; }
+.bc .panel > [data-slot] { flex: 1; }
+.bc .s-time > header, .bc .s-ticker > header { display: none; }
+/* Hauptschirm mit mehreren Inhalten: der erste bekommt am meisten Platz, dazwischen eine feine Linie */
+.bc .wmulti { gap: var(--pad); }
+.bc .wmulti > .wslot:first-child { flex-grow: 1.5; }
+.bc .wmulti > .wslot + .wslot::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: .35vmin; z-index: 1;
+  background: linear-gradient(90deg, var(--c) 0 12%, transparent 12% 13.5%, color-mix(in srgb, var(--c) 45%, transparent) 13.5%); }
+.bc .s-ticker { border-left: 1.4vmin solid var(--c); padding-left: 1.4vmin; border-radius: 1vmin 0 0 1vmin; }
+
+/* Widgets im Stil des Bordcomputers */
+.bc .w { font-weight: 400; letter-spacing: .02em; }
+.bc .w b { font-weight: 700; color: var(--c, var(--text)); }
+.bc .w-time .hm { color: var(--text); font-weight: 400; letter-spacing: .01em; }
+.bc .s-time .w { align-items: flex-start; justify-content: center; padding-left: 0; }
+.bc .s-time .w-time { align-items: baseline; justify-content: flex-start; }
+.bc .s-time .w-time .hm { font-size: min(92cqh, 34cqw); line-height: .9; }
+.bc .w-weekdays span { color: var(--soft); opacity: .45; } .bc .w-weekdays span.on { color: #000; opacity: 1; background: var(--c1); padding: 0 .3em; border-radius: .25em; }
+.bc .w-rows .row { border-bottom: 0; gap: .6em; }
+.bc .w-rows .row::before { content: ""; flex: none; width: .5em; align-self: stretch; background: var(--c); border-radius: .25em 0 0 .25em; }
+.bc .w-rows .row:nth-child(3n+2)::before { background: var(--c2); } .bc .w-rows .row:nth-child(3n)::before { background: var(--c3); }
+.bc .w-rows .row.head::before { display: none; }
+.bc .w-rows .lbl { color: var(--soft); }
+.bc .w-rows .badge { background: var(--c); color: #000; }
+.bc .w-headline small, .bc .w-text .ic { color: var(--c); }
+@container (aspect-ratio > 6) {
+  .bc .w-headline, .bc .w-text { flex-direction: row; justify-content: flex-start; gap: 3cqh; text-align: left; }
+  .bc .w-headline small { font-size: 34cqh; flex: none; }
+  .bc .w-headline span, .bc .w-text span, .bc .w-text.long span { font-size: 50cqh; display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+}
+.bc .analog .sec { stroke: var(--c1); }
+.bc .w-module { line-height: 1.2; --bright: var(--text); --normal: var(--soft); --dimmed: color-mix(in srgb, var(--soft) 60%, transparent); }
+.bc .w-picture .photo, .bc .w-picture svg { border-radius: 2vmin 0 0 0; }
+
+/* Sternzeit */
+.bc .w-stardate { align-items: flex-end; justify-content: center; gap: 1cqh; text-align: right; }
+.bc .w-stardate small { font-size: min(16cqh, 9cqw); color: var(--w-dim); letter-spacing: .08em; }
+.bc .w-stardate b { font-size: min(52cqh, 24cqw); line-height: .95; color: var(--c2); }
+.bc .w-stardate span { font-size: min(15cqh, 8cqw); color: var(--soft); }
+@container (aspect-ratio > 6) {
+  .bc .w-stardate { flex-direction: row; align-items: baseline; justify-content: center; gap: 3cqh; }
+  .bc .w-stardate b { font-size: 70cqh; } .bc .w-stardate small, .bc .w-stardate span { font-size: 34cqh; }
+}
+
+/* Sonne in flachen Feldern: Symbol neben der Zeit */
+.bc .w-sun b { font-weight: 700; }
+@container (aspect-ratio > 1.6) {
+  .bc .w-sun { flex-direction: row; gap: 5cqw; }
+  .bc .w-sun .ic { width: 55cqh; height: 55cqh; }
+  .bc .w-sun b { font-size: min(48cqh, 22cqw); }
+}
+
+/* Hochkant: Anzeigen in einer Reihe unter dem Hauptschirm */
+@media (orientation: portrait) {
+  .bc { --side: 11vmin; grid-template-rows: minmax(0, 1fr) minmax(0, 3.4fr); }
+  .bc .upper .body { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto minmax(0, 1.5fr) minmax(0, 1fr);
+    grid-template-areas: "title" "time" "info"; }
+  .bc .lower .body { grid-template-columns: repeat(3, minmax(0, 1fr)); grid-template-rows: minmax(0, 2.6fr) minmax(0, 1fr) minmax(0, .35fr);
+    grid-template-areas: "main main main" "a b c" "ticker ticker ticker"; }
+  .bc .title { font-size: 5.4vmin; }
+  .bc .s-time .w-time { justify-content: center; }
+  .bc .s-info .w-stardate { align-items: center; text-align: center; }
+}

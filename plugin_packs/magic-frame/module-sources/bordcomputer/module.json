@@ -1,0 +1,59 @@
+{
+  "type": "bordcomputer",
+  "kind": "skin",
+  "name": {"de": "Bordcomputer", "en": "Starship console", "es": "Ordenador de a bordo"},
+  "description": {
+    "de": "Schwarzer Bildschirm mit runden Balken in Orange, Flieder und Pfirsich, wie die Bordcomputer in Raumschiff-Serien der 90er. Mit Sternzeit, Hauptschirm (bis zu drei Inhalte), drei Anzeigen und einer Laufzeile. Ein Fan-Design, kein offizielles Produkt.",
+    "en": "Black screen with rounded bars in orange, lilac and peach, like the ship computers in 90s starship series. With stardate, main viewer (up to three items), three readouts and a ticker line. A fan design, not an official product.",
+    "es": "Pantalla negra con barras redondeadas en naranja, lila y melocotón, como los ordenadores de las series de naves de los 90. Con fecha estelar, pantalla principal (hasta tres elementos), tres indicadores y una línea inferior. Diseño de fan, no es un producto oficial."
+  },
+  "version": "1.2.0",
+  "author": "Jan",
+  "script": "module.js",
+  "style": "module.css",
+  "fetch": "fetch.py",
+  "every": 900,
+  "place": true,
+  "sizes": true,
+  "own": ["time", "analog", "date", "year", "weekdays", "countdown", "weather", "sunrise", "sunset", "forecast",
+          "weatherpicture", "picture", "stardate"],
+  "widgetNames": {
+    "stardate": {"de": "Sternzeit", "en": "Stardate", "es": "Fecha estelar"}
+  },
+  "slots": [
+    {"id": "time", "name": {"de": "Oben groß", "en": "Top, large", "es": "Arriba, grande"}, "default": "skin:time",
+     "accepts": ["time", "analog", "date", "stardate", "countdown", "weather", "text", "values", "nowplaying", "headlines"]},
+    {"id": "info", "name": {"de": "Oben rechts", "en": "Top right", "es": "Arriba a la derecha"}, "default": "skin:stardate",
+     "accepts": ["stardate", "date", "year", "time", "countdown", "weather", "sunrise", "sunset", "text", "values"]},
+    {"id": "main", "name": {"de": "Hauptschirm", "en": "Main viewer", "es": "Pantalla principal"}, "default": "skin:forecast", "max": 3,
+     "accepts": ["forecast", "list", "values", "headlines", "text", "nowplaying", "weather", "weatherpicture", "picture",
+                 "analog", "time", "stardate", "countdown", "module"]},
+    {"id": "a", "name": {"de": "Anzeige 1", "en": "Readout 1", "es": "Indicador 1"}, "default": "skin:weather",
+     "accepts": ["weather", "sunrise", "sunset", "time", "date", "stardate", "countdown", "values", "text", "analog", "wifi"]},
+    {"id": "b", "name": {"de": "Anzeige 2", "en": "Readout 2", "es": "Indicador 2"}, "default": "skin:sunrise",
+     "accepts": ["weather", "sunrise", "sunset", "time", "date", "stardate", "countdown", "values", "text", "analog", "wifi"]},
+    {"id": "c", "name": {"de": "Anzeige 3", "en": "Readout 3", "es": "Indicador 3"}, "default": "skin:sunset",
+     "accepts": ["weather", "sunrise", "sunset", "time", "date", "stardate", "countdown", "values", "text", "analog", "wifi"]},
+    {"id": "ticker", "name": {"de": "Laufzeile unten", "en": "Bottom line", "es": "Línea inferior"}, "default": "skin:weekdays",
+     "accepts": ["weekdays", "headlines", "text", "date", "stardate"]}
+  ],
+  "fields": [
+    {"key": "palette", "kind": "select", "default": "classic",
+     "label": {"de": "Farben", "en": "Colours", "es": "Colores"},
+     "options": [{"value": "classic", "label": {"de": "Orange und Flieder", "en": "Orange and lilac", "es": "Naranja y lila"}},
+                 {"value": "blue", "label": {"de": "Blau", "en": "Blue", "es": "Azul"}},
+                 {"value": "red", "label": {"de": "Alarmstufe Rot", "en": "Red alert", "es": "Alerta roja"}}]},
+    {"key": "title", "kind": "text", "default": "",
+     "label": {"de": "Titel oben rechts", "en": "Title top right", "es": "Título arriba a la derecha"},
+     "hint": {"de": "Leer = BORDCOMPUTER", "en": "Empty = MAIN COMPUTER", "es": "Vacío = ORDENADOR CENTRAL"}},
+    {"key": "seconds", "kind": "bool", "default": false,
+     "label": {"de": "Sekunden zeigen", "en": "Show seconds", "es": "Mostrar segundos"}},
+    {"key": "blink", "kind": "bool", "default": true,
+     "label": {"de": "Zahlen in den Balken laufen", "en": "Numbers in the bars change", "es": "Los números de las barras cambian"}},
+    {"key": "countdown", "kind": "text", "default": "",
+     "label": {"de": "Countdown bis (HH:MM)", "en": "Countdown to (HH:MM)", "es": "Cuenta atrás hasta (HH:MM)"},
+     "hint": {"de": "Für das Feld „Countdown“, z. B. 17:00", "en": "For the “Countdown” field, e.g. 17:00", "es": "Para el campo «Cuenta atrás», p. ej. 17:00"}},
+    {"key": "countdownLabel", "kind": "text", "default": "",
+     "label": {"de": "Name des Countdowns", "en": "Countdown name", "es": "Nombre de la cuenta atrás"}}
+  ]
+}

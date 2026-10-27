@@ -10,6 +10,7 @@ Unpacked sources of the add-on modules for Dynaframe's Magic Mirror, as examples
 | `musicassistant` | now playing via a WebSocket written with the Python standard library | MMM-MusicAssistant |
 | `jellyfin` | now playing on a Jellyfin server | |
 | `traveltime` | travel time by car with traffic from Mapbox or the Google Routes API (own key), "leave by" for an arrival time, German motorway incidents near the route; results cached in `fetch.py` between fetches | |
+| `bordcomputer` | add-on **skin** "Starship console": layout with fields (`slots`, main viewer up to three entries via `max`, text size via `sizes`), own widget `stardate`, Antonio font embedded into `module.css` by `build.sh` | |
 | `pegelstand` | river level from PEGELONLINE, the smallest example | |
 
 The installable ZIPs are in [../modules](../modules).

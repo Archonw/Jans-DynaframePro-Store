@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "generated": "2026-10-27T23:26:09Z",
+  "generated": "2026-10-27T23:40:26Z",
   "store": {
     "name": "Jan's Store",
     "author": "Jan",
@@ -288,6 +288,21 @@
       "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/magic-mirror-module-traveltime-1.0.0/traveltime.zip",
       "size": 11387,
       "checksum": "830ed0c222d4424af3c647c6b96db4430ca812541bcf69fcff00461804642dcc"
+    },
+    {
+      "id": "magic-mirror-skin-bordcomputer",
+      "type": "magic-mirror-module",
+      "title": "Magic Mirror skin: Starship console",
+      "author": "Jan",
+      "description": "Skin for Dynaframe's Magic Mirror 0.6.3 or newer (install that first). Black screen with rounded orange, lilac and peach bars like the ship computers of 90s starship series: big clock, stardate, main viewer for up to three items, three readouts and a bottom line. Choose on the plugin page what each field shows (forecast, news, calendar, departures, Home Assistant values …). Text size adjustable per field. Three colour sets incl. red alert. A fan design, not an official product. Does not appear under Plugins. Guide for building skins: https://github.com/Archonw/Jans-DynaframePro-Store/blob/main/plugin_packs/magic-frame/MODULES.md#skins",
+      "version": "1.2.0",
+      "updated": "2026-10-27T23:40:26Z",
+      "thumbnails": [
+        "plugin_packs/magic-frame/thumbs/bordcomputer.webp"
+      ],
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/magic-mirror-skin-bordcomputer-1.2.0/bordcomputer.zip",
+      "size": 32470,
+      "checksum": "3631881b02ebe357855ebad5f8a9ddd0e1d5a6d8ba0a5db118d39c09c5f49600"
     },
     {
       "id": "settings-backup",
