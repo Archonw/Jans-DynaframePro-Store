@@ -40,6 +40,7 @@ Integrations bring their own scene and can show themselves over the running slid
 | <img src="plugin_packs/playlist-button/thumb.webp" width="220"> | **Playlist Button** | A GPIO button opens an overlay menu to switch playlists. |
 | <img src="plugin_packs/Webpages/thumb.webp" width="220"> | **Web Page Button** | A GPIO button opens one or more web pages full screen over the slideshow (YouTube links play as video) and closes them again. |
 | <img src="plugin_packs/jellyfin/thumb-v2.webp" width="220"> | **Jellyfin Now Playing** | Shows the cover of what a chosen Jellyfin user is watching or listening to right now. |
+| <img src="plugin_packs/immich/thumb.webp" width="220"> | **Immich Slideshow** | Photos from your own Immich server in the slideshow, with DynaFrame's own display time and transitions: albums or all photos, narrowed down by stars, favourites, people or a search, random or by date. The photos stay on the server; only the next few are kept on the frame. |
 
 ### Magic Mirror modules
 

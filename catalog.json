@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "generated": "2026-10-27T23:03:59Z",
+  "generated": "2026-10-27T23:26:09Z",
   "store": {
     "name": "Jan's Store",
     "author": "Jan",
@@ -303,6 +303,21 @@
       "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/settings-backup-0.3.1/SettingsBackup.zip",
       "size": 56119,
       "checksum": "e08afa7693a552de126dd01395314012c9f8a65d1ec74381dd0ae59d75af7e92"
+    },
+    {
+      "id": "immich",
+      "type": "plugin",
+      "title": "Immich Slideshow",
+      "author": "Jan",
+      "description": "Photos from your own Immich server in DynaFrame's slideshow, with DynaFrame's own display time and transitions: pick albums or all photos, narrow down by stars, favourites, people or a free search, random order without repeats or by date. The photos stay on the server; only the next few are kept on the frame and swapped once shown. German, English or Spanish.",
+      "version": "0.2.2",
+      "updated": "2026-10-27T23:26:09Z",
+      "thumbnails": [
+        "plugin_packs/immich/thumb.webp"
+      ],
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/immich-0.2.2/ImmichSlideshow.zip",
+      "size": 62505,
+      "checksum": "826202896d6f382bd32cc7b0bd5e41da6f950c27ab9dafb6d568414a436c2e4b"
     }
   ]
 }
