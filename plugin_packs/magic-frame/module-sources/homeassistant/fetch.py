@@ -341,7 +341,9 @@ def view_presence(config, ctx):
         e = states.get(row["id"])
         if e:
             people.append({"name": row["label"] or e["name"], "state": e["state"],
-                           "picture": e.get("picture", ""), "changed": e.get("changed")})
+                           "picture": e.get("picture", ""), "changed": e.get("changed"),
+                           # Handys (device_tracker) heißen oft "iPhone von Sophie": die Szene kürzt das
+                           "device": e["domain"] == "device_tracker" and not row["label"]})
     if not people:
         raise fail(ctx, "no-people")
     return {"people": people}

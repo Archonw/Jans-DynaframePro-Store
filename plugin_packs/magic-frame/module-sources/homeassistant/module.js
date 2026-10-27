@@ -142,19 +142,32 @@
 
   // ------------------------------------------------------------ Anwesenheit
 
+  // "iPhone von Sophie", "Handy-Christin", "Sophies iPhone" -> "Sophie", "Christin"
+  const DEVICE = "i?phone|handy|smartphone|mobil(e|telefon)?|pixel|galaxy|samsung|xiaomi|redmi|oneplus|huawei|ipad|tablet";
+  function personName(p) {
+    let name = String(p.name || "");
+    if (p.device) {
+      const short = name.replace(new RegExp(`^(${DEVICE})(\\s*[a-z]?\\d+\\w*)?(\\s*(von|de|of|di|du)\\s*|[_-]+)`, "i"), "")
+        .replace(new RegExp(`(['’]?s)?[\\s_-]*(${DEVICE})(\\s*[a-z]?\\d+\\w*)?$`, "i"), "").trim();
+      // nur übernehmen, wenn ein Name übrig bleibt (kein "Pro", keine Modellnummer)
+      if (short && short !== name && !/\\d|^(pro|max|plus|ultra|mini|lite)$/i.test(short)) name = short;
+    }
+    return name;
+  }
+
   function initials(name) {
     return String(name || "?").split(/\s+/).filter(Boolean).slice(0, 2).map((w) => w[0].toUpperCase()).join("")
       .replace(/[^\p{L}\p{N}]/gu, "") || "?";
   }
 
   function where(p) {
-    if (p.state === "home") return t(STATES.home);
-    if (p.state === "not_home") return t(STATES.not_home);
-    return p.state;
+    const state = p.state === "unavailable" ? "unknown" : p.state;   // kurz halten, passt unter das Bild
+    return STATES[state] ? t(STATES[state]) : state;
   }
 
   function presenceHtml(d, c) {
     let people = d.people || [];
+    people = people.map((p) => ({ ...p, name: personName(p) }));
     if (c.onlyHome) people = people.filter((p) => p.state === "home");
     if (!people.length) return `<div class="small dimmed">${esc(t(TEXT.nobody))}</div>`;
     const face = (p) => `<span class="ha-face">${c.pictures !== false && p.picture
@@ -165,7 +178,7 @@
         <td class="sym">${face(p)}</td><td class="name">${esc(p.name)}</td><td class="state">${esc(where(p))}</td></tr>`).join("")}</table>`;
     }
     return `<div class="ha-people">${people.map((p) => `<div class="ha-person ${p.state === "home" ? "home" : "away"}">
-      ${face(p)}<div class="xsmall normal">${esc(p.name.split(/\s+/)[0])}</div>
+      ${face(p)}<div class="xsmall normal ha-pname">${esc(p.name.split(/\s+/)[0])}</div>
       ${p.state === "home" ? "" : `<div class="xsmall dimmed">${esc(where(p))}</div>`}</div>`).join("")}</div>`;
   }
 
@@ -234,7 +247,7 @@
         return { items: (d.rooms || []).map((r) => ({ label: r.name, value: deg(r.temp) + (r.humidity != null ? ` · ${h.number(r.humidity)} %` : ""), icon: "thermo" })) };
       }
       if (view === "presence") {
-        return { items: (d.people || []).map((p) => ({ label: p.name, value: where(p), icon: "person" })) };
+        return { items: (d.people || []).map((p) => ({ label: personName(p), value: where(p), icon: "person" })) };
       }
       return { items: (d.entities || []).filter((e) => !e.missing)
         .map((e) => ({ label: e.name, value: haState(e), icon: ctx.config.icons !== false ? haIcon(e) : "" })) };

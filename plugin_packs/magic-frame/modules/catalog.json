@@ -13,7 +13,7 @@
         "en": "Everything from Home Assistant in one module, one view per spot: values of any entities, house status (only open windows, locks, alarms, low batteries), climate per room, presence and bin collection (also from an ICS link without Home Assistant). Enter address and token only once. Not an official Home Assistant product. Needs Dynaframe's Magic Mirror 0.7.0 or newer.",
         "es": "Todo de Home Assistant en un módulo, una vista por sitio: valores de cualquier entidad, estado de la casa (solo ventanas abiertas, cerraduras, alarmas, baterías bajas), clima por habitación, presencia y recogida de basura (también con enlace ICS sin Home Assistant). Dirección y token solo una vez. No es un producto oficial de Home Assistant. Necesita Dynaframe's Magic Mirror 0.7.0 o posterior."
       },
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": "Jan",
       "zip": "homeassistant.zip"
     },

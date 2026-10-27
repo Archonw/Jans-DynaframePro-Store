@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "generated": "2026-10-27T16:32:40Z",
+  "generated": "2026-10-27T16:41:06Z",
   "store": {
     "name": "Jan's Store",
     "author": "Jan",
@@ -190,14 +190,14 @@
       "title": "Magic Mirror module: Home Assistant",
       "author": "Jan",
       "description": "Module for Dynaframe's Magic Mirror 0.7.0 or newer (install that first). Everything from Home Assistant in one module, one view per spot: values of any entities, house status (only open windows, unlocked locks, alarms, low batteries), climate per room, who is home and bin collection (also from an ICS link). Enter address and token only once. Not an official Home Assistant product. Does not appear under Plugins. Guide for building or porting modules: https://github.com/Archonw/Jans-DynaframePro-Store/blob/main/plugin_packs/magic-frame/MODULES.md",
-      "version": "1.0.0",
-      "updated": "2026-10-27T16:32:34Z",
+      "version": "1.0.1",
+      "updated": "2026-10-27T16:41:06Z",
       "thumbnails": [
         "plugin_packs/magic-frame/thumbs/homeassistant.webp"
       ],
-      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/magic-mirror-module-homeassistant-1.0.0/homeassistant.zip",
-      "size": 16572,
-      "checksum": "6da51d7100bcb928463cbfb010eb218f0602b4015d6fc932880613067f87b6ca"
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/magic-mirror-module-homeassistant-1.0.1/homeassistant.zip",
+      "size": 17103,
+      "checksum": "4006ee86617d59cfcefbd94c4c21c561edfc2b49fbff4035986c73da5cd19941"
     },
     {
       "id": "magic-mirror-module-pegelstand",

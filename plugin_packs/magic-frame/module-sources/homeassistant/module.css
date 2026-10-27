@@ -34,7 +34,8 @@ body.light-bg .ha .sym { color: #666; }
 .ha-people { display: flex; gap: calc(1.6 * var(--u)); flex-wrap: wrap; }
 .region.right .ha-people { justify-content: flex-end; }
 .region.center .ha-people, .region.bar .ha-people { justify-content: center; }
-.ha-person { text-align: center; width: calc(8 * var(--u)); }
+.ha-person { text-align: center; width: calc(9 * var(--u)); min-width: 0; }
+.ha-person .xsmall { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .ha-face { display: inline-flex; align-items: center; justify-content: center; overflow: hidden; border-radius: 50%;
   width: calc(6.5 * var(--u)); height: calc(6.5 * var(--u)); background: #333; color: #fff; font-size: calc(2.4 * var(--u));
   box-shadow: 0 0 0 calc(.35 * var(--u)) var(--line); margin-bottom: calc(.5 * var(--u)); }
