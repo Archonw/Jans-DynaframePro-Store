@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "generated": "2026-10-27T11:50:00Z",
+  "generated": "2026-10-27T16:32:40Z",
   "store": {
     "name": "Jan's Store",
     "author": "Jan",
@@ -175,14 +175,14 @@
       "title": "Dynaframe's Magic Mirror",
       "author": "Jan",
       "description": "Inspired by MagicMirror² (github.com/MagicMirrorOrg/MagicMirror); not an official MagicMirror² project. Pick modules and place each one top, bottom, left, right or centre. Or switch the whole scene to a skin (Retro LCD clock, Colour grid, or add-on skins from the catalog, the store or a ZIP file) and choose what each of its fields shows. More modules (Guest Wi-Fi QR, WebUntis, Music Assistant, Jellyfin, river level) from the built-in module catalog. Build your own or port MagicMirror² modules, also with an AI: https://github.com/Archonw/Jans-DynaframePro-Store/blob/main/plugin_packs/magic-frame/MODULES.md",
-      "version": "0.6.8",
-      "updated": "2026-10-25T10:28:57Z",
+      "version": "0.7.0",
+      "updated": "2026-10-27T16:32:40Z",
       "thumbnails": [
         "plugin_packs/magic-frame/thumb.webp"
       ],
-      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/magic-frame-0.6.8/MagicFrame.zip",
-      "size": 157220,
-      "checksum": "d868078006edeb518a6e5b28d03b1d7df7da027723110c5ed63e6e1cda587a7e"
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/magic-frame-0.7.0/MagicFrame.zip",
+      "size": 155748,
+      "checksum": "73cd7640e75aabe75c2bb3b0157577b5ebb4434dfeb26f98003c17c20f93eb8f"
     },
     {
       "id": "magic-mirror-module-pegelstand",

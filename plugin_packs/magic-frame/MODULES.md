@@ -54,11 +54,11 @@ After that, the module appears under **Add module** like a built-in one, and its
 }
 ```
 
-- `type`: unique id, lowercase letters, digits, `.`, `_`, `-` (2–48 chars). Use a prefix such as `yourname.weather` to avoid clashes. Built-in types (`clock`, `weather`, `forecast`, `rain`, `calendar`, `news`, `departures`, `compliments`, `warnings`, `homeassistant`, `webpage`) are taken.
+- `type`: unique id, lowercase letters, digits, `.`, `_`, `-` (2–48 chars). Use a prefix such as `yourname.weather` to avoid clashes. Built-in types (`clock`, `weather`, `forecast`, `rain`, `calendar`, `news`, `departures`, `compliments`, `warnings`, `webpage`) are taken. (`homeassistant` was built in up to 0.6.x and is an add-on from 0.7.0.)
 - Texts (`name`, `description`, `label`, `hint`, option labels) are a string or `{"de", "en", "es"}`; missing languages fall back to English.
 - `region`: where the module lands when added: `top_bar`, `top_left`, `top_center`, `top_right`, `middle_left`, `middle_center`, `middle_right`, `bottom_left`, `bottom_center`, `bottom_right`, `bottom_bar`.
-- `every`: seconds between fetches (30 to 86400; down to 10 with `visibleOnly`). `visibleOnly`: only fetch while the scene is on screen (for data that changes by the minute). `place`: the module needs the location set on the page (`ctx["lat"]`, `ctx["lon"]`).
-- `fields[].kind`: `text`, `textarea`, `number` (with `min`/`max`), `bool`, `select` (with `options: [{"value", "label"}]`), `secret` (passwords and tokens: never sent to the scene or back to the page), `stop` (a public transport stop picked via search). `showIf: {"otherKey": "value"}` shows a field only for that value. Every module also gets a `header` field automatically.
+- `every`: seconds between fetches (30 to 86400; down to 10 with `visibleOnly`). `visibleOnly`: only fetch while the scene is on screen (for data that changes by the minute); the plugin page then says so in the module's status line. `place`: the module needs the location set on the page (`ctx["lat"]`, `ctx["lon"]`).
+- `fields[].kind`: `text`, `textarea`, `number` (with `min`/`max`), `bool`, `select` (with `options: [{"value", "label"}]`), `secret` (passwords and tokens: never sent to the scene or back to the page), `stop` (a public transport stop picked via search). `showIf: {"otherKey": "value"}` shows a field only for that value (several keys: all must match). A `textarea` with `"picker": "homeassistant"` (from 0.7.0) gets a button that loads the entities of the Home Assistant at the module's `url`/`token` fields and ticks them into the text, one per line. Every module also gets a `header` field automatically.
 
 ## module.js
 
@@ -98,7 +98,7 @@ def fetch(config, ctx):
     return {"cm": row["value"]}
 ```
 
-Dynaframe's Magic Mirror imports this file in its own Python process and calls `fetch(config, ctx)` on the `every` schedule. Return anything JSON-serialisable; it becomes `ctx.data` in the scene. `ctx` has `lat`, `lon`, `lang`, `imperial`, `get(url, params=None, headers=None, expect="json"|"text")` (with Dynaframe's Magic Mirror's User-Agent and timeouts), `SourceError(code, detail)` and `log(text)`. Raise `ctx["SourceError"]("unreachable")`, `("key")`, `("format")`, `("http:503")` etc. for readable errors on the page.
+Dynaframe's Magic Mirror imports this file in its own Python process and calls `fetch(config, ctx)` on the `every` schedule. Return anything JSON-serialisable; it becomes `ctx.data` in the scene. `ctx` has `lat`, `lon`, `lang`, `imperial`, `get(url, params=None, headers=None, expect="json"|"text")` (with Dynaframe's Magic Mirror's User-Agent and timeouts), `SourceError(code, detail)` and `log(text)`. From 0.7.0 also `shared`: the settings (secrets included) of the *other* instances of the same module type on the page, so a login entered once can be used by every instance, e.g. `token = config.get("token") or next((c["token"] for c in ctx["shared"] if c.get("token")), "")`. It only ever contains instances of your own module and never reaches the scene. Raise `ctx["SourceError"]("unreachable")`, `("key")`, `("format")`, `("http:503")` etc. for readable errors on the page.
 
 Use only the Python standard library and `requests` (and `icalendar`, which Dynaframe's Magic Mirror already has): your plugin's own requirements may live in a different environment.
 
