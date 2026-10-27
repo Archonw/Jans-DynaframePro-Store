@@ -1,0 +1,26 @@
+/* Fahrzeit */
+.m-traveltime .tt-box { display: flex; flex-direction: column; gap: calc(0.4 * var(--u)); max-width: calc(46 * var(--u)); }
+.region.right .m-traveltime .tt-box { margin-left: auto; align-items: flex-end; }
+.region.center .m-traveltime .tt-box, .region.bar .m-traveltime .tt-box { margin: 0 auto; align-items: center; }
+.m-traveltime .tt-to { display: flex; align-items: center; gap: calc(0.6 * var(--u)); }
+.m-traveltime .tt-big { display: flex; align-items: baseline; flex-wrap: wrap; gap: calc(0.8 * var(--u)); }
+.m-traveltime .tt-big b { font-size: calc(9 * var(--u)); font-weight: 300; line-height: .95; letter-spacing: -.02em;
+  font-variant-numeric: tabular-nums; }
+.m-traveltime .tt-big > span { font-size: calc(2.6 * var(--u)); }
+.m-traveltime .tt-line { display: flex; align-items: center; flex-wrap: wrap; gap: calc(0.8 * var(--u)); }
+.m-traveltime .tt-line b { font-weight: 400; }
+.m-traveltime .tt-chip { display: inline-block; font-size: calc(1.7 * var(--u)); line-height: 1.5; padding: 0 calc(0.8 * var(--u));
+  border-radius: 99px; border: 1px solid currentColor; align-self: center; white-space: nowrap; }
+.m-traveltime .tt-chip.ok { color: #7bd88f; }
+.m-traveltime .tt-chip.warn { color: var(--accent); }
+.m-traveltime .tt-chip.bad { color: var(--bad); }
+.m-traveltime .tt-leave { display: flex; align-items: center; gap: calc(0.6 * var(--u)); }
+.m-traveltime .tt-leave .ic { color: var(--accent); flex: none; }
+.m-traveltime .tt-when { font-weight: 600; color: var(--bright); }
+.m-traveltime .tt-when.soon { color: var(--accent); }
+.m-traveltime .tt-events { list-style: none; margin: calc(0.4 * var(--u)) 0 0; padding: 0; display: grid; gap: calc(0.4 * var(--u)); }
+.m-traveltime .tt-events li { display: flex; gap: calc(0.6 * var(--u)); align-items: flex-start; color: var(--normal); text-align: left; }
+.m-traveltime .tt-events li .ic { color: var(--accent); flex: none; margin-top: .15em; }
+.m-traveltime .tt-events li.closure .ic { color: var(--bad); }
+.m-traveltime .tt-events b { color: var(--bright); font-weight: 600; }
+.m-traveltime .tt-credit { font-size: calc(1.1 * var(--u)); color: var(--dimmed); opacity: .8; }

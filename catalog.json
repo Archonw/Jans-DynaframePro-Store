@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "generated": "2026-10-27T16:41:06Z",
+  "generated": "2026-10-27T22:19:17Z",
   "store": {
     "name": "Jan's Store",
     "author": "Jan",
@@ -273,6 +273,21 @@
       "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/magic-mirror-module-jellyfin-1.0.0/jellyfin.zip",
       "size": 7436,
       "checksum": "60907f28d6ebf19c6688f54cab0efbb585ec72341398ef022aada4e3abb9eea8"
+    },
+    {
+      "id": "magic-mirror-module-traveltime",
+      "type": "magic-mirror-module",
+      "title": "Magic Mirror module: Travel time",
+      "author": "Jan",
+      "description": "Module for Dynaframe's Magic Mirror (install that first). How long the drive takes right now: traffic delay, distance, road, alternative route and \"Leave by\" for an arrival time, plus incidents and closures on German motorways along the route. Uses your own Mapbox key (10,000 requests a month free without a payment method) or Google Routes API key. Does not appear under Plugins. Guide for building or porting modules: https://github.com/Archonw/Jans-DynaframePro-Store/blob/main/plugin_packs/magic-frame/MODULES.md",
+      "version": "1.0.0",
+      "updated": "2026-10-27T22:19:17Z",
+      "thumbnails": [
+        "plugin_packs/magic-frame/thumbs/traveltime.webp"
+      ],
+      "download_url": "plugin_packs/magic-frame/modules/traveltime.zip",
+      "size": 11387,
+      "checksum": "830ed0c222d4424af3c647c6b96db4430ca812541bcf69fcff00461804642dcc"
     },
     {
       "id": "settings-backup",

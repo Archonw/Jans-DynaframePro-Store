@@ -99,6 +99,22 @@
       "version": "1.0.0",
       "author": "Jan",
       "zip": "jellyfin.zip"
+    },
+    {
+      "type": "traveltime",
+      "name": {
+        "de": "Fahrzeit",
+        "en": "Travel time",
+        "es": "Tiempo de viaje"
+      },
+      "description": {
+        "de": "Wie lange die Fahrt mit dem Auto gerade dauert, mit Stau-Verzögerung, Strecke, Ausweichroute und „Losfahren bis“ für eine Ankunftszeit. Dazu Meldungen und Sperrungen auf deutschen Autobahnen an der Strecke. Mit eigenem Schlüssel von Mapbox (ohne Zahlungsart 10.000 Abfragen im Monat frei) oder Google.",
+        "en": "How long the drive takes right now, with traffic delay, distance, alternative route and “Leave by” for an arrival time. Plus incidents and closures on German motorways along the way. With your own Mapbox key (10,000 requests a month free without a payment method) or Google key.",
+        "es": "Cuánto dura ahora el trayecto en coche, con retraso por tráfico, distancia, ruta alternativa y «Sal antes de» para una hora de llegada. Además, incidencias y cortes en autopistas alemanas en el camino. Con tu propia clave de Mapbox (10.000 consultas al mes gratis sin método de pago) o de Google."
+      },
+      "version": "1.0.0",
+      "author": "Jan",
+      "zip": "traveltime.zip"
     }
   ]
 }

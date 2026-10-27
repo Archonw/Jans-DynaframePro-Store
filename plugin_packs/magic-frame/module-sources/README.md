@@ -9,6 +9,7 @@ Unpacked sources of the add-on modules for Dynaframe's Magic Mirror, as examples
 | `webuntis` | timetable, exams, homework; QR or password login in `fetch.py` | MMM-Webuntis |
 | `musicassistant` | now playing via a WebSocket written with the Python standard library | MMM-MusicAssistant |
 | `jellyfin` | now playing on a Jellyfin server | |
+| `traveltime` | travel time by car with traffic from Mapbox or the Google Routes API (own key), "leave by" for an arrival time, German motorway incidents near the route; results cached in `fetch.py` between fetches | |
 | `pegelstand` | river level from PEGELONLINE, the smallest example | |
 
 The installable ZIPs are in [../modules](../modules).
