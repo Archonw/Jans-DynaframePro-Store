@@ -19,7 +19,7 @@ Genutzte Engine-Endpunkte (bestaetigt per swagger.json):
   POST /renderer/overlay/settings -> Overlay-Layout ein-/ausschalten (enabled, currentOverlay)
 Genutzte Plugin-Base-Methoden:
   plugin.engine_url            -> Basis-URL der Engine (aus DYNAFRAME_ENGINE_URL)
-  plugin.get_setting(...)      -> liest Settings aus manifest.json
+  page.settings()              -> Einstellungen von der eigenen Plugin-Seite (data/settings.json)
   plugin.update_overlay_text() -> setzt den Text der PlaylistButtonPlugin.MenuText-Overlay-Quelle
   plugin.log() / plugin.ready() / plugin.is_running()
 """
@@ -62,6 +62,7 @@ def _write_crash_log(exc_type, exc_value, exc_tb):
 
 sys.excepthook = _write_crash_log
 
+import json
 import threading
 import time
 import uuid
@@ -75,10 +76,15 @@ from dynaframe_plugin_base import create_plugin
 
 TEXT_SERVICE_ID = "PlaylistButtonPlugin.MenuText"
 MENU_TEXT_ELEMENT_ID = "playlist-menu-text-element"
+MENU_TEXTS = {
+    "de": {"more": "weitere", "active": "aktiv"},
+    "en": {"more": "more", "active": "active"},
+    "es": {"more": "más", "active": "activa"},
+}
 
 plugin = create_plugin()
 
-import support_page
+import page
 
 # Persistent HTTP session — reuses TCP connections instead of opening a new one
 # per request, avoiding repeated DNS lookups, TCP handshakes, and TLS negotiation.
@@ -185,7 +191,8 @@ def compute_window_start(total, selected_index, window_size, anchor_index):
 
 
 def render_menu_text(items, selected_index, active_playlist_id, active_playlist_name,
-                      window_size, anchor_index):
+                      window_size, anchor_index, lang="de"):
+    words = MENU_TEXTS.get(lang, MENU_TEXTS["de"])
     total = len(items)
     anchor_index = max(0, min(anchor_index, window_size - 1))
     start = compute_window_start(total, selected_index, window_size, anchor_index)
@@ -193,15 +200,15 @@ def render_menu_text(items, selected_index, active_playlist_id, active_playlist_
 
     lines = []
     if start > 0:
-        lines.append(f"   ↑ {start} weitere")
+        lines.append(f"   ↑ {start} {words['more']}")
     for i in range(start, end):
         item = items[i]
         marker = "➤ " if i == selected_index else "   "
-        suffix = "  (aktiv)" if is_active(item, active_playlist_id, active_playlist_name) else ""
+        suffix = f"  ({words['active']})" if is_active(item, active_playlist_id, active_playlist_name) else ""
         lines.append(f"{marker}{item['name']}{suffix}")
     remaining_below = total - end
     if remaining_below > 0:
-        lines.append(f"   ↓ {remaining_below} weitere")
+        lines.append(f"   ↓ {remaining_below} {words['more']}")
 
     return "\n".join(lines)
 
@@ -225,7 +232,7 @@ def push_overlay_text(value):
         plugin.log(f"Overlay-Text-Update fehlgeschlagen: {exc}", level="error")
 
 
-def push_menu_overlay():
+def push_menu_overlay(settings):
     with state_lock:
         text = render_menu_text(
             state["playlists"],
@@ -234,6 +241,7 @@ def push_menu_overlay():
             state["active_playlist_name"],
             settings["visible_lines"],
             settings["anchor_line"] - 1,
+            settings["language"],
         )
     push_overlay_text(text)
 
@@ -333,6 +341,11 @@ def handle_short_press(settings):
             plugin.log("Keine Playlisten gefunden.", level="warning")
             return
         active_id, active_name = fetch_active_playlist_info()
+        # Neue oder umbenannte Playlisten koennen den Kasten breiter oder hoeher
+        # machen; nur dann wird das Overlay-Design neu gespeichert.
+        style = current_style(items)
+        if _synced_style["file"] != settings["overlay_file"] or _synced_style["style"] != style:
+            sync_overlay_style(settings["overlay_file"], style)
 
         with state_lock:
             # Re-check: another thread may have opened the overlay while we fetched.
@@ -348,7 +361,7 @@ def handle_short_press(settings):
                 )
                 state["overlay_visible"] = True
 
-        push_menu_overlay()
+        push_menu_overlay(settings)
         set_overlay_enabled(settings["overlay_file"], True)
     else:
         with state_lock:
@@ -356,7 +369,7 @@ def handle_short_press(settings):
                 state["selected_index"] = (state["selected_index"] + 1) % len(state["playlists"])
 
         # Only push the updated text — the overlay is already enabled.
-        push_menu_overlay()
+        push_menu_overlay(settings)
 
     start_inactivity_timer(settings["overlay_timeout_seconds"], settings["overlay_file"])
 
@@ -381,6 +394,48 @@ def handle_long_press(settings):
     hide_overlay(settings["overlay_file"])
 
 
+MENU_PADDING = 16
+LINE_HEIGHT = 1.35   # Zeilenhoehe des Overlay-Textes, relativ zur Schriftgroesse
+CHAR_WIDTH = 0.56    # mittlere Zeichenbreite von Arial, relativ zur Schriftgroesse
+
+
+def menu_box_size(items, values):
+    """Breite und Hoehe des Menue-Kastens passend zu Schriftgroesse, Zeilenzahl
+    und laengstem Playlist-Namen, damit der farbige Hintergrund den Text genau
+    umschliesst, statt bei grosser Schrift zu klein oder bei kleiner zu gross
+    zu sein."""
+    font_size = values["FontSize"]
+    total = len(items)
+    window = values["VisibleLines"]
+    lines = max(1, min(total, window)) + (2 if total > window else 0)
+    words = MENU_TEXTS.get(values["Language"], MENU_TEXTS["de"])
+    suffix = len(words["active"]) + 4
+    longest = max((len(it["name"]) for it in items), default=12)
+    chars = max(longest + 3 + suffix, len(words["more"]) + 8)
+    width = int(round(chars * CHAR_WIDTH * font_size + 2 * MENU_PADDING))
+    height = int(round(lines * LINE_HEIGHT * font_size + 2 * MENU_PADDING))
+    return width, height
+
+
+def current_style(items=None):
+    values = page.settings()
+    if items is None:
+        items = fetch_menu_items(values["OnlyEnabledPlaylists"], values["ShowFolderPlaylists"],
+                                 values["FolderCacheSeconds"])
+    width, height = menu_box_size(items, values)
+    return {
+        "fontSize": values["FontSize"],
+        "backgroundColor": values["BackgroundColor"],
+        "backgroundOpacity": values["BackgroundOpacity"],
+        "padding": MENU_PADDING,
+        "width": width,
+        "height": height,
+    }
+
+
+_synced_style = {"file": None, "style": None}
+
+
 def ensure_overlay_design(overlay_file):
     try:
         resp = _http.get(f"{plugin.engine_url}/overlay/list", timeout=5)
@@ -393,6 +448,7 @@ def ensure_overlay_design(overlay_file):
         plugin.log(f"Konnte Overlay-Liste nicht abrufen: {exc}", level="warning")
         return
 
+    style = current_style()
     config = {
         "id": 0,
         "designId": uuid.uuid4().hex,
@@ -408,16 +464,16 @@ def ensure_overlay_design(overlay_file):
                 "prefixText": "",
                 "defaultValue": "",
                 "fontFamily": "Arial",
-                "fontSize": 32,
+                "fontSize": style["fontSize"],
                 "fontWeight": 400,
                 "color": "#FFFFFF",
-                "backgroundColor": "#000000AA",
-                "backgroundOpacity": 100,
+                "backgroundColor": style["backgroundColor"],
+                "backgroundOpacity": style["backgroundOpacity"],
                 "textAlign": "left",
                 "bold": False,
                 "italic": False,
                 "opacity": 100,
-                "padding": 16,
+                "padding": style["padding"],
                 "borderRadius": 8,
                 "dropShadowEnabled": True,
                 "dropShadowAngle": 45,
@@ -430,8 +486,8 @@ def ensure_overlay_design(overlay_file):
                 "y": 0,
                 "xPercent": 5,
                 "yPercent": 55,
-                "width": 620,
-                "height": 320,
+                "width": style["width"],
+                "height": style["height"],
                 "zIndex": 10,
                 "visible": True,
                 "locked": False,
@@ -476,7 +532,7 @@ def ensure_overlay_design(overlay_file):
         plugin.log(f"Anlegen des Overlay-Designs fehlgeschlagen: {exc}", level="error")
 
 
-def sync_overlay_style(overlay_file, font_size):
+def sync_overlay_style(overlay_file, style):
     try:
         resp = _http.get(f"{plugin.engine_url}/overlay/load/{overlay_file}", timeout=5)
         resp.raise_for_status()
@@ -489,18 +545,17 @@ def sync_overlay_style(overlay_file, font_size):
         plugin.log(f"Konnte Overlay-Design nicht laden (Style-Sync): {exc}", level="warning")
         return
 
-    try:
-        font_size_int = int(float(font_size))
-    except (TypeError, ValueError):
-        font_size_int = 32
-
     changed = False
     for el in config.get("elements", []):
-        if el.get("id") == MENU_TEXT_ELEMENT_ID and el.get("fontSize") != font_size_int:
-            el["fontSize"] = font_size_int
-            changed = True
+        if el.get("id") != MENU_TEXT_ELEMENT_ID:
+            continue
+        for key, value in style.items():
+            if el.get(key) != value:
+                el[key] = value
+                changed = True
 
     if not changed:
+        _synced_style.update(file=overlay_file, style=dict(style))
         return
 
     try:
@@ -510,7 +565,11 @@ def sync_overlay_style(overlay_file, font_size):
             timeout=10,
         )
         if resp.status_code == 200 and resp.json().get("success"):
-            plugin.log(f"Schriftgroesse im Overlay auf {font_size_int}px aktualisiert.")
+            _synced_style.update(file=overlay_file, style=dict(style))
+            plugin.log(
+                f"Overlay-Stil aktualisiert: {style['fontSize']}px, Kasten {style['width']}x{style['height']}, Hintergrund "
+                f"{style['backgroundColor']} mit {style['backgroundOpacity']}% Deckkraft."
+            )
         else:
             plugin.log(f"Style-Sync fehlgeschlagen: {resp.text[:200]}", level="error")
     except Exception as exc:
@@ -520,36 +579,78 @@ def sync_overlay_style(overlay_file, font_size):
 # --------------------------------------------------------------------------
 # Setup
 # --------------------------------------------------------------------------
-settings = {
-    "long_press_seconds": float(plugin.get_setting("LongPressSeconds", 1.5)),
-    "overlay_timeout_seconds": float(plugin.get_setting("OverlayTimeoutSeconds", 10)),
-    "overlay_file": plugin.get_setting("OverlayFileName", "default.json"),
-    "only_enabled": str(plugin.get_setting("OnlyEnabledPlaylists", True)).lower() == "true",
-    "font_size": plugin.get_setting("FontSize", 32),
-    "show_folders": str(plugin.get_setting("ShowFolderPlaylists", True)).lower() == "true",
-    "visible_lines": max(1, int(plugin.get_setting("VisibleLines", 8))),
-    "anchor_line": max(1, int(plugin.get_setting("AnchorLine", 4))),
-    "folder_cache_seconds": max(0, float(plugin.get_setting("FolderCacheSeconds", 30))),
-}
+def runtime_settings():
+    """Die Einstellungen von der Plugin-Seite, unter den Namen, die die
+    Tastenlogik verwendet. Wird bei jedem Tastendruck neu gelesen, damit
+    Aenderungen sofort gelten."""
+    values = page.settings()
+    return {
+        "long_press_seconds": values["LongPressSeconds"],
+        "overlay_timeout_seconds": values["OverlayTimeoutSeconds"],
+        "overlay_file": values["OverlayFileName"],
+        "only_enabled": values["OnlyEnabledPlaylists"],
+        "show_folders": values["ShowFolderPlaylists"],
+        "visible_lines": values["VisibleLines"],
+        "anchor_line": values["AnchorLine"],
+        "folder_cache_seconds": values["FolderCacheSeconds"],
+        "language": values["Language"],
+    }
 
 
-def on_sync_style_action(_context):
-    current_font_size = plugin.get_setting("FontSize", 32)
-    sync_overlay_style(settings["overlay_file"], current_font_size)
-    plugin.report_activity("Overlay-Stil synchronisiert", f"Schriftgroesse: {current_font_size}px")
+_status = {"button": "", "buttonOk": False}
+STYLE_SETTINGS = {"FontSize", "BackgroundColor", "BackgroundOpacity", "VisibleLines", "Language",
+                  "OnlyEnabledPlaylists", "ShowFolderPlaylists"}
 
 
-plugin.on_action("sync-style", on_sync_style_action)
+def on_settings_changed(changed):
+    changed = set(changed)
+    overlay_file = page.settings()["OverlayFileName"]
+    if "OverlayFileName" in changed:
+        ensure_overlay_design(overlay_file)
+    if changed & (STYLE_SETTINGS | {"OverlayFileName"}):
+        sync_overlay_style(overlay_file, current_style())
+    with state_lock:
+        visible = state["overlay_visible"]
+    if visible:
+        push_menu_overlay(runtime_settings())
+    if changed & {"GpioPin", "LongPressSeconds"}:
+        _button_wake.set()
+
+
+def show_menu():
+    """Wie ein kurzer Tastendruck: oeffnet das Menue oder springt eine Zeile weiter."""
+    threading.Thread(target=on_released, name="show-menu", daemon=True).start()
+    return {"success": True}
+
+
+def page_state():
+    with state_lock:
+        visible = state["overlay_visible"]
+    return {"version": _version(), "button": _status["button"], "buttonOk": _status["buttonOk"],
+            "menuVisible": visible}
+
+
+def _version():
+    try:
+        manifest = json.loads((Path(__file__).resolve().parent / "manifest.json").read_text(encoding="utf-8"))
+        return str(manifest.get("Version") or "")
+    except Exception:
+        return ""
+
+
+_button_wake = threading.Event()
+page.migrate(plugin)
+plugin.on_action("show-menu", lambda _context=None: show_menu())
 plugin.connect_sse()
 
 # Report ready before touching the overlay or the GPIO, so a missing or busy pin
 # can never leave the plugin stuck in "waiting for plugin to finish initializing".
-support_page.start(plugin)
+page.start(plugin, state=page_state, changed=on_settings_changed, show=show_menu)
 plugin.ready()
 
 try:
-    ensure_overlay_design(settings["overlay_file"])
-    sync_overlay_style(settings["overlay_file"], settings["font_size"])
+    ensure_overlay_design(page.settings()["OverlayFileName"])
+    sync_overlay_style(page.settings()["OverlayFileName"], current_style())
 except Exception as exc:
     plugin.log(f"Overlay-Design konnte nicht vorbereitet werden: {exc}", level="error")
 
@@ -558,7 +659,7 @@ def on_held():
     with state_lock:
         state["long_press_triggered"] = True
     try:
-        handle_long_press(settings)
+        handle_long_press(runtime_settings())
     except Exception as exc:
         plugin.log(f"Fehler bei Langdruck-Verarbeitung: {exc}", level="error")
 
@@ -570,7 +671,7 @@ def on_released():
     if was_long:
         return
     try:
-        handle_short_press(settings)
+        handle_short_press(runtime_settings())
     except Exception as exc:
         plugin.log(f"Fehler bei Kurzdruck-Verarbeitung: {exc}", level="error")
 
@@ -629,27 +730,19 @@ _pin_factory_done = False
 
 def _gpio_pin():
     """BCM-Pin aus den Settings, oder None solange kein (gueltiger) Pin eingetragen ist."""
-    raw = str(plugin.get_setting("GpioPin", "") or "").strip()
-    try:
-        pin = int(float(raw))
-    except ValueError:
-        return None
-    return pin if 0 <= pin <= 27 else None
+    raw = page.settings()["GpioPin"]
+    return int(raw) if raw else None
 
 
 def _setup_button():
     """Legt den Taster fuer den eingestellten Pin an. Wirft nie; ein belegter Pin wird nur geloggt."""
     global _button, _button_key, _pin_factory, _pin_factory_done
     pin = _gpio_pin()
-    try:
-        long_press = max(0.5, float(plugin.get_setting("LongPressSeconds", 1.5)))
-    except (TypeError, ValueError):
-        long_press = 1.5
+    long_press = page.settings()["LongPressSeconds"]
     key = (pin, long_press)
     if key == _button_key:
         return
     _button_key = key
-    settings["long_press_seconds"] = long_press
     if _button is not None:
         try:
             _button.close()
@@ -657,8 +750,9 @@ def _setup_button():
             pass
         _button = None
     if pin is None:
-        plugin.log("No GPIO pin set yet. Enter the BCM pin of your button under GpioPin "
-                   "in the plugin settings (for example 21).", level="warning")
+        _status.update(button="nopin", buttonOk=False)
+        plugin.log("No GPIO pin set yet. Enter the BCM pin of your button on the plugin page "
+                   "(for example 21).", level="warning")
         return
     if not _pin_factory_done:
         _pin_factory = _find_gpio_pin_factory()
@@ -673,17 +767,15 @@ def _setup_button():
             pin_factory=_pin_factory,
         )
     except Exception as exc:
+        _status.update(button=f"busy:{pin}:{exc}", buttonOk=False)
         plugin.log(f"GPIO{pin} cannot be used: {exc}. It is probably taken by another plugin "
-                   "or device; choose a different pin under GpioPin.", level="error")
+                   "or device; choose a different pin on the plugin page.", level="error")
         return
     button.when_held = on_held
     button.when_released = on_released
     _button = button
-    plugin.log(
-        f"PlaylistButtonPlugin bereit auf GPIO{pin} "
-        f"(lang={long_press}s, "
-        f"Overlay-Timeout={settings['overlay_timeout_seconds']}s)."
-    )
+    _status.update(button=f"ready:{pin}", buttonOk=True)
+    plugin.log(f"PlaylistButtonPlugin bereit auf GPIO{pin} (lang={long_press}s).")
 
 
 def _button_loop():
@@ -693,11 +785,13 @@ def _button_loop():
             _setup_button()
         except Exception as exc:
             plugin.log(f"Taster-Einrichtung fehlgeschlagen: {exc}", level="error")
-        if _shutdown_event.wait(5):
+        _button_wake.wait(5)
+        _button_wake.clear()
+        if _shutdown_event.is_set():
             break
 
 
 threading.Thread(target=_button_loop, name="button", daemon=True).start()
 
 _shutdown_event.wait()
-support_page.stop(plugin)
+page.stop(plugin)

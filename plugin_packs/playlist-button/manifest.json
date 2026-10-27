@@ -2,84 +2,13 @@
   "Name": "PlaylistButtonPlugin",
   "Author": "Jan",
   "Description": "GPIO button control for playlists: short print opens an overlay menu with all playlists (alphabetical, current ones marked) and scrolls through the list when pressed again briefly. After 10 seconds of inactivity, the overlay closes again without changing the active playlist. A long key press takes over the playlist marked in the menu as a new active playlist.",
-  "Version": "1.6.2",
+  "Version": "1.8.2",
   "DisplayName": "Playlist Button",
   "ManifestVersion": 1,
   "IconPath": null,
   "Enabled": false,
   "ApiVersion": 2,
-  "Settings": [
-    {
-      "Name": "GpioPin",
-      "Type": "string",
-      "Description": "BCM pin number of your button, e.g. 21. Empty after installation: enter a pin that is not used by another plugin or device. A change takes effect within a few seconds.",
-      "DefaultValue": "",
-      "Value": ""
-    },
-    {
-      "Name": "LongPressSeconds",
-      "Type": "number",
-      "Description": "Hold time in seconds from which a print is considered 'long' and the playlist changes",
-      "DefaultValue": 1.5,
-      "Value": 1.5
-    },
-    {
-      "Name": "OverlayTimeoutSeconds",
-      "Type": "number",
-      "Description": "Seconds without pressing a key, after which the selection overlay is automatically hidden",
-      "DefaultValue": 10,
-      "Value": 10
-    },
-    {
-      "Name": "OverlayFileName",
-      "Type": "string",
-      "Description": "Overlay layout file that is activated when the menu is displayed (must contain a text element with the source PlaylistButtonPlugin.MenuText)",
-      "DefaultValue": "playlist-menu-overlay.json",
-      "Value": "playlist-menu-overlay.json"
-    },
-    {
-      "Name": "OnlyEnabledPlaylists",
-      "Type": "boolean",
-      "Description": "When active, only playlists with isEnabled=true are displayed in the menu",
-      "DefaultValue": true,
-      "Value": true
-    },
-    {
-      "Name": "FontSize",
-      "Type": "number",
-      "Description": "Font size (in px) of the playlist selection menu in the overlay",
-      "DefaultValue": 32,
-      "Value": 32
-    },
-    {
-      "Name": "ShowFolderPlaylists",
-      "Type": "boolean",
-      "Description": "When active, in addition to the saved playlists, all folder playlists (folder playlists) are also displayed alphabetically in the menu",
-      "DefaultValue": true,
-      "Value": true
-    },
-    {
-      "Name": "VisibleLines",
-      "Type": "number",
-      "Description": "Maximum number of lines visible simultaneously in the menu. For longer lists, the menu becomes a scrolling window.",
-      "DefaultValue": 8,
-      "Value": 8
-    },
-    {
-      "Name": "AnchorLine",
-      "Type": "number",
-      "Description": "Line number (1-based) in which the selection marker remains as soon as there are enough entries above it (e.g. 4 = arrow clicks into the 4th line, list scrolls below/above it).",
-      "DefaultValue": 4,
-      "Value": 4
-    },
-    {
-      "Name": "FolderCacheSeconds",
-      "Type": "number",
-      "Description": "How long (in seconds) the list of folder playlists is cached before it is queried again from the engine on a menu call. Higher value = faster menu opening, but newly created folders only appear after the cache time has expired.",
-      "DefaultValue": 30,
-      "Value": 30
-    }
-  ],
+  "Settings": [],
   "OverlayPlugins": [],
   "Services": [
     {
@@ -102,17 +31,17 @@
   "OverlayDesigns": null,
   "AdvancedSettings": {
     "Enabled": true,
-    "Label": "About & support",
-    "Description": "Report a problem, ask a question or buy Jan a coffee.",
+    "Label": "Open Playlist Button",
+    "Description": "All settings: GPIO pin, press times, which playlists are listed, menu size, background colour and transparency, language. Also report a problem or buy Jan a coffee.",
     "RequiresReady": false
   },
   "Actions": [
     {
-      "id": "sync-style",
-      "label": "Overlay-Stil synchronisieren",
-      "description": "Immediately incorporates settings such as font size into the saved overlay design, without restarting and without changing the position set via WebUI.",
+      "id": "show-menu",
+      "label": "Show menu",
+      "description": "Works like a short press of the button: opens the playlist menu, or moves the marker one line down if it is already open.",
       "kind": "command",
-      "invokeOnSettingsChange": true,
+      "invokeOnSettingsChange": false,
       "requiresReady": true
     }
   ],
@@ -146,7 +75,7 @@
     },
     {
       "id": "advanced-ui",
-      "reason": "Shows the About & support page with the issue link and the coffee button.",
+      "reason": "Shows the plugin page with all settings, the issue link and the coffee button.",
       "scope": null
     }
   ],

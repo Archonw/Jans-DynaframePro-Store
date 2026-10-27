@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "generated": "2026-10-27T11:20:32Z",
+  "generated": "2026-10-27T11:50:00Z",
   "store": {
     "name": "Jan's Store",
     "author": "Jan",
@@ -14,14 +14,14 @@
       "title": "Playlist Button",
       "author": "Jan",
       "description": "GPIO button to select playlists via an overlay menu",
-      "version": "1.6.3",
-      "updated": "2026-10-21T14:48:23Z",
+      "version": "1.8.2",
+      "updated": "2026-10-27T11:50:00Z",
       "thumbnails": [
         "plugin_packs/playlist-button/thumb.webp"
       ],
-      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/playlist-button-1.6.3/playlist-button.zip",
-      "size": 25514,
-      "checksum": "33d3d8ed3e2f19c4e4692d039ceb0f87e21228f34f068b80e1f051c26a5912e1"
+      "download_url": "plugin_packs/playlist-button/playlist-button.zip",
+      "size": 36868,
+      "checksum": "ba50a559febae4604d6c366e9281a84ec670401740a426a6ff57cc486268553a"
     },
     {
       "id": "webpage-button",
