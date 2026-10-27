@@ -285,7 +285,7 @@
       "thumbnails": [
         "plugin_packs/magic-frame/thumbs/traveltime.webp"
       ],
-      "download_url": "plugin_packs/magic-frame/modules/traveltime.zip",
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/magic-mirror-module-traveltime-1.0.0/traveltime.zip",
       "size": 11387,
       "checksum": "830ed0c222d4424af3c647c6b96db4430ca812541bcf69fcff00461804642dcc"
     },
