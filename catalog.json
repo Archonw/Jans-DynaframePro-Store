@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "generated": "2026-10-27T11:14:34Z",
+  "generated": "2026-10-27T11:20:32Z",
   "store": {
     "name": "Jan's Store",
     "author": "Jan",
@@ -96,15 +96,15 @@
       "type": "integration",
       "title": "World Map Live",
       "author": "Jan",
-      "description": "A calm world map with borders, day and night and the day-night line that shows real aircraft, ships, lightning strikes and the ISS live: aircraft from the OpenSky Network (no account needed), ships from AISStream.io (free API key), lightning from the volunteer network Blitzortung.org, the ISS orbit from CelesTrak. Whole world or Europe, DACH, North America, East Asia. German, English or Spanish.",
-      "version": "0.3.5",
-      "updated": "2026-10-21T14:48:23Z",
+      "description": "A calm world map with borders, day and night and the day-night line that shows real aircraft, ships, lightning strikes and the ISS live: aircraft from the OpenSky Network (no account needed), ships from up to five sources you can switch on and off (AISStream.io with a free API key, Kystverket for Norway and Digitraffic for the Baltic Sea without sign-up, AISHub, or your own AIS receiver), lightning from the volunteer network Blitzortung.org, the ISS orbit from CelesTrak. Whole world or Europe, DACH, North America, South America, East Asia, Australia and Oceania. German, English or Spanish.",
+      "version": "0.4.1",
+      "updated": "2026-10-27T11:20:32Z",
       "thumbnails": [
         "plugin_packs/world-map-live/thumb.webp"
       ],
-      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/world-map-live-0.3.5/WorldMapLive.zip",
-      "size": 159618,
-      "checksum": "f2ef4e67e0d7079cdd0d8d8f964eda3c2e639711dd9aa05615cda787bd5b11f7"
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/world-map-live-0.4.1/WorldMapLive.zip",
+      "size": 167289,
+      "checksum": "621b7b3feb333427f1e696f4179e1813c5de4e9e5338d0bcd51d46a4910835ea"
     },
     {
       "id": "biathlon-live",
