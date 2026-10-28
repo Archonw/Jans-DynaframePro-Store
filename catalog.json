@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "generated": "2026-10-27T23:40:26Z",
+  "generated": "2026-10-28T01:03:29Z",
   "store": {
     "name": "Jan's Store",
     "author": "Jan",
@@ -333,6 +333,23 @@
       "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/immich-0.2.2/ImmichSlideshow.zip",
       "size": 62505,
       "checksum": "826202896d6f382bd32cc7b0bd5e41da6f950c27ab9dafb6d568414a436c2e4b"
+    },
+    {
+      "id": "network-overview",
+      "type": "integration",
+      "title": "Network Overview",
+      "author": "Jan",
+      "description": "Your home network as a living map: which devices are online (LAN, Wi-Fi, guests), internet speed and today's data volume from your FRITZ!Box, queries and blocked ads from up to three Pi-holes (keepalived pairs are recognised), and storage, disk temperatures, CPU, RAM and containers from your Unraid server (7.2 or later, or any server with Glances). The plugin keeps a short history and points out what stands out today: a new device, a hot disk, a Pi-hole that does not answer, more blocked or downloaded than usual. Everything stays in your home network. German, English or Spanish.",
+      "version": "0.1.1",
+      "updated": "2026-10-28T01:03:29Z",
+      "thumbnails": [
+        "plugin_packs/network-overview/thumb.webp",
+        "plugin_packs/network-overview/thumb-landscape.webp",
+        "plugin_packs/network-overview/thumb-portrait.webp"
+      ],
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/network-overview-0.1.1/NetworkOverview.zip",
+      "size": 129061,
+      "checksum": "8f243903ea56f1999ee81247b55d9d1f6fe9dd67ebbcb814939e3edec4a7418b"
     }
   ]
 }
