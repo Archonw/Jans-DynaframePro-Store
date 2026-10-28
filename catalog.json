@@ -70,7 +70,7 @@
         "plugin_packs/fussball-live/thumb-bl2.webp",
         "plugin_packs/fussball-live/thumb-ucl.webp"
       ],
-      "download_url": "plugin_packs/fussball-live/FussballLive.zip",
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/fussball-live-0.4.16/FussballLive.zip",
       "size": 1091352,
       "checksum": "215432dc32094b1561c04174b118d279afb3f4a82a263122a1913bb21cdd49ef"
     },
