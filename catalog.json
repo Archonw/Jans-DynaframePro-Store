@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "generated": "2026-10-28T23:06:42Z",
+  "generated": "2026-10-30T19:37:52Z",
   "store": {
     "name": "Jan's Store",
     "author": "Jan",
@@ -61,8 +61,8 @@
       "title": "Fußball Live",
       "author": "Jan",
       "description": "Live scores, matchdays and tables for Bundesliga, Champions League, English, Scottish and Spanish leagues and cups, the World Cup and more. Installs the plugin together with its scene and can show it over the running playlist every few minutes. Pick your club to show its crest in the background and its colours as accent. German, English or Spanish.",
-      "version": "0.4.16",
-      "updated": "2026-10-28T23:06:42Z",
+      "version": "0.4.17",
+      "updated": "2026-10-30T19:37:52Z",
       "thumbnails": [
         "plugin_packs/fussball-live/thumb-hero.webp",
         "plugin_packs/fussball-live/thumb-landscape.webp",
@@ -70,9 +70,9 @@
         "plugin_packs/fussball-live/thumb-bl2.webp",
         "plugin_packs/fussball-live/thumb-ucl.webp"
       ],
-      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/fussball-live-0.4.16/FussballLive.zip",
-      "size": 1091352,
-      "checksum": "215432dc32094b1561c04174b118d279afb3f4a82a263122a1913bb21cdd49ef"
+      "download_url": "plugin_packs/fussball-live/FussballLive.zip",
+      "size": 1091457,
+      "checksum": "5d556ab62c51874fc4ee0ba2657e3621d7c6a979035d7ca9238397f2bb5653d5"
     },
     {
       "id": "american-football-live",
@@ -80,16 +80,16 @@
       "title": "American Football Live",
       "author": "Jan",
       "description": "Live scores, weeks and standings for the NFL, College Football (Top 25, SEC, Big Ten, Big 12, ACC), UFL and CFL. Installs the plugin together with its scene and can show it over the running playlist every few minutes or on a touchdown. Pick your team to show its logo in the background and its colours as accent. German, English or Spanish.",
-      "version": "0.2.11",
-      "updated": "2026-10-27T23:03:59Z",
+      "version": "0.2.12",
+      "updated": "2026-10-30T19:37:52Z",
       "thumbnails": [
         "plugin_packs/american-football-live/thumb-hero.webp",
         "plugin_packs/american-football-live/thumb-landscape.webp",
         "plugin_packs/american-football-live/thumb-portrait.webp"
       ],
-      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/american-football-live-0.2.11/AmericanFootballLive.zip",
-      "size": 83057,
-      "checksum": "d23ea8c7aa54b9ed90a0653edc5031e61226d13023f2b43874924ec70d00e1ff"
+      "download_url": "plugin_packs/american-football-live/AmericanFootballLive.zip",
+      "size": 83158,
+      "checksum": "1f9a79aa8100e8a2862e04552bcdccd0d114c44b1f8c7a68be657481a0942453"
     },
     {
       "id": "world-map-live",
