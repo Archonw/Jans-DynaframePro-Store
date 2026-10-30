@@ -70,7 +70,7 @@
         "plugin_packs/fussball-live/thumb-bl2.webp",
         "plugin_packs/fussball-live/thumb-ucl.webp"
       ],
-      "download_url": "plugin_packs/fussball-live/FussballLive.zip",
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/fussball-live-0.4.17/FussballLive.zip",
       "size": 1091457,
       "checksum": "5d556ab62c51874fc4ee0ba2657e3621d7c6a979035d7ca9238397f2bb5653d5"
     },
@@ -87,7 +87,7 @@
         "plugin_packs/american-football-live/thumb-landscape.webp",
         "plugin_packs/american-football-live/thumb-portrait.webp"
       ],
-      "download_url": "plugin_packs/american-football-live/AmericanFootballLive.zip",
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/american-football-live-0.2.12/AmericanFootballLive.zip",
       "size": 83158,
       "checksum": "1f9a79aa8100e8a2862e04552bcdccd0d114c44b1f8c7a68be657481a0942453"
     },
