@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "generated": "2026-10-31T15:32:41Z",
+  "generated": "2026-10-31T17:51:07Z",
   "store": {
     "name": "Jan's Store",
     "author": "Jan",
@@ -350,6 +350,21 @@
       "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/network-overview-0.1.1/NetworkOverview.zip",
       "size": 129061,
       "checksum": "8f243903ea56f1999ee81247b55d9d1f6fe9dd67ebbcb814939e3edec4a7418b"
+    },
+    {
+      "id": "magic-mirror-module-fuelprices",
+      "type": "magic-mirror-module",
+      "title": "Magic Mirror module: Fuel prices",
+      "author": "Jan",
+      "description": "Module for Dynaframe's Magic Mirror (install that first). The cheapest petrol stations near you for Super E5, Super E10 and diesel with real-time prices, and whether now is a good time to fill up: comparison with the average, the last 24 hours as a small chart and the time of day when fuel is usually cheapest (the module learns this itself). Germany only, needs a free Tankerkönig API key. Does not appear under Plugins. Guide for building or porting modules: https://github.com/Archonw/Jans-DynaframePro-Store/blob/main/plugin_packs/magic-frame/MODULES.md",
+      "version": "1.0.0",
+      "updated": "2026-10-31T17:51:07Z",
+      "thumbnails": [
+        "plugin_packs/magic-frame/thumbs/fuelprices.webp"
+      ],
+      "download_url": "plugin_packs/magic-frame/modules/fuelprices.zip",
+      "size": 12495,
+      "checksum": "6eb708092d653f5beb563560fe86e3a98842de9da70c77f39102385b98cf016a"
     }
   ]
 }

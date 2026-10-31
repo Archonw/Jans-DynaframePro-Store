@@ -131,6 +131,22 @@
       "version": "1.2.0",
       "author": "Jan",
       "zip": "bordcomputer.zip"
+    },
+    {
+      "type": "fuelprices",
+      "name": {
+        "de": "Spritpreise",
+        "en": "Fuel prices",
+        "es": "Precios del combustible"
+      },
+      "description": {
+        "de": "Die günstigsten Tankstellen in deiner Nähe für Super E5, Super E10 und Diesel, mit Preisen in Echtzeit. Das Modul merkt sich die Preise und zeigt, ob es gerade günstig ist: Vergleich mit dem Durchschnitt, Verlauf der letzten 24 Stunden und die Uhrzeit, zu der Tanken meist am billigsten ist. Nur Deutschland, mit freiem Schlüssel von Tankerkönig.",
+        "en": "The cheapest petrol stations near you for Super E5, Super E10 and diesel, with real-time prices. The module remembers the prices and shows whether now is a good time: comparison with the average, the last 24 hours and the time of day when filling up is usually cheapest. Germany only, with a free Tankerkönig key.",
+        "es": "Las gasolineras más baratas cerca de ti para Super E5, Super E10 y diésel, con precios en tiempo real. El módulo recuerda los precios y muestra si ahora conviene repostar: comparación con la media, las últimas 24 horas y la hora del día en que suele ser más barato. Solo Alemania, con una clave gratuita de Tankerkönig."
+      },
+      "version": "1.0.0",
+      "author": "Jan",
+      "zip": "fuelprices.zip"
     }
   ]
 }

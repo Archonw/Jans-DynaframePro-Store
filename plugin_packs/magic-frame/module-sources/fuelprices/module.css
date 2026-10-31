@@ -1,0 +1,42 @@
+/* Spritpreise */
+.m-fuelprices .fp-box { display: flex; flex-direction: column; gap: calc(0.6 * var(--u)); max-width: calc(46 * var(--u)); }
+.region.right .m-fuelprices .fp-box { margin-left: auto; align-items: flex-end; }
+.region.center .m-fuelprices .fp-box, .region.bar .m-fuelprices .fp-box { margin: 0 auto; align-items: center; }
+.m-fuelprices .fp-fuels { display: flex; flex-direction: column; gap: calc(1.4 * var(--u)); }
+.m-fuelprices .fp-fuel { display: flex; flex-direction: column; gap: calc(0.25 * var(--u)); }
+.region.right .m-fuelprices .fp-fuel { align-items: flex-end; }
+.region.center .m-fuelprices .fp-fuel, .region.bar .m-fuelprices .fp-fuel { align-items: center; }
+.m-fuelprices .fp-head { display: flex; align-items: center; flex-wrap: wrap; gap: calc(0.6 * var(--u)); }
+.m-fuelprices .fp-head .ic, .m-fuelprices .fp-tip .ic { flex: none; color: var(--accent); }
+.m-fuelprices .fp-price { display: flex; align-items: baseline; gap: calc(0.5 * var(--u)); line-height: 1; }
+.m-fuelprices .fp-price b { font-size: calc(4.6 * var(--u)); font-weight: 300; letter-spacing: -.01em; font-variant-numeric: tabular-nums; }
+.m-fuelprices .fp-price.one b { font-size: calc(7 * var(--u)); }
+.m-fuelprices .fp-price sup { font-size: .5em; vertical-align: .75em; margin-left: .04em; }
+.m-fuelprices .fp-price > span { font-size: calc(2.2 * var(--u)); }
+.m-fuelprices .fp-fuel.cheap .fp-price b { color: #7bd88f; }
+.m-fuelprices .fp-where { max-width: calc(44 * var(--u)); }
+.m-fuelprices .fp-tip { display: inline-flex; align-items: flex-start; gap: calc(0.5 * var(--u)); color: var(--normal); }
+.m-fuelprices .fp-chip { display: inline-block; font-size: calc(1.5 * var(--u)); line-height: 1.5; padding: 0 calc(0.8 * var(--u));
+  border-radius: 99px; border: 1px solid currentColor; white-space: nowrap; }
+.m-fuelprices .fp-chip.ok { color: #7bd88f; }
+.m-fuelprices .fp-chip.warn { color: var(--accent); }
+.m-fuelprices .fp-chip.dim { color: var(--dimmed); }
+.m-fuelprices .fp-chip.hot { color: #10140f; background: #7bd88f; border-color: #7bd88f; font-weight: 600; }
+.m-fuelprices .fp-chart { position: relative; width: calc(30 * var(--u)); margin-top: calc(0.3 * var(--u)); }
+.m-fuelprices .fp-chart .fp-plot svg { display: block; width: 100%; height: calc(5 * var(--u)); overflow: visible; }
+.m-fuelprices .fp-chart .fp-dot { position: absolute; width: calc(0.9 * var(--u)); height: calc(0.9 * var(--u)); border-radius: 50%;
+  background: var(--accent); transform: translate(-50%, -50%); }
+.m-fuelprices .fp-chart .fp-plot { position: relative; }
+.m-fuelprices .fp-line { fill: none; stroke: var(--bright); stroke-width: 1.6; vector-effect: non-scaling-stroke; stroke-linejoin: round; }
+.m-fuelprices .fp-avg { stroke: var(--dimmed); stroke-width: 1; stroke-dasharray: 3 3; vector-effect: non-scaling-stroke; }
+.m-fuelprices .fp-axis { display: flex; justify-content: space-between; margin-top: calc(0.2 * var(--u)); }
+.m-fuelprices .fp-table { border-collapse: collapse; }
+.m-fuelprices .fp-table th, .m-fuelprices .fp-table td { padding: calc(0.3 * var(--u)) calc(0.7 * var(--u)); vertical-align: baseline; }
+.m-fuelprices .fp-table thead th { font-weight: 400; text-align: right; }
+.m-fuelprices .fp-table tbody th { text-align: left; font-weight: 400; display: flex; flex-direction: column; padding-left: 0; }
+.m-fuelprices .fp-table td { text-align: right; font-variant-numeric: tabular-nums; color: var(--bright); white-space: nowrap; }
+.m-fuelprices .fp-table td sup { font-size: .6em; }
+.m-fuelprices .fp-table td.fp-best { color: #7bd88f; font-weight: 600; }
+.m-fuelprices .fp-table tr.fp-closed { opacity: .45; }
+.m-fuelprices .fp-credit { font-size: calc(1.1 * var(--u)); color: var(--dimmed); opacity: .8; }
+.m-fuelprices .fp-fuels.many .fp-chart .fp-plot svg { height: calc(3.6 * var(--u)); }
