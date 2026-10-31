@@ -362,7 +362,7 @@
       "thumbnails": [
         "plugin_packs/magic-frame/thumbs/fuelprices.webp"
       ],
-      "download_url": "plugin_packs/magic-frame/modules/fuelprices.zip",
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/magic-mirror-module-fuelprices-1.0.0/fuelprices.zip",
       "size": 12495,
       "checksum": "6eb708092d653f5beb563560fe86e3a98842de9da70c77f39102385b98cf016a"
     }
