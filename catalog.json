@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "generated": "2026-11-06T14:01:15Z",
+  "generated": "2026-11-06T20:30:21Z",
   "store": {
     "name": "Jan's Store",
     "author": "Jan",
@@ -380,6 +380,25 @@
       "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/web-login-0.3.1/WebLogin.zip",
       "size": 79595,
       "checksum": "f2feb86ceb7cd0f6063f40fd817ee472496daf8612297a4a5337bc6c1fe3192a"
+    },
+    {
+      "id": "ticker-wall",
+      "type": "integration",
+      "title": "Ticker Wall",
+      "author": "Jan",
+      "description": "Turn the frame into a news-channel and trading-floor wall: news feeds, stock prices, crypto, currencies, world clocks, weather and earthquakes, all scrolling at once. Far too much to follow, and that's the point. Ticker Wall also analyses the headlines: a topic radar of what many sources report right now, breaking-news detection, the news pace of the day and a market mood gauge with gainers and losers. Optional alerts bring the wall over the playlist: keywords in the news, breaking news, price rules (NVDA > 150, TSLA ± 5%), big index moves, market opening bells and strong earthquakes. Two looks (news channel or trading terminal), landscape and portrait, region presets for the US, UK, Germany, Spain or international. Free sources; stock prices need a free Finnhub key. Installs the plugin together with its scene. English, German or Spanish.",
+      "version": "0.1.3",
+      "updated": "2026-11-06T20:30:21Z",
+      "thumbnails": [
+        "plugin_packs/ticker-wall/thumb.webp",
+        "plugin_packs/ticker-wall/thumb-news.webp",
+        "plugin_packs/ticker-wall/thumb-terminal.webp",
+        "plugin_packs/ticker-wall/thumb-alert.webp",
+        "plugin_packs/ticker-wall/thumb-portrait.webp"
+      ],
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/ticker-wall-0.1.3/TickerWall.zip",
+      "size": 244877,
+      "checksum": "4f43d3e5c5c2257d003add0ebb1f108f92ac40c9ccb769d27c02b1bc49ccd7de"
     }
   ]
 }
