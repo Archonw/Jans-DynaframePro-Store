@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "generated": "2026-11-06T13:57:41Z",
+  "generated": "2026-11-06T14:01:15Z",
   "store": {
     "name": "Jan's Store",
     "author": "Jan",
@@ -371,15 +371,15 @@
       "type": "plugin",
       "title": "Web Login",
       "author": "Jan",
-      "description": "Puts a login in front of the frame's web page: a password, single sign-on with your own OIDC provider, or both, optionally over HTTPS. Also closes the ports that lead past the login to everyone but the frame itself and devices you trust, such as Home Assistant, or apps with an API key (HTTPS only by default); ports of other plugins stay open unless you tick them. The frame, its scenes and NFC readers keep working, and the login comes back on its own after a DynaFrame update. German, English or Spanish.",
-      "version": "0.3.0",
-      "updated": "2026-11-06T13:57:41Z",
+      "description": "Puts a login in front of the frame's web page: a password, single sign-on with your own OIDC provider, or both, optionally over HTTPS. Also closes the ports that lead past the login to everyone but the frame itself and devices you trust, such as Home Assistant, or apps with an API key (HTTPS only by default); ports of other plugins stay open unless you tick them. The frame, its scenes and NFC readers keep working, and the login comes back on its own after a DynaFrame update. German, English or Spanish. Please note: SSH, file shares, other plugins' ports (unless ticked) and UDP services are not covered; never expose the frame to the internet. Test thoroughly yourself whether it gives enough protection for your setup. Provided as is, without warranty, at your own risk.",
+      "version": "0.3.1",
+      "updated": "2026-11-06T14:01:15Z",
       "thumbnails": [
         "plugin_packs/web-login/thumb.webp"
       ],
-      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/web-login-0.3.0/WebLogin.zip",
-      "size": 77106,
-      "checksum": "5cc091524352e1f30613f1667049479f916d96560332b822461f011160747673"
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/web-login-0.3.1/WebLogin.zip",
+      "size": 79595,
+      "checksum": "f2feb86ceb7cd0f6063f40fd817ee472496daf8612297a4a5337bc6c1fe3192a"
     }
   ]
 }
