@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "generated": "2026-10-31T17:51:07Z",
+  "generated": "2026-11-06T13:57:41Z",
   "store": {
     "name": "Jan's Store",
     "author": "Jan",
@@ -365,6 +365,21 @@
       "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/magic-mirror-module-fuelprices-1.0.0/fuelprices.zip",
       "size": 12495,
       "checksum": "6eb708092d653f5beb563560fe86e3a98842de9da70c77f39102385b98cf016a"
+    },
+    {
+      "id": "web-login",
+      "type": "plugin",
+      "title": "Web Login",
+      "author": "Jan",
+      "description": "Puts a login in front of the frame's web page: a password, single sign-on with your own OIDC provider, or both, optionally over HTTPS. Also closes the ports that lead past the login to everyone but the frame itself and devices you trust, such as Home Assistant, or apps with an API key (HTTPS only by default); ports of other plugins stay open unless you tick them. The frame, its scenes and NFC readers keep working, and the login comes back on its own after a DynaFrame update. German, English or Spanish.",
+      "version": "0.3.0",
+      "updated": "2026-11-06T13:57:41Z",
+      "thumbnails": [
+        "plugin_packs/web-login/thumb.webp"
+      ],
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/web-login-0.3.0/WebLogin.zip",
+      "size": 77106,
+      "checksum": "5cc091524352e1f30613f1667049479f916d96560332b822461f011160747673"
     }
   ]
 }
