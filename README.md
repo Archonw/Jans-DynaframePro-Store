@@ -2,6 +2,14 @@
 
 Plugins, live integrations and Magic Mirror modules for DynaFrame Pro digital photo frames. Everything installs straight from the frame's built-in Store.
 
+## Watch the video
+
+<!-- Video player: drag promo/DynaframePro-Promo-EN-small.mp4 into the GitHub editor on this line -->
+
+[![Promo video: all packs in 1:36](promo/poster.webp)](promo/DynaframePro-Promo-EN.mp4)
+
+Full HD download: [English](promo/DynaframePro-Promo-EN.mp4) · [Deutsch](promo/DynaframePro-Promo-DE.mp4)
+
 ## Add the store to your frame
 
 1. Open your frame's web interface and go to **Store**.
