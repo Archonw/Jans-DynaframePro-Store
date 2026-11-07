@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "generated": "2026-11-06T20:40:34Z",
+  "generated": "2026-11-07T12:32:17Z",
   "store": {
     "name": "Jan's Store",
     "author": "Jan",
@@ -399,6 +399,26 @@
       "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/ticker-wall-0.1.4/TickerWall.zip",
       "size": 244889,
       "checksum": "f8fac346b365356c861516a5fec04aebd2a27193b8e75d61f5b9439196403906"
+    },
+    {
+      "id": "halloween-scare",
+      "type": "integration",
+      "title": "Halloween Scare",
+      "author": "Jan",
+      "description": "A Halloween jump scare for your frame. It shows your photos as usual until a motion sensor or the doorbell in your Home Assistant goes off. Then one of four scares comes over the playlist: a haunted portrait whose eyes find you before it turns into a screaming ghoul, a pale ghost standing in the photo that is on screen right now before it jumps at you, the picture breaking up like an old TV while a dark figure comes closer with every glitch, or a monster grabbing the edge of the frame and roaring \"Trick or treat!\". Every scare has a gentle version for children. The frame plays the screams and noises itself, right on cue, and sets the volume back afterwards. Pause between scares, chance per trigger, quiet hours, \"only around Halloween\" and an arm switch; Home Assistant automations can start a scare with the halloween_scare event. All pictures and sounds are made by the plugin itself. Installs the plugin together with its scene. English, German or Spanish.",
+      "version": "0.1.4",
+      "updated": "2026-11-07T12:32:17Z",
+      "thumbnails": [
+        "plugin_packs/halloween-scare/thumb.webp",
+        "plugin_packs/halloween-scare/thumb-portrait.webp",
+        "plugin_packs/halloween-scare/thumb-ghost.webp",
+        "plugin_packs/halloween-scare/thumb-static.webp",
+        "plugin_packs/halloween-scare/thumb-monster.webp",
+        "plugin_packs/halloween-scare/thumb-gentle.webp"
+      ],
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/halloween-scare-0.1.4/HalloweenScare.zip",
+      "size": 1703996,
+      "checksum": "f03dcc83bd8811c01df02bdb00d7cd14086fc8fc25bbc0b965d217f13271fe53"
     }
   ]
 }
