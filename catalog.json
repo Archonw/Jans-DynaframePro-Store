@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "generated": "2026-11-07T12:32:17Z",
+  "generated": "2026-11-07T12:53:20Z",
   "store": {
     "name": "Jan's Store",
     "author": "Jan",
@@ -405,7 +405,7 @@
       "type": "integration",
       "title": "Halloween Scare",
       "author": "Jan",
-      "description": "A Halloween jump scare for your frame. It shows your photos as usual until a motion sensor or the doorbell in your Home Assistant goes off. Then one of four scares comes over the playlist: a haunted portrait whose eyes find you before it turns into a screaming ghoul, a pale ghost standing in the photo that is on screen right now before it jumps at you, the picture breaking up like an old TV while a dark figure comes closer with every glitch, or a monster grabbing the edge of the frame and roaring \"Trick or treat!\". Every scare has a gentle version for children. The frame plays the screams and noises itself, right on cue, and sets the volume back afterwards. Pause between scares, chance per trigger, quiet hours, \"only around Halloween\" and an arm switch; Home Assistant automations can start a scare with the halloween_scare event. All pictures and sounds are made by the plugin itself. Installs the plugin together with its scene. English, German or Spanish.",
+      "description": "This pack is a demo: it shows how a plugin can react to triggers from Home Assistant (motion sensors, doorbells, switches, events) and take over the screen for a moment. Halloween is just the example. A Halloween jump scare for your frame. It shows your photos as usual until a motion sensor or the doorbell in your Home Assistant goes off. Then one of four scares comes over the playlist: a haunted portrait whose eyes find you before it turns into a screaming ghoul, a pale ghost standing in the photo that is on screen right now before it jumps at you, the picture breaking up like an old TV while a dark figure comes closer with every glitch, or a monster grabbing the edge of the frame and roaring \"Trick or treat!\". Every scare has a gentle version for children. The frame plays the screams and noises itself, right on cue, and sets the volume back afterwards. Pause between scares, chance per trigger, quiet hours, \"only around Halloween\" and an arm switch; Home Assistant automations can start a scare with the halloween_scare event. All pictures and sounds are made by the plugin itself. Installs the plugin together with its scene. English, German or Spanish.",
       "version": "0.1.4",
       "updated": "2026-11-07T12:32:17Z",
       "thumbnails": [
