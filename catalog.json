@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "generated": "2026-11-08T08:49:11Z",
+  "generated": "2026-11-08T19:18:05Z",
   "store": {
     "name": "Jan's Store",
     "author": "Jan",
@@ -425,9 +425,9 @@
       "type": "integration",
       "title": "Growing Up",
       "author": "Jan",
-      "description": "Watch your children (or anyone) grow up on the frame. Growing Up takes people from your own Immich server, picks the best face per month, quarter or year from all their photos and cuts out portraits lined up on the face. The scene plays them as a time-lapse with age and date, as a contact sheet of all years, as then and now, and shows siblings side by side at the same age. On birthdays it can come over the playlist with congratulations. Photos stay on your Immich server; the frame keeps only the small portraits. Installs the plugin together with its scene. English, German or Spanish.",
-      "version": "0.1.2",
-      "updated": "2026-11-07T21:19:21Z",
+      "description": "Watch your children (or anyone) grow up on the frame. Growing Up takes people from your own Immich server, picks the best face per month, quarter or year from all their photos and cuts out portraits lined up on the face. The scene plays them as a time-lapse with age and date, as a contact sheet of all years, as then and now, and shows siblings side by side at the same age. On birthdays it can come over the playlist with congratulations. Limit it to chosen albums, star ratings or favourites so nothing private shows. Photos stay on your Immich server; the frame keeps only the small portraits. Installs the plugin together with its scene. English, German or Spanish.",
+      "version": "0.1.3",
+      "updated": "2026-11-08T19:18:05Z",
       "thumbnails": [
         "plugin_packs/growing-up/thumb.webp",
         "plugin_packs/growing-up/thumb-film.webp",
@@ -435,9 +435,9 @@
         "plugin_packs/growing-up/thumb-sameage.webp",
         "plugin_packs/growing-up/thumb-portrait.webp"
       ],
-      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/growing-up-0.1.2/GrowingUp.zip",
-      "size": 81244,
-      "checksum": "bd590ff2a117428b867f17a3f4ee2d00bc2c27eed57f690e959711e0fbc84910"
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/growing-up-0.1.3/GrowingUp.zip",
+      "size": 83969,
+      "checksum": "c0d05bb571db4c755fec9fa8e1bf6d6309a40a9248c51cc9d574f8c79a783822"
     },
     {
       "id": "photo-mosaic",
