@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "generated": "2026-11-08T19:21:22Z",
+  "generated": "2026-11-08T19:23:25Z",
   "store": {
     "name": "Jan's Store",
     "author": "Jan",
@@ -457,6 +457,25 @@
       "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/photo-mosaic-0.1.4/PhotoMosaic.zip",
       "size": 86640,
       "checksum": "0dadb5561e45f602b0669cc28038945c2c4698f04993b9cb1678a79e91df110b"
+    },
+    {
+      "id": "on-this-day",
+      "type": "integration",
+      "title": "On This Day",
+      "author": "Jan",
+      "description": "Your photos of this day in earlier years, shown as a journey through time. Next to every photo you see the weather back then at that very place and hour (from the photo's date, time and GPS, via the free Open-Meteo archive back to 1940) and the weather today, with how much warmer or colder it was. A timeline shows the temperature of every year. After the last year a summary shows one photo per year, the temperatures of all years next to today's, the warmest, coldest and wettest year and the place you were most often on this day. Two views: time travel (one photo after another with slow zoom) or side by side (all years as photo cards). Photo duration, transition, photos per year and the days around today are adjustable. The photos come from a DynaFrame playlist, the whole DynaFrame library or an Immich server (all photos or an album), with Immich filters for albums, stars, favourites and archived photos. Installs the plugin together with its scene. English, German or Spanish.",
+      "version": "0.1.1",
+      "updated": "2026-11-08T19:23:25Z",
+      "thumbnails": [
+        "plugin_packs/on-this-day/thumb.webp",
+        "plugin_packs/on-this-day/thumb-journey.webp",
+        "plugin_packs/on-this-day/thumb-summary.webp",
+        "plugin_packs/on-this-day/thumb-wall.webp",
+        "plugin_packs/on-this-day/thumb-portrait.webp"
+      ],
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/on-this-day-0.1.1/OnThisDay.zip",
+      "size": 213173,
+      "checksum": "a944f342374dcbb6c453faa92500618baeb4a844682bf0b1879b3e19f3fef582"
     }
   ]
 }
