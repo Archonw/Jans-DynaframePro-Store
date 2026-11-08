@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "generated": "2026-11-07T21:19:21Z",
+  "generated": "2026-11-08T06:58:51Z",
   "store": {
     "name": "Jan's Store",
     "author": "Jan",
@@ -438,6 +438,25 @@
       "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/growing-up-0.1.2/GrowingUp.zip",
       "size": 81244,
       "checksum": "bd590ff2a117428b867f17a3f4ee2d00bc2c27eed57f690e959711e0fbc84910"
+    },
+    {
+      "id": "photo-mosaic",
+      "type": "integration",
+      "title": "Photo Mosaic",
+      "author": "Jan",
+      "description": "One of your photos, rebuilt from hundreds of your own photos as small tiles, matched by colour. The tiles settle over the picture in a wave, then the camera glides slowly towards a single tile, which turns into the real photo with its date and place, and finally the mosaic fades back to the original. In the endless flow the camera dives into the tile until it fills the screen, and that photo becomes the next mosaic. Tiles and motifs come from a DynaFrame playlist, the whole DynaFrame library or an Immich server (all photos or an album), and can come from different sources. The plugin prepares the tiles once in the background and caches them, so playback stays light on the Pi. Tile size, tint, pace and captions can be set on the plugin page. Installs the plugin together with its scene. English, German or Spanish.",
+      "version": "0.1.0",
+      "updated": "2026-11-08T06:58:51Z",
+      "thumbnails": [
+        "plugin_packs/photo-mosaic/thumb.webp",
+        "plugin_packs/photo-mosaic/thumb-build.webp",
+        "plugin_packs/photo-mosaic/thumb-mosaic.webp",
+        "plugin_packs/photo-mosaic/thumb-zoom.webp",
+        "plugin_packs/photo-mosaic/thumb-original.webp"
+      ],
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/photo-mosaic-0.1.0/PhotoMosaic.zip",
+      "size": 79753,
+      "checksum": "e49588fa49cabda9c669b103bbdad03b7b0e42149cb081bd2a7afc6f6fa57c0f"
     }
   ]
 }
