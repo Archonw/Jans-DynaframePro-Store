@@ -11,6 +11,7 @@ Unpacked sources of the add-on modules for Dynaframe's Magic Mirror, as examples
 | `jellyfin` | now playing on a Jellyfin server | |
 | `traveltime` | travel time by car with traffic from Mapbox or the Google Routes API (own key), "leave by" for an arrival time, German motorway incidents near the route; results cached in `fetch.py` between fetches | |
 | `bordcomputer` | add-on **skin** "Starship console": layout with fields (`slots`, main viewer up to three entries via `max`, text size via `sizes`), own widget `stardate`, Antonio font embedded into `module.css` by `build.sh` | |
+| `fuelprices` | cheapest petrol stations from Tankerkönig (own free key) with a price history kept in a file by `fetch.py` to work out the average and the cheapest hour | |
 | `pegelstand` | river level from PEGELONLINE, the smallest example | |
 
 The installable ZIPs are in [../modules](../modules).
