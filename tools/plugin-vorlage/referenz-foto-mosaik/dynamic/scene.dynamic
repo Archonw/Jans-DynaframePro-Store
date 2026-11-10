@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "1.0",
+  "id": "photo-mosaic",
+  "title": "Foto Mosaik",
+  "description": "One of your photos, made of hundreds of your own photos, with a slow zoom into single tiles.",
+  "author": "Jan",
+  "subject": "Photos",
+  "tags": [
+    "photos",
+    "mosaic",
+    "art"
+  ],
+  "entryPoint": "index.html",
+  "thumbnail": "thumbnail.svg",
+  "backgroundColor": "#0b0d11",
+  "recommendedDurationSec": 300
+}

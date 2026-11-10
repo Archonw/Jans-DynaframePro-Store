@@ -1,0 +1,95 @@
+{
+  "Name": "PhotoMosaic",
+  "Author": "Jan",
+  "Description": "Recreates one of your photos from hundreds of your own small photos as tiles, matched by colour, then slowly zooms into single tiles and fades back to the original. Photos come from a DynaFrame playlist, the whole DynaFrame library or an Immich server (all photos or an album). The tiles are prepared once in the background and cached, so playback stays light on the Pi.",
+  "Version": "0.1.7",
+  "DisplayName": "Foto Mosaik",
+  "ManifestVersion": 1,
+  "IconPath": "icon.png",
+  "Enabled": true,
+  "ApiVersion": 2,
+  "Settings": [],
+  "OverlayPlugins": [],
+  "Services": [
+    {
+      "type": "background",
+      "id": "PhotoMosaic.Tiles",
+      "friendlyName": "Foto Mosaik",
+      "description": "Prepares the mosaic tiles from your photos in the background.",
+      "events": null,
+      "eventParameters": null
+    }
+  ],
+  "ContentSources": null,
+  "OverlayPolicies": null,
+  "OverlayDesigns": null,
+  "AdvancedSettings": {
+    "Enabled": true,
+    "Label": "Open Foto Mosaik",
+    "Description": "Which photos become tiles and motifs, tile size, colour matching, flow and the optional Immich server.",
+    "RequiresReady": false
+  },
+  "Actions": [
+    {
+      "id": "refresh",
+      "label": "Read photos again",
+      "description": "Read the photos and prepare the tiles again right away.",
+      "kind": "command",
+      "invokeOnSettingsChange": false,
+      "requiresReady": false
+    },
+    {
+      "id": "playlist",
+      "label": "Create playlist",
+      "description": "Create a playlist \"Foto Mosaik\" that contains the scene.",
+      "kind": "command",
+      "invokeOnSettingsChange": false,
+      "requiresReady": false
+    }
+  ],
+  "Compatibility": {
+    "MinHostVersion": null,
+    "MaxHostVersionExclusive": null,
+    "MinPluginPlatformRevision": 7,
+    "MaxPluginPlatformRevisionExclusive": null,
+    "Architectures": [
+      "arm64",
+      "x64"
+    ],
+    "RequiredFeatures": [
+      "advanced-settings",
+      "permission-declarations-v1",
+      "plugin-actions-v1",
+      "sse-events"
+    ]
+  },
+  "Permissions": [
+    {
+      "id": "network",
+      "reason": "Reads photos from your Immich server, if you add one.",
+      "scope": null
+    },
+    {
+      "id": "plugin-storage:read-write",
+      "reason": "Stores your settings, including the optional Immich API key, and the prepared tiles on the frame.",
+      "scope": null
+    },
+    {
+      "id": "background-execution",
+      "reason": "Prepares the tiles in the background, about once a day.",
+      "scope": null
+    },
+    {
+      "id": "dynamic-content:write",
+      "reason": "Creates the playlist \"Foto Mosaik\" with the scene when you ask for it.",
+      "scope": null
+    },
+    {
+      "id": "advanced-ui",
+      "reason": "Shows the page with the mosaic settings.",
+      "scope": null
+    }
+  ],
+  "Links": null,
+  "Documentation": null
+}

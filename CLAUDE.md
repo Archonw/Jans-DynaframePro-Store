@@ -31,3 +31,7 @@ Vor dem Veröffentlichen prüfen, dass in keiner ZIP noch `Dynaframe-Stuff`, `Dy
 5. `download_url` zeigt auf ein **GitHub Release** des jeweiligen Repos (`https://github.com/<repo>/releases/download/<pack-id>-<version>/<Zip>.zip`), damit Downloads gezählt werden (seit 25.10.2026, getestet). Die ZIP trotzdem nach `plugin_packs/` committen: der Workflow `Pack-Releases` legt bei jedem Push auf `main` das fehlende Release aus der ZIP an (passend zu `size`/`checksum`) und korrigiert `download_url` selbst, auch wenn sie noch relativ ist oder aus dem Test-Store kopiert wurde. Darum nie eine ZIP bei gleicher Version austauschen: ein bestehendes Release wird nicht überschrieben. Zahlen: `python3 tools/downloads.py [owner/repo]`.
 6. Magic-Mirror-Module zusätzlich in `plugin_packs/magic-frame/modules/catalog.json` eintragen bzw. Version erhöhen.
 7. Direkt auf `main` committen und pushen.
+
+## Plugin-Einstellungsseiten: immer nach Vorlage
+
+Jede neue Plugin-Seite (und jede überarbeitete) wird nach `tools/plugin-vorlage/` gebaut: README.md dort lesen, Referenz ist Foto Mosaik (`tools/plugin-vorlage/referenz-foto-mosaik/`). Kurz: Kopf mit Sprachwahl, Status-Karte (Version zuletzt), eigene Karten, nur bei Bedarf Immich-/WebDAV-/Ordner-Karten aus der Referenz, als letzte Karte „Eine Playlist dafür“ (`own_playlist.py`), dann der Support-Fuß. Texte DE/EN/ES, im HTML in der Sprache von `<html lang>` vorbefüllt. ZIPs mit `tools/plugin-vorlage/make_zip.py` packen.

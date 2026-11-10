@@ -1,0 +1,8 @@
+html, body { margin: 0; height: 100%; background: #0b0d11; overflow: hidden; }
+#stage { position: fixed; inset: 0; width: 100vw; height: 100vh; display: block; }
+.note {
+  position: fixed; left: 50%; top: 50%; transform: translate(-50%, -50%);
+  max-width: 70vw; margin: 0; padding: 1.1em 1.6em; border-radius: 1em;
+  background: rgba(20, 24, 31, .85); color: #e8edf3; text-align: center;
+  font: 600 clamp(14px, 2.6vh, 30px)/1.4 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
