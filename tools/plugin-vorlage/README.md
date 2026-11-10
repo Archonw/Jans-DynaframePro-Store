@@ -9,6 +9,7 @@ Abschauen und Kopieren).
 |---|---|
 | `referenz-foto-mosaik/` | Komplettes Pack: Seite (`plugin/studio/`), Plugin (`plugin/plugin.py`), Quellen inkl. Immich (`plugin/sources.py`), Szene (`dynamic/`) |
 | `own_playlist.py` | Gemeinsamer Baustein für die Karte „Eine Playlist dafür“ (Einbau im Docstring) |
+| `immich-filter/` | Immich-Filter von Foto Mosaik als Baustein: `immich_filters.py` (Schema, Suche je Album × Person, Prüfen), `block.js` (Seite), `apply_ui.py` (setzt die Filtergruppen in eine Seite ein, Texte DE/EN/ES vorbefüllt). So eingebaut in Reisekarte, Farbkalender, Heute vor X Jahren. |
 | `make_zip.py` | ZIP mit richtigen Datei-/Ordnerrechten packen (sonst „Error“ im Store) |
 
 ## Aufbau der Seite (Reihenfolge der Karten)
