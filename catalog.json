@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "generated": "2026-11-10T16:57:04Z",
+  "generated": "2026-11-11T20:25:18Z",
   "store": {
     "name": "Jan's Store",
     "author": "Jan",
@@ -130,14 +130,14 @@
       "title": "Travel Map",
       "author": "Jan",
       "description": "A world map in the style of an old globe, studded with push pins where your photos were taken. The places come from the photos' GPS data: a DynaFrame playlist, the whole DynaFrame media library (plus extra folders such as a mounted NAS) or your Immich server (all photos or an album). Every collection gets its own pin colour and shape (push pin, thumbtack, flag, long pin); close pins are merged. The pins go in one by one in the order the photos were taken, then a photo is shown at its pin now and then with place and date. Oval world map or three globes, or only the area with pins. German, English or Spanish.",
-      "version": "0.1.24",
-      "updated": "2026-11-10T16:57:04Z",
+      "version": "0.1.25",
+      "updated": "2026-11-11T20:25:18Z",
       "thumbnails": [
         "plugin_packs/travel-map/thumb.webp"
       ],
-      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/travel-map-0.1.24/TravelMap.zip",
-      "size": 1622220,
-      "checksum": "f3ea4b7bba6635cd587bffc792025347b8434803c0dbab7a6f67bda697ac17a0"
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/travel-map-0.1.25/TravelMap.zip",
+      "size": 1628459,
+      "checksum": "4cc35dd321ada4dd80d8ff24a888079682e60418e3dcb31b66d5bd7812c162a6"
     },
     {
       "id": "phone-photos",
@@ -445,8 +445,8 @@
       "title": "Foto Mosaik",
       "author": "Jan",
       "description": "One of your photos, rebuilt from hundreds of your own photos as small tiles, matched by colour. The tiles settle over the picture in a wave, then the camera glides slowly towards a single tile, which turns into the real photo with its date and place, and finally the mosaic fades back to the original. In the endless flow the camera dives into the tile until it fills the screen, and that photo becomes the next mosaic. Tiles and motifs come from a DynaFrame playlist, the whole DynaFrame library or an Immich server (all photos or an album), and can come from different sources. The plugin prepares the tiles once in the background and caches them, so playback stays light on the Pi. Tile size, tint, pace and captions can be set on the plugin page. Installs the plugin together with its scene. English, German or Spanish.",
-      "version": "0.1.7",
-      "updated": "2026-11-09T21:23:16Z",
+      "version": "0.1.10",
+      "updated": "2026-11-11T20:25:18Z",
       "thumbnails": [
         "plugin_packs/photo-mosaic/thumb-hero.webp",
         "plugin_packs/photo-mosaic/thumb-build.webp",
@@ -454,9 +454,9 @@
         "plugin_packs/photo-mosaic/thumb-zoom.webp",
         "plugin_packs/photo-mosaic/thumb-original.webp"
       ],
-      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/photo-mosaic-0.1.7/PhotoMosaic.zip",
-      "size": 100628,
-      "checksum": "def11077227f75256b6b54d68c7b5f7c046811ec04461e2920666f097d8e1424"
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/photo-mosaic-0.1.10/PhotoMosaic.zip",
+      "size": 105697,
+      "checksum": "9a8cebbd2abf4c178d101478499f4bd07d07d174f52a0b4b8a5fbc9a861eaaf9"
     },
     {
       "id": "on-this-day",
@@ -464,8 +464,8 @@
       "title": "On This Day",
       "author": "Jan",
       "description": "Your photos of this day in earlier years, shown as a journey through time. Next to every photo you see the weather back then at that very place and hour (from the photo's date, time and GPS, via the free Open-Meteo archive back to 1940) and the weather today, with how much warmer or colder it was. A timeline shows the temperature of every year. After the last year a summary shows one photo per year, the temperatures of all years next to today's, the warmest, coldest and wettest year and the place you were most often on this day. Two views: time travel (one photo after another with slow zoom) or side by side (all years as photo cards). Photo duration, transition, photos per year and the days around today are adjustable. The photos come from a DynaFrame playlist, the whole DynaFrame library or an Immich server (all photos or an album), with Immich filters for albums, stars, favourites and archived photos. Installs the plugin together with its scene. English, German or Spanish.",
-      "version": "0.1.4",
-      "updated": "2026-11-10T16:57:04Z",
+      "version": "0.1.5",
+      "updated": "2026-11-11T20:25:18Z",
       "thumbnails": [
         "plugin_packs/on-this-day/thumb.webp",
         "plugin_packs/on-this-day/thumb-journey.webp",
@@ -473,18 +473,18 @@
         "plugin_packs/on-this-day/thumb-wall.webp",
         "plugin_packs/on-this-day/thumb-portrait.webp"
       ],
-      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/on-this-day-0.1.4/OnThisDay.zip",
-      "size": 225609,
-      "checksum": "d746f8ecd91abe3294c335264203221dd3f5b5b5b40fdae8ce4852432233ad3b"
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/on-this-day-0.1.5/OnThisDay.zip",
+      "size": 231725,
+      "checksum": "3f45c52f43e3b99762dcd7d702404c4c76a4bcf2b8cc2aad00994a69019d0cc8"
     },
     {
       "id": "color-calendar",
       "type": "integration",
       "title": "Colour Calendar",
       "author": "Jan",
-      "description": "Your year as a calendar of colours. Every day becomes a cell in the colour of the photos you took that day, so summers, holidays, winters and Christmas show up as a band of colour. The photos come from a DynaFrame playlist, the whole DynaFrame media library (WebDAV too, plus extra folders) or your Immich server (all photos or chosen albums; Immich's ThumbHash gives the colours without downloading a single image). Immich photos can be filtered by stars, favourites and archive; hidden and locked photos never show. Four shapes: months, weeks like a wall planner, a ring (several years as rings inside each other) or stripes with one band per year. Last 12 months, this year, a year of your choice or several years; dark or light, squares or dots, vivid colours and the colour of each month. Now and then a day lights up and shows up to four of its photos with the date and its colours: at random, day by day or this day in earlier years. Installs the plugin together with its scene. English, German or Spanish.",
-      "version": "0.1.4",
-      "updated": "2026-11-10T16:57:04Z",
+      "description": "Your year as a calendar of colours. Every day becomes a cell in the colour of the photos you took that day, so summers, holidays, winters and Christmas show up as a band of colour. The photos come from a DynaFrame playlist, the whole DynaFrame media library (WebDAV too, plus extra folders) or your Immich server (all photos or chosen albums; Immich's ThumbHash gives the colours without downloading a single image). Immich photos can be filtered by stars, favourites and archive; hidden and locked photos never show. Four shapes: months, weeks like a wall planner, a ring (several years as rings inside each other) or stripes with one band per year. Last 12 months, this year, a year of your choice or several years; dark or light, squares or dots, vivid colours and the colour of each month. Now and then a day lights up and slowly scrolls through its photos, shown whole and uncropped, side by side or one above the other (you choose how many photos or how long, and how fast), with the date and its colours: at random, day by day or this day in earlier years. Installs the plugin together with its scene. English, German or Spanish.",
+      "version": "0.1.8",
+      "updated": "2026-11-11T20:25:18Z",
       "thumbnails": [
         "plugin_packs/color-calendar/thumb.webp",
         "plugin_packs/color-calendar/thumb-focus.webp",
@@ -493,9 +493,9 @@
         "plugin_packs/color-calendar/thumb-weeks.webp",
         "plugin_packs/color-calendar/thumb-portrait.webp"
       ],
-      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/color-calendar-0.1.4/ColorCalendar.zip",
-      "size": 212355,
-      "checksum": "addaf0a8197c5b54935cdf326ff1705c40164f55cf41915bb254053783b261de"
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/color-calendar-0.1.8/ColorCalendar.zip",
+      "size": 222310,
+      "checksum": "84bb1711e6e12a903bd7182d31fc0e7ed9c35b7e97fa63bbe9bb5e6e0d20ab75"
     }
   ]
 }
