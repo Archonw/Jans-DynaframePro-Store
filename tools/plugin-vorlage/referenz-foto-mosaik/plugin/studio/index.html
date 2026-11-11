@@ -102,6 +102,106 @@
     </section>
 
     <section class="card">
+      <h2 data-i18n="dfTitle">Welche Fotos aus DynaFrame</h2>
+      <p class="hint" data-i18n="dfHint">Gilt für Kacheln und Motive aus DynaFrame (alle Fotos, Ordner, Playlists). Die Daten liest DynaFrame selbst aus den Fotos (EXIF). Fotos, die DynaFrame nicht in seiner Mediendatenbank hat, fallen weg, sobald ein Filter gesetzt ist.</p>
+
+      <h4 class="group" data-i18n="grpWhat">Was</h4>
+      <div class="grid">
+        <label class="field">
+          <span data-i18n="minRating">Sterne</span>
+          <select id="DfMinRating">
+            <option value="0" data-i18n="ratingAny">Egal</option>
+            <option value="1" data-i18n="rating1">Mindestens 1 Stern</option>
+            <option value="2" data-i18n="rating2">Mindestens 2 Sterne</option>
+            <option value="3" data-i18n="rating3">Mindestens 3 Sterne</option>
+            <option value="4" data-i18n="rating4">Mindestens 4 Sterne</option>
+            <option value="5" data-i18n="rating5">5 Sterne</option>
+          </select>
+        </label>
+        <label class="field">
+          <span data-i18n="orientation">Ausrichtung</span>
+          <select id="DfOrientation">
+            <option value="any" data-i18n="ratingAny">Egal</option>
+            <option value="landscape" data-i18n="landscape">Querformat</option>
+            <option value="portrait" data-i18n="portrait">Hochformat</option>
+            <option value="square" data-i18n="squareShape">Quadratisch</option>
+          </select>
+        </label>
+        <label class="field">
+          <span data-i18n="minMegapixels">Mindestens … Megapixel</span>
+          <input type="number" id="DfMinMegapixels" min="0" max="200" step="1" spellcheck="false" autocomplete="off">
+        </label>
+      </div>
+
+      <h4 class="group" data-i18n="grpWhere">Wo</h4>
+      <div class="grid">
+        <label class="field">
+          <span data-i18n="dfPlace">Ort enthält</span>
+          <input type="text" id="DfPlace" spellcheck="false" autocomplete="off">
+        </label>
+      </div>
+
+      <h4 class="group" data-i18n="grpWhen">Wann</h4>
+      <div class="grid">
+        <label class="field check"><input type="checkbox" id="DfOnThisDay"><span data-i18n="onThisDay">An diesem Tag: dasselbe Datum in früheren Jahren</span></label>
+      </div>
+      <div class="grid">
+        <label class="field">
+          <span data-i18n="lastDays">Nur die letzten … Tage (0 = aus)</span>
+          <input type="number" id="DfLastDays" min="0" max="36500" step="1" spellcheck="false" autocomplete="off">
+        </label>
+        <label class="field">
+          <span data-i18n="takenAfter">Aufgenommen ab</span>
+          <input type="date" id="DfAfter" spellcheck="false" autocomplete="off">
+        </label>
+        <label class="field">
+          <span data-i18n="takenBefore">Aufgenommen bis</span>
+          <input type="date" id="DfBefore" spellcheck="false" autocomplete="off">
+        </label>
+      </div>
+
+      <h4 class="group" data-i18n="grpCamera">Kamera</h4>
+      <div class="grid">
+        <label class="field">
+          <span data-i18n="make">Hersteller</span>
+          <input type="text" id="DfMake" spellcheck="false" autocomplete="off">
+        </label>
+        <label class="field">
+          <span data-i18n="model">Modell</span>
+          <input type="text" id="DfModel" spellcheck="false" autocomplete="off">
+        </label>
+        <label class="field">
+          <span data-i18n="lens">Objektiv</span>
+          <input type="text" id="DfLens" spellcheck="false" autocomplete="off">
+        </label>
+      </div>
+
+      <h4 class="group" data-i18n="grpText">Text</h4>
+      <div class="grid">
+        <label class="field">
+          <span data-i18n="dfText">Titel, Beschreibung oder Tags enthalten</span>
+          <input type="text" id="DfText" spellcheck="false" autocomplete="off">
+        </label>
+        <label class="field">
+          <span data-i18n="fileName">Dateiname enthält</span>
+          <input type="text" id="DfFileName" spellcheck="false" autocomplete="off">
+        </label>
+      </div>
+
+      <h4 class="group" data-i18n="grpJunk">Aussortieren</h4>
+      <div class="grid">
+        <label class="field check"><input type="checkbox" id="DfCameraOnly"><span data-i18n="cameraOnly">Nur Fotos aus einer Kamera (ohne Screenshots und gespeicherte Bilder)</span></label>
+        <label class="field check"><input type="checkbox" id="DfNoScreenshots"><span data-i18n="noScreenshots">Dateinamen weglassen, die nach Bildschirmfoto aussehen</span></label>
+      </div>
+      <div class="grid">
+        <label class="field">
+          <span data-i18n="skipNames">Dateinamen weglassen (mit Komma getrennt)</span>
+          <input type="text" id="DfSkipNames" placeholder="WhatsApp, Screenshot, Download" spellcheck="false" autocomplete="off">
+        </label>
+      </div>
+    </section>
+
+    <section class="card">
       <h2 data-i18n="lookTitle">Mosaik</h2>
       <div class="grid">
         <label class="field">

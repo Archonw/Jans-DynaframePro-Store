@@ -12,6 +12,8 @@ auf dem Pi das meiste an Zeit und Speicher.
 """
 
 import io
+import os
+import re
 
 from PIL import Image, ImageOps
 
@@ -61,6 +63,51 @@ def taken_date(data):
     if len(value) >= 19 and value[4] == ":":
         return value[:10].replace(":", "-") + "T" + value[11:19]
     return ""
+
+
+_RATING = (re.compile(rb'xmp:Rating="(-?\d)"'), re.compile(rb"<xmp:Rating>(-?\d)</xmp:Rating>"))
+
+
+def file_meta(path):
+    """EXIF/XMP-Daten direkt aus einer Fotodatei, wie sie die Mediendatenbank
+    von DynaFrame hätte: Sterne (XMP oder EXIF 0x4746, auch aus einer .xmp
+    daneben), Datum, Kamera, Größe. Für Fotos aus Ordnern ohne DB-Eintrag."""
+    meta = {"r": 0, "mk": "", "md": "", "ln": "", "w": 0, "h": 0, "x": "", "n": os.path.basename(path)}
+    taken = ""
+    try:
+        with Image.open(path) as image:
+            meta["w"], meta["h"] = image.size
+            exif = image.getexif()
+            if exif.get(0x0112) in (5, 6, 7, 8):
+                meta["w"], meta["h"] = meta["h"], meta["w"]
+            meta["mk"] = str(exif.get(0x010F) or "").strip("\x00 ")[:60]
+            meta["md"] = str(exif.get(0x0110) or "").strip("\x00 ")[:60]
+            sub = exif.get_ifd(0x8769)
+            meta["ln"] = str(sub.get(0xA434) or "").strip("\x00 ")[:80]
+            value = str(sub.get(0x9003) or exif.get(0x0132) or "").strip()
+            if len(value) >= 19 and value[4] == ":":
+                taken = value[:10].replace(":", "-") + "T" + value[11:19]
+            if exif.get(0x4746):
+                meta["r"] = int(exif.get(0x4746))
+    except Exception:
+        return None, ""
+    # XMP im Kopf der Datei oder als .xmp daneben
+    sources = []
+    for side in (path + ".xmp", os.path.splitext(path)[0] + ".xmp"):
+        if os.path.isfile(side):
+            sources.append(side)
+    sources.append(path)
+    for source in sources:
+        try:
+            with open(source, "rb") as handle:
+                head = handle.read(512 * 1024)
+        except OSError:
+            continue
+        found = next((m for m in (r.search(head) for r in _RATING) if m), None)
+        if found:
+            meta["r"] = max(0, int(found.group(1)))
+            break
+    return meta, taken
 
 
 def square(image, side):

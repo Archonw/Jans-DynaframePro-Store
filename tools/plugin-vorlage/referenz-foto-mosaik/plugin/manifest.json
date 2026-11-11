@@ -2,7 +2,7 @@
   "Name": "PhotoMosaic",
   "Author": "Jan",
   "Description": "Recreates one of your photos from hundreds of your own small photos as tiles, matched by colour, then slowly zooms into single tiles and fades back to the original. Photos come from a DynaFrame playlist, the whole DynaFrame library or an Immich server (all photos or an album). The tiles are prepared once in the background and cached, so playback stays light on the Pi.",
-  "Version": "0.1.7",
+  "Version": "0.1.10",
   "DisplayName": "Foto Mosaik",
   "ManifestVersion": 1,
   "IconPath": "icon.png",

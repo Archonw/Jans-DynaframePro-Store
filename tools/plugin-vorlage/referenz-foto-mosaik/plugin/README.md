@@ -37,6 +37,11 @@ overlay of the original keep the motif recognisable.
   (source "My own photos, uploaded here"); they are rebuilt from the tiles in
   turn. In endless mode the camera dives into a tile, shows that photo and then
   returns to one of your own photos.
+- **Filters for DynaFrame photos** (all photos, folders, playlists), from the
+  EXIF data DynaFrame keeps in its media library: minimum stars, orientation,
+  megapixels, place, on this day, last N days or a date range, camera make,
+  model and lens, title/description/tags, file name, only camera photos, no
+  screenshots, file names to leave out.
 - Tiles and motifs can come from different sources, e.g. tiles from the whole
   library and motifs from a "Best of" playlist.
 - Photos stored in WebDAV (e.g. Nextcloud): DynaFrame only hands plugins a

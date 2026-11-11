@@ -405,7 +405,35 @@ class DynaFrame:
             media_id = row.get("id")
         key = f"d:{media_id}|{path}" if media_id is not None else f"f:{path}"
         return {"k": key, "t": str(_find(row, TAKEN_KEYS) or "")[:19], "p": str(_find(row, PLACE_KEYS) or "")[:80],
-                "s": as_int(_find(row, SIZE_KEYS), 0)}
+                "s": as_int(_find(row, SIZE_KEYS), 0), "m": self._meta(row)}
+
+    @staticmethod
+    def _meta(row):
+        """EXIF-Daten aus der Mediendatenbank von DynaFrame, für die Filter.
+        Nur Felder, die da sind; fehlt "r", kennt die Datenbank das Foto nicht."""
+        low = {str(k).lower(): v for k, v in row.items()}
+        # Playlist-Einträge haben die Felder oft, aber leer (rating: null):
+        # dann zählt nur, was die Mediendatenbank weiß
+        # (auch wenn Breite oder Kamera schon drinstehen: ohne Sterne-Feld
+        # ist es kein Eintrag der Mediendatenbank)
+        if low.get("rating") is None:
+            return {}
+        lens = ""
+        extra = low.get("custommetadata")
+        if isinstance(extra, str) and extra.strip().startswith("{"):
+            try:
+                extra = json.loads(extra)
+            except ValueError:
+                extra = None
+        if isinstance(extra, dict):
+            info = extra.get("cameraInfo") or extra.get("camerainfo") or {}
+            if isinstance(info, dict):
+                lens = str(info.get("LensModel") or info.get("Lens") or "")
+        text = " ".join(str(low.get(k) or "") for k in ("title", "description", "subject", "tags", "keywords"))
+        return {"r": as_int(low.get("rating"), 0), "mk": str(low.get("make") or "")[:60],
+                "md": str(low.get("model") or "")[:60], "ln": lens[:80],
+                "w": as_int(low.get("width"), 0), "h": as_int(low.get("height"), 0),
+                "x": text.strip()[:400], "n": str(low.get("filename") or "")[:120]}
 
     def _media_row(self, media_id):
         for path in (f"/media/{media_id}", f"/media/database/{media_id}"):
@@ -481,13 +509,19 @@ class DynaFrame:
                 continue
         return list(dict.fromkeys(found))
 
-    def folder_rows(self, folders, stop, seen):
+    def folder_rows(self, folders, stop, seen, recursive=True, budget=180):
+        """Fotos in Ordnern. Höchstens `budget` Sekunden: ein Netzlaufwerk
+        (SMB) mit tausenden Unterordnern soll das Plugin nicht festhalten."""
         out = []
+        deadline = time.time() + budget
         for folder in folders:
             for root, dirs, files in os.walk(folder, followlinks=False):
                 if stop.is_set() or len(out) >= MAX_PHOTOS:
                     return out
-                dirs[:] = [d for d in dirs if not d.startswith(".") and d not in SKIP_DIRS]
+                if time.time() > deadline:
+                    self.log(f"Ordner {folder}: nach {budget} s abgebrochen, {len(out)} Fotos bis dahin.", "warning")
+                    return out
+                dirs[:] = [d for d in dirs if not d.startswith(".") and d not in SKIP_DIRS] if recursive else []
                 for name in files:
                     if name.startswith(".") or not image_ext(name, self.heif):
                         continue
@@ -525,8 +559,15 @@ class DynaFrame:
             if stop.is_set():
                 break
             folder = _find(item, ("directoryPath", "folderPath", "directory", "folder"))
-            if isinstance(folder, str) and folder.startswith("/"):
-                out += self.folder_rows([folder], stop, set())
+            if item.get("isEnabled") is False or item.get("isExcluded"):
+                continue   # in DynaFrame abgeschaltet
+            kind = str(item.get("contentType") or item.get("mediaType") or "").lower()
+            if kind == "directory" and not folder:
+                folder = _find(item, PATH_KEYS)
+            if isinstance(folder, str) and folder.startswith("/") and (kind == "directory" or not _find(item, PATH_KEYS)):
+                # Ordner in der Playlist: nur mit Unterordnern, wenn DynaFrame das so hat
+                deep = item.get("includeSubfolders")
+                out += self.folder_rows([folder], stop, set(), recursive=deep is not False)
                 continue
             media = item.get("media") if isinstance(item.get("media"), dict) else {}
             media_id = item.get("mediaFileId") or item.get("mediaId") or media.get("id")
@@ -536,7 +577,7 @@ class DynaFrame:
             row = None
             if path and (media or _find(item, PATH_KEYS)):
                 row = media if _find(media, PATH_KEYS) else item
-            if row is None or not _find(row, TAKEN_KEYS):
+            if row is None or not _find(row, TAKEN_KEYS) or not self._meta(row):
                 # Die Mediendatenbank kennt Datum, Ort und Größe
                 if by_id is None:
                     by_id, by_path = {}, {}
@@ -555,6 +596,13 @@ class DynaFrame:
                 continue
             if self._is_photo(row):
                 out.append(self._row(row, media_id if media_id is not None else row.get("id")))
+        seen_paths, unique = set(), []
+        for row in out:
+            path = row["k"].split("|", 1)[1] if row["k"].startswith("d:") else row["k"][2:]
+            if path not in seen_paths:
+                seen_paths.add(path)
+                unique.append(row)
+        out = unique
         self.log(f"Playlist {playlist_id}: {len(items)} Einträge, {len(out)} Fotos"
                  + (f", {unresolved} nicht gefunden" if unresolved else "") + ".")
         return out

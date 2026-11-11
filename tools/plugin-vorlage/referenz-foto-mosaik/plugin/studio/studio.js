@@ -4,10 +4,11 @@
 // /Plugins/Advanced/PhotoMosaic/ aus, ohne <base>.
 
 const el = (id) => document.getElementById(id);
-const NUMBER_FIELDS = ["MaxTiles", "ColorBlend", "Ghost", "RefreshHours", "PlaylistSeconds", "PauseSeconds", "TourTiles", "LastDays", "MinMegapixels", "MinFileKB"];
-const CHECK_FIELDS = ["Captions", "ShowCount", "OnThisDay", "WithPeople", "CameraOnly", "NoScreenshots", "NotInAlbum"];
-const SELECT_FIELDS = ["Tiles", "Flow", "Tempo", "MotifOrder", "Orientation"];
-const FILTER_TEXT = ["City", "State", "Country", "TakenAfter", "TakenBefore", "Make", "Model", "Lens", "Description", "OcrText", "FileName", "SkipNames"];
+const NUMBER_FIELDS = ["MaxTiles", "ColorBlend", "Ghost", "RefreshHours", "PlaylistSeconds", "PauseSeconds", "TourTiles", "LastDays", "MinMegapixels", "MinFileKB", "DfLastDays", "DfMinMegapixels"];
+const CHECK_FIELDS = ["Captions", "ShowCount", "OnThisDay", "WithPeople", "CameraOnly", "NoScreenshots", "NotInAlbum", "DfOnThisDay", "DfCameraOnly", "DfNoScreenshots"];
+const SELECT_FIELDS = ["Tiles", "Flow", "Tempo", "MotifOrder", "Orientation", "DfOrientation"];
+const FILTER_TEXT = ["City", "State", "Country", "TakenAfter", "TakenBefore", "Make", "Model", "Lens", "Description", "OcrText", "FileName", "SkipNames",
+  "DfAfter", "DfBefore", "DfPlace", "DfMake", "DfModel", "DfLens", "DfText", "DfFileName", "DfSkipNames"];
 const TEXT_FIELDS = ["ServerUrl", "Folders", "WebDavUrl", "WebDavUser"].concat(FILTER_TEXT);
 // Listen zum Anhaken in den Immich-Filtern: Einstellung -> Liste
 const PICKERS = { People: "people", SkipAlbums: "immich_album", SkipTags: "tags" };
@@ -94,6 +95,13 @@ const I18N = {
   grpJunk: ["Aussortieren", "Skip the junk", "Descartar"],
   grpSkip: ["Weglassen", "Leave out", "Excluir"],
   orientation: ["Ausrichtung", "Orientation", "Orientación"],
+  dfTitle: ["Welche Fotos aus DynaFrame", "Which photos from DynaFrame", "Qué fotos de DynaFrame"],
+  dfHint: ["Gilt für Kacheln und Motive aus DynaFrame (alle Fotos, Ordner, Playlists). Die Daten liest DynaFrame selbst aus den Fotos (EXIF). Fotos, die DynaFrame nicht in seiner Mediendatenbank hat, fallen weg, sobald ein Filter gesetzt ist.",
+    "Applies to tiles and motifs from DynaFrame (all photos, folders, playlists). DynaFrame reads this data from the photos itself (EXIF). Photos that are not in DynaFrame's media library are left out as soon as a filter is set.",
+    "Se aplica a las teselas y motivos de DynaFrame (todas las fotos, carpetas, listas). DynaFrame lee estos datos de las fotos (EXIF). Las fotos que no están en la biblioteca de DynaFrame se excluyen en cuanto hay un filtro."],
+  srcFiltered: ["{n} von {m} Fotos passen zu den Filtern.", "{n} of {m} photos match the filters.", "{n} de {m} fotos cumplen los filtros."],
+  dfPlace: ["Ort enthält", "Place contains", "El lugar contiene"],
+  dfText: ["Titel, Beschreibung oder Tags enthalten", "Title, description or tags contain", "Título, descripción o etiquetas contienen"],
   landscape: ["Querformat", "Landscape", "Horizontal"],
   portrait: ["Hochformat", "Portrait", "Vertical"],
   squareShape: ["Quadratisch", "Square", "Cuadrada"],
@@ -290,17 +298,26 @@ async function save(changes) {
 
 // ------------------------------------------------------------ Quellen
 
+const loading = {};
 async function loadList(kind, force = false) {
-  if (lists[kind] && !force) return;
+  if ((lists[kind] && !force) || loading[kind]) return;   // nie zwei gleiche Anfragen auf einmal
+  loading[kind] = true;
   try {
     const result = await api(LIST_API[kind][0]);
     if (result.success === false) throw new Error(result.error || "?");
+    if (result.loading) {
+      // Der Rahmen liest die Mediendatenbank noch; gleich noch einmal fragen
+      loading[kind] = false;
+      setTimeout(() => loadList(kind, true), 3000);
+      return;
+    }
     lists[kind] = result[LIST_API[kind][1]] || [];
     listErrors[kind] = "";
   } catch (error) {
     lists[kind] = [];
     listErrors[kind] = error.message;
   }
+  loading[kind] = false;
   if (current) {
     for (const prefix of SOURCES) renderRef(prefix, current.settings, true);
     renderPickers(current.settings);
@@ -391,7 +408,10 @@ function sourceNote(prefix, state) {
   else if (listKind && listErrors[listKind]) setStatus(listErrors[listKind], "bad", prefix + "Note");
   else if (kind === "upload") setStatus(row.total ? t("uploadCount", { n: fmt(row.total) }) : t("uploadNone"), row.total ? "ok" : "warn", prefix + "Note");
   else if (row.state === "error") setStatus(row.error, "bad", prefix + "Note");
-  else if (row.state === "ok") setStatus((albums ? albums + " · " : "") + (row.total ? t("srcOk", { n: fmt(row.total) }) : t("srcEmpty")), row.total ? "ok" : "warn", prefix + "Note");
+  else if (row.state === "ok" || (row.state === "empty" && row.before)) {
+    const found = row.before ? t("srcFiltered", { n: fmt(row.total), m: fmt(row.before) }) : row.total ? t("srcOk", { n: fmt(row.total) }) : t("srcEmpty");
+    setStatus((albums ? albums + " · " : "") + found, row.total ? "ok" : "warn", prefix + "Note");
+  }
   else if (row.state === "empty") setStatus(t("srcEmpty"), "warn", prefix + "Note");
   else setStatus("", "", prefix + "Note");
 }
@@ -421,6 +441,7 @@ function render(state) {
     for (const name of CHECK_FIELDS) el(name).checked = Boolean(s[name]);
     for (const name of SELECT_FIELDS) el(name).value = s[name];
     el("MinRating").value = String(s.MinRating);
+    el("DfMinRating").value = String(s.DfMinRating);
     for (const node of document.querySelectorAll(".tour-only")) node.hidden = s.Flow !== "tour";
     renderPickers(s);
     el("FavoritesOnly").value = String(Boolean(s.FavoritesOnly));
@@ -478,6 +499,7 @@ for (const prefix of SOURCES) {
   });
 }
 el("MinRating").addEventListener("change", (e) => save({ MinRating: Number(e.target.value) }));
+el("DfMinRating").addEventListener("change", (e) => save({ DfMinRating: Number(e.target.value) }));
 for (const name of FILTER_TEXT) el(name).addEventListener("change", (e) => save({ [name]: e.target.value }));
 for (const name of Object.keys(PICKERS)) {
   el(name + "Filter").addEventListener("input", () => current && renderPickers(current.settings));

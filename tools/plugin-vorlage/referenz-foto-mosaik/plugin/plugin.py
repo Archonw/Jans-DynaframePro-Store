@@ -171,6 +171,23 @@ SCHEMA = {
     "SkipAlbums":      {"kind": "ref", "default": ""},
     "SkipTags":        {"kind": "ref", "default": ""},
     "SkipNames":       {"kind": "name", "default": ""},
+    # Filter für Fotos aus DynaFrame (Mediendatenbank mit EXIF-Daten)
+    "DfMinRating":     {"kind": "int", "default": 0, "min": 0, "max": 5},
+    "DfOrientation":   {"kind": "choice", "default": "any", "choices": ("any", "landscape", "portrait", "square")},
+    "DfOnThisDay":     {"kind": "bool", "default": False},
+    "DfLastDays":      {"kind": "int", "default": 0, "min": 0, "max": 36500},
+    "DfAfter":         {"kind": "date", "default": ""},
+    "DfBefore":        {"kind": "date", "default": ""},
+    "DfPlace":         {"kind": "name", "default": ""},
+    "DfMake":          {"kind": "name", "default": ""},
+    "DfModel":         {"kind": "name", "default": ""},
+    "DfLens":          {"kind": "name", "default": ""},
+    "DfText":          {"kind": "name", "default": ""},
+    "DfFileName":      {"kind": "name", "default": ""},
+    "DfCameraOnly":    {"kind": "bool", "default": False},
+    "DfNoScreenshots": {"kind": "bool", "default": False},
+    "DfMinMegapixels": {"kind": "int", "default": 0, "min": 0, "max": 200},
+    "DfSkipNames":     {"kind": "name", "default": ""},
     "ServerUrl":       {"kind": "url", "default": ""},
     "ApiKey":          {"kind": "secret", "default": ""},
     "WebDavUrl":       {"kind": "url", "default": ""},
@@ -547,13 +564,149 @@ def immich_filters(values):
     }
 
 
+DF_FILTERS = [name for name in SCHEMA if name.startswith("Df")]
+
+
+def df_filters(values):
+    return {name: values[name] for name in DF_FILTERS}
+
+
+def df_active(values):
+    return any(values[name] != SCHEMA[name]["default"] for name in DF_FILTERS)
+
+
+def df_keep(row, values, today=None):
+    """Passt ein Foto aus DynaFrame zu den Filtern? Daten aus der Mediendatenbank
+    (Sterne, Datum, Kamera, Objektiv, Größe, Ort, Titel/Tags). Fotos, die nur
+    im Ordner liegen und die Datenbank nicht kennt, fallen bei aktiven Filtern weg."""
+    meta = row.get("m") or {}
+    if not meta:
+        return False
+    contains = lambda hay, needle: not needle or needle.lower() in str(hay or "").lower()
+    if values["DfMinRating"] and meta.get("r", 0) < values["DfMinRating"]:
+        return False
+    w, h = meta.get("w") or 0, meta.get("h") or 0
+    if values["DfOrientation"] != "any":
+        if not (w and h):
+            return False
+        ratio = w / h
+        shape = "square" if 0.9 <= ratio <= 1.1 else "landscape" if ratio > 1 else "portrait"
+        if shape != values["DfOrientation"]:
+            return False
+    if values["DfMinMegapixels"] and (not (w and h) or w * h < values["DfMinMegapixels"] * 1e6):
+        return False
+    taken = row.get("t") or ""
+    day = taken[:10]
+    if values["DfAfter"] and (not day or day < values["DfAfter"]):
+        return False
+    if values["DfBefore"] and (not day or day > values["DfBefore"]):
+        return False
+    if values["DfLastDays"]:
+        since = (datetime.date.today() - datetime.timedelta(days=values["DfLastDays"])).isoformat()
+        if not day or day < since:
+            return False
+    if values["DfOnThisDay"]:
+        today = today or datetime.date.today()
+        if taken[5:10] != today.strftime("%m-%d"):
+            return False
+    if not (contains(row.get("p"), values["DfPlace"]) and contains(meta.get("mk"), values["DfMake"])
+            and contains(meta.get("md"), values["DfModel"]) and contains(meta.get("ln"), values["DfLens"])
+            and contains(meta.get("x"), values["DfText"]) and contains(meta.get("n"), values["DfFileName"])):
+        return False
+    if values["DfCameraOnly"] and not (meta.get("mk") or meta.get("md")):
+        return False
+    name = str(meta.get("n") or "").lower()
+    if values["DfNoScreenshots"] and (re.search(r"screen ?shot|bildschirmfoto|captura|screen_|scrnli", name)
+                                      or name.endswith(".png")):
+        return False
+    skip = [n.strip().lower() for n in values["DfSkipNames"].split(",") if n.strip()]
+    if skip and any(n in name for n in skip):
+        return False
+    return True
+
+
 def scan_signature(values):
+    # Nur ein Hash: index.json ist für alle lesbar, der API-Key gehört nicht hinein
+    return hashlib.sha256(_signature_text(values).encode()).hexdigest()
+
+
+def _signature_text(values):
     return json.dumps([values["TileKind"], values["TileRef"], values["MotifKind"], values["MotifRef"],
                        values["MaxTiles"], values["TileDirs"], values["MotifDirs"], values["ServerUrl"], values["ApiKey"], values["Folders"],
-                       immich_filters(values)], sort_keys=True)
+                       immich_filters(values), df_filters(values)], sort_keys=True)
+
+
+FILE_META = DATA_DIR / "file_meta.json"
+_filter_note = {}   # wie viele Fotos vor den Filtern da waren
+
+
+def add_meta(rows, values, stop):
+    """EXIF-Daten für Fotos, die die Mediendatenbank so nicht kennt (z. B. eine
+    Playlist mit Ordner auf einem SMB-Laufwerk, während DynaFrame dieselben Fotos
+    über WebDAV kennt). Erst gleicher Pfad, dann gleicher Dateiname und gleiche
+    Größe in der Datenbank, sonst die Datei selbst lesen (gemerkt nach Pfad,
+    Größe und Änderungszeit)."""
+    by_path, by_name = {}, {}
+    for lib in library_cached(values, stop):
+        meta = lib.get("m")
+        if not meta:
+            continue
+        path = lib["k"].split("|", 1)[1] if lib["k"].startswith("d:") else lib["k"][2:]
+        by_path[path] = lib
+        by_name.setdefault((os.path.basename(path).lower(), lib.get("s") or 0), lib)
+    cache = read_json(FILE_META, {})
+    cache = cache if isinstance(cache, dict) else {}
+    out, read = [], 0
+    for r in rows:
+        if r.get("m") or stop.is_set():
+            out.append(r)
+            continue
+        path = r["k"].split("|", 1)[1] if r["k"].startswith("d:") else r["k"][2:]
+        size = r.get("s") or 0
+        if not size and os.path.isfile(path):
+            try:
+                size = os.path.getsize(path)
+            except OSError:
+                size = 0
+        lib = by_path.get(path) or by_name.get((os.path.basename(path).lower(), size))
+        if lib:
+            out.append(dict(r, m=lib["m"], t=r.get("t") or lib.get("t") or "", p=r.get("p") or lib.get("p") or ""))
+            continue
+        if os.path.isfile(path):
+            try:
+                stamp = f"{size}:{int(os.path.getmtime(path))}"
+            except OSError:
+                stamp = ""
+            hit = cache.get(path)
+            if not hit or hit.get("v") != stamp:
+                meta, taken = mosaic.file_meta(path)
+                hit = {"v": stamp, "m": meta, "t": taken}
+                cache[path] = hit
+                read += 1
+            if hit.get("m"):
+                out.append(dict(r, m=hit["m"], t=r.get("t") or hit.get("t") or ""))
+                continue
+        out.append(r)
+    if read:
+        write_json(FILE_META, cache)
+        log(f"EXIF aus {read} Dateien gelesen.")
+    return out
 
 
 def collect(kind, ref, values, stop, dirs=None):
+    rows = collect_raw(kind, ref, values, stop, dirs)
+    if kind in ("library", "folders", "playlist") and df_active(values):
+        if any(not r.get("m") for r in rows):
+            rows = add_meta(rows, values, stop)
+        before = len(rows)
+        rows = [r for r in rows if df_keep(r, values)]
+        log(f"DynaFrame-Filter: {len(rows)} von {before} Fotos passen.")
+        _filter_note[kind] = before
+    # Die EXIF-Daten brauchen wir nur zum Filtern, nicht im Index
+    return [{k: v for k, v in r.items() if k != "m"} for r in rows]
+
+
+def collect_raw(kind, ref, values, stop, dirs=None):
     if kind in ("immich_all", "immich_album"):
         immich.configure(values["ServerUrl"], values["ApiKey"])
         albums = [a for a in ref.split(",") if a] if kind == "immich_album" else None
@@ -623,11 +776,31 @@ def folder_label(path):
     return path
 
 
+_folders_job = {"thread": None, "error": ""}
+
+
 def list_folders():
-    try:
-        rows = library_cached(settings())
-    except EngineError as exc:
-        return {"success": False, "error": tr("DynaFrame antwortet nicht: {exc}", exc=exc)}
+    """Die Ordner aus der Mediendatenbank. Das Lesen dauert auf dem Pi mit
+    tausenden Fotos eine Weile; es läuft im Hintergrund und die Seite fragt
+    alle paar Sekunden nach (loading: true), statt die Anfrage festzuhalten."""
+    # Ohne Sperre lesen: während des Einlesens hält library_cached() sie lange
+    fresh = now() - _library["at"] <= 600 and _library["folders"] == settings()["Folders"]
+    rows = _library["rows"] if fresh else None
+    if rows is None:
+        job = _folders_job["thread"]
+        if job is None or not job.is_alive():
+            if _folders_job["error"]:
+                error, _folders_job["error"] = _folders_job["error"], ""
+                return {"success": False, "error": error}
+
+            def work():
+                try:
+                    library_cached(settings())
+                except Exception as exc:  # Engine weg, Zeitüberschreitung
+                    _folders_job["error"] = tr("DynaFrame antwortet nicht: {exc}", exc=exc)
+            _folders_job["thread"] = threading.Thread(target=work, daemon=True)
+            _folders_job["thread"].start()
+        return {"success": True, "loading": True}
     counts = {}
     for row in rows:
         folder = row_dir(row)
@@ -737,9 +910,11 @@ def scan(reason=""):
     try:
         progress.update(done=0, total=0, phase="list")
         try:
+            _filter_note.clear()
             candidates = collect(values["TileKind"], values["TileRef"], values, stop,
                                  values["TileDirs"].splitlines())
-            _data["status"]["tiles"] = {"state": "ok", "total": len(candidates), "error": ""}
+            _data["status"]["tiles"] = {"state": "ok", "total": len(candidates), "error": "",
+                                        "before": _filter_note.get(values["TileKind"], 0)}
         except (sources.SourceError, EngineError) as exc:
             _data["status"]["tiles"] = {"state": "error", "total": 0, "error": str(exc)}
             log(f"Kacheln: {exc}", "warning")
@@ -818,6 +993,8 @@ def scan(reason=""):
         if not tiles:
             _data["status"]["tiles"]["state"] = "empty"
             log("Keine Fotos für Kacheln gefunden.", "warning")
+            # Nicht mit den alten Kacheln weiterzeigen (z. B. aus einer früheren Quelle)
+            publish([], [], values, final=True)
             return
         progress.update(phase="sheets")
         publish(tiles, motifs, values, final=True)
