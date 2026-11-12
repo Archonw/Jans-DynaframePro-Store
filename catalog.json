@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "generated": "2026-11-11T20:25:18Z",
+  "generated": "2026-11-12T19:37:36Z",
   "store": {
     "name": "Jan's Store",
     "author": "Jan",
@@ -496,6 +496,21 @@
       "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/color-calendar-0.1.8/ColorCalendar.zip",
       "size": 222310,
       "checksum": "84bb1711e6e12a903bd7182d31fc0e7ed9c35b7e97fa63bbe9bb5e6e0d20ab75"
+    },
+    {
+      "id": "playlist-music",
+      "type": "plugin",
+      "title": "Playlist Music",
+      "author": "Jan",
+      "description": "Plays music while certain playlists are running, each playlist with its own music: internet radio, your own stream, Jellyfin, a folder on the frame, Spotify (Premium; the frame becomes a Spotify Connect speaker, pairing by code, no developer key) or Music Assistant (e.g. YouTube Music). Plays on the frame or on another speaker (Spotify Connect devices, Music Assistant speakers such as Sonos). Fades in and out or keeps playing, pauses or gets quieter for videos and when another plugin shows something, doesn't start if music is already playing, only at the times you choose. German, English or Spanish.",
+      "version": "0.1.1",
+      "updated": "2026-11-12T19:37:36Z",
+      "thumbnails": [
+        "plugin_packs/playlist-music/thumb.webp"
+      ],
+      "download_url": "plugin_packs/playlist-music/PlaylistMusic.zip",
+      "size": 72706,
+      "checksum": "9c42e109d78f867fd032b9432d129ead1ebf60aaee0207f60f3ad3a61a148066"
     }
   ]
 }
