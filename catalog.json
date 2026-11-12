@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "generated": "2026-11-12T21:11:12Z",
+  "generated": "2026-11-12T21:19:46Z",
   "store": {
     "name": "Jan's Store",
     "author": "Jan",
@@ -533,11 +533,11 @@
     {
       "id": "photo-quiz",
       "type": "integration",
-      "title": "Foto Quiz",
+      "title": "Photo Quiz",
       "author": "Jan",
       "description": "A guessing game with your own photos for the whole family. The TV shows a photo, at first pixelated, zoomed in or blurred and getting clearer, and everyone guesses on their phone when (the year) and where (a tap on the map) it was taken. Join by scanning the QR code on the TV, no app needed. Up to three hints appear during the round: season and time of day, the weather back then, the camera, how far and in which direction from home, the country. The reveal shows date, place and a map with everyone's guesses and points; after the last round the final standings crown the winner. Play the year only, the place only or both; rounds, time per round and the reveal effect are adjustable. Start it as a playlist or straight from a phone (the frame switches to the quiz and back afterwards). Photos come from the DynaFrame library (with filters for stars, dates, camera and more), a playlist, folders or an Immich server (with album, star, favourite and archive filters). Installs the plugin together with its scene. English, German or Spanish.",
-      "version": "0.1.0",
-      "updated": "2026-11-12T21:11:12Z",
+      "version": "0.1.1",
+      "updated": "2026-11-12T21:19:46Z",
       "thumbnails": [
         "plugin_packs/photo-quiz/thumb.webp",
         "plugin_packs/photo-quiz/thumb-guess.webp",
@@ -546,9 +546,9 @@
         "plugin_packs/photo-quiz/thumb-final.webp",
         "plugin_packs/photo-quiz/thumb-tv.webp"
       ],
-      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/photo-quiz-0.1.0/PhotoQuiz.zip",
-      "size": 554840,
-      "checksum": "bd04e642f53af8320a18b13407fdbb4d7536b99ab3990588567c10a110d0f64f"
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/photo-quiz-0.1.1/PhotoQuiz.zip",
+      "size": 554898,
+      "checksum": "a3f1fe2d7eeb1229d81ee2e10030420b2b931ca46bb79610771b467588a69c43"
     }
   ]
 }

@@ -29,5 +29,6 @@
   "magic-mirror-module-pegelstand": "Water level of a gauge on German federal waterways (PEGELONLINE) with trend",
   "magic-mirror-module-traveltime": "How long the drive takes right now, with traffic delay, alternative route and \"Leave by\" time (own Mapbox or Google key)",
   "magic-mirror-module-fuelprices": "Cheapest petrol stations near you with real-time prices and whether now is a good time to fill up (Germany, free Tankerkönig key)",
-  "magic-mirror-skin-bordcomputer": "A whole new look for the Magic Mirror: rounded orange and lilac bars like the ship computers of 90s starship series, with clock, stardate and fields you fill yourself"
+  "magic-mirror-skin-bordcomputer": "A whole new look for the Magic Mirror: rounded orange and lilac bars like the ship computers of 90s starship series, with clock, stardate and fields you fill yourself",
+  "photo-quiz": "Guess when and where your own photos were taken, together on your phones."
 }
