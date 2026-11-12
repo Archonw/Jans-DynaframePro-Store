@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "generated": "2026-11-12T21:19:46Z",
+  "generated": "2026-11-12T21:35:54Z",
   "store": {
     "name": "Jan's Store",
     "author": "Jan",
@@ -549,6 +549,25 @@
       "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/photo-quiz-0.1.1/PhotoQuiz.zip",
       "size": 554898,
       "checksum": "a3f1fe2d7eeb1229d81ee2e10030420b2b931ca46bb79610771b467588a69c43"
+    },
+    {
+      "id": "travel-scrapbook",
+      "type": "integration",
+      "title": "Travel Scrapbook",
+      "author": "Jan",
+      "description": "Finds your trips by itself (several days far from home, from the GPS and date of your photos; your home is found automatically, also if you moved) and turns every trip into a scrapbook page: pasted prints chosen by stars (DynaFrame's media database or Immich), a small hand-drawn route map with the places and the way home, a ticket with days, kilometres and photos, a postmark, the weather of every day from the free Open-Meteo archive and handwritten notes (hottest day, rainy days, stations, five-star photos). The frame shows one holiday after another, matching the season, newest, oldest or random, with an optional cover page of all trips. On the plugin page you see all trips and can give each one your own title, a note in blue ink, or leave it out. Paper: kraft, cream or black photo album; landscape and portrait. Photos from a DynaFrame playlist, the whole DynaFrame library or an Immich server, with filters. Installs the plugin together with its scene. English, German or Spanish.",
+      "version": "0.1.0",
+      "updated": "2026-11-12T21:35:54Z",
+      "thumbnails": [
+        "plugin_packs/travel-scrapbook/thumb.webp",
+        "plugin_packs/travel-scrapbook/thumb-trip.webp",
+        "plugin_packs/travel-scrapbook/thumb-cover.webp",
+        "plugin_packs/travel-scrapbook/thumb-black.webp",
+        "plugin_packs/travel-scrapbook/thumb-portrait.webp"
+      ],
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/travel-scrapbook-0.1.0/TravelScrapbook.zip",
+      "size": 1499339,
+      "checksum": "4e42af3b9e37b16d891abb25c34096c5e24ef523ee3d0cdfbc59697d6e3903ed"
     }
   ]
 }
