@@ -508,7 +508,7 @@
       "thumbnails": [
         "plugin_packs/playlist-music/thumb.webp"
       ],
-      "download_url": "plugin_packs/playlist-music/PlaylistMusic.zip",
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/playlist-music-0.1.1/PlaylistMusic.zip",
       "size": 72706,
       "checksum": "9c42e109d78f867fd032b9432d129ead1ebf60aaee0207f60f3ad3a61a148066"
     }
