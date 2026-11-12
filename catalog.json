@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "generated": "2026-11-12T21:35:54Z",
+  "generated": "2026-11-12T21:38:48Z",
   "store": {
     "name": "Jan's Store",
     "author": "Jan",
@@ -515,20 +515,20 @@
     {
       "id": "photo-universe",
       "type": "integration",
-      "title": "Fotouniversum",
+      "title": "Photo Universe",
       "author": "Jan",
       "description": "Your photos as a galaxy: every photo is a star, and photos with more rating stars shine brighter. The stars form constellations by year, place or person, and the camera flies through the galaxy, steers towards a star and opens the photo with its date, place, rating and the people in it. By year, time spirals outwards through the galaxy; taking turns, the stars drift into new constellations now and then. Photos come from the whole DynaFrame library, chosen folders or playlists, or an Immich server (people from Immich's face recognition), with the same filters as Foto Mosaik. The plugin reads the photo list in the background; the galaxy is drawn with WebGL on the frame. Installs the plugin together with its scene. English, German or Spanish.",
-      "version": "0.1.0",
-      "updated": "2026-11-12T21:03:56Z",
+      "version": "0.1.1",
+      "updated": "2026-11-12T21:38:48Z",
       "thumbnails": [
         "plugin_packs/photo-universe/thumb-hero.webp",
         "plugin_packs/photo-universe/thumb-constellation.webp",
         "plugin_packs/photo-universe/thumb-photo.webp",
         "plugin_packs/photo-universe/thumb-places.webp"
       ],
-      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/photo-universe-0.1.0/PhotoUniverse.zip",
-      "size": 156549,
-      "checksum": "d2bb340fa330e043f3f08e50d3632feeaa1972ef19417bff4e2211c0155622d4"
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/photo-universe-0.1.1/PhotoUniverse.zip",
+      "size": 156930,
+      "checksum": "e43eb7a8e407969a41b916e26ddf75f9f8526795b53be8bda8c6ef4023a448d6"
     },
     {
       "id": "photo-quiz",
