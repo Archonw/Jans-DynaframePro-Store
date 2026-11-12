@@ -1,10 +1,10 @@
-"""Setzt die Immich-Filter von Foto Mosaik in eine Plugin-Seite ein.
+"""Setzt die Immich-Filter von Photo Mosaic in eine Plugin-Seite ein.
 
     python3 apply_ui.py <pack-ordner> <fm-studio-ordner> <config>
 
 Ersetzt im HTML den Bereich zwischen <!-- immich-filters --> und
 <!-- /immich-filters --> (diese Marken setzt der Aufrufer vorher) durch die
-Filtergruppen von Foto Mosaik, mit Schlüsseln "if…" in I18N, Texte in der
+Filtergruppen von Photo Mosaic, mit Schlüsseln "if…" in I18N, Texte in der
 Sprache von <html lang> vorbefüllt. Hängt block.js an studio.js an und die
 Gruppen-Stile an studio.css.
 """
@@ -95,7 +95,7 @@ def main(pack, fm_studio, cfg):
     j = studio / "studio.js"
     js = j.read_text(encoding="utf-8")
     lines = "".join(f"  {k}: {json.dumps(v, ensure_ascii=False)},\n".replace('", "', '", "') for k, v in i18n.items())
-    js, n = re.subn(r"^  supportAsk:", lambda m: "  // Immich-Filter (wie Foto Mosaik)\n" + lines + m.group(0),
+    js, n = re.subn(r"^  supportAsk:", lambda m: "  // Immich-Filter (wie Photo Mosaic)\n" + lines + m.group(0),
                     js, count=1, flags=re.M)
     if n != 1:
         raise SystemExit("supportAsk fehlt")
@@ -106,7 +106,7 @@ def main(pack, fm_studio, cfg):
     c = studio / "studio.css"
     css = c.read_text(encoding="utf-8")
     css = css.replace('input[type="url"], select {', 'input[type="url"], input[type="date"], select {', 1)
-    add = "\n/* Immich-Filter in Gruppen (wie Foto Mosaik) */\n"
+    add = "\n/* Immich-Filter in Gruppen (wie Photo Mosaic) */\n"
     if not re.search(r"^\.card \.sub|^\.sub ", css, re.M):
         add += ".sub { margin: 18px 0 4px; font-size: 15px; }\n"
     add += (".group { margin: 22px 0 6px; font-size: 12.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }\n"

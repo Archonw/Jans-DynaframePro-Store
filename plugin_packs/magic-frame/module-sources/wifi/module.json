@@ -1,12 +1,12 @@
 {
   "type": "wifi",
-  "name": {"de": "WLAN für Gäste", "en": "Guest Wi-Fi", "es": "Wi-Fi para invitados"},
+  "name": {"de": "Guest Wi-Fi", "en": "Guest Wi-Fi", "es": "Guest Wi-Fi"},
   "description": {
     "de": "Zeigt Netzwerkname, Passwort und einen QR-Code, mit dem sich Gäste per Handykamera ins WLAN einwählen. Nachbau von MMM-WiFiPassword.",
     "en": "Shows network name, password and a QR code guests scan with their phone camera to join your Wi-Fi. Rebuild of MMM-WiFiPassword.",
     "es": "Muestra el nombre de la red, la contraseña y un código QR que los invitados escanean con la cámara para conectarse al Wi-Fi. Versión de MMM-WiFiPassword."
   },
-  "version": "1.0.0",
+  "version": "1.0.3",
   "author": "Jan · inspired by TeraTech/MMM-WiFiPassword",
   "url": "https://github.com/TeraTech/MMM-WiFiPassword",
   "region": "bottom_left",

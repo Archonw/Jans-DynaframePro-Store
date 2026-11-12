@@ -1,16 +1,16 @@
 {
  "type": "webuntis",
  "name": {
-  "de": "WebUntis Stundenplan",
+  "de": "WebUntis timetable",
   "en": "WebUntis timetable",
-  "es": "Horario WebUntis"
+  "es": "WebUntis timetable"
  },
  "description": {
   "de": "Stundenplan der nächsten Schultage mit Vertretungen und Ausfällen, dazu Prüfungen, Hausaufgaben und Mitteilungen aus WebUntis. Nachbau von MMM-Webuntis. Kein offizielles Untis-Produkt.",
   "en": "Timetable for the next school days with substitutions and cancellations, plus exams, homework and messages from WebUntis. Rebuild of MMM-Webuntis. Not an official Untis product.",
   "es": "Horario de los próximos días lectivos con sustituciones y cancelaciones, además de exámenes, deberes y avisos de WebUntis. Versión de MMM-Webuntis. No es un producto oficial de Untis."
  },
- "version": "1.0.0",
+ "version": "1.0.3",
  "author": "Jan · inspired by HeikoGr/MMM-Webuntis",
  "url": "https://github.com/HeikoGr/MMM-Webuntis",
  "region": "top_right",

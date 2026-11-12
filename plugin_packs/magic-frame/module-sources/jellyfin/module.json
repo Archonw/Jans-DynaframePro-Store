@@ -1,12 +1,12 @@
 {
   "type": "jellyfin",
-  "name": {"de": "Jellyfin: läuft gerade", "en": "Jellyfin: now playing", "es": "Jellyfin: en reproducción"},
+  "name": {"de": "Jellyfin: now playing", "en": "Jellyfin: now playing", "es": "Jellyfin: now playing"},
   "description": {
     "de": "Was gerade auf deinem Jellyfin-Server läuft: Musik, Film, Serienfolge oder Live-TV mit Cover, Fortschritt und was als Nächstes kommt. Kein offizielles Jellyfin-Produkt.",
     "en": "What's playing on your Jellyfin server: music, movie, episode or live TV with cover, progress and what's up next. Not an official Jellyfin product.",
     "es": "Lo que se reproduce en tu servidor Jellyfin: música, película, episodio o TV en directo con portada, progreso y lo siguiente. No es un producto oficial de Jellyfin."
   },
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Jan",
   "region": "bottom_left",
   "script": "module.js",

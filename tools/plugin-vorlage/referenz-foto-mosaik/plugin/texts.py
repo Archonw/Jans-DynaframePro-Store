@@ -17,9 +17,9 @@ _TEXTS = {
     "Die Fotos werden neu eingelesen.": ("Reading the photos again.", "Volviendo a leer las fotos."),
     "Die Playlist gibt es nicht mehr.": ("That playlist no longer exists.", "Esa lista ya no existe."),
     "Die Playlist {name} gibt es schon.": ("The playlist {name} already exists.", "La lista {name} ya existe."),
-    "Die Szene Foto Mosaik ist auf diesem Rahmen nicht installiert. Installiere das Paket noch einmal.": (
-        "The Foto Mosaik scene is not installed on this frame. Install the package again.",
-        "La escena Foto Mosaik no está instalada en este marco. Vuelve a instalar el paquete."),
+    "Die Szene Photo Mosaic ist auf diesem Rahmen nicht installiert. Installiere das Paket noch einmal.": (
+        "The Photo Mosaic scene is not installed on this frame. Install the package again.",
+        "La escena Photo Mosaic no está instalada en este marco. Vuelve a instalar el paquete."),
     "Die Playlist {old} heißt jetzt {name}.": (
         "The playlist {old} is now called {name}.", "La lista {old} ahora se llama {name}."),
     "Deine Fotos, zusammengesetzt aus hunderten deiner Fotos.": (

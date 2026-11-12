@@ -1,9 +1,9 @@
-"""Setzt die Karte „Welche Fotos aus DynaFrame“ von Foto Mosaik in eine Plugin-Seite ein.
+"""Setzt die Karte „Welche Fotos aus DynaFrame“ von Photo Mosaic in eine Plugin-Seite ein.
 
     python3 apply_ui.py <pack-ordner> <fm-studio-ordner> <config>
 
 Ersetzt im HTML die Zeile <!-- dynaframe-filters --> (die Marke setzt der
-Aufrufer vorher, üblich: vor der Immich-Karte) durch die Karte von Foto Mosaik,
+Aufrufer vorher, üblich: vor der Immich-Karte) durch die Karte von Photo Mosaic,
 Texte mit Schlüsseln "df…" in I18N, vorbefüllt in der Sprache von <html lang>.
 Hängt block.js an studio.js an. Danach in render(): dfRender(s, state).
 Stile (.group, input[type=date]) kommen vom Immich-Filter-Baustein; fehlen sie,
@@ -41,7 +41,7 @@ CONFIGS = {
 
 
 def fm_i18n(js):
-    """I18N von Foto Mosaik, auch Einträge über mehrere Zeilen."""
+    """I18N von Photo Mosaic, auch Einträge über mehrere Zeilen."""
     out = {}
     for m in re.finditer(r'^  (\w+): (\[.*?\]),\n', js, re.M | re.S):
         try:
@@ -94,7 +94,7 @@ def main(pack, fm_studio, cfg):
     j = studio / "studio.js"
     js = j.read_text(encoding="utf-8")
     lines = "".join(f"  {k}: {json.dumps(v, ensure_ascii=False)},\n" for k, v in i18n.items())
-    js, n = re.subn(r"^  supportAsk:", lambda m: "  // DynaFrame-Filter (wie Foto Mosaik)\n" + lines + m.group(0),
+    js, n = re.subn(r"^  supportAsk:", lambda m: "  // DynaFrame-Filter (wie Photo Mosaic)\n" + lines + m.group(0),
                     js, count=1, flags=re.M)
     if n != 1:
         raise SystemExit("supportAsk fehlt")

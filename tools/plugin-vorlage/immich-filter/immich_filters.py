@@ -1,5 +1,5 @@
-"""Die Immich-Filter von Foto Mosaik als gemeinsamer Baustein
-(Reisekarte, Farbkalender, Heute vor X Jahren).
+"""Die Immich-Filter von Photo Mosaic als gemeinsamer Baustein
+(Travel Map, Colour Calendar, On This Day).
 
 Einbau im Plugin:
     SCHEMA.update(immich_filters.SCHEMA)          # oder nur Teile davon
@@ -8,7 +8,7 @@ Einbau im Plugin:
     items = immich_filters.search(immich, stop, f, album_ids, extra_body)
     /api/people -> immich_filters.people(immich), /api/tags -> immich_filters.tags(immich)
 
-Wie Growing Up und Foto Mosaik: eine Suche je Album und je Person (mehrere
+Wie Growing Up und Photo Mosaic: eine Suche je Album und je Person (mehrere
 IDs verknüpft Immich mit UND, wir wollen ODER). Was Immich selbst kann
 (Favoriten, Ort, Kamera, Zeitraum, Beschreibung, Text im Bild, Dateiname,
 in keinem Album) macht der Server, den Rest prüft keep(): Sterne (>=),
@@ -52,7 +52,7 @@ SCHEMA = {
     "SkipNames":       {"kind": "name", "default": ""},
 }
 
-# Filter, die ein bestimmtes Datum wählen: Heute vor X Jahren sucht selbst nach Tagen
+# Filter, die ein bestimmtes Datum wählen: On This Day sucht selbst nach Tagen
 WHEN = ("OnThisDay", "LastDays", "TakenAfter", "TakenBefore")
 
 

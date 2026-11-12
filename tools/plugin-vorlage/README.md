@@ -2,15 +2,20 @@
 
 Jans Regel (10.11.2026): **Jede neue Plugin-Seite wird nach diesem Grundgerüst
 gebaut.** Bestehende Plugins werden bei der nächsten Änderung angeglichen.
-Referenz ist Foto Mosaik 0.1.10 (`referenz-foto-mosaik/`, komplettes Pack zum
+Referenz ist Photo Mosaic 0.1.11 (`referenz-foto-mosaik/`, komplettes Pack zum
 Abschauen und Kopieren).
+
+Jans Regel (12.11.2026): **Plugin-Namen immer englisch**, in allen drei Sprachen
+gleich (Plugin-Seite, Szene, Playlist, Store). Wird ein Plugin umbenannt, bekommen
+seine Playlists den neuen Namen über `renamed_playlists.py`.
 
 | Datei | Wofür |
 |---|---|
 | `referenz-foto-mosaik/` | Komplettes Pack: Seite (`plugin/studio/`), Plugin (`plugin/plugin.py`), Quellen inkl. Immich (`plugin/sources.py`), Szene (`dynamic/`) |
+| `renamed_playlists.py` | Benennt Playlists mit altem Namen beim ersten Start nach einem Update um (Einbau im Docstring) |
 | `own_playlist.py` | Gemeinsamer Baustein für die Karte „Eine Playlist dafür“ (Einbau im Docstring) |
-| `immich-filter/` | Immich-Filter von Foto Mosaik als Baustein: `immich_filters.py` (Schema, Suche je Album × Person, Prüfen), `block.js` (Seite), `apply_ui.py` (setzt die Filtergruppen in eine Seite ein, Texte DE/EN/ES vorbefüllt). So eingebaut in Reisekarte, Farbkalender, Heute vor X Jahren. |
-| `dynaframe-filter/` | DynaFrame-Filter von Foto Mosaik als Baustein: `dynaframe_filters.py` (Schema, `Matcher` sucht jedes Foto in der Mediendatenbank, sonst EXIF/XMP der Datei), `block.js` (Seite), `apply_ui.py` (setzt die Karte „Welche Fotos aus DynaFrame“ ein, Texte DE/EN/ES vorbefüllt). So eingebaut in Foto Mosaik, Reisekarte, Farbkalender, Heute vor X Jahren. Anleitung in `dynaframe-filter/README.md`. |
+| `immich-filter/` | Immich-Filter von Photo Mosaic als Baustein: `immich_filters.py` (Schema, Suche je Album × Person, Prüfen), `block.js` (Seite), `apply_ui.py` (setzt die Filtergruppen in eine Seite ein, Texte DE/EN/ES vorbefüllt). So eingebaut in Travel Map, Colour Calendar, On This Day. |
+| `dynaframe-filter/` | DynaFrame-Filter von Photo Mosaic als Baustein: `dynaframe_filters.py` (Schema, `Matcher` sucht jedes Foto in der Mediendatenbank, sonst EXIF/XMP der Datei), `block.js` (Seite), `apply_ui.py` (setzt die Karte „Welche Fotos aus DynaFrame“ ein, Texte DE/EN/ES vorbefüllt). So eingebaut in Photo Mosaic, Travel Map, Colour Calendar, On This Day. Anleitung in `dynaframe-filter/README.md`. |
 | `make_zip.py` | ZIP mit richtigen Datei-/Ordnerrechten packen (sonst „Error“ im Store) |
 
 ## Aufbau der Seite (Reihenfolge der Karten)
@@ -36,7 +41,7 @@ Abschauen und Kopieren).
 - Design: Farben/Abstände aus `studio.css` der Referenz übernehmen (Karten, `.grid`, `.field`, `.hint`, `.status`, `h3.sub`, `h4.group`, `.checks`), Handy-Breite muss gehen.
 - Manifest-Texte (Plugins-Seite) auf Englisch; Seite und Szene folgen der Spracheinstellung im Plugin.
 
-## Daten aus DynaFrame (gelernt mit Foto Mosaik 0.1.9/0.1.10)
+## Daten aus DynaFrame (gelernt mit Photo Mosaic 0.1.9/0.1.10)
 
 - Sterne, Kamera, Datum, Ort usw. stehen in der **Mediendatenbank** (`GET /media/database?page=N&pageSize=500`, Antwort `{items, totalCount, …}`). DynaFrame liest dafür EXIF und XMP selbst, auch Sidecars `foto.jpg.xmp` (so schreibt Jans App StarSwipe die Sterne; `metadataSource: "xmp"`).
 - **Playlist-Einträge (`/playlists/{id}/items`) haben `make`, `width`, `dateTaken`, aber kein Feld `rating`.** Für Filter nie den Playlist-Eintrag nehmen, sondern die Zeile der Mediendatenbank über `mediaFileId` oder Pfad (macht `dynaframe_filters.Matcher`). Eine Zeile ohne Feld `rating` ist kein Datenbank-Eintrag.

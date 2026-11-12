@@ -1,6 +1,6 @@
 # DynaFrame-Filter (Baustein)
 
-Die Karte „Welche Fotos aus DynaFrame“ von Foto Mosaik für andere Plugins: Fotos aus
+Die Karte „Welche Fotos aus DynaFrame“ von Photo Mosaic für andere Plugins: Fotos aus
 DynaFrame-Quellen (alle Fotos, Ordner, Playlists) nach Sternen, Ausrichtung, Megapixel,
 Ort, Zeitraum, Kamera, Objektiv, Text und Dateinamen filtern. Die Daten kommen aus der
 Mediendatenbank von DynaFrame; Fotos, die sie nicht kennt, liest `file_meta()` selbst
@@ -37,6 +37,6 @@ Mediendatenbank von DynaFrame; Fotos, die sie nicht kennt, liest `file_meta()` s
 
 ## Getestet
 
-Mit der nachgebauten Engine von Foto Mosaik (`fotomosaik/test/mock_engine.py`: Playlist 5 =
-Einträge wie auf Jans Rahmen, ohne `rating`) in Reisekarte, Farbkalender und Heute vor X
+Mit der nachgebauten Engine von Photo Mosaic (`fotomosaik/test/mock_engine.py`: Playlist 5 =
+Einträge wie auf Jans Rahmen, ohne `rating`) in Travel Map, Colour Calendar und Heute vor X
 Jahren; Sidecar im StarSwipe-Format über `file_meta()`.

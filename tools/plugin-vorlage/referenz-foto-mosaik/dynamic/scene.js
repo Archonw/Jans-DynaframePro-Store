@@ -1,4 +1,4 @@
-/* Foto Mosaik - die Szene.
+/* Photo Mosaic - die Szene.
  *
  * Ein Foto entsteht aus hunderten eigenen kleinen Fotos. Das Plugin liefert
  * die Kacheln als wenige große Bögen (api/sheet) mit ihren Farben
@@ -36,12 +36,12 @@
   let baseIndex = 0;
 
   const TEXT = {
-    de: { made: "Aus {n} eigenen Fotos", wait: "Foto Mosaik legt die Kacheln an …", none: "Foto Mosaik findet keine Fotos. Wähle auf der Plugin-Seite eine Quelle.",
-      unreachable: "Foto Mosaik antwortet nicht.", login: "Bitte zuerst im Browser beim Rahmen anmelden.", of: "{a} von {b}" },
-    en: { made: "Made of {n} of your photos", wait: "Foto Mosaik is preparing the tiles …", none: "Foto Mosaik finds no photos. Pick a source on the plugin page.",
-      unreachable: "Foto Mosaik is not responding.", login: "Please sign in to the frame in the browser first.", of: "{a} of {b}" },
-    es: { made: "Hecho con {n} de tus fotos", wait: "Foto Mosaik está preparando las teselas …", none: "Foto Mosaik no encuentra fotos. Elige una fuente en la página del plugin.",
-      unreachable: "Foto Mosaik no responde.", login: "Inicia sesión primero en el marco desde el navegador.", of: "{a} de {b}" }
+    de: { made: "Aus {n} eigenen Fotos", wait: "Photo Mosaic legt die Kacheln an …", none: "Photo Mosaic findet keine Fotos. Wähle auf der Plugin-Seite eine Quelle.",
+      unreachable: "Photo Mosaic antwortet nicht.", login: "Bitte zuerst im Browser beim Rahmen anmelden.", of: "{a} von {b}" },
+    en: { made: "Made of {n} of your photos", wait: "Photo Mosaic is preparing the tiles …", none: "Photo Mosaic finds no photos. Pick a source on the plugin page.",
+      unreachable: "Photo Mosaic is not responding.", login: "Please sign in to the frame in the browser first.", of: "{a} of {b}" },
+    es: { made: "Hecho con {n} de tus fotos", wait: "Photo Mosaic está preparando las teselas …", none: "Photo Mosaic no encuentra fotos. Elige una fuente en la página del plugin.",
+      unreachable: "Photo Mosaic no responde.", login: "Inicia sesión primero en el marco desde el navegador.", of: "{a} de {b}" }
   };
   let lang = params.get("lang") || "en";
   const tx = (key, values) => {

@@ -20,16 +20,16 @@
     {
       "type": "pegelstand",
       "name": {
-        "de": "Pegelstand",
+        "de": "River level",
         "en": "River level",
-        "es": "Nivel del río"
+        "es": "River level"
       },
       "description": {
         "de": "Wasserstand eines Pegels an Bundeswasserstraßen (PEGELONLINE), z. B. Mainz am Rhein, mit Trend.",
         "en": "Water level of a gauge on German federal waterways (PEGELONLINE), e.g. Mainz on the Rhine, with trend.",
         "es": "Nivel de agua de una estación en las vías navegables federales de Alemania (PEGELONLINE), con tendencia."
       },
-      "version": "1.0.2",
+      "version": "1.0.4",
       "author": "Jan",
       "zip": "pegelstand.zip"
     },
@@ -53,16 +53,16 @@
     {
       "type": "webuntis",
       "name": {
-        "de": "WebUntis Stundenplan",
+        "de": "WebUntis timetable",
         "en": "WebUntis timetable",
-        "es": "Horario WebUntis"
+        "es": "WebUntis timetable"
       },
       "description": {
         "de": "Stundenplan der nächsten Schultage mit Vertretungen und Ausfällen, dazu Prüfungen, Hausaufgaben und Mitteilungen aus WebUntis. Nachbau von MMM-Webuntis. Kein offizielles Untis-Produkt.",
         "en": "Timetable for the next school days with substitutions and cancellations, plus exams, homework and messages from WebUntis. Rebuild of MMM-Webuntis. Not an official Untis product.",
         "es": "Horario de los próximos días lectivos con sustituciones y cancelaciones, además de exámenes, deberes y avisos de WebUntis. Versión de MMM-Webuntis. No es un producto oficial de Untis."
       },
-      "version": "1.0.0",
+      "version": "1.0.3",
       "author": "Jan · inspired by HeikoGr/MMM-Webuntis",
       "url": "https://github.com/HeikoGr/MMM-Webuntis",
       "zip": "webuntis.zip"
@@ -70,16 +70,16 @@
     {
       "type": "wifi",
       "name": {
-        "de": "WLAN für Gäste",
+        "de": "Guest Wi-Fi",
         "en": "Guest Wi-Fi",
-        "es": "Wi-Fi para invitados"
+        "es": "Guest Wi-Fi"
       },
       "description": {
         "de": "Zeigt Netzwerkname, Passwort und einen QR-Code, mit dem sich Gäste per Handykamera ins WLAN einwählen. Nachbau von MMM-WiFiPassword.",
         "en": "Shows network name, password and a QR code guests scan with their phone camera to join your Wi-Fi. Rebuild of MMM-WiFiPassword.",
         "es": "Muestra el nombre de la red, la contraseña y un código QR que los invitados escanean con la cámara para conectarse al Wi-Fi. Versión de MMM-WiFiPassword."
       },
-      "version": "1.0.0",
+      "version": "1.0.3",
       "author": "Jan · inspired by TeraTech/MMM-WiFiPassword",
       "url": "https://github.com/TeraTech/MMM-WiFiPassword",
       "zip": "wifi.zip"
@@ -87,64 +87,64 @@
     {
       "type": "jellyfin",
       "name": {
-        "de": "Jellyfin: läuft gerade",
+        "de": "Jellyfin: now playing",
         "en": "Jellyfin: now playing",
-        "es": "Jellyfin: en reproducción"
+        "es": "Jellyfin: now playing"
       },
       "description": {
         "de": "Was gerade auf deinem Jellyfin-Server läuft: Musik, Film, Serienfolge oder Live-TV mit Cover, Fortschritt und was als Nächstes kommt. Kein offizielles Jellyfin-Produkt.",
         "en": "What's playing on your Jellyfin server: music, movie, episode or live TV with cover, progress and what's up next. Not an official Jellyfin product.",
         "es": "Lo que se reproduce en tu servidor Jellyfin: música, película, episodio o TV en directo con portada, progreso y lo siguiente. No es un producto oficial de Jellyfin."
       },
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": "Jan",
       "zip": "jellyfin.zip"
     },
     {
       "type": "traveltime",
       "name": {
-        "de": "Fahrzeit",
+        "de": "Travel time",
         "en": "Travel time",
-        "es": "Tiempo de viaje"
+        "es": "Travel time"
       },
       "description": {
         "de": "Wie lange die Fahrt mit dem Auto gerade dauert, mit Stau-Verzögerung, Strecke, Ausweichroute und „Losfahren bis“ für eine Ankunftszeit. Dazu Meldungen und Sperrungen auf deutschen Autobahnen an der Strecke. Mit eigenem Schlüssel von Mapbox (ohne Zahlungsart 10.000 Abfragen im Monat frei) oder Google.",
         "en": "How long the drive takes right now, with traffic delay, distance, alternative route and “Leave by” for an arrival time. Plus incidents and closures on German motorways along the way. With your own Mapbox key (10,000 requests a month free without a payment method) or Google key.",
         "es": "Cuánto dura ahora el trayecto en coche, con retraso por tráfico, distancia, ruta alternativa y «Sal antes de» para una hora de llegada. Además, incidencias y cortes en autopistas alemanas en el camino. Con tu propia clave de Mapbox (10.000 consultas al mes gratis sin método de pago) o de Google."
       },
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": "Jan",
       "zip": "traveltime.zip"
     },
     {
       "type": "bordcomputer",
       "name": {
-        "de": "Bordcomputer",
+        "de": "Starship console",
         "en": "Starship console",
-        "es": "Ordenador de a bordo"
+        "es": "Starship console"
       },
       "description": {
         "de": "Schwarzer Bildschirm mit runden Balken in Orange, Flieder und Pfirsich, wie die Bordcomputer in Raumschiff-Serien der 90er. Mit Sternzeit, Hauptschirm (bis zu drei Inhalte), drei Anzeigen und einer Laufzeile. Ein Fan-Design, kein offizielles Produkt.",
         "en": "Black screen with rounded bars in orange, lilac and peach, like the ship computers in 90s starship series. With stardate, main viewer (up to three items), three readouts and a ticker line. A fan design, not an official product.",
         "es": "Pantalla negra con barras redondeadas en naranja, lila y melocotón, como los ordenadores de las series de naves de los 90. Con fecha estelar, pantalla principal (hasta tres elementos), tres indicadores y una línea inferior. Diseño de fan, no es un producto oficial."
       },
-      "version": "1.2.0",
+      "version": "1.2.1",
       "author": "Jan",
       "zip": "bordcomputer.zip"
     },
     {
       "type": "fuelprices",
       "name": {
-        "de": "Spritpreise",
+        "de": "Fuel prices",
         "en": "Fuel prices",
-        "es": "Precios del combustible"
+        "es": "Fuel prices"
       },
       "description": {
         "de": "Die günstigsten Tankstellen in deiner Nähe für Super E5, Super E10 und Diesel, mit Preisen in Echtzeit. Das Modul merkt sich die Preise und zeigt, ob es gerade günstig ist: Vergleich mit dem Durchschnitt, Verlauf der letzten 24 Stunden und die Uhrzeit, zu der Tanken meist am billigsten ist. Nur Deutschland, mit freiem Schlüssel von Tankerkönig.",
         "en": "The cheapest petrol stations near you for Super E5, Super E10 and diesel, with real-time prices. The module remembers the prices and shows whether now is a good time: comparison with the average, the last 24 hours and the time of day when filling up is usually cheapest. Germany only, with a free Tankerkönig key.",
         "es": "Las gasolineras más baratas cerca de ti para Super E5, Super E10 y diésel, con precios en tiempo real. El módulo recuerda los precios y muestra si ahora conviene repostar: comparación con la media, las últimas 24 horas y la hora del día en que suele ser más barato. Solo Alemania, con una clave gratuita de Tankerkönig."
       },
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": "Jan",
       "zip": "fuelprices.zip"
     }

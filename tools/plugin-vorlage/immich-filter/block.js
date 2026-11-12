@@ -1,5 +1,5 @@
 
-// ------------------------------------------------------------ Immich-Filter (wie Foto Mosaik, immich_filters.py)
+// ------------------------------------------------------------ Immich-Filter (wie Photo Mosaic, immich_filters.py)
 
 const IF_TEXT = ["City", "State", "Country", "TakenAfter", "TakenBefore", "Make", "Model", "Lens", "Description", "OcrText", "FileName", "SkipNames"];
 const IF_NUMBER = ["LastDays", "MinMegapixels", "MinFileKB"];

@@ -2,8 +2,8 @@
   "schemaVersion": "1.0",
   "kind": "integration",
   "id": "photo-mosaic",
-  "title": "Foto Mosaik",
-  "version": "0.1.10",
+  "title": "Photo Mosaic",
+  "version": "0.1.11",
   "author": "Jan",
   "description": "One of your photos, made of hundreds of your own photos as colour-matched tiles, with a slow zoom into single tiles and a fade back to the original. Photos from a DynaFrame playlist, the whole library or Immich.",
   "dynamic": {

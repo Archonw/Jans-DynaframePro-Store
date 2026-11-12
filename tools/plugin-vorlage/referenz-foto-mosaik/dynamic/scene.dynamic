@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
   "id": "photo-mosaic",
-  "title": "Foto Mosaik",
+  "title": "Photo Mosaic",
   "description": "One of your photos, made of hundreds of your own photos, with a slow zoom into single tiles.",
   "author": "Jan",
   "subject": "Photos",

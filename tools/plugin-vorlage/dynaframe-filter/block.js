@@ -1,4 +1,4 @@
-// ------------------------------------------------------------ DynaFrame-Filter (wie Foto Mosaik, dynaframe_filters.py)
+// ------------------------------------------------------------ DynaFrame-Filter (wie Photo Mosaic, dynaframe_filters.py)
 
 const DF_TEXT = ["DfAfter", "DfBefore", "DfPlace", "DfMake", "DfModel", "DfLens", "DfText", "DfFileName", "DfSkipNames"];
 const DF_NUMBER = ["DfLastDays", "DfMinMegapixels"];

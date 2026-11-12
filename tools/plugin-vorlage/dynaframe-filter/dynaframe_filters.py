@@ -1,4 +1,4 @@
-"""Filter für Fotos aus DynaFrame (wie Foto Mosaik 0.1.10) als gemeinsamer Baustein.
+"""Filter für Fotos aus DynaFrame (wie Photo Mosaic 0.1.10) als gemeinsamer Baustein.
 
 DynaFrame liest beim Einlesen selbst EXIF/XMP aus den Fotos und legt es in
 seiner Mediendatenbank ab (GET /media/database: rating 0-5, make, model,
@@ -6,7 +6,7 @@ width/height, dateTaken, locationName, title/description/tags/keywords,
 customMetadata.cameraInfo.LensModel …). Die Sterne kommen auch aus XMP-Sidecars
 (foto.jpg.xmp, z. B. von StarSwipe, digiKam, darktable).
 
-WICHTIG (gelernt mit Foto Mosaik 0.1.9 auf Küche): Playlist-Einträge
+WICHTIG (gelernt mit Photo Mosaic 0.1.9 auf Küche): Playlist-Einträge
 (/playlists/{id}/items) haben make/width/dateTaken, aber KEIN Feld rating.
 Deshalb nie die Daten aus dem Playlist-Eintrag nehmen, sondern immer die Zeile
 der Mediendatenbank (über mediaFileId oder Pfad). Das macht Matcher.
@@ -48,7 +48,7 @@ SCHEMA = {
     "DfSkipNames":     {"kind": "name", "default": ""},
 }
 
-# Filter, die ein Datum wählen (Farbkalender/Heute vor X Jahren wählen die Tage selbst)
+# Filter, die ein Datum wählen (Colour Calendar/On This Day wählen die Tage selbst)
 WHEN = ("DfOnThisDay", "DfLastDays", "DfAfter", "DfBefore")
 
 PATH_KEYS = ("filePath", "path", "fullPath", "localPath", "file", "filename", "fileName")

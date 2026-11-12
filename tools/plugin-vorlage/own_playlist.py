@@ -208,7 +208,7 @@ class OwnPlaylist:
         playlist_id = state.get("id")
         if self.wanted():
             if playlist_id:
-                return self.t("created", name=state.get("name") or self.name())
+                return self.t("created", name=self.name())
             return self.note or self.t("pending")
         if state.get("deleted"):
             return self.t("deleted")

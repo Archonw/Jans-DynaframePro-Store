@@ -1,4 +1,4 @@
-# Foto Mosaik
+# Photo Mosaic
 
 A DynaFrame scene that rebuilds one of your photos from hundreds of your own
 small photos, then slowly zooms into single tiles.
@@ -61,7 +61,7 @@ while the previous picture is still on screen.
 ## Setup
 
 1. Install the package from the store.
-2. Plugins > Foto Mosaik > Open Foto Mosaik: pick where the tiles and
+2. Plugins > Photo Mosaic > Open Photo Mosaic: pick where the tiles and
    motifs come from. The first run takes a few minutes.
-3. Press "Create playlist" (or add the scene "Foto Mosaik" to any playlist).
+3. Press "Create playlist" (or add the scene "Photo Mosaic" to any playlist).
    About 5 minutes per playlist entry show several motifs.

@@ -21,7 +21,7 @@ const LIST_API = { playlist: ["./api/playlists", "playlists"], immich_album: [".
 
 const I18N = {
   eyebrow: ["Plugin-Seite", "Plugin page", "Página del plugin"],
-  name: ["Foto Mosaik", "Foto Mosaik", "Foto Mosaik"],
+  name: ["Photo Mosaic", "Photo Mosaic", "Photo Mosaic"],
   lede: ["Eines deiner Fotos, zusammengesetzt aus hunderten deiner eigenen Fotos. Die Kamera fährt langsam auf einzelne Kacheln zu, die dabei zum echten Foto werden. Jede Änderung hier wird sofort gespeichert.",
     "One of your photos, made of hundreds of your own photos. The camera slowly glides towards single tiles, which turn into the real photo. Every change here is saved immediately.",
     "Una de tus fotos, hecha con cientos de tus propias fotos. La cámara se acerca despacio a teselas sueltas, que se convierten en la foto real. Cada cambio aquí se guarda al instante."],
@@ -209,7 +209,7 @@ const I18N = {
   oclock: ["{time} Uhr", "{time}", "{time}"],
   saved: ["Gespeichert.", "Saved.", "Guardado."],
   playlistTitle: ["Eine Playlist dafür", "A playlist for it", "Una lista para ello"],
-  makePlaylist: ["Playlist „Foto Mosaik“ anlegen", "Create the playlist “Foto Mosaik”", "Crear la lista «Foto Mosaik»"],
+  makePlaylist: ["Playlist „Photo Mosaic“ anlegen", "Create the playlist “Photo Mosaic”", "Crear la lista «Photo Mosaic»"],
   no: ["Nein", "No", "No"],
   yesCreate: ["Ja, anlegen", "Yes, create it for me", "Sí, créala"],
   playlistHint: ["Die Playlist enthält nur die Szene und ist eingeschaltet. Die Dauer gilt beim Anlegen; danach änderst du sie in der Playlist selbst. Du kannst die Szene auch selbst in jede Playlist aufnehmen.",
@@ -433,7 +433,7 @@ function render(state) {
   if (document.activeElement !== el("MakePlaylist")) el("MakePlaylist").value = String(Boolean(state.settings.MakePlaylist));
   el("playlistNote").textContent = state.ownPlaylist || "";
   el("issueLink").href = "https://github.com/Archonw/Jans-DynaframePro-Store/issues/new?title=" +
-    encodeURIComponent(`[Foto Mosaik ${state.version}] `);
+    encodeURIComponent(`[Photo Mosaic ${state.version}] `);
   if (!editing) {
     for (const name of NUMBER_FIELDS.concat(TEXT_FIELDS)) {
       if (document.activeElement !== el(name)) el(name).value = s[name];

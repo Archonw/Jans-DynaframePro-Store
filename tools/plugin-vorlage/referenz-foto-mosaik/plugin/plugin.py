@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Foto Mosaik - der Plugin-Teil des Pakets.
+"""Photo Mosaic - der Plugin-Teil des Pakets.
 
 Die Szene "photo-mosaic" setzt ein Foto aus hunderten eigenen kleinen Fotos
 zusammen, fährt langsam auf einzelne Kacheln zu und blendet am Ende zum
@@ -44,8 +44,8 @@ plugin = create_plugin()
 
 PLUGIN_ID = "PhotoMosaic"
 SCENE_ID = "photo-mosaic"            # id in scene.dynamic - nie ändern
-PLAYLIST_NAME = "Foto Mosaik"       # in allen Sprachen gleich (Jans Wunsch)
-OLD_PLAYLIST_NAMES = ("Fotomosaik", "Photo Mosaic", "Fotomosaico")   # bis 0.1.0
+PLAYLIST_NAME = "Photo Mosaic"      # in allen Sprachen gleich, englisch (Jans Wunsch, 12.11.2026)
+OLD_PLAYLIST_NAMES = ("Foto Mosaik", "Fotomosaik", "Fotomosaico")   # Foto Mosaik bis 0.1.10, die anderen bis 0.1.0
 PLAYLIST_NAMES = {"de": PLAYLIST_NAME, "en": PLAYLIST_NAME, "es": PLAYLIST_NAME}
 OWN_PLAYLISTS = (PLAYLIST_NAME,) + OLD_PLAYLIST_NAMES
 PLUGIN_DIR = Path(plugin.plugin_dir)
@@ -1029,7 +1029,7 @@ def rename_playlist(playlist_id, name):
 
 
 def rename_old_playlist():
-    """Eine Playlist aus 0.1.0 (Fotomosaik/Photo Mosaic/Fotomosaico) bekommt den einen Namen."""
+    """Eine Playlist mit altem Namen (Foto Mosaik, Fotomosaik, Fotomosaico) bekommt den englischen."""
     try:
         for row in dynaframe.playlists():
             if row["name"] in OLD_PLAYLIST_NAMES:

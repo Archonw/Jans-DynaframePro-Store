@@ -9,7 +9,7 @@ Jede Quelle liefert eine Liste von Zeilen {"k", "t", "p", "s"}:
 - s: Dateigröße in Byte, wenn bekannt (findet WebDAV-Originale im Cache).
 
 Die Engine-API der Mediendatenbank ist nicht dokumentiert; die Wege sind von
-der Reisekarte übernommen und auf Jans Rahmen geprüft.
+Travel Map übernommen und auf Jans Rahmen geprüft.
 """
 
 import datetime
