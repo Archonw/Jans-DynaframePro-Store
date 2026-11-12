@@ -30,7 +30,8 @@ Vor dem Veröffentlichen prüfen, dass in keiner ZIP noch `Dynaframe-Stuff`, `Dy
 4. Jede Änderung braucht eine **höhere Version** als die im öffentlichen Store, in `catalog.json` **und** in `dynaframe-package.json`/`manifest.json` in der ZIP. Sonst sehen Frames kein Update.
 5. `download_url` zeigt auf ein **GitHub Release** des jeweiligen Repos (`https://github.com/<repo>/releases/download/<pack-id>-<version>/<Zip>.zip`), damit Downloads gezählt werden (seit 25.10.2026, getestet). Die ZIP trotzdem nach `plugin_packs/` committen: der Workflow `Pack-Releases` legt bei jedem Push auf `main` das fehlende Release aus der ZIP an (passend zu `size`/`checksum`) und korrigiert `download_url` selbst, auch wenn sie noch relativ ist oder aus dem Test-Store kopiert wurde. Darum nie eine ZIP bei gleicher Version austauschen: ein bestehendes Release wird nicht überschrieben. Zahlen: `python3 tools/downloads.py [owner/repo]`.
 6. Magic-Mirror-Module zusätzlich in `plugin_packs/magic-frame/modules/catalog.json` eintragen bzw. Version erhöhen.
-7. Direkt auf `main` committen und pushen.
+7. Die Pack-Tabellen in `README.md` (zwischen `<!-- packs:start -->` und `<!-- packs:end -->`) nicht von Hand pflegen: Sie werden aus `catalog.json` erzeugt (`python3 tools/build_readme.py`, macht auch der Workflow `Pack-Releases` bei jedem Push). Jeder Abschnitt ist alphabetisch sortiert. Neue Packs erscheinen automatisch mit dem ersten Satz ihrer Beschreibung; einen kürzeren Text legt man in `tools/readme_texts.json` fest.
+8. Direkt auf `main` committen und pushen.
 
 ## Plugin-Einstellungsseiten: immer nach Vorlage
 

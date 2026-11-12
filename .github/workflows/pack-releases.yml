@@ -1,12 +1,14 @@
 # Legt für jedes Pack, dessen download_url im Katalog auf ein GitHub Release
 # zeigt, das Release an und lädt die ZIP aus plugin_packs/<id>/ hoch.
 # Grund: GitHub zählt Downloads von Release-Assets (download_count).
+# Danach werden die Pack-Tabellen in README.md aus catalog.json neu erzeugt,
+# damit neue Packs automatisch in der Übersicht landen.
 name: Pack-Releases
 
 on:
   push:
     branches: [main]
-    paths: ["catalog.json", "plugin_packs/**"]
+    paths: ["catalog.json", "plugin_packs/**", "tools/readme_texts.json", "tools/build_readme.py"]
   workflow_dispatch:
 
 permissions:
@@ -21,3 +23,13 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python3 tools/pack_releases.py
+      - name: README-Übersicht aus catalog.json erzeugen
+        run: |
+          git pull --ff-only origin main
+          python3 tools/build_readme.py
+          if ! git diff --quiet README.md; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git commit -m "README: Übersicht aus catalog.json aktualisiert" README.md
+            git push
+          fi
