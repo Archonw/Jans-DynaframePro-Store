@@ -135,7 +135,7 @@
       "thumbnails": [
         "plugin_packs/travel-map/thumb.webp"
       ],
-      "download_url": "plugin_packs/travel-map/TravelMap.zip",
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/travel-map-0.1.25/TravelMap.zip",
       "size": 1628459,
       "checksum": "4cc35dd321ada4dd80d8ff24a888079682e60418e3dcb31b66d5bd7812c162a6"
     },
@@ -454,7 +454,7 @@
         "plugin_packs/photo-mosaic/thumb-zoom.webp",
         "plugin_packs/photo-mosaic/thumb-original.webp"
       ],
-      "download_url": "plugin_packs/photo-mosaic/PhotoMosaic.zip",
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/photo-mosaic-0.1.10/PhotoMosaic.zip",
       "size": 105697,
       "checksum": "9a8cebbd2abf4c178d101478499f4bd07d07d174f52a0b4b8a5fbc9a861eaaf9"
     },
@@ -473,7 +473,7 @@
         "plugin_packs/on-this-day/thumb-wall.webp",
         "plugin_packs/on-this-day/thumb-portrait.webp"
       ],
-      "download_url": "plugin_packs/on-this-day/OnThisDay.zip",
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/on-this-day-0.1.5/OnThisDay.zip",
       "size": 231725,
       "checksum": "3f45c52f43e3b99762dcd7d702404c4c76a4bcf2b8cc2aad00994a69019d0cc8"
     },
@@ -493,7 +493,7 @@
         "plugin_packs/color-calendar/thumb-weeks.webp",
         "plugin_packs/color-calendar/thumb-portrait.webp"
       ],
-      "download_url": "plugin_packs/color-calendar/ColorCalendar.zip",
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/color-calendar-0.1.8/ColorCalendar.zip",
       "size": 222310,
       "checksum": "84bb1711e6e12a903bd7182d31fc0e7ed9c35b7e97fa63bbe9bb5e6e0d20ab75"
     }
