@@ -88,6 +88,10 @@ Add-ons for **Dynaframe's Magic Mirror** (install that first). They appear in th
 
 Problems, questions or ideas? Open an [issue](https://github.com/Archonw/Jans-DynaframePro-Store/issues). Most packs also have a "report a problem" link on their settings page that fills in the pack name for you.
 
+## For plugin authors: ports
+
+Some packs open a page in your Wi-Fi (phone pages, guest page, casting) on ports 8090 to 8119. The list is in [PORTS.md](tools/plugin-vorlage/PORTS.md). If one of these ports is taken, for example by your plugin, our plugin moves to the next free port by itself and shows it on its settings page. To avoid clashes, please use ports outside 8090 to 8199.
+
 ## Please note
 
 These packs were created with AI. I am not a programmer and cannot review the code for security issues myself. Use them at your own discretion.
