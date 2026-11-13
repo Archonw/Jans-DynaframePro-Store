@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "generated": "2026-11-12T22:04:33Z",
+  "generated": "2026-11-13T07:11:43Z",
   "store": {
     "name": "Jan's Store",
     "author": "Jan",
@@ -568,6 +568,26 @@
       "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/travel-scrapbook-0.1.1/TravelScrapbook.zip",
       "size": 1500398,
       "checksum": "ff6de09acec4a81540d93419fe7e411dfd1dd25007ff4b3beb951b881d646db4"
+    },
+    {
+      "id": "party-wall",
+      "type": "integration",
+      "title": "Party Wall",
+      "author": "Jan",
+      "description": "A photo wall for your party. Guests scan the QR code on the TV, upload photos of the evening from their phone (no app needed) and react with emojis that fly across the TV with their name. The TV shows the photos one by one, new ones first, with the QR code, the guest count and the current favourites beside them; every few minutes the top five take the stage. At the end of the evening a recap counts down the most popular photos to number one and closes with a collage of the night. Guests can browse the gallery, ask for a photo on the TV and save photos to their phone. You can approve photos before they appear, hide or delete them, download all photos as a ZIP and keep several parties apart. Three looks (party, elegant, bright). Installs the plugin together with its scene. English, German or Spanish.",
+      "version": "0.1.1",
+      "updated": "2026-11-13T07:11:43Z",
+      "thumbnails": [
+        "plugin_packs/party-wall/thumb.webp",
+        "plugin_packs/party-wall/thumb-wall.webp",
+        "plugin_packs/party-wall/thumb-phone.webp",
+        "plugin_packs/party-wall/thumb-intro.webp",
+        "plugin_packs/party-wall/thumb-recap.webp",
+        "plugin_packs/party-wall/thumb-end.webp"
+      ],
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/party-wall-0.1.1/PartyWall.zip",
+      "size": 285549,
+      "checksum": "fa7f86f03dd517511100e70676bcf08bee215f3251c47b83bd1c513ef6d594e3"
     }
   ]
 }

@@ -31,5 +31,6 @@
   "magic-mirror-module-fuelprices": "Cheapest petrol stations near you with real-time prices and whether now is a good time to fill up (Germany, free Tankerkönig key)",
   "magic-mirror-skin-bordcomputer": "A whole new look for the Magic Mirror: rounded orange and lilac bars like the ship computers of 90s starship series, with clock, stardate and fields you fill yourself",
   "photo-quiz": "Guess when and where your own photos were taken, together on your phones.",
-  "travel-scrapbook": "Finds your trips by itself from photo GPS and date and shows each one as a scrapbook page with prints, route map, kilometres, weather and handwritten notes."
+  "travel-scrapbook": "Finds your trips by itself from photo GPS and date and shows each one as a scrapbook page with prints, route map, kilometres, weather and handwritten notes.",
+  "party-wall": "Guests scan a QR code, upload photos of the evening from their phone and send emojis that fly across the TV. Ends with a recap of the most popular photos."
 }
