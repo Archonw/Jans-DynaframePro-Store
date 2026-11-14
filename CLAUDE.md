@@ -33,6 +33,16 @@ Vor dem Veröffentlichen prüfen, dass in keiner ZIP noch `Dynaframe-Stuff`, `Dy
 7. Die Pack-Tabellen in `README.md` (zwischen `<!-- packs:start -->` und `<!-- packs:end -->`) nicht von Hand pflegen: Sie werden aus `catalog.json` erzeugt (`python3 tools/build_readme.py`, macht auch der Workflow `Pack-Releases` bei jedem Push). Jeder Abschnitt ist alphabetisch sortiert. Neue Packs erscheinen automatisch mit dem ersten Satz ihrer Beschreibung; einen kürzeren Text legt man in `tools/readme_texts.json` fest.
 8. Direkt auf `main` committen und pushen.
 
+## Geparkte Packs (Test-Store zeigt nur, woran gearbeitet wird)
+
+Veröffentlichte Packs verschwinden aus dem Test-Store, bleiben aber im Repo: `tools/park.py` verschiebt ihren Eintrag aus `DynaframPro/Jans-store/catalog.json` nach `DynaframPro/Jans-store/parked.json` (ZIPs und Bilder bleiben in `plugin_packs/`). Das läuft automatisch im Workflow `Pack-Releases` bei jedem Push und alle 3 Stunden: Geparkt wird jedes Pack, dessen Testversion **nicht höher** ist als die im öffentlichen Store. Packs mit neuerer Testversion bleiben sichtbar, bis sie veröffentlicht sind.
+
+- Wieder daran arbeiten: `python3 tools/park.py unpark <id>`, dann Version erhöhen wie gewohnt. Oder einfach einen neuen Eintrag mit höherer Version in `catalog.json` schreiben: Der Katalog gewinnt, der geparkte Eintrag wird gelöscht.
+- Von Hand parken (auch mit neuerer Testversion): `python3 tools/park.py park <id>` oder `"parked": true` in den Eintrag schreiben.
+- Überblick: `python3 tools/park.py list`.
+- Ein mit `unpark` zurückgeholtes Pack bleibt in derselben Version sichtbar, auch wenn es öffentlich gleich ist. Nach dem nächsten Veröffentlichen wird es wieder geparkt.
+- Wer ein Pack bearbeitet, das nicht in `catalog.json` steht: zuerst in `parked.json` nachsehen.
+
 ## Plugin-Einstellungsseiten: immer nach Vorlage
 
 Jede neue Plugin-Seite (und jede überarbeitete) wird nach `tools/plugin-vorlage/` gebaut: README.md dort lesen, Referenz ist Photo Mosaic (`tools/plugin-vorlage/referenz-foto-mosaik/`). Kurz: Kopf mit Sprachwahl, Status-Karte (Version zuletzt), eigene Karten, nur bei Bedarf Immich-/WebDAV-/Ordner-Karten aus der Referenz, als letzte Karte „Eine Playlist dafür“ (`own_playlist.py`), dann der Support-Fuß. Texte DE/EN/ES, im HTML in der Sprache von `<html lang>` vorbefüllt. ZIPs mit `tools/plugin-vorlage/make_zip.py` packen. Plugins, die Fotos aus DynaFrame nehmen, bekommen die Karte „Welche Fotos aus DynaFrame“ (`tools/plugin-vorlage/dynaframe-filter/`); Sterne usw. immer aus der Mediendatenbank, nie aus Playlist-Einträgen (die haben kein `rating`).
