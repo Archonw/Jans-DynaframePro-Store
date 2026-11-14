@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="referrer" content="no-referrer">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#f3e9d8">
+  <title>Postcards</title>
+  <link rel="icon" href="icon.png">
+  <link rel="stylesheet" href="send.css">
+</head>
+<body>
+  <main class="page">
+    <header class="top">
+      <p class="kicker" data-t="kicker">Postcards</p>
+      <h1 id="title" data-t="title">Send a postcard</h1>
+      <p class="to" id="toLine" hidden></p>
+    </header>
+
+    <section class="panel" id="broken" hidden>
+      <p class="big" data-t="broken">This link is incomplete. Please ask for the link again.</p>
+    </section>
+
+    <section class="panel" id="closed" hidden>
+      <p class="big" data-t="closed">Sending postcards is switched off on the frame right now.</p>
+    </section>
+
+    <form class="panel" id="form" hidden>
+      <div class="step">
+        <span class="num">1</span>
+        <div class="step-body">
+          <p class="label" data-t="step1">Choose a photo</p>
+          <label class="pick" id="pick">
+            <input type="file" id="file" accept="image/*">
+            <span class="pick-empty" id="pickEmpty"><b data-t="pick">Choose photo</b><small data-t="pickHint">from your photos or take a new one</small></span>
+            <img id="preview" alt="" hidden>
+          </label>
+          <button type="button" class="link" id="again" data-t="otherPhoto" hidden>Choose another photo</button>
+        </div>
+      </div>
+
+      <div class="step">
+        <span class="num">2</span>
+        <div class="step-body">
+          <label class="label" for="text" data-t="step2">Write your greeting</label>
+          <textarea id="text" maxlength="300" rows="4" data-tp="textPh" placeholder="Dear all, greetings from …"></textarea>
+          <p class="count"><span id="count">0</span> / 300</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <span class="num">3</span>
+        <div class="step-body two">
+          <label><span class="label" data-t="name">Your name</span>
+            <input type="text" id="from" maxlength="40" autocomplete="name" data-tp="namePh" placeholder="e.g. Grandma Ruth"></label>
+          <label><span class="label" data-t="city">Where are you writing from?</span>
+            <input type="text" id="city" maxlength="40" autocomplete="address-level2" data-tp="cityPh" placeholder="e.g. Bremen"></label>
+          <p class="hint" data-t="cityHint">The town appears in the postmark.</p>
+        </div>
+      </div>
+
+      <div class="card-back" id="back" aria-hidden="true">
+        <div class="cb-text" id="backText"></div>
+        <div class="cb-side">
+          <div class="cb-stamp"><span>♥</span></div>
+          <div class="cb-mark" id="backMark"></div>
+          <div class="cb-to" id="backTo"></div>
+        </div>
+      </div>
+
+      <button type="submit" class="send" id="send" data-t="send" disabled>Send postcard</button>
+      <p class="status" id="status" role="status"></p>
+    </form>
+
+    <section class="panel done" id="done" hidden>
+      <div class="done-stamp" aria-hidden="true">✓</div>
+      <p class="big" id="doneTitle" data-t="sent">Your postcard is on its way!</p>
+      <p class="hint" id="doneNote" data-t="waitAck">Waiting for the frame to pick it up …</p>
+      <button type="button" class="send" id="another" data-t="another">Send another postcard</button>
+    </section>
+
+    <footer class="foot">
+      <p data-t="privacy">Your photo and greeting are encrypted on this phone and can only be opened by the frame the link belongs to.</p>
+    </footer>
+  </main>
+  <script src="send.js"></script>
+</body>
+</html>
