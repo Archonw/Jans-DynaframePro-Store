@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "generated": "2026-11-15T09:42:27Z",
+  "generated": "2026-11-15T09:46:01Z",
   "store": {
     "name": "Jan's Store",
     "author": "Jan",
@@ -130,14 +130,14 @@
       "title": "Travel Map",
       "author": "Jan",
       "description": "A world map in the style of an old globe, studded with push pins where your photos were taken. The places come from the photos' GPS data: a DynaFrame playlist, the whole DynaFrame media library (plus extra folders such as a mounted NAS) or your Immich server (all photos or an album). Every collection gets its own pin colour and shape (push pin, thumbtack, flag, long pin); close pins are merged. The pins go in one by one in the order the photos were taken, then a photo is shown at its pin now and then with place and date. Oval world map or three globes, or only the area with pins. German, English or Spanish.",
-      "version": "0.1.27",
-      "updated": "2026-11-15T08:00:52Z",
+      "version": "0.1.28",
+      "updated": "2026-11-15T09:46:01Z",
       "thumbnails": [
         "plugin_packs/travel-map/thumb.webp"
       ],
-      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/travel-map-0.1.27/TravelMap.zip",
-      "size": 1632504,
-      "checksum": "5a97e4dcf45e2e5d9b426ad4e2c5a50509dccf70d829aa2c9c9741a292d99438"
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/travel-map-0.1.28/TravelMap.zip",
+      "size": 1632621,
+      "checksum": "5382bd652aed0dc4a58fc12964de1b8816527cfceb2fb2566dce749aef3a6e4f"
     },
     {
       "id": "phone-photos",
@@ -430,8 +430,8 @@
       "title": "Photo Mosaic",
       "author": "Jan",
       "description": "One of your photos, rebuilt from hundreds of your own photos as small tiles, matched by colour. The tiles settle over the picture in a wave, then the camera glides slowly towards a single tile, which turns into the real photo with its date and place, and finally the mosaic fades back to the original. In the endless flow the camera dives into the tile until it fills the screen, and that photo becomes the next mosaic. Tiles and motifs come from a DynaFrame playlist, the whole DynaFrame library or an Immich server (all photos or an album), and can come from different sources. The plugin prepares the tiles once in the background and caches them, so playback stays light on the Pi. Tile size, tint, pace and captions can be set on the plugin page. Installs the plugin together with its scene. English, German or Spanish.",
-      "version": "0.1.12",
-      "updated": "2026-11-15T08:00:52Z",
+      "version": "0.1.13",
+      "updated": "2026-11-15T09:46:01Z",
       "thumbnails": [
         "plugin_packs/photo-mosaic/thumb-hero.webp",
         "plugin_packs/photo-mosaic/thumb-build.webp",
@@ -439,9 +439,9 @@
         "plugin_packs/photo-mosaic/thumb-zoom.webp",
         "plugin_packs/photo-mosaic/thumb-original.webp"
       ],
-      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/photo-mosaic-0.1.12/PhotoMosaic.zip",
-      "size": 108674,
-      "checksum": "1ab5492d49c5ac97157410c33e85072d25999d7d7be872d18983e03607bb4ce0"
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/photo-mosaic-0.1.13/PhotoMosaic.zip",
+      "size": 108783,
+      "checksum": "a826d1813d6fbfc6d99d64a264ba1c213c75c85f40855515da2b95eef7ea9c8a"
     },
     {
       "id": "on-this-day",
@@ -449,8 +449,8 @@
       "title": "On This Day",
       "author": "Jan",
       "description": "Your photos of this day in earlier years, shown as a journey through time. Next to every photo you see the weather back then at that very place and hour (from the photo's date, time and GPS, via the free Open-Meteo archive back to 1940) and the weather today, with how much warmer or colder it was. A timeline shows the temperature of every year. After the last year a summary shows one photo per year, the temperatures of all years next to today's, the warmest, coldest and wettest year and the place you were most often on this day. Two views: time travel (one photo after another with slow zoom) or side by side (all years as photo cards). Photo duration, transition, photos per year and the days around today are adjustable. The photos come from a DynaFrame playlist, the whole DynaFrame library or an Immich server (all photos or an album), with Immich filters for albums, stars, favourites and archived photos. Installs the plugin together with its scene. English, German or Spanish.",
-      "version": "0.1.7",
-      "updated": "2026-11-15T08:00:52Z",
+      "version": "0.1.8",
+      "updated": "2026-11-15T09:46:01Z",
       "thumbnails": [
         "plugin_packs/on-this-day/thumb.webp",
         "plugin_packs/on-this-day/thumb-journey.webp",
@@ -458,9 +458,9 @@
         "plugin_packs/on-this-day/thumb-wall.webp",
         "plugin_packs/on-this-day/thumb-portrait.webp"
       ],
-      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/on-this-day-0.1.7/OnThisDay.zip",
-      "size": 235767,
-      "checksum": "ca8ce0c8dbf20033391eedca15cbe818de81ef56c312a8e4c621cf3e3695a3d6"
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/on-this-day-0.1.8/OnThisDay.zip",
+      "size": 235896,
+      "checksum": "a7110609ff360b84889204d68ac063cb5a3d3ce25d91868bc02cbf4577cc4b1c"
     },
     {
       "id": "color-calendar",
@@ -503,17 +503,17 @@
       "title": "Photo Universe",
       "author": "Jan",
       "description": "Your photos as a galaxy: every photo is a star, and photos with more rating stars shine brighter. The stars form constellations by year, place or person, and the camera flies through the galaxy, steers towards a star and opens the photo with its date, place, rating and the people in it. By year, time spirals outwards through the galaxy; taking turns, the stars drift into new constellations now and then. Photos come from the whole DynaFrame library, chosen folders or playlists, or an Immich server (people from Immich's face recognition), with the same filters as Photo Mosaic. The plugin reads the photo list in the background; the galaxy is drawn with WebGL on the frame. Installs the plugin together with its scene. English, German or Spanish.",
-      "version": "0.1.2",
-      "updated": "2026-11-15T08:00:52Z",
+      "version": "0.1.3",
+      "updated": "2026-11-15T09:46:01Z",
       "thumbnails": [
         "plugin_packs/photo-universe/thumb-hero.webp",
         "plugin_packs/photo-universe/thumb-constellation.webp",
         "plugin_packs/photo-universe/thumb-photo.webp",
         "plugin_packs/photo-universe/thumb-places.webp"
       ],
-      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/photo-universe-0.1.2/PhotoUniverse.zip",
-      "size": 159888,
-      "checksum": "6d22de09f07323855f37b67cf36cc3f59980edc31b22351dda4376257b7faa78"
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/photo-universe-0.1.3/PhotoUniverse.zip",
+      "size": 159999,
+      "checksum": "5e680dbfb4076ca799d51d24c225145923de41cc63c306d4501339bc47afb62c"
     },
     {
       "id": "photo-quiz",
@@ -521,8 +521,8 @@
       "title": "Photo Quiz",
       "author": "Jan",
       "description": "A guessing game with your own photos for the whole family. The TV shows a photo, at first pixelated, zoomed in or blurred and getting clearer, and everyone guesses on their phone when (the year) and where (a tap on the map) it was taken. Join by scanning the QR code on the TV, no app needed. Up to three hints appear during the round: season and time of day, the weather back then, the camera, how far and in which direction from home, the country. The reveal shows date, place and a map with everyone's guesses and points; after the last round the final standings crown the winner. Play the year only, the place only or both; rounds, time per round and the reveal effect are adjustable. Start it as a playlist or straight from a phone (the frame switches to the quiz and back afterwards). Photos come from the DynaFrame library (with filters for stars, dates, camera and more), a playlist, folders or an Immich server (with album, star, favourite and archive filters). Installs the plugin together with its scene. English, German or Spanish.",
-      "version": "0.1.3",
-      "updated": "2026-11-15T08:07:41Z",
+      "version": "0.1.4",
+      "updated": "2026-11-15T09:46:01Z",
       "thumbnails": [
         "plugin_packs/photo-quiz/thumb.webp",
         "plugin_packs/photo-quiz/thumb-guess.webp",
@@ -531,9 +531,9 @@
         "plugin_packs/photo-quiz/thumb-final.webp",
         "plugin_packs/photo-quiz/thumb-tv.webp"
       ],
-      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/photo-quiz-0.1.3/PhotoQuiz.zip",
-      "size": 566726,
-      "checksum": "1a7f3d54b3598e207eae9684bb68db5ffd525d70f3658176cb66d24db908c412"
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/photo-quiz-0.1.4/PhotoQuiz.zip",
+      "size": 566851,
+      "checksum": "7fd84f4d56abe50efb6c87d45517c6523a9e2a86b66856a82ffb343e52685001"
     },
     {
       "id": "travel-scrapbook",
@@ -541,8 +541,8 @@
       "title": "Travel Scrapbook",
       "author": "Jan",
       "description": "Finds your trips by itself (several days far from home, from the GPS and date of your photos; your home is found automatically, also if you moved) and turns every trip into a scrapbook page: pasted prints chosen by stars (DynaFrame's media database or Immich), a small hand-drawn route map with the places and the way home, a ticket with days, kilometres and photos, a postmark, the weather of every day from the free Open-Meteo archive and handwritten notes (hottest day, rainy days, stations, five-star photos). The frame shows one holiday after another, matching the season, newest, oldest or random, with an optional cover page of all trips. On the plugin page you see all trips and can give each one your own title, a note in blue ink, or leave it out. Paper: kraft, cream or black photo album; landscape and portrait. Photos from a DynaFrame playlist, the whole DynaFrame library or an Immich server, with filters. Installs the plugin together with its scene. English, German or Spanish.",
-      "version": "0.1.2",
-      "updated": "2026-11-15T08:00:52Z",
+      "version": "0.1.3",
+      "updated": "2026-11-15T09:46:01Z",
       "thumbnails": [
         "plugin_packs/travel-scrapbook/thumb.webp",
         "plugin_packs/travel-scrapbook/thumb-trip.webp",
@@ -550,9 +550,9 @@
         "plugin_packs/travel-scrapbook/thumb-black.webp",
         "plugin_packs/travel-scrapbook/thumb-portrait.webp"
       ],
-      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/travel-scrapbook-0.1.2/TravelScrapbook.zip",
-      "size": 1503355,
-      "checksum": "7ecd843a7eb3244b6851411992af6d0ded106c4a4b407ceb12ffac93a747ca9b"
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/travel-scrapbook-0.1.3/TravelScrapbook.zip",
+      "size": 1503482,
+      "checksum": "879049ba99d24d24c5e0e3ba35de497528af1501df702fde00017bbf6a512739"
     },
     {
       "id": "party-wall",
