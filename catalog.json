@@ -51,7 +51,7 @@
         "plugin_packs/jellyfin/thumb-film.webp",
         "plugin_packs/jellyfin/thumb-serie-hoch.webp"
       ],
-      "download_url": "plugin_packs/jellyfin/JellyfinNowPlaying.zip",
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/jellyfin-now-playing-0.4.3/JellyfinNowPlaying.zip",
       "size": 80048,
       "checksum": "1a634c4ab861ffe8d0f27083843fdc0e0b84852151c869056092c428a07b22a1"
     },
@@ -70,7 +70,7 @@
         "plugin_packs/fussball-live/thumb-bl2.webp",
         "plugin_packs/fussball-live/thumb-ucl.webp"
       ],
-      "download_url": "plugin_packs/fussball-live/FussballLive.zip",
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/fussball-live-0.4.22/FussballLive.zip",
       "size": 1096156,
       "checksum": "d708446a40369658c287aed0e13e64780a9a9ead0012b6f0ed333d1a3942ace0"
     },
@@ -87,7 +87,7 @@
         "plugin_packs/american-football-live/thumb-landscape.webp",
         "plugin_packs/american-football-live/thumb-portrait.webp"
       ],
-      "download_url": "plugin_packs/american-football-live/AmericanFootballLive.zip",
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/american-football-live-0.2.16/AmericanFootballLive.zip",
       "size": 86264,
       "checksum": "4af9b1a51adcc1df60e12141f2c58ee9597c6bc56eb528c44477e229c8830784"
     },
@@ -102,7 +102,7 @@
       "thumbnails": [
         "plugin_packs/world-map-live/thumb.webp"
       ],
-      "download_url": "plugin_packs/world-map-live/WorldMapLive.zip",
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/world-map-live-0.4.6/WorldMapLive.zip",
       "size": 174750,
       "checksum": "9d0fe5b27141de2e29d41e06ad97ff146f15a8a71c7301a51bbb147abb4bce6c"
     },
@@ -120,7 +120,7 @@
         "plugin_packs/biathlon-live/thumb-live.webp",
         "plugin_packs/biathlon-live/thumb-portrait.webp"
       ],
-      "download_url": "plugin_packs/biathlon-live/BiathlonLive.zip",
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/biathlon-live-0.1.10/BiathlonLive.zip",
       "size": 219558,
       "checksum": "bd85e88a4224ee43c1b2bc65e6767ad369beba96d29ef3076b6282e96fa98b24"
     },
@@ -135,7 +135,7 @@
       "thumbnails": [
         "plugin_packs/travel-map/thumb.webp"
       ],
-      "download_url": "plugin_packs/travel-map/TravelMap.zip",
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/travel-map-0.1.27/TravelMap.zip",
       "size": 1632504,
       "checksum": "5a97e4dcf45e2e5d9b426ad4e2c5a50509dccf70d829aa2c9c9741a292d99438"
     },
@@ -180,7 +180,7 @@
       "thumbnails": [
         "plugin_packs/magic-frame/thumb.webp"
       ],
-      "download_url": "plugin_packs/magic-frame/MagicFrame.zip",
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/magic-frame-0.7.3/MagicFrame.zip",
       "size": 162717,
       "checksum": "6420ec34d359f2be8b762a7bf1f87b764638902a25ce26ee6141a7bea4b270bf"
     },
@@ -347,7 +347,7 @@
         "plugin_packs/network-overview/thumb-landscape.webp",
         "plugin_packs/network-overview/thumb-portrait.webp"
       ],
-      "download_url": "plugin_packs/network-overview/NetworkOverview.zip",
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/network-overview-0.1.6/NetworkOverview.zip",
       "size": 136548,
       "checksum": "8912f0e51d7f280ef270b41af60387fe7c3f04f21b394e3ce30140a992b3af98"
     },
@@ -381,7 +381,7 @@
         "plugin_packs/ticker-wall/thumb-alert.webp",
         "plugin_packs/ticker-wall/thumb-portrait.webp"
       ],
-      "download_url": "plugin_packs/ticker-wall/TickerWall.zip",
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/ticker-wall-0.1.8/TickerWall.zip",
       "size": 248025,
       "checksum": "2f90a1c6a7fbdf899a5cad51161b8a1a37b1d7d16ce38f3fc880f97aab145daf"
     },
@@ -420,7 +420,7 @@
         "plugin_packs/growing-up/thumb-sameage.webp",
         "plugin_packs/growing-up/thumb-portrait.webp"
       ],
-      "download_url": "plugin_packs/growing-up/GrowingUp.zip",
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/growing-up-0.1.7/GrowingUp.zip",
       "size": 87049,
       "checksum": "e13d26dbdbe026dbc31d9eafde17c9f18287da69602ab2caf51191b66eee1fab"
     },
@@ -439,7 +439,7 @@
         "plugin_packs/photo-mosaic/thumb-zoom.webp",
         "plugin_packs/photo-mosaic/thumb-original.webp"
       ],
-      "download_url": "plugin_packs/photo-mosaic/PhotoMosaic.zip",
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/photo-mosaic-0.1.12/PhotoMosaic.zip",
       "size": 108674,
       "checksum": "1ab5492d49c5ac97157410c33e85072d25999d7d7be872d18983e03607bb4ce0"
     },
@@ -458,7 +458,7 @@
         "plugin_packs/on-this-day/thumb-wall.webp",
         "plugin_packs/on-this-day/thumb-portrait.webp"
       ],
-      "download_url": "plugin_packs/on-this-day/OnThisDay.zip",
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/on-this-day-0.1.7/OnThisDay.zip",
       "size": 235767,
       "checksum": "ca8ce0c8dbf20033391eedca15cbe818de81ef56c312a8e4c621cf3e3695a3d6"
     },
@@ -478,7 +478,7 @@
         "plugin_packs/color-calendar/thumb-weeks.webp",
         "plugin_packs/color-calendar/thumb-portrait.webp"
       ],
-      "download_url": "plugin_packs/color-calendar/ColorCalendar.zip",
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/color-calendar-0.1.10/ColorCalendar.zip",
       "size": 226360,
       "checksum": "d219bba1ad8fd668b9e9dad7a1fb5d1ddb6caedc9adb36b47b02419b52473cdb"
     },
@@ -511,7 +511,7 @@
         "plugin_packs/photo-universe/thumb-photo.webp",
         "plugin_packs/photo-universe/thumb-places.webp"
       ],
-      "download_url": "plugin_packs/photo-universe/PhotoUniverse.zip",
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/photo-universe-0.1.2/PhotoUniverse.zip",
       "size": 159888,
       "checksum": "6d22de09f07323855f37b67cf36cc3f59980edc31b22351dda4376257b7faa78"
     },
@@ -550,7 +550,7 @@
         "plugin_packs/travel-scrapbook/thumb-black.webp",
         "plugin_packs/travel-scrapbook/thumb-portrait.webp"
       ],
-      "download_url": "plugin_packs/travel-scrapbook/TravelScrapbook.zip",
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/travel-scrapbook-0.1.2/TravelScrapbook.zip",
       "size": 1503355,
       "checksum": "7ecd843a7eb3244b6851411992af6d0ded106c4a4b407ceb12ffac93a747ca9b"
     },
