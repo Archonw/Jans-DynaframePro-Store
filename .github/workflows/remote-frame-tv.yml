@@ -55,6 +55,16 @@ jobs:
               --title "Remote Frame TV $v" \
               --notes "Android TV / Fire TV app that finds DynaFrames on the network and shows one full screen (DynaFrame's /RemoteFrame view). Install: see apps/remote-frame-tv/README.md"
           fi
+          # Fester Link, der immer die neueste APK liefert:
+          # releases/download/remote-frame-tv-latest/RemoteFrameTV.apk
+          cp "$apk" RemoteFrameTV.apk
+          if ! gh release view remote-frame-tv-latest >/dev/null 2>&1; then
+            gh release create remote-frame-tv-latest --target "$GITHUB_SHA" --latest=false \
+              --title "Remote Frame TV (always the newest version)" \
+              --notes "Fixed download link for the newest Remote Frame TV: https://github.com/${GITHUB_REPOSITORY}/releases/download/remote-frame-tv-latest/RemoteFrameTV.apk"
+          fi
+          gh release upload remote-frame-tv-latest RemoteFrameTV.apk --clobber
+          gh release edit remote-frame-tv-latest --notes "Fixed download link for the newest Remote Frame TV (now $v): https://github.com/${GITHUB_REPOSITORY}/releases/download/remote-frame-tv-latest/RemoteFrameTV.apk"
       - uses: actions/upload-artifact@v4
         with:
           name: RemoteFrameTV
