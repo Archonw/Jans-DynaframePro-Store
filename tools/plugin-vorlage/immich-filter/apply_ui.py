@@ -38,6 +38,8 @@ def fm_i18n(js):
 
 
 def fm_block(html):
+    # Erst ab der Immich-Karte suchen: seit Photo Mosaic 0.1.8 steht die DynaFrame-Karte davor
+    html = html[html.index('id="ApiKey"'):]
     start = html.index('      <h4 class="group" data-i18n="grpWhat">')
     end = html.index("      <details>", start)
     return html[start:end].rstrip() + "\n"
