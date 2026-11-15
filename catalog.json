@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "generated": "2026-11-15T08:16:45Z",
+  "generated": "2026-11-15T09:42:27Z",
   "store": {
     "name": "Jan's Store",
     "author": "Jan",
@@ -468,8 +468,8 @@
       "title": "Colour Calendar",
       "author": "Jan",
       "description": "Your year as a calendar of colours. Every day becomes a cell in the colour of the photos you took that day, so summers, holidays, winters and Christmas show up as a band of colour. The photos come from a DynaFrame playlist, the whole DynaFrame media library (WebDAV too, plus extra folders) or your Immich server (all photos or chosen albums; Immich's ThumbHash gives the colours without downloading a single image). Immich photos can be filtered by stars, favourites and archive; hidden and locked photos never show. Four shapes: months, weeks like a wall planner, a ring (several years as rings inside each other) or stripes with one band per year. Last 12 months, this year, a year of your choice or several years; dark or light, squares or dots, vivid colours and the colour of each month. Now and then a day lights up and slowly scrolls through its photos, shown whole and uncropped, side by side or one above the other (you choose how many photos or how long, and how fast), with the date and its colours: at random, day by day or this day in earlier years. Installs the plugin together with its scene. English, German or Spanish.",
-      "version": "0.1.10",
-      "updated": "2026-11-15T08:00:52Z",
+      "version": "0.1.11",
+      "updated": "2026-11-15T09:42:27Z",
       "thumbnails": [
         "plugin_packs/color-calendar/thumb.webp",
         "plugin_packs/color-calendar/thumb-focus.webp",
@@ -478,9 +478,9 @@
         "plugin_packs/color-calendar/thumb-weeks.webp",
         "plugin_packs/color-calendar/thumb-portrait.webp"
       ],
-      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/color-calendar-0.1.10/ColorCalendar.zip",
-      "size": 226360,
-      "checksum": "d219bba1ad8fd668b9e9dad7a1fb5d1ddb6caedc9adb36b47b02419b52473cdb"
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/color-calendar-0.1.11/ColorCalendar.zip",
+      "size": 226317,
+      "checksum": "6da4f847f77cb4aade74b44fd715a9c93e466a6ce491b5d2c0c74b0871d0ae81"
     },
     {
       "id": "playlist-music",
