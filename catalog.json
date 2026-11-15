@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "generated": "2026-11-15T09:46:01Z",
+  "generated": "2026-11-15T14:07:09Z",
   "store": {
     "name": "Jan's Store",
     "author": "Jan",
@@ -573,6 +573,23 @@
       "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/party-wall-0.1.4/PartyWall.zip",
       "size": 314276,
       "checksum": "792357f80bfd0de04471692816da1aef196e1879165809f749b7fb3ed01c24eb"
+    },
+    {
+      "id": "sing-along",
+      "type": "integration",
+      "title": "Sing-along",
+      "author": "Jan",
+      "description": "Karaoke on the side: while music plays via Music Assistant, Spotify or Jellyfin, the frame shows the lyrics line by line in time with the song, with the album cover and the song's progress. The current line lights up from left to right like in a karaoke bar, instrumental breaks show three dots that count down to the next line. By itself it slides in over your photos while a song with lyrics plays and hands the screen back when the music stops (with 'Allow takeover'), or it plays in its own Sing-along playlist. Lyrics come from LRCLIB, a free collection of synced lyrics without account or key; songs found once are remembered on the frame. Music Assistant and Jellyfin are read from your own servers (settings are taken over from Playlist Music or Jellyfin Now Playing if they have them), Spotify either from Playlist Music on this frame without any setup or from your Spotify account with your own free Spotify app. Three layouts, three text sizes and an offset for speakers with delay. A connections card shows whether LRCLIB and the music sources can be reached. Allow lrclib.net in a Pi-hole. Installs the plugin together with its scene. English, German or Spanish.",
+      "version": "0.1.2",
+      "updated": "2026-11-15T14:07:09Z",
+      "thumbnails": [
+        "plugin_packs/sing-along/thumb.webp",
+        "plugin_packs/sing-along/thumb-backdrop.webp",
+        "plugin_packs/sing-along/thumb-lyrics.webp"
+      ],
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/sing-along-0.1.2/SingAlong.zip",
+      "size": 89847,
+      "checksum": "139076ec17f56137d069b67be4eea08253226be8fa2a88402ca570eb8cfb2f21"
     }
   ]
 }
