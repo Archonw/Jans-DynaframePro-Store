@@ -88,7 +88,7 @@ Add-ons for **Dynaframe's Magic Mirror** (install that first). They appear in th
 An app for **Fire TV** and **Android TV**. It finds every DynaFrame in your home network by itself; pick one with the remote and it shows that frame full screen (DynaFrame's Remote frames view, so switch on *Remote frames* in the frame's settings). Frames with DynaFrame's login ask for it once.
 
 Install on a Fire TV: allow the app *Downloader* to install apps (Settings → My Fire TV → Developer options), open Downloader and enter
-`https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/remote-frame-tv-0.1.2/RemoteFrameTV-0.1.2.apk`
+`https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/remote-frame-tv-0.1.3/RemoteFrameTV-0.1.3.apk`
 
 More (adb, Android TV, updates): [apps/remote-frame-tv](apps/remote-frame-tv/README.md).
 

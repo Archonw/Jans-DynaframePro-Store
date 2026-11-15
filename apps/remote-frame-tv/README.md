@@ -14,7 +14,7 @@ Android TV / Fire TV app. It finds every DynaFrame on the home network by itself
 
 1. Fire TV: Settings → My Fire TV → Developer options → "Install unknown apps": allow **Downloader** (install "Downloader" from the Amazon app store first). If Developer options are missing: Settings → My Fire TV → About → click the device name 7 times.
 2. Open Downloader and enter the APK address of the latest release, currently
-   `https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/remote-frame-tv-0.1.2/RemoteFrameTV-0.1.2.apk`
+   `https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/remote-frame-tv-0.1.3/RemoteFrameTV-0.1.3.apk`
 3. Install, open. The app is listed under "Your apps & channels".
 
 With adb instead: enable Developer options → ADB debugging, then `adb connect <TV-IP>:5555` and `adb install -r RemoteFrameTV-<version>.apk`.
@@ -25,7 +25,7 @@ Same as above with "Downloader" from the Play Store (or "Send files to TV"), or 
 
 ## Updates
 
-Install the newer APK over the old one; saved frames and logins stay. All releases are signed with the same key.
+Install the newer APK over the old one; saved frames and logins stay. All releases from 0.1.3 on are signed with the same private key (GitHub secret). 0.1.0–0.1.2 used another key: uninstall those once before installing 0.1.3.
 
 ## Build
 

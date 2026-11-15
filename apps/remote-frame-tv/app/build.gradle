@@ -15,10 +15,14 @@ android {
     }
     signingConfigs {
         release {
-            storeFile file("../signing/remoteframetv.jks")
-            storePassword "remoteframetv"
-            keyAlias "remoteframetv"
-            keyPassword "remoteframetv"
+            // Key and password come only from GitHub secrets (workflow), never from the repo.
+            def ks = System.getenv("RFTV_KEYSTORE")
+            if (ks) {
+                storeFile file(ks)
+                storePassword System.getenv("RFTV_KEYSTORE_PASSWORD")
+                keyAlias "remoteframetv"
+                keyPassword System.getenv("RFTV_KEYSTORE_PASSWORD")
+            }
         }
     }
     buildTypes {

@@ -24,9 +24,21 @@ jobs:
       - uses: gradle/actions/setup-gradle@v4
         with:
           gradle-version: "8.9"
-      - name: APK bauen
+      - name: APK bauen (signiert mit dem Schlüssel aus den Secrets)
         working-directory: apps/remote-frame-tv
-        run: gradle --no-daemon assembleRelease
+        env:
+          RFTV_KEYSTORE_B64: ${{ secrets.RFTV_KEYSTORE_B64 }}
+          RFTV_KEYSTORE_PASSWORD: ${{ secrets.RFTV_KEYSTORE_PASSWORD }}
+        run: |
+          if [ -z "$RFTV_KEYSTORE_B64" ] || [ -z "$RFTV_KEYSTORE_PASSWORD" ]; then
+            echo "::error::Secrets RFTV_KEYSTORE_B64 / RFTV_KEYSTORE_PASSWORD fehlen: keine APK ohne richtigen Schlüssel."
+            exit 1
+          fi
+          export RFTV_KEYSTORE="$RUNNER_TEMP/rftv.jks"
+          echo "$RFTV_KEYSTORE_B64" | base64 -d > "$RFTV_KEYSTORE"
+          gradle --no-daemon assembleRelease
+          rm -f "$RFTV_KEYSTORE"
+          test -f app/build/outputs/apk/release/app-release.apk
       - name: Release anlegen
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
