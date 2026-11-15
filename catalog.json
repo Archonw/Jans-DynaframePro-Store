@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "generated": "2026-11-15T08:00:52Z",
+  "generated": "2026-11-15T08:07:41Z",
   "store": {
     "name": "Jan's Store",
     "author": "Jan",
@@ -145,14 +145,14 @@
       "title": "Photo Cast",
       "author": "Jan",
       "description": "Show the photo or video you are looking at on your phone on the frame right away, on iPhone and Android without an extra app: from the share menu of the Photos app or WhatsApp (iPhone shortcut), from an Android share app, or from the frame's phone page (QR code). Photos fill the screen for a few minutes, videos play once with sound, several take turns, then your playlist carries on. Phones pair once with a code shown on the frame, so nobody else on the Wi-Fi can send. German, English or Spanish.",
-      "version": "0.4.3",
-      "updated": "2026-11-12T22:04:33Z",
+      "version": "0.4.5",
+      "updated": "2026-11-15T08:07:41Z",
       "thumbnails": [
         "plugin_packs/foto-cast/thumb-foto-cast.webp"
       ],
-      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/phone-photos-0.4.3/FotoCast.zip",
-      "size": 102374,
-      "checksum": "e1612ff93b21ed4a880fffd608033920ca26e96f5f55a3005c0c5a99fef4b0a1"
+      "download_url": "plugin_packs/foto-cast/FotoCast.zip",
+      "size": 114072,
+      "checksum": "b11a6cc65313d44e14125fc800fdb92c4023cdd3d1efd1d62c8f0341dffc6261"
     },
     {
       "id": "youtube-cast",
@@ -160,14 +160,14 @@
       "title": "YouTube Cast",
       "author": "Jan",
       "description": "Cast YouTube videos from your phone to the frame, like to a TV: tap the cast button in the YouTube app and choose the frame (Android and iPhone, on the same Wi-Fi or once linked with a TV code). The app becomes the remote for pause, seek and volume. Links can also be sent from a phone page or the iPhone share menu. Afterwards your playlist carries on. German, English or Spanish.",
-      "version": "0.1.1",
-      "updated": "2026-10-25T11:11:25Z",
+      "version": "0.1.4",
+      "updated": "2026-11-15T08:07:41Z",
       "thumbnails": [
         "plugin_packs/youtube-cast/thumb.webp"
       ],
-      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/youtube-cast-0.1.1/YouTubeCast.zip",
-      "size": 87704,
-      "checksum": "3538eee1651947097b3165de7c4fec7b598b34cc5dd59c727983d70cb19d9298"
+      "download_url": "plugin_packs/youtube-cast/YouTubeCast.zip",
+      "size": 100389,
+      "checksum": "e50a5aca0ec6cceb26ae324f82fbe2a208a18ca885ba953872c08e917d817390"
     },
     {
       "id": "magic-frame",
@@ -390,9 +390,9 @@
       "type": "integration",
       "title": "Halloween Scare",
       "author": "Jan",
-      "description": "This pack is a demo: it shows how a plugin can react to triggers from Home Assistant (motion sensors, doorbells, switches, events) and take over the screen for a moment. Halloween is just the example. A Halloween jump scare for your frame. It shows your photos as usual until a motion sensor or the doorbell in your Home Assistant goes off. Then one of four scares comes over the playlist: a haunted portrait whose eyes find you before it turns into a screaming ghoul, a pale ghost standing in the photo that is on screen right now before it jumps at you, the picture breaking up like an old TV while a dark figure comes closer with every glitch, or a monster grabbing the edge of the frame and roaring \"Trick or treat!\". Every scare has a gentle version for children. The frame plays the screams and noises itself, right on cue, and sets the volume back afterwards. Pause between scares, chance per trigger, quiet hours, \"only around Halloween\" and an arm switch; Home Assistant automations can start a scare with the halloween_scare event. All pictures and sounds are made by the plugin itself. Installs the plugin together with its scene. English, German or Spanish.",
-      "version": "0.1.4",
-      "updated": "2026-11-07T12:32:17Z",
+      "description": "This pack is a demo: it shows how a plugin can react to triggers from Home Assistant (motion sensors, doorbells, switches, events) and take over the screen for a moment. Halloween is just the example. A Halloween jump scare for your frame. It shows your photos as usual until a motion sensor or the doorbell in your Home Assistant goes off. Then one of four scares comes over the playlist: a haunted portrait whose eyes find you before it turns into a screaming ghoul, a pale ghost standing in the photo that is on screen right now before it jumps at you, the picture breaking up like an old TV while a dark figure comes closer with every glitch, or a monster grabbing the edge of the frame and roaring \"Trick or treat!\". Every scare has a gentle version for children. The frame plays the screams and noises itself, right on cue, and sets the volume back afterwards. Pause between scares, chance per trigger, quiet hours, \"only around Halloween\" and an arm switch; Home Assistant automations can start a scare with the halloween_scare event. All pictures and sounds are made by the plugin itself. You can also add your own pictures and videos (e.g. photorealistic images or jump-scare clips with sound), with an idle video that loops until the trigger cuts to the scare. Installs the plugin together with its scene. English, German or Spanish.",
+      "version": "0.1.7",
+      "updated": "2026-11-15T08:07:41Z",
       "thumbnails": [
         "plugin_packs/halloween-scare/thumb.webp",
         "plugin_packs/halloween-scare/thumb-portrait.webp",
@@ -401,9 +401,9 @@
         "plugin_packs/halloween-scare/thumb-monster.webp",
         "plugin_packs/halloween-scare/thumb-gentle.webp"
       ],
-      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/halloween-scare-0.1.4/HalloweenScare.zip",
-      "size": 1703996,
-      "checksum": "f03dcc83bd8811c01df02bdb00d7cd14086fc8fc25bbc0b965d217f13271fe53"
+      "download_url": "plugin_packs/halloween-scare/HalloweenScare.zip",
+      "size": 1710956,
+      "checksum": "17b2a66c8a525de663956a93256c69ab231c04878a49d79f5ded6be68a24cbef"
     },
     {
       "id": "growing-up",
@@ -521,8 +521,8 @@
       "title": "Photo Quiz",
       "author": "Jan",
       "description": "A guessing game with your own photos for the whole family. The TV shows a photo, at first pixelated, zoomed in or blurred and getting clearer, and everyone guesses on their phone when (the year) and where (a tap on the map) it was taken. Join by scanning the QR code on the TV, no app needed. Up to three hints appear during the round: season and time of day, the weather back then, the camera, how far and in which direction from home, the country. The reveal shows date, place and a map with everyone's guesses and points; after the last round the final standings crown the winner. Play the year only, the place only or both; rounds, time per round and the reveal effect are adjustable. Start it as a playlist or straight from a phone (the frame switches to the quiz and back afterwards). Photos come from the DynaFrame library (with filters for stars, dates, camera and more), a playlist, folders or an Immich server (with album, star, favourite and archive filters). Installs the plugin together with its scene. English, German or Spanish.",
-      "version": "0.1.1",
-      "updated": "2026-11-12T21:19:46Z",
+      "version": "0.1.3",
+      "updated": "2026-11-15T08:07:41Z",
       "thumbnails": [
         "plugin_packs/photo-quiz/thumb.webp",
         "plugin_packs/photo-quiz/thumb-guess.webp",
@@ -531,9 +531,9 @@
         "plugin_packs/photo-quiz/thumb-final.webp",
         "plugin_packs/photo-quiz/thumb-tv.webp"
       ],
-      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/photo-quiz-0.1.1/PhotoQuiz.zip",
-      "size": 554898,
-      "checksum": "a3f1fe2d7eeb1229d81ee2e10030420b2b931ca46bb79610771b467588a69c43"
+      "download_url": "plugin_packs/photo-quiz/PhotoQuiz.zip",
+      "size": 566726,
+      "checksum": "1a7f3d54b3598e207eae9684bb68db5ffd525d70f3658176cb66d24db908c412"
     },
     {
       "id": "travel-scrapbook",
@@ -560,8 +560,8 @@
       "title": "Party Wall",
       "author": "Jan",
       "description": "A photo wall for your party. Guests scan the QR code on the TV, upload photos of the evening from their phone (no app needed) and react with emojis that fly across the TV with their name. The TV shows the photos one by one, new ones first, with the QR code, the guest count and the current favourites beside them; every few minutes the top five take the stage. At the end of the evening a recap counts down the most popular photos to number one and closes with a collage of the night. Guests can browse the gallery, ask for a photo on the TV and save photos to their phone. You can approve photos before they appear, hide or delete them, download all photos as a ZIP and keep several parties apart. Three looks (party, elegant, bright). Installs the plugin together with its scene. English, German or Spanish.",
-      "version": "0.1.1",
-      "updated": "2026-11-13T07:11:43Z",
+      "version": "0.1.4",
+      "updated": "2026-11-15T08:07:41Z",
       "thumbnails": [
         "plugin_packs/party-wall/thumb.webp",
         "plugin_packs/party-wall/thumb-wall.webp",
@@ -570,9 +570,9 @@
         "plugin_packs/party-wall/thumb-recap.webp",
         "plugin_packs/party-wall/thumb-end.webp"
       ],
-      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/party-wall-0.1.1/PartyWall.zip",
-      "size": 285549,
-      "checksum": "fa7f86f03dd517511100e70676bcf08bee215f3251c47b83bd1c513ef6d594e3"
+      "download_url": "plugin_packs/party-wall/PartyWall.zip",
+      "size": 314276,
+      "checksum": "792357f80bfd0de04471692816da1aef196e1879165809f749b7fb3ed01c24eb"
     }
   ]
 }
