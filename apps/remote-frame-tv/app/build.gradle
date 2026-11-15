@@ -1,0 +1,35 @@
+plugins { id "com.android.application" }
+
+def v = new Properties()
+file("../version.properties").withInputStream { v.load(it) }
+
+android {
+    namespace "de.archonw.remoteframetv"
+    compileSdk 34
+    defaultConfig {
+        applicationId "de.archonw.remoteframetv"
+        minSdk 22          // Fire OS 5 (Fire TV Stick 2nd gen) and newer
+        targetSdk 34
+        versionCode Integer.parseInt(v.getProperty("versionCode"))
+        versionName v.getProperty("versionName")
+    }
+    signingConfigs {
+        release {
+            storeFile file("../signing/remoteframetv.jks")
+            storePassword "remoteframetv"
+            keyAlias "remoteframetv"
+            keyPassword "remoteframetv"
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.release
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    lint { abortOnError false; checkReleaseBuilds false }
+}

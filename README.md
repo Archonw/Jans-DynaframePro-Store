@@ -83,6 +83,15 @@ Add-ons for **Dynaframe's Magic Mirror** (install that first). They appear in th
 **Build your own module or port one from MagicMirror²:** the guide [MODULES.md](plugin_packs/magic-frame/MODULES.md) is complete on its own, so you can hand it to an AI together with the link to a MagicMirror² module. Working examples are in [module-sources](plugin_packs/magic-frame/module-sources).
 <!-- packs:end -->
 
+## Remote Frame TV: your frame on the TV
+
+An app for **Fire TV** and **Android TV**. It finds every DynaFrame in your home network by itself; pick one with the remote and it shows that frame full screen (DynaFrame's Remote frames view, so switch on *Remote frames* in the frame's settings). Frames with DynaFrame's login ask for it once.
+
+Install on a Fire TV: allow the app *Downloader* to install apps (Settings → My Fire TV → Developer options), open Downloader and enter
+`https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/remote-frame-tv-0.1.2/RemoteFrameTV-0.1.2.apk`
+
+More (adb, Android TV, updates): [apps/remote-frame-tv](apps/remote-frame-tv/README.md).
+
 ## Help and feedback
 
 Problems, questions or ideas? Open an [issue](https://github.com/Archonw/Jans-DynaframePro-Store/issues). Most packs also have a "report a problem" link on their settings page that fills in the pack name for you.

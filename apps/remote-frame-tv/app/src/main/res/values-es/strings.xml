@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="subtitle">Elige un DynaFrame para mostrar en este televisor.</string>
+    <string name="searching">Buscando marcos en la red…</string>
+    <string name="found_n">%1$d marco(s) encontrado(s).</string>
+    <string name="found_none">No se encontró ningún marco. ¿Está el televisor en la misma red? También puedes introducir la dirección.</string>
+    <string name="rescan">Buscar de nuevo</string>
+    <string name="add_manual">Introducir dirección</string>
+    <string name="autostart">Abrir el último marco al iniciar: %1$s</string>
+    <string name="on">sí</string>
+    <string name="off">no</string>
+    <string name="manual_title">Dirección del marco</string>
+    <string name="manual_hint">p. ej. 192.168.178.115</string>
+    <string name="ok">Abrir</string>
+    <string name="cancel">Cancelar</string>
+    <string name="remove">Quitar de la lista</string>
+    <string name="saved">guardado</string>
+    <string name="not_reachable">no accesible</string>
+    <string name="login_needed">requiere inicio de sesión</string>
+    <string name="loading">Conectando con %1$s…</string>
+    <string name="error_retry">%1$s no responde (%2$s). Nuevo intento en 10 s. Atrás = lista de marcos.</string>
+    <string name="back_hint">Botón Atrás: lista de marcos</string>
+    <string name="open">Mostrar</string>
+</resources>

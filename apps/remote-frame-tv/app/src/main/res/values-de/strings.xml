@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="subtitle">Wähle einen DynaFrame, den dieser Fernseher zeigen soll.</string>
+    <string name="searching">Suche Bilderrahmen im Netzwerk…</string>
+    <string name="found_n">%1$d Bilderrahmen gefunden.</string>
+    <string name="found_none">Kein Bilderrahmen gefunden. Ist der Fernseher im selben Netzwerk? Du kannst die Adresse auch eingeben.</string>
+    <string name="rescan">Neu suchen</string>
+    <string name="add_manual">Adresse eingeben</string>
+    <string name="autostart">Beim Start zuletzt gewählten Rahmen öffnen: %1$s</string>
+    <string name="on">an</string>
+    <string name="off">aus</string>
+    <string name="manual_title">Adresse des Bilderrahmens</string>
+    <string name="manual_hint">z. B. 192.168.178.115</string>
+    <string name="ok">Öffnen</string>
+    <string name="cancel">Abbrechen</string>
+    <string name="remove">Aus der Liste entfernen</string>
+    <string name="saved">gespeichert</string>
+    <string name="not_reachable">nicht erreichbar</string>
+    <string name="login_needed">Anmeldung nötig</string>
+    <string name="loading">Verbinde mit %1$s…</string>
+    <string name="error_retry">%1$s antwortet nicht (%2$s). Neuer Versuch in 10 s. Zurück = Rahmenliste.</string>
+    <string name="back_hint">Zurück-Taste: Rahmenliste</string>
+    <string name="open">Anzeigen</string>
+</resources>

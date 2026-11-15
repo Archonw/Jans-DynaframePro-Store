@@ -1,0 +1,49 @@
+# Baut die Android-TV-/Fire-TV-App "Remote Frame TV" (apps/remote-frame-tv) und legt
+# für jede neue Version (apps/remote-frame-tv/version.properties) ein GitHub Release
+# remote-frame-tv-<version> mit der APK an. Bestehende Releases werden nie überschrieben.
+name: Remote Frame TV
+
+on:
+  push:
+    branches: [main]
+    paths: ["apps/remote-frame-tv/**", ".github/workflows/remote-frame-tv.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  apk:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: "8.9"
+      - name: APK bauen
+        working-directory: apps/remote-frame-tv
+        run: gradle --no-daemon assembleRelease
+      - name: Release anlegen
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          v=$(grep '^versionName=' apps/remote-frame-tv/version.properties | cut -d= -f2)
+          tag="remote-frame-tv-$v"
+          apk="RemoteFrameTV-$v.apk"
+          cp apps/remote-frame-tv/app/build/outputs/apk/release/app-release.apk "$apk"
+          sha256sum "$apk"
+          if gh release view "$tag" >/dev/null 2>&1; then
+            echo "Release $tag gibt es schon, wird nicht überschrieben."
+          else
+            gh release create "$tag" "$apk" --target "$GITHUB_SHA" \
+              --title "Remote Frame TV $v" \
+              --notes "Android TV / Fire TV app that finds DynaFrames on the network and shows one full screen (DynaFrame's /RemoteFrame view). Install: see apps/remote-frame-tv/README.md"
+          fi
+      - uses: actions/upload-artifact@v4
+        with:
+          name: RemoteFrameTV
+          path: apps/remote-frame-tv/app/build/outputs/apk/release/app-release.apk
