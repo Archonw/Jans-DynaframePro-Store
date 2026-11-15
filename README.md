@@ -62,7 +62,6 @@ Integrations bring their own scene and can show themselves over the running slid
 | <img src="plugin_packs/playlist-button/thumb.webp" width="220"> | **Playlist Button** | A GPIO button opens an overlay menu to switch playlists. |
 | <img src="plugin_packs/playlist-music/thumb.webp" width="220"> | **Playlist Music** | Plays music while certain playlists run, each with its own music: internet radio, Jellyfin, a folder, Spotify Connect or Music Assistant, on the frame or another speaker. Fades in and out and pauses for videos. |
 | <img src="plugin_packs/settings-backup/thumb.webp" width="220"> | **Settings Backup** | Saves the settings of all your plugins and scenes to one file and puts them back, on this frame or another one. Missing stores and packs are installed automatically. With a password the file is encrypted and also carries API keys and passwords. Every restore can be undone. |
-| <img src="plugin_packs/web-login/thumb.webp" width="220"> | **Web Login** | Puts a login in front of the frame's web page (password, single sign-on with your own OIDC provider, or both, optionally over HTTPS) and closes the ports that lead past it, except for devices you trust such as Home Assistant or apps with an API key. Never expose the frame to the internet. |
 | <img src="plugin_packs/Webpages/thumb.webp" width="220"> | **Web Page Button** | A GPIO button opens one or more web pages full screen over the slideshow (YouTube links play as video) and closes them again. |
 
 ### Magic Mirror modules

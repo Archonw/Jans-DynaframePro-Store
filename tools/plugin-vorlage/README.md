@@ -16,6 +16,7 @@ seine Playlists den neuen Namen über `renamed_playlists.py`.
 | `own_playlist.py` | Gemeinsamer Baustein für die Karte „Eine Playlist dafür“ (Einbau im Docstring) |
 | `immich-filter/` | Immich-Filter von Photo Mosaic als Baustein: `immich_filters.py` (Schema, Suche je Album × Person, Prüfen), `block.js` (Seite), `apply_ui.py` (setzt die Filtergruppen in eine Seite ein, Texte DE/EN/ES vorbefüllt). So eingebaut in Travel Map, Colour Calendar, On This Day. |
 | `dynaframe-filter/` | DynaFrame-Filter von Photo Mosaic als Baustein: `dynaframe_filters.py` (Schema, `Matcher` sucht jedes Foto in der Mediendatenbank, sonst EXIF/XMP der Datei), `block.js` (Seite), `apply_ui.py` (setzt die Karte „Welche Fotos aus DynaFrame“ ein, Texte DE/EN/ES vorbefüllt). So eingebaut in Photo Mosaic, Travel Map, Colour Calendar, On This Day. Anleitung in `dynaframe-filter/README.md`. |
+| `scene-bridge/` | **Pflicht für jede Szene, die Daten von ihrem Plugin holt**: `plugin_bridge.js` vor die Szenen-Skripte (`apply.py <pack>/dynamic`). Sonst bekommt die Szene bei DynaFrames eigenem HTTPS/Login (ab 2026.11.14) keine Daten mehr. Anleitung in `scene-bridge/README.md`. |
 | `ports/` + `PORTS.md` | Für Plugins mit eigener Seite im WLAN (Handy-Seite usw.): Port-Liste, `plugin_ports.py` (belegten Port erkennen, ausweichen, merken, auf der Seite änderbar), Port-Feld für die Plugin-Seite. Pflicht für jedes Plugin, das einen Port öffnet. Anleitung in `ports/README.md`. |
 | `make_zip.py` | ZIP mit richtigen Datei-/Ordnerrechten packen (sonst „Error“ im Store) |
 
@@ -54,6 +55,7 @@ seine Playlists den neuen Namen über `renamed_playlists.py`.
 
 - `requirements.txt` enthält immer `requests`; `plugin.connect_sse()` und `plugin.ready()` vor langsamer Einrichtung.
 - Aktions-IDs nur `^[a-z][a-z0-9-]*$`.
+- Szene lädt `plugin_bridge.js` vor ihren Skripten (`scene-bridge/`), sonst geht sie mit DynaFrame-HTTPS/Login nicht.
 - Szene ruft `window.DynaFrameScene?.ready?.()` auf, sobald sie etwas zeigt (+ ~8 s Rückfall).
 - Takeover-Plugins: Schutz gegen übrig gebliebene Takeover-Playlist (`/mnt/project-files/takeover-stop/leftover.py`).
 - Szene+Plugin = Pack-Typ `integration`; Version in `dynaframe-package.json`, `plugin/manifest.json` und Katalog erhöhen; ZIP mit `make_zip.py` packen.
