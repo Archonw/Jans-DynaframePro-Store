@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "generated": "2026-11-16T17:12:21Z",
+  "generated": "2026-11-16T18:34:36Z",
   "store": {
     "name": "Jan's Store",
     "author": "Jan",
@@ -44,16 +44,16 @@
       "title": "Jellyfin Now Playing",
       "author": "Jan",
       "description": "Shows what a chosen Jellyfin user is watching or listening to, on the whole screen, for as long as it plays: cover, backdrop, title, episode, year, genres, plot and progress. Installs the plugin together with its scene. All settings on its own plugin page, in German, English or Spanish.",
-      "version": "0.4.3",
-      "updated": "2026-11-15T08:00:52Z",
+      "version": "0.4.4",
+      "updated": "2026-11-16T18:34:36Z",
       "thumbnails": [
         "plugin_packs/jellyfin/thumb-v2.webp",
         "plugin_packs/jellyfin/thumb-film.webp",
         "plugin_packs/jellyfin/thumb-serie-hoch.webp"
       ],
-      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/jellyfin-now-playing-0.4.3/JellyfinNowPlaying.zip",
-      "size": 80048,
-      "checksum": "1a634c4ab861ffe8d0f27083843fdc0e0b84852151c869056092c428a07b22a1"
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/jellyfin-now-playing-0.4.4/JellyfinNowPlaying.zip",
+      "size": 80935,
+      "checksum": "5c111e6cabb3307ac1b1ad96d76da019d476f99f28a391ec2cfc2d7176ce2a4b"
     },
     {
       "id": "fussball-live",
@@ -61,8 +61,8 @@
       "title": "Football Live",
       "author": "Jan",
       "description": "Live scores, matchdays and tables for Bundesliga, Champions League, English, Scottish and Spanish leagues and cups, the World Cup and more. Installs the plugin together with its scene and can show it over the running playlist every few minutes. Pick your club to show its crest in the background and its colours as accent. English, German or Spanish.",
-      "version": "0.4.22",
-      "updated": "2026-11-15T08:00:52Z",
+      "version": "0.4.23",
+      "updated": "2026-11-16T18:34:36Z",
       "thumbnails": [
         "plugin_packs/fussball-live/thumb-hero.webp",
         "plugin_packs/fussball-live/thumb-landscape.webp",
@@ -70,9 +70,9 @@
         "plugin_packs/fussball-live/thumb-bl2.webp",
         "plugin_packs/fussball-live/thumb-ucl.webp"
       ],
-      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/fussball-live-0.4.22/FussballLive.zip",
-      "size": 1096156,
-      "checksum": "d708446a40369658c287aed0e13e64780a9a9ead0012b6f0ed333d1a3942ace0"
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/fussball-live-0.4.23/FussballLive.zip",
+      "size": 1097046,
+      "checksum": "d734f4a363ef5a6e09ec0a9a361a6b3daa8a6bad8395020cfaf0e2d4029d0cfe"
     },
     {
       "id": "american-football-live",
@@ -80,16 +80,16 @@
       "title": "American Football Live",
       "author": "Jan",
       "description": "Live scores, weeks and standings for the NFL, College Football (Top 25, SEC, Big Ten, Big 12, ACC), UFL and CFL. Installs the plugin together with its scene and can show it over the running playlist every few minutes or on a touchdown. Pick your team to show its logo in the background and its colours as accent. English, German or Spanish.",
-      "version": "0.2.16",
-      "updated": "2026-11-15T08:00:52Z",
+      "version": "0.2.17",
+      "updated": "2026-11-16T18:34:36Z",
       "thumbnails": [
         "plugin_packs/american-football-live/thumb-hero.webp",
         "plugin_packs/american-football-live/thumb-landscape.webp",
         "plugin_packs/american-football-live/thumb-portrait.webp"
       ],
-      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/american-football-live-0.2.16/AmericanFootballLive.zip",
-      "size": 86264,
-      "checksum": "4af9b1a51adcc1df60e12141f2c58ee9597c6bc56eb528c44477e229c8830784"
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/american-football-live-0.2.17/AmericanFootballLive.zip",
+      "size": 87152,
+      "checksum": "0d01cbd1baab7ab9ecefd542003befd0a3a343eb59d96855babbc0e20cc47f05"
     },
     {
       "id": "world-map-live",
@@ -112,17 +112,17 @@
       "title": "Biathlon Live",
       "author": "Jan",
       "description": "Biathlon results with shooting, live standings during a race, schedule, next venue and World Cup standings from the IBU (biathlonresults.com): World Cup, World Championships, IBU Cup and more. A rebuild of the MagicMirror module MMM-Biathlon by 2hdlockness. Installs the plugin together with its scene and can show it over the running playlist every few minutes, at race start or when a result is in. Pick your nation to highlight its athletes. English, German or Spanish.",
-      "version": "0.1.10",
-      "updated": "2026-11-15T08:00:52Z",
+      "version": "0.1.11",
+      "updated": "2026-11-16T18:34:36Z",
       "thumbnails": [
         "plugin_packs/biathlon-live/thumb.webp",
         "plugin_packs/biathlon-live/thumb-landscape.webp",
         "plugin_packs/biathlon-live/thumb-live.webp",
         "plugin_packs/biathlon-live/thumb-portrait.webp"
       ],
-      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/biathlon-live-0.1.10/BiathlonLive.zip",
-      "size": 219558,
-      "checksum": "bd85e88a4224ee43c1b2bc65e6767ad369beba96d29ef3076b6282e96fa98b24"
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/biathlon-live-0.1.11/BiathlonLive.zip",
+      "size": 220447,
+      "checksum": "ac02bfd583c060f8cff3fc27c54ee2940f657264fd48d86834f40d8d805df7c9"
     },
     {
       "id": "travel-map",
@@ -145,14 +145,14 @@
       "title": "Photo Cast",
       "author": "Jan",
       "description": "Show the photo or video you are looking at on your phone on the frame right away, on iPhone and Android without an extra app: from the share menu of the Photos app or WhatsApp (iPhone shortcut), from an Android share app, or from the frame's phone page (QR code). Photos fill the screen for a few minutes, videos play once with sound, several take turns, then your playlist carries on. Phones pair once with a code shown on the frame, so nobody else on the Wi-Fi can send. German, English or Spanish.",
-      "version": "0.4.5",
-      "updated": "2026-11-15T08:07:41Z",
+      "version": "0.4.6",
+      "updated": "2026-11-16T18:34:36Z",
       "thumbnails": [
         "plugin_packs/foto-cast/thumb-foto-cast.webp"
       ],
-      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/phone-photos-0.4.5/FotoCast.zip",
-      "size": 114072,
-      "checksum": "b11a6cc65313d44e14125fc800fdb92c4023cdd3d1efd1d62c8f0341dffc6261"
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/phone-photos-0.4.6/FotoCast.zip",
+      "size": 114960,
+      "checksum": "dfc68a8d9a2dcaa1a4cdc2c17e5301805a464d7d073acf1cbe9e40121e83d298"
     },
     {
       "id": "youtube-cast",
@@ -160,14 +160,14 @@
       "title": "YouTube Cast",
       "author": "Jan",
       "description": "Cast YouTube videos from your phone to the frame, like to a TV: tap the cast button in the YouTube app and choose the frame (Android and iPhone, on the same Wi-Fi or once linked with a TV code). The app becomes the remote for pause, seek and volume. Links can also be sent from a phone page or the iPhone share menu. Afterwards your playlist carries on. German, English or Spanish.",
-      "version": "0.1.4",
-      "updated": "2026-11-15T08:07:41Z",
+      "version": "0.1.5",
+      "updated": "2026-11-16T18:34:36Z",
       "thumbnails": [
         "plugin_packs/youtube-cast/thumb.webp"
       ],
-      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/youtube-cast-0.1.4/YouTubeCast.zip",
-      "size": 100389,
-      "checksum": "e50a5aca0ec6cceb26ae324f82fbe2a208a18ca885ba953872c08e917d817390"
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/youtube-cast-0.1.5/YouTubeCast.zip",
+      "size": 101276,
+      "checksum": "6f6d0021fb0c3185bc2fad2881e11081c482419043368a74c4de26f75fd94492"
     },
     {
       "id": "magic-frame",
@@ -175,14 +175,14 @@
       "title": "Dynaframe's Magic Mirror",
       "author": "Jan",
       "description": "Inspired by MagicMirror² (github.com/MagicMirrorOrg/MagicMirror); not an official MagicMirror² project. Pick modules and place each one top, bottom, left, right or centre. Or switch the whole scene to a skin (Retro LCD clock, Colour grid, or add-on skins from the catalog, the store or a ZIP file) and choose what each of its fields shows. More modules (Guest Wi-Fi QR, WebUntis, Music Assistant, Jellyfin, river level) from the built-in module catalog. Build your own or port MagicMirror² modules, also with an AI: https://github.com/Archonw/Jans-DynaframePro-Store/blob/main/plugin_packs/magic-frame/MODULES.md",
-      "version": "0.7.3",
-      "updated": "2026-11-15T08:00:52Z",
+      "version": "0.7.4",
+      "updated": "2026-11-16T18:34:36Z",
       "thumbnails": [
         "plugin_packs/magic-frame/thumb.webp"
       ],
-      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/magic-frame-0.7.3/MagicFrame.zip",
-      "size": 162717,
-      "checksum": "6420ec34d359f2be8b762a7bf1f87b764638902a25ce26ee6141a7bea4b270bf"
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/magic-frame-0.7.4/MagicFrame.zip",
+      "size": 163604,
+      "checksum": "47c06a6472803787fc0d09f6bd93953614831f4236ffd2901e14ba4efd9892e5"
     },
     {
       "id": "magic-mirror-module-homeassistant",
@@ -372,8 +372,8 @@
       "title": "Ticker Wall",
       "author": "Jan",
       "description": "Turn the frame into a news-channel and trading-floor wall: news feeds, stock prices, crypto, currencies, world clocks, weather and earthquakes, all scrolling at once. Far too much to follow, and that's the point. Ticker Wall also analyses the headlines: a topic radar of what many sources report right now, breaking-news detection, the news pace of the day and a market mood gauge with gainers and losers. Optional alerts bring the wall over the playlist: keywords in the news, breaking news, price rules (NVDA > 150, TSLA ± 5%), big index moves, market opening bells and strong earthquakes. Two looks (news channel or trading terminal), landscape and portrait, region presets for the US, UK, Germany, Spain or international. Free sources; stock prices need a free Finnhub key. Installs the plugin together with its scene. English, German or Spanish.",
-      "version": "0.1.8",
-      "updated": "2026-11-15T08:00:52Z",
+      "version": "0.1.9",
+      "updated": "2026-11-16T18:34:36Z",
       "thumbnails": [
         "plugin_packs/ticker-wall/thumb.webp",
         "plugin_packs/ticker-wall/thumb-news.webp",
@@ -381,9 +381,9 @@
         "plugin_packs/ticker-wall/thumb-alert.webp",
         "plugin_packs/ticker-wall/thumb-portrait.webp"
       ],
-      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/ticker-wall-0.1.8/TickerWall.zip",
-      "size": 248025,
-      "checksum": "2f90a1c6a7fbdf899a5cad51161b8a1a37b1d7d16ce38f3fc880f97aab145daf"
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/ticker-wall-0.1.9/TickerWall.zip",
+      "size": 248913,
+      "checksum": "1e338b5344110b13ff4879ad13b1829ec5f5712272cdf88184735e85fd0bac07"
     },
     {
       "id": "halloween-scare",
@@ -391,8 +391,8 @@
       "title": "Halloween Scare",
       "author": "Jan",
       "description": "This pack is a demo: it shows how a plugin can react to triggers from Home Assistant (motion sensors, doorbells, switches, events) and take over the screen for a moment. Halloween is just the example. A Halloween jump scare for your frame. It shows your photos as usual until a motion sensor or the doorbell in your Home Assistant goes off. Then one of four scares comes over the playlist: a haunted portrait whose eyes find you before it turns into a screaming ghoul, a pale ghost standing in the photo that is on screen right now before it jumps at you, the picture breaking up like an old TV while a dark figure comes closer with every glitch, or a monster grabbing the edge of the frame and roaring \"Trick or treat!\". Every scare has a gentle version for children. The frame plays the screams and noises itself, right on cue, and sets the volume back afterwards. Pause between scares, chance per trigger, quiet hours, \"only around Halloween\" and an arm switch; Home Assistant automations can start a scare with the halloween_scare event. All pictures and sounds are made by the plugin itself. You can also add your own pictures and videos (e.g. photorealistic images or jump-scare clips with sound), with an idle video that loops until the trigger cuts to the scare. Installs the plugin together with its scene. English, German or Spanish.",
-      "version": "0.1.7",
-      "updated": "2026-11-15T08:07:41Z",
+      "version": "0.1.8",
+      "updated": "2026-11-16T18:34:36Z",
       "thumbnails": [
         "plugin_packs/halloween-scare/thumb.webp",
         "plugin_packs/halloween-scare/thumb-portrait.webp",
@@ -401,9 +401,9 @@
         "plugin_packs/halloween-scare/thumb-monster.webp",
         "plugin_packs/halloween-scare/thumb-gentle.webp"
       ],
-      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/halloween-scare-0.1.7/HalloweenScare.zip",
-      "size": 1710956,
-      "checksum": "17b2a66c8a525de663956a93256c69ab231c04878a49d79f5ded6be68a24cbef"
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/halloween-scare-0.1.8/HalloweenScare.zip",
+      "size": 1711845,
+      "checksum": "e5bfcbecb8d59cc7d6480a08c32d16aab1cdd7ffd89c4ab54423ce2f4ae79e50"
     },
     {
       "id": "growing-up",
@@ -411,8 +411,8 @@
       "title": "Growing Up",
       "author": "Jan",
       "description": "Watch your children (or anyone) grow up on the frame. Growing Up takes people from your own Immich server, picks the best face per month, quarter or year from all their photos and cuts out portraits lined up on the face. The scene plays them as a time-lapse with age and date, as a contact sheet of all years, as then and now, and shows siblings side by side at the same age. On birthdays it can come over the playlist with congratulations. Limit it to chosen albums, star ratings or favourites so nothing private shows. Photos stay on your Immich server; the frame keeps only the small portraits. Installs the plugin together with its scene. English, German or Spanish.",
-      "version": "0.1.7",
-      "updated": "2026-11-15T08:00:52Z",
+      "version": "0.1.8",
+      "updated": "2026-11-16T18:34:36Z",
       "thumbnails": [
         "plugin_packs/growing-up/thumb.webp",
         "plugin_packs/growing-up/thumb-film.webp",
@@ -420,9 +420,9 @@
         "plugin_packs/growing-up/thumb-sameage.webp",
         "plugin_packs/growing-up/thumb-portrait.webp"
       ],
-      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/growing-up-0.1.7/GrowingUp.zip",
-      "size": 87049,
-      "checksum": "e13d26dbdbe026dbc31d9eafde17c9f18287da69602ab2caf51191b66eee1fab"
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/growing-up-0.1.8/GrowingUp.zip",
+      "size": 87937,
+      "checksum": "420f0c0e6287731fb9d1df43e3b217aa9ed91df0b4825f0081b369fe096d8d40"
     },
     {
       "id": "photo-mosaic",
@@ -521,8 +521,8 @@
       "title": "Photo Quiz",
       "author": "Jan",
       "description": "A guessing game with your own photos for the whole family. The TV shows a photo, at first pixelated, zoomed in or blurred and getting clearer, and everyone guesses on their phone when (the year) and where (a tap on the map) it was taken. Join by scanning the QR code on the TV, no app needed. Up to three hints appear during the round: season and time of day, the weather back then, the camera, how far and in which direction from home, the country. The reveal shows date, place and a map with everyone's guesses and points; after the last round the final standings crown the winner. Play the year only, the place only or both; rounds, time per round and the reveal effect are adjustable. Start it as a playlist or straight from a phone (the frame switches to the quiz and back afterwards). Photos come from the DynaFrame library (with filters for stars, dates, camera and more), a playlist, folders or an Immich server (with album, star, favourite and archive filters). Installs the plugin together with its scene. English, German or Spanish.",
-      "version": "0.1.4",
-      "updated": "2026-11-15T09:46:01Z",
+      "version": "0.1.5",
+      "updated": "2026-11-16T18:34:36Z",
       "thumbnails": [
         "plugin_packs/photo-quiz/thumb.webp",
         "plugin_packs/photo-quiz/thumb-guess.webp",
@@ -531,9 +531,9 @@
         "plugin_packs/photo-quiz/thumb-final.webp",
         "plugin_packs/photo-quiz/thumb-tv.webp"
       ],
-      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/photo-quiz-0.1.4/PhotoQuiz.zip",
-      "size": 566851,
-      "checksum": "7fd84f4d56abe50efb6c87d45517c6523a9e2a86b66856a82ffb343e52685001"
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/photo-quiz-0.1.5/PhotoQuiz.zip",
+      "size": 567739,
+      "checksum": "c8dcb67b5333e98a834d26ceb2f2b8730ad284b8712bb38f4ec70e38a372af45"
     },
     {
       "id": "travel-scrapbook",
@@ -560,8 +560,8 @@
       "title": "Party Wall",
       "author": "Jan",
       "description": "A photo wall for your party. Guests scan the QR code on the TV, upload photos of the evening from their phone (no app needed) and react with emojis that fly across the TV with their name. The TV shows the photos one by one, new ones first, with the QR code, the guest count and the current favourites beside them; every few minutes the top five take the stage. At the end of the evening a recap counts down the most popular photos to number one and closes with a collage of the night. Guests can browse the gallery, ask for a photo on the TV and save photos to their phone. You can approve photos before they appear, hide or delete them, download all photos as a ZIP and keep several parties apart. Three looks (party, elegant, bright). Installs the plugin together with its scene. English, German or Spanish.",
-      "version": "0.1.4",
-      "updated": "2026-11-15T08:07:41Z",
+      "version": "0.1.5",
+      "updated": "2026-11-16T18:34:36Z",
       "thumbnails": [
         "plugin_packs/party-wall/thumb.webp",
         "plugin_packs/party-wall/thumb-wall.webp",
@@ -570,9 +570,9 @@
         "plugin_packs/party-wall/thumb-recap.webp",
         "plugin_packs/party-wall/thumb-end.webp"
       ],
-      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/party-wall-0.1.4/PartyWall.zip",
-      "size": 314276,
-      "checksum": "792357f80bfd0de04471692816da1aef196e1879165809f749b7fb3ed01c24eb"
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/party-wall-0.1.5/PartyWall.zip",
+      "size": 315165,
+      "checksum": "469a9480307f8c356ed48f58fa995debc614bac778fbd1991f8ea7ca3b27864b"
     },
     {
       "id": "sing-along",
@@ -580,16 +580,16 @@
       "title": "Sing-along",
       "author": "Jan",
       "description": "Karaoke on the side: while music plays via Music Assistant, Spotify or Jellyfin, the frame shows the lyrics line by line in time with the song, with the album cover and the song's progress. The current line lights up from left to right like in a karaoke bar, instrumental breaks show three dots that count down to the next line. By itself it slides in over your photos while a song with lyrics plays and hands the screen back when the music stops (with 'Allow takeover'), or it plays in its own Sing-along playlist. Lyrics come from LRCLIB, a free collection of synced lyrics without account or key; songs found once are remembered on the frame. Music Assistant and Jellyfin are read from your own servers (settings are taken over from Playlist Music or Jellyfin Now Playing if they have them), Spotify either from Playlist Music on this frame without any setup or from your Spotify account with your own free Spotify app. Three layouts, three text sizes and an offset for speakers with delay. A connections card shows whether LRCLIB and the music sources can be reached. Allow lrclib.net in a Pi-hole. Installs the plugin together with its scene. English, German or Spanish.",
-      "version": "0.1.3",
-      "updated": "2026-11-16T08:41:49Z",
+      "version": "0.1.4",
+      "updated": "2026-11-16T18:34:36Z",
       "thumbnails": [
         "plugin_packs/sing-along/thumb.webp",
         "plugin_packs/sing-along/thumb-backdrop.webp",
         "plugin_packs/sing-along/thumb-lyrics.webp"
       ],
-      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/sing-along-0.1.3/SingAlong.zip",
-      "size": 89963,
-      "checksum": "e4af86b7c1953287fedaf457689311f6938e770e5f122396b5734060552a5071"
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/sing-along-0.1.4/SingAlong.zip",
+      "size": 90852,
+      "checksum": "2b9fb9a16aa52208cd5fd0970bfc1a2ed54d80a5e792ad7383a6adddcbe9ef11"
     },
     {
       "id": "contact-sheet",

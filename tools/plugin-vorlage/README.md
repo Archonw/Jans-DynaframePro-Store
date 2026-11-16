@@ -57,5 +57,5 @@ seine Playlists den neuen Namen über `renamed_playlists.py`.
 - Aktions-IDs nur `^[a-z][a-z0-9-]*$`.
 - Szene lädt `plugin_bridge.js` vor ihren Skripten (`scene-bridge/`), sonst geht sie mit DynaFrame-HTTPS/Login nicht.
 - Szene ruft `window.DynaFrameScene?.ready?.()` auf, sobald sie etwas zeigt (+ ~8 s Rückfall).
-- Takeover-Plugins: Schutz gegen übrig gebliebene Takeover-Playlist (`/mnt/project-files/takeover-stop/leftover.py`).
+- Takeover-Plugins: `playback_guard.py` (liegt hier) unverändert ins Plugin legen, optional importieren und nach jedem Zurückgeben (eigenes Release und Ende durch den Rahmen) in einem Thread `playback_guard.restore_if_stalled(engine_base(), engine_headers, log, stop_event=...)` aufrufen. Er holt den Leerlauf-Bildschirm, wenn vorher nichts lief (DynaFrame lässt sonst das letzte Takeover-Bild stehen, 16.11.2026), und startet Quick Mix oder gespeicherte Playlist neu, wenn DynaFrame sie nicht zurückbringt. Zusätzlich weiter: Schutz gegen übrig gebliebene Takeover-Playlist (`/mnt/project-files/takeover-stop/leftover.py`).
 - Szene+Plugin = Pack-Typ `integration`; Version in `dynaframe-package.json`, `plugin/manifest.json` und Katalog erhöhen; ZIP mit `make_zip.py` packen.
