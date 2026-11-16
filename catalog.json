@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "generated": "2026-11-16T18:34:36Z",
+  "generated": "2026-11-16T19:02:36Z",
   "store": {
     "name": "Jan's Store",
     "author": "Jan",
@@ -609,6 +609,21 @@
       "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/contact-sheet-0.1.2/ContactSheet.zip",
       "size": 184094,
       "checksum": "e0f5f9bd3c3d7b31da09238ff1eef4d10443f1cfcc0b9b767746f7e688367900"
+    },
+    {
+      "id": "cloud-folder-sync",
+      "type": "plugin",
+      "title": "Cloud Folder Sync",
+      "author": "Jan",
+      "description": "Photos from a cloud folder on your frame. Family members put photos into a shared folder in Google Drive, Dropbox, OneDrive, pCloud, MEGA, Koofr, Nextcloud or iCloud (also shared iCloud albums) with the provider's own app, from anywhere; the frame picks up new photos every 15 minutes and DynaFrame shows them like any other folder. Sign in on the plugin page, pick the folder, done. Mirror or add-only, videos optional, an optional playlist, and it pauses when the frame runs low on space. Uses rclone (downloaded once from rclone.org, also works with any other rclone remote). The frame opens no port. English, German or Spanish.",
+      "version": "0.1.9",
+      "updated": "2026-11-16T19:02:36Z",
+      "thumbnails": [
+        "plugin_packs/cloud-folder-sync/thumb.webp"
+      ],
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/cloud-folder-sync-0.1.9/CloudFolderSync.zip",
+      "size": 68101,
+      "checksum": "65284a6d6e4e8344694a4baf53f2cc26ee5f8b60773fcd8aefc0ac24b0acc0ed"
     }
   ]
 }

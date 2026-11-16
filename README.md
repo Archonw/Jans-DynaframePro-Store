@@ -60,6 +60,7 @@ Integrations bring their own scene and can show themselves over the running slid
 
 | | Pack | What it does |
 |---|---|---|
+| <img src="plugin_packs/cloud-folder-sync/thumb.webp" width="220"> | **Cloud Folder Sync** | Photos from a cloud folder on your frame. |
 | <img src="plugin_packs/immich/thumb.webp" width="220"> | **Immich Slideshow** | Photos from your own Immich server in the slideshow, with DynaFrame's own display time and transitions: albums or all photos, narrowed down by stars, favourites, people or a search, random or by date. The photos stay on the server; only the next few are kept on the frame. |
 | <img src="plugin_packs/playlist-button/thumb.webp" width="220"> | **Playlist Button** | A GPIO button opens an overlay menu to switch playlists. |
 | <img src="plugin_packs/playlist-music/thumb.webp" width="220"> | **Playlist Music** | Plays music while certain playlists run, each with its own music: internet radio, Jellyfin, a folder, Spotify Connect or Music Assistant, on the frame or another speaker. Fades in and out and pauses for videos. |
