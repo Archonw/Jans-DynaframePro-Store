@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "generated": "2026-11-16T08:41:49Z",
+  "generated": "2026-11-16T12:46:13Z",
   "store": {
     "name": "Jan's Store",
     "author": "Jan",
@@ -590,6 +590,25 @@
       "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/sing-along-0.1.3/SingAlong.zip",
       "size": 89963,
       "checksum": "e4af86b7c1953287fedaf457689311f6938e770e5f122396b5734060552a5071"
+    },
+    {
+      "id": "contact-sheet",
+      "type": "integration",
+      "title": "Contact Sheet",
+      "author": "Jan",
+      "description": "Your photos on an endless analogue film strip: 35 mm frames with sprocket holes, small frame numbers and subtle edge printing with date and place. The strip stops on a photo for a few seconds (if you like, a red grease pencil circles it), then starts slowly and often spools a long way at full speed, smeared by motion blur, before it brakes and stops on the next photo; sometimes it moves just one frame on. On a light table, contact sheet paper, a wooden table or a dark surface, in colour or black and white, with film grain. Portrait photos are cropped or turned into the frame like on real film. Photos come from the whole DynaFrame library, chosen folders or playlists, or an Immich server, with the same filters as Photo Mosaic. Drawn on the graphics chip and only while the strip moves, so it stays light on a Pi 4. Installs the plugin together with its scene. English, German or Spanish.",
+      "version": "0.1.1",
+      "updated": "2026-11-16T12:46:13Z",
+      "thumbnails": [
+        "plugin_packs/contact-sheet/thumb-hero.webp",
+        "plugin_packs/contact-sheet/thumb-motion.webp",
+        "plugin_packs/contact-sheet/thumb-paper.webp",
+        "plugin_packs/contact-sheet/thumb-wood.webp",
+        "plugin_packs/contact-sheet/thumb-dark.webp"
+      ],
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/contact-sheet-0.1.1/ContactSheet.zip",
+      "size": 179788,
+      "checksum": "ddc572928a4aa422192a16fcfb53a3da106014c4fb073aa552d9768279c90da1"
     }
   ]
 }
