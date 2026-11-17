@@ -23,6 +23,11 @@ Plugins meiden sie dann und Web Login zeigt den Plugin-Namen an.
 | 8080 | DynaFrame Renderer | WLAN |
 | 1900/udp | SSDP (YouTube Cast) | WLAN |
 
+Mit DynaFrames eigenem HTTPS/Login (ab 2026.11.14) hören 8001, 8003 und 8080 nur noch auf
+127.0.0.1. Aus dem WLAN gehen 8001/8080 nur mit Login (nginx 18001/18080), 8003 gar nicht,
+Port 80 zeigt nur noch /Connect und Gäste-Seiten. Die Engine ist auf dem Rahmen selbst weiter
+ohne Login erreichbar, die Weboberfläche nicht mehr (Szenen: `scene-bridge/`).
+
 ## Unsere Plugins
 
 | Block | Standard | Plugin | Wofür |
@@ -33,7 +38,18 @@ Plugins meiden sie dann und Web Login zeigt den Plugin-Namen an.
 | 8104–8109 | 8104 + 8105 | Photo Stories | Handy-Seite http + https (immer zwei Ports nebeneinander) |
 | 8110–8114 | 8110 | Party Wall | Gäste-Seite |
 | 8115–8119 | 8115 | Thumbs Up | Abstimmen am Handy |
-| 8120–8179 | | frei | für neue Plugins, in Fünferblöcken |
+| 8120–8124 | 8120 | Photobomber | Mitspielen am Handy |
+| 8125–8129 | 8125 | Postcards | Senden-Seite im WLAN |
+| 8130–8134 | 8130 | Time Capsule | Handy-Seite im WLAN (8130 http, 8131 https zum Aufnehmen) |
+| 8135–8139 | 8135 | Guestbook | Gäste-Seite im WLAN (Eintragen mit Selfie) |
+| 8140–8144 | 8140 | Photo Gala | Abstimmen am Handy |
+| 8145–8149 | 8145, 8146 | Photo Booth | Handy-Seite (8145 http, 8146 https für die Kamera) |
+| 8150–8154 | 8150 | Spot the Difference | Handy-Seite im WLAN (Fehlersuche) |
+| 8155–8159 | 8155 | Secret Santa | Handy-Seite im WLAN (Wichteln: Anmelden, eigenes Los) |
+| 8160–8164 | 8160 | Game Night | Handy-Seite im WLAN (Punkte, Würfel, Timer, Bestenliste) |
+| 8170–8174 | 8170 | Trivia Night | Handy-Seite im WLAN (Mitspielen, Antworten, Runde einstellen) |
+| 8175–8179 | 8175 | Music Quiz | Handy-Seite im WLAN (Jahr und Künstler raten, Thema wählen) |
+| 8165–8169 | 8165 | Dynaframe's Magic Mirror | Handy-Seiten von Zusatzmodulen (Knowledge of the Day: Quiz am Handy) |
 | 8180–8999 | | Ausweichbereich | wenn ein Block voll ist |
 
 Nur auf dem Rahmen selbst (127.0.0.1), nicht im WLAN:

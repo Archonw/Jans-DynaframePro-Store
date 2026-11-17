@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "generated": "2026-11-16T19:02:36Z",
+  "generated": "2026-11-17T10:25:56Z",
   "store": {
     "name": "Jan's Store",
     "author": "Jan",
@@ -624,6 +624,25 @@
       "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/cloud-folder-sync-0.1.9/CloudFolderSync.zip",
       "size": 68101,
       "checksum": "65284a6d6e4e8344694a4baf53f2cc26ee5f8b60773fcd8aefc0ac24b0acc0ed"
+    },
+    {
+      "id": "secret-santa",
+      "type": "integration",
+      "title": "Secret Santa",
+      "author": "Jan",
+      "description": "Secret Santa for the family, run by your frame. Everyone scans the QR code on the TV and joins on their phone (no app), with a wish list and things they would rather not get. The frame draws in secret, as one big chain if you like, never inside the same household and without last year's pairs. Each person sees only on their own phone whom they give to, in a sealed envelope that closes again when the phone is put away. The TV never shows who drew whom: it shows who has joined, a countdown to the gift giving, the budget, and how many have opened their lot or have their gift ready. Givers can ask their person anonymous questions. At the end the frame reveals the pairs one by one with a drum roll and closes the circle. New round next year with the same people. Opens on its own with 'Allow takeover'. Phones connect on port 8155. Installs the plugin together with its scene. English, German or Spanish.",
+      "version": "0.1.2",
+      "updated": "2026-11-17T10:25:56Z",
+      "thumbnails": [
+        "plugin_packs/secret-santa/thumb.webp",
+        "plugin_packs/secret-santa/thumb-signup.webp",
+        "plugin_packs/secret-santa/thumb-countdown.webp",
+        "plugin_packs/secret-santa/thumb-phone.webp",
+        "plugin_packs/secret-santa/thumb-ring.webp"
+      ],
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/secret-santa-0.1.2/SecretSanta.zip",
+      "size": 1709191,
+      "checksum": "8b24039ac103e602d0b49bf99b2ecbeed5772c91502e5903971425dc2b54a06c"
     }
   ]
 }

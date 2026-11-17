@@ -71,7 +71,19 @@ BLOCKS = {
     "PhotoStories": (8104, 8109, "Photo Stories"),
     "PartyWall": (8110, 8114, "Party Wall"),
     "ThumbsUp": (8115, 8119, "Thumbs Up"),
-    # 8120 bis 8179: für neue Plugins, in Fünferblöcken vergeben
+    "Photobomber": (8120, 8124, "Photobomber"),
+    "Postcards": (8125, 8129, "Postcards"),
+    "TimeCapsule": (8130, 8134, "Time Capsule"),
+    "Guestbook": (8135, 8139, "Guestbook"),
+    "PhotoGala": (8140, 8144, "Photo Gala"),
+    "PhotoBooth": (8145, 8149, "Photo Booth"),
+    "SpotTheDifference": (8150, 8154, "Spot the Difference"),
+    "SecretSanta": (8155, 8159, "Secret Santa"),
+    "GameNight": (8160, 8164, "Game Night"),
+    "TriviaNight": (8170, 8174, "Trivia Night"),
+    "MusicQuiz": (8175, 8179, "Music Quiz"),
+    "MagicFrame": (8165, 8169, "Dynaframe's Magic Mirror"),   # Handy-Seiten von Zusatzmodulen (Knowledge of the Day)
+    # danach: für neue Plugins den Bereich erweitern (8180 ff. ist Ausweichbereich)
 }
 OVERFLOW = (8180, 8999)     # hierhin weichen Plugins aus, wenn ihr Block voll ist
 LOWEST = 1024               # darunter darf ein Plugin (Benutzer pi) nicht öffnen
