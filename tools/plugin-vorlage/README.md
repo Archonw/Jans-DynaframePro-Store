@@ -59,3 +59,7 @@ seine Playlists den neuen Namen über `renamed_playlists.py`.
 - Szene ruft `window.DynaFrameScene?.ready?.()` auf, sobald sie etwas zeigt (+ ~8 s Rückfall).
 - Takeover-Plugins: `playback_guard.py` (liegt hier) unverändert ins Plugin legen, optional importieren und nach jedem Zurückgeben (eigenes Release und Ende durch den Rahmen) in einem Thread `playback_guard.restore_if_stalled(engine_base(), engine_headers, log, stop_event=...)` aufrufen. Er holt den Leerlauf-Bildschirm, wenn vorher nichts lief (DynaFrame lässt sonst das letzte Takeover-Bild stehen, 16.11.2026), und startet Quick Mix oder gespeicherte Playlist neu, wenn DynaFrame sie nicht zurückbringt. Zusätzlich weiter: Schutz gegen übrig gebliebene Takeover-Playlist (`/mnt/project-files/takeover-stop/leftover.py`).
 - Szene+Plugin = Pack-Typ `integration`; Version in `dynaframe-package.json`, `plugin/manifest.json` und Katalog erhöhen; ZIP mit `make_zip.py` packen.
+
+## Vorschaubilder für den Store
+
+Text in Vorschaubildern immer auf Englisch: Plugin-Sprache Englisch, Browser `locale: "en-US"`, englische Beispieldaten. Siehe CLAUDE.md, Abschnitt „Vorschaubilder: immer auf Englisch“.

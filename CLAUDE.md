@@ -43,6 +43,10 @@ Veröffentlichte Packs verschwinden aus dem Test-Store, bleiben aber im Repo: `t
 - Ein mit `unpark` zurückgeholtes Pack bleibt in derselben Version sichtbar, auch wenn es öffentlich gleich ist. Nach dem nächsten Veröffentlichen wird es wieder geparkt.
 - Wer ein Pack bearbeitet, das nicht in `catalog.json` steht: zuerst in `parked.json` nachsehen.
 
+## Vorschaubilder: immer auf Englisch
+
+Alle Vorschaubilder im Repo (`thumbnails` im Katalog, `plugin_packs/<pack>/*.webp|png`, Promo-Bilder) zeigen Text **nur auf Englisch**, auch wenn das Plugin DE/EN/ES kann (Regel von Jan, 17.11.2026). Für Screenshots die Sprache im Plugin auf Englisch stellen, im Browser `locale: "en-US"` setzen und englische Beispieldaten nehmen (Namen, Titel, Wunschlisten, Datumsformat). Bilder ohne Text sind frei. Vor dem Commit jedes neue oder geänderte Vorschaubild ansehen und auf deutsche Wörter prüfen.
+
 ## Plugin-Einstellungsseiten: immer nach Vorlage
 
 Jede neue Plugin-Seite (und jede überarbeitete) wird nach `tools/plugin-vorlage/` gebaut: README.md dort lesen, Referenz ist Photo Mosaic (`tools/plugin-vorlage/referenz-foto-mosaik/`). Kurz: Kopf mit Sprachwahl, Status-Karte (Version zuletzt), eigene Karten, nur bei Bedarf Immich-/WebDAV-/Ordner-Karten aus der Referenz, als letzte Karte „Eine Playlist dafür“ (`own_playlist.py`), dann der Support-Fuß. Texte DE/EN/ES, im HTML in der Sprache von `<html lang>` vorbefüllt. ZIPs mit `tools/plugin-vorlage/make_zip.py` packen. Plugins, die Fotos aus DynaFrame nehmen, bekommen die Karte „Welche Fotos aus DynaFrame“ (`tools/plugin-vorlage/dynaframe-filter/`); Sterne usw. immer aus der Mediendatenbank, nie aus Playlist-Einträgen (die haben kein `rating`).
