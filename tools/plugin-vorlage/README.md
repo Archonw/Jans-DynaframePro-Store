@@ -18,6 +18,7 @@ seine Playlists den neuen Namen über `renamed_playlists.py`.
 | `dynaframe-filter/` | DynaFrame-Filter von Photo Mosaic als Baustein: `dynaframe_filters.py` (Schema, `Matcher` sucht jedes Foto in der Mediendatenbank, sonst EXIF/XMP der Datei), `block.js` (Seite), `apply_ui.py` (setzt die Karte „Welche Fotos aus DynaFrame“ ein, Texte DE/EN/ES vorbefüllt). So eingebaut in Photo Mosaic, Travel Map, Colour Calendar, On This Day. Anleitung in `dynaframe-filter/README.md`. |
 | `scene-bridge/` | **Pflicht für jede Szene, die Daten von ihrem Plugin holt**: `plugin_bridge.js` vor die Szenen-Skripte (`apply.py <pack>/dynamic`). Sonst bekommt die Szene bei DynaFrames eigenem HTTPS/Login (ab 2026.11.14) keine Daten mehr. Anleitung in `scene-bridge/README.md`. |
 | `ports/` + `PORTS.md` | Für Plugins mit eigener Seite im WLAN (Handy-Seite usw.): Port-Liste, `plugin_ports.py` (belegten Port erkennen, ausweichen, merken, auf der Seite änderbar), Port-Feld für die Plugin-Seite. Pflicht für jedes Plugin, das einen Port öffnet. Anleitung in `ports/README.md`. |
+| `accordion/` | **Pflicht für jede Seite**: Aufklappen (Akkordeon). `apply.py <pack>` hängt `accordion.js`/`.css` an und klappt die Standard-Karten (DynaFrame-Filter, Immich, WebDAV, Ordner, Verbindungen) zu, solange sie nicht gebraucht werden. Anleitung in `accordion/README.md`. |
 | `make_zip.py` | ZIP mit richtigen Datei-/Ordnerrechten packen (sonst „Error“ im Store) |
 
 ## Aufbau der Seite (Reihenfolge der Karten)
@@ -30,6 +31,7 @@ seine Playlists den neuen Namen über `renamed_playlists.py`.
    - **Welche Fotos aus DynaFrame** (eigene Karte, vor der Immich-Karte): Filter für Fotos aus DynaFrame-Quellen (alle Fotos, Ordner, Playlists) nach Sternen, Ausrichtung, Megapixel, Ort, Zeitraum, Kamera/Objektiv, Text und Dateinamen, darunter „{n} von {m} Fotos passen“. **Gehört in jedes Plugin, das Fotos aus DynaFrame nimmt.** Baustein `dynaframe-filter/`. Gruppen weglassen, die keinen Sinn ergeben (z. B. „Wann“, wenn das Plugin die Tage selbst wählt).
    - **Volle Auflösung für WebDAV-Fotos**: nur wenn das Plugin Fotos größer als 512 px braucht.
    - **Weitere Ordner auf dem Rahmen**: nur bei der Quelle „Alle Fotos in DynaFrame“.
+   - **Aufklappen** (Jans Regel 17.11.2026): Quellen-Karten, Filter, freiwillige Logins und „Erweitert“ sind zugeklappt, solange sie nicht gebraucht werden, mit Plakette in der Kopfzeile („Nur mit Immich als Quelle nötig“, „2 aktiv“, „Optional“). Kopf, Status, Haupt-Karte und „Eine Playlist dafür“ bleiben offen. Baustein `accordion/`.
 5. **Eine Playlist dafür**: immer die letzte Karte, wenn das Plugin eine Szene hat. Auswahl Nein / Ja, anlegen, ggf. Dauer, Hinweis, Statuszeile (`playlistNote`), Backend über `own_playlist.py`.
 6. **Support-Fuß** (`<footer class="support">`): Issue-Link `https://github.com/Archonw/Jans-DynaframePro-Store/issues/new?title=[Name Version] `, Buy me a coffee mit QR. Unverändert aus der Referenz kopieren.
 
