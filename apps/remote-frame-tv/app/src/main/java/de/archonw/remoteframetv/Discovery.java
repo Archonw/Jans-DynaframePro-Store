@@ -234,6 +234,7 @@ final class Discovery {
 
     static Frame probe(String host, int connectMs, int readMs, java.util.List<String[]> hints) {
         boolean answered = false;
+        boolean locked = false;        // http said "login needed" (redirect to /Connect, 401 or 403)
         String[] schemes = {"http", "https"};
         for (String scheme : schemes) {
             HttpURLConnection c = null;
@@ -247,43 +248,48 @@ final class Discovery {
                     if (id.isEmpty()) return null;
                     Frame f = new Frame(host, o.optString("frameName", host));
                     f.id = id;
-                    if (hints != null) collectHints(o.opt("discoveredFrames"), hints);
                     f.state = Frame.OK;
+                    f.secure = scheme.equals("https");
+                    f.remotes.addAll(fetchRemotes(scheme, host, connectMs, readMs));
+                    if (hints != null) collectHints(o.opt("discoveredFrames"), hints);
                     return f;
                 }
                 if (code >= 300 && code < 400) {
                     String loc = String.valueOf(c.getHeaderField("Location"));
-                    if (loc.contains("/dfr-login") || loc.contains("/Connect") || loc.contains("/Account/Login")
-                            || loc.contains("/Login")) {
-                        Frame f = new Frame(host, host);
-                        f.state = Frame.LOGIN;
-                        f.secure = true;
-                        return f;
+                    if (loc.contains("/dfr-login") || loc.contains("/Connect") || loc.contains("/Login")) {
+                        locked = true;
+                        continue;                  // the frame may still answer over https (approved device)
                     }
-                    if (loc.startsWith("https://")) continue;   // frame forces https: try that
+                    if (loc.startsWith("https://")) continue;
                     return null;
                 }
                 if (code == 401 || code == 403) {
-                    // A login-protected DynaFrame answers like this for API calls without a session.
-                    if (isDynaFramePage(scheme, host, connectMs, readMs)) {
-                        Frame f = new Frame(host, host);
-                        f.state = Frame.LOGIN;
-                        f.secure = true;
-                        return f;
+                    if (scheme.equals("http")) {
+                        locked = locked || isDynaFramePage(scheme, host, connectMs, readMs);
+                        if (locked) continue;
+                        return null;
                     }
+                    locked = locked || isDynaFramePage(scheme, host, connectMs, readMs);
+                    break;
                 }
-                return null;
+                if (scheme.equals("http") && !locked) return null;
             } catch (java.net.SocketTimeoutException e) {
                 if (!answered) break;          // nobody there: do not wait for https as well
-                return null;
+                if (!locked) return null;
             } catch (java.net.ConnectException e) {
                 // port closed: maybe the frame only speaks https
             } catch (Exception e) {
-                if (answered) return null;
-                break;                         // no route, TLS trouble, ...: not a frame we can show
+                if (answered && !locked) return null;
+                if (!answered) break;          // no route, TLS trouble, ...: not a frame we can show
             } finally {
                 if (c != null) c.disconnect();
             }
+        }
+        if (locked) {
+            Frame f = new Frame(host, host);
+            f.state = Frame.LOGIN;
+            f.secure = true;
+            return f;
         }
         if (!answered) {
             Frame f = new Frame(host, host);
@@ -339,6 +345,11 @@ final class Discovery {
     private static boolean isDynaFramePage(String scheme, String host, int connectMs, int readMs) {
         HttpURLConnection c = null;
         try {
+            // DynaFrame with WebUI security sends browsers from its start page to /Connect.
+            c = open(scheme + "://" + host + "/", connectMs, readMs);
+            int rc = c.getResponseCode();
+            if (rc >= 300 && rc < 400 && String.valueOf(c.getHeaderField("Location")).contains("/Connect")) return true;
+            c.disconnect();
             c = open(scheme + "://" + host + "/RemoteFrame", connectMs, readMs);
             c.setInstanceFollowRedirects(true);
             int code = c.getResponseCode();
