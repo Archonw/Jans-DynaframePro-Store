@@ -294,7 +294,7 @@ public class MainActivity extends Activity implements Discovery.Listener {
                 .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
                     @Override public void onClick(DialogInterface d, int w) {
                         String host = in.getText().toString().trim()
-                                .replaceAll("/+$", "").replaceAll("/RemoteFrame$", "");
+                                .replaceAll("/+$", "").replaceAll("/RemoteFrame(/\\d+)?$", "");
                         if (host.isEmpty()) return;
                         Frame f = null;
                         for (Frame o : frames) if (o.host.equals(host)) f = o;

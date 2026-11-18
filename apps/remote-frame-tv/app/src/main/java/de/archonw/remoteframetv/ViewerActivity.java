@@ -99,6 +99,15 @@ public class ViewerActivity extends Activity {
             }
 
             @Override
+            public void onReceivedHttpError(WebView view, WebResourceRequest req, android.webkit.WebResourceResponse resp) {
+                // DynaFrame before 2026.11.18 has no numbered remote frames: /RemoteFrame/0 -> 404, use /RemoteFrame.
+                if (req.isForMainFrame() && resp.getStatusCode() == 404 && url.endsWith("/RemoteFrame/0")) {
+                    url = url.substring(0, url.length() - 2);
+                    view.loadUrl(url);
+                }
+            }
+
+            @Override
             public void onReceivedError(WebView view, WebResourceRequest req, WebResourceError err) {
                 if (req.isForMainFrame()) fail(String.valueOf(err.getDescription()));
             }
@@ -141,7 +150,7 @@ public class ViewerActivity extends Activity {
         if (now.getHost() == null || !now.getHost().equals(want.getHost())) return false;
         if (path.startsWith("/Connect")) {
             if (!"https".equals(now.getScheme())) {
-                url = "https://" + want.getEncodedAuthority() + "/RemoteFrame";
+                url = "https://" + want.getEncodedAuthority() + want.getPath();
                 getSharedPreferences("remoteframetv", MODE_PRIVATE).edit().putBoolean("secure:" + want.getHost(), true).apply();
                 web.loadUrl(url);
                 return true;
@@ -157,7 +166,7 @@ public class ViewerActivity extends Activity {
         }
         // Any other page of this frame after the login: go to the frame view.
         if (u.startsWith("https://") && !path.startsWith("/engine-proxy")) {
-            url = "https://" + now.getEncodedAuthority() + "/RemoteFrame";
+            url = "https://" + now.getEncodedAuthority() + Uri.parse(url).getPath();
             web.loadUrl(url);
             return true;
         }

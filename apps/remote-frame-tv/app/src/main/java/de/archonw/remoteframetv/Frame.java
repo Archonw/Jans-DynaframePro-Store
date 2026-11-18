@@ -16,13 +16,13 @@ final class Frame {
         this.name = name == null || name.isEmpty() ? host : name;
     }
 
-    /** Address of DynaFrame's own browser viewer. http redirects to https itself if the frame wants that. */
+    /** Address of DynaFrame's own browser viewer (remote frame 0; older DynaFrames only know /RemoteFrame, see ViewerActivity). http redirects to https itself if the frame wants that. */
     String viewerUrl() {
         String h = host;
         if (h.startsWith("http://") || h.startsWith("https://")) {
-            return h.replaceAll("/+$", "") + "/RemoteFrame";
+            return h.replaceAll("/+$", "") + "/RemoteFrame/0";
         }
         // With WebUI security, http only leads to the /Connect help page; the login lives on https.
-        return (secure || state == LOGIN ? "https://" : "http://") + h + "/RemoteFrame";
+        return (secure || state == LOGIN ? "https://" : "http://") + h + "/RemoteFrame/0";
     }
 }
