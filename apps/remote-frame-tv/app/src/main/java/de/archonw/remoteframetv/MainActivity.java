@@ -31,6 +31,7 @@ public class MainActivity extends Activity implements Discovery.Listener {
     private TextView autostartBtn;
     private Discovery discovery;
     private boolean scanning;
+    private long lastScanDone;
 
     @Override
     protected void onCreate(Bundle saved) {
@@ -66,6 +67,9 @@ public class MainActivity extends Activity implements Discovery.Listener {
             }
         }
         if (changed) render();
+        // Back from the viewer: the search may have run while the TV was busy with the frame
+        // (autostart), so look again if it is not fresh.
+        if (!scanning && lastScanDone > 0 && System.currentTimeMillis() - lastScanDone > 20000) scan();
     }
 
     @Override
@@ -267,6 +271,7 @@ public class MainActivity extends Activity implements Discovery.Listener {
     @Override
     public void onDone() {
         scanning = false;
+        lastScanDone = System.currentTimeMillis();
         int n = countOnline();
         status.setText(n == 0 ? getString(R.string.found_none) : getString(R.string.found_n, n));
         for (Frame f : frames) if (f.state == Frame.UNKNOWN) f.state = Frame.OFFLINE;
