@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "generated": "2026-11-17T11:29:36Z",
+  "generated": "2026-11-18T07:58:38Z",
   "store": {
     "name": "Jan's Store",
     "author": "Jan",
@@ -643,6 +643,24 @@
       "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/secret-santa-0.1.4/SecretSanta.zip",
       "size": 1713142,
       "checksum": "b9a36bf4447ad9bc2a29c33d1ee7690c10e2cc2f2c8ce4a9ae5606dbc9237054"
+    },
+    {
+      "id": "photo-table",
+      "type": "integration",
+      "title": "Photo Table",
+      "author": "Jan, inspired by Geektoolkit",
+      "description": "Lots of your photos lie scattered on a table as prints. The whole table swings far around, sometimes more, sometimes less, to the left and to the right, and every time it stops you see a whole new part of the table with new photos, with one large photo lying on top in the middle, sometimes straighter, sometimes more tilted, while the photos underneath lie every which way. Choose a wooden table, linen or a dark table, white borders or instant-photo frames with month, year and place in handwriting, the print size, how close the prints lie, the pause between turns, how far and which way it turns. Photos come from the whole DynaFrame library, chosen folders or playlists, or an Immich server, with the same filters as Photo Mosaic. Drawn on the graphics chip and only while the table turns, so it stays light on a Pi 4. Installs the plugin together with its scene. English, German or Spanish. Inspired by Geektoolkit.",
+      "version": "0.1.3",
+      "updated": "2026-11-18T07:58:38Z",
+      "thumbnails": [
+        "plugin_packs/photo-table/thumb-hero.webp",
+        "plugin_packs/photo-table/thumb-turn.webp",
+        "plugin_packs/photo-table/thumb-linen.webp",
+        "plugin_packs/photo-table/thumb-dark.webp"
+      ],
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/photo-table-0.1.3/PhotoTable.zip",
+      "size": 210624,
+      "checksum": "256c378a420be1acbfd16c7874a852e10e4821b9383c680ea9a6ea376213c5b6"
     }
   ]
 }
