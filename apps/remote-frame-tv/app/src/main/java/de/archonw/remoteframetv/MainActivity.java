@@ -54,6 +54,21 @@ public class MainActivity extends Activity implements Discovery.Listener {
     }
 
     @Override
+    protected void onResume() {
+        super.onResume();
+        boolean changed = false;
+        for (Frame f : frames) {
+            List<Frame.Remote> rs = store.remotes(f.host);
+            if (!rs.isEmpty() && rs.size() != f.remotes.size()) {
+                f.remotes.clear();
+                f.remotes.addAll(rs);
+                changed = true;
+            }
+        }
+        if (changed) render();
+    }
+
+    @Override
     protected void onDestroy() {
         if (discovery != null) discovery.stop();
         super.onDestroy();
@@ -131,38 +146,44 @@ public class MainActivity extends Activity implements Discovery.Listener {
         list.removeAllViews();
         View refocus = null;
         for (final Frame f : frames) {
-            SpannableStringBuilder sb = new SpannableStringBuilder(f.name);
-            int start = sb.length();
-            String detail = "   " + f.host;
-            if (f.state == Frame.LOGIN) detail += " · " + getString(R.string.login_needed);
-            else if (f.state == Frame.OFFLINE) detail += " · " + getString(R.string.not_reachable);
-            else if (f.state == Frame.UNKNOWN && f.saved) detail += " · " + getString(R.string.saved);
-            sb.append(detail);
-            sb.setSpan(new ForegroundColorSpan(Ui.MUTED), start, sb.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-            sb.setSpan(new RelativeSizeSpan(0.75f), start, sb.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+            // One card per remote frame when the DynaFrame has several, else one card for the frame.
+            List<Frame.Remote> rs = f.remotes.size() > 1 ? f.remotes : java.util.Collections.<Frame.Remote>singletonList(null);
+            for (final Frame.Remote r : rs) {
+                final int remoteId = r != null ? r.id : (f.remotes.size() == 1 ? f.remotes.get(0).id : store.lastRemote(f.host));
+                SpannableStringBuilder sb = new SpannableStringBuilder(r != null ? f.name + " · " + r.label() : f.name);
+                int start = sb.length();
+                String detail = "   " + f.host;
+                if (f.state == Frame.LOGIN) detail += " · " + getString(R.string.login_needed);
+                else if (f.state == Frame.OFFLINE) detail += " · " + getString(R.string.not_reachable);
+                else if (f.state == Frame.UNKNOWN && f.saved) detail += " · " + getString(R.string.saved);
+                sb.append(detail);
+                sb.setSpan(new ForegroundColorSpan(Ui.MUTED), start, sb.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                sb.setSpan(new RelativeSizeSpan(0.75f), start, sb.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
 
-            TextView b = Ui.button(this, sb, 22);
-            b.setTag(f.host);
-            b.setOnClickListener(new View.OnClickListener() {
-                @Override public void onClick(View v) { open(f); }
-            });
-            b.setOnLongClickListener(new View.OnLongClickListener() {
-                @Override public boolean onLongClick(View v) { frameMenu(f); return true; }
-            });
-            b.setOnKeyListener(new View.OnKeyListener() {
-                @Override public boolean onKey(View v, int code, KeyEvent e) {
-                    if (code == KeyEvent.KEYCODE_MENU && e.getAction() == KeyEvent.ACTION_UP) {
-                        frameMenu(f);
-                        return true;
+                TextView b = Ui.button(this, sb, 22);
+                String tag = f.host + "#" + remoteId;
+                b.setTag(tag);
+                b.setOnClickListener(new View.OnClickListener() {
+                    @Override public void onClick(View v) { open(f, remoteId); }
+                });
+                b.setOnLongClickListener(new View.OnLongClickListener() {
+                    @Override public boolean onLongClick(View v) { frameMenu(f); return true; }
+                });
+                b.setOnKeyListener(new View.OnKeyListener() {
+                    @Override public boolean onKey(View v, int code, KeyEvent e) {
+                        if (code == KeyEvent.KEYCODE_MENU && e.getAction() == KeyEvent.ACTION_UP) {
+                            frameMenu(f);
+                            return true;
+                        }
+                        return false;
                     }
-                    return false;
-                }
-            });
-            LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
-                    ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-            lp.setMargins(0, 0, 0, Ui.dp(this, 12));
-            list.addView(b, lp);
-            if (f.host.equals(focusedHost)) refocus = b;
+                });
+                LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
+                        ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+                lp.setMargins(0, 0, 0, Ui.dp(this, 12));
+                list.addView(b, lp);
+                if (tag.equals(focusedHost)) refocus = b;
+            }
         }
         if (refocus != null) refocus.requestFocus();
         else if (focused == null && list.getChildCount() > 0) list.getChildAt(0).requestFocus();
@@ -205,6 +226,7 @@ public class MainActivity extends Activity implements Discovery.Listener {
             if (hint[0] != null && !hint[0].isEmpty() && found.name.equals(found.host)) found.name = hint[0];
             if (found.id == null) found.id = hint[1];
         }
+        if (!found.remotes.isEmpty()) store.saveRemotes(found.host, found.remotes);
         if (known == null) {
             frames.add(found);
         } else {
@@ -212,6 +234,10 @@ public class MainActivity extends Activity implements Discovery.Listener {
             if (!found.name.equals(found.host)) known.name = found.name;
             known.state = found.state;
             known.secure = found.secure;
+            if (!found.remotes.isEmpty()) {
+                known.remotes.clear();
+                known.remotes.addAll(found.remotes);
+            }
             if (known.saved) store.refresh(known);
         }
         render();
@@ -250,11 +276,16 @@ public class MainActivity extends Activity implements Discovery.Listener {
     // ------------------------------------------------------------------ actions
 
     private void open(Frame f) {
+        open(f, f.remotes.size() == 1 ? f.remotes.get(0).id : store.lastRemote(f.host));
+    }
+
+    private void open(Frame f, int remoteId) {
         String last = store.last();
         store.remember(f);
+        store.setLastRemote(f.host, remoteId);
         f.saved = true;
         Intent i = new Intent(this, ViewerActivity.class);
-        i.putExtra("url", f.viewerUrl());
+        i.putExtra("url", f.viewerUrl(remoteId));
         i.putExtra("host", f.host);
         i.putExtra("name", f.name);
         startActivity(i);

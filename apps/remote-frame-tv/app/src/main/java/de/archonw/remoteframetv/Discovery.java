@@ -322,6 +322,20 @@ final class Discovery {
         }
     }
 
+    /** The remote frames this DynaFrame offers (empty for older versions or without login). */
+    static java.util.List<Frame.Remote> fetchRemotes(String scheme, String host, int connectMs, int readMs) {
+        HttpURLConnection c = null;
+        try {
+            c = open(scheme + "://" + host + "/engine-proxy/remote-frame/settings", connectMs, readMs);
+            if (c.getResponseCode() != 200) return new java.util.ArrayList<>();
+            return Frame.parseRemotes(readAll(c.getInputStream()));
+        } catch (Exception e) {
+            return new java.util.ArrayList<>();
+        } finally {
+            if (c != null) c.disconnect();
+        }
+    }
+
     private static boolean isDynaFramePage(String scheme, String host, int connectMs, int readMs) {
         HttpURLConnection c = null;
         try {

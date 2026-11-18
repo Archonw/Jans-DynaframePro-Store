@@ -27,6 +27,7 @@ final class Store {
                 f.id = o.optString("id", null);
                 f.secure = o.optBoolean("secure", false) || p.getBoolean("secure:" + f.host, false);
                 f.saved = true;
+                f.remotes.addAll(remotes(f.host));
                 out.add(f);
             }
         } catch (Exception ignored) {
@@ -77,6 +78,23 @@ final class Store {
     }
 
     String last() { return p.getString("last", null); }
+
+    int lastRemote(String host) { return p.getInt("remote:" + host, 0); }
+
+    void setLastRemote(String host, int id) { p.edit().putInt("remote:" + host, id).apply(); }
+
+    void saveRemotes(String host, List<Frame.Remote> list) {
+        JSONArray a = new JSONArray();
+        try {
+            for (Frame.Remote r : list) a.put(new JSONObject().put("id", r.id).put("name", r.name).put("enabled", true));
+            p.edit().putString("remotes:" + host, new JSONObject().put("frames", a).toString()).apply();
+        } catch (Exception ignored) {
+        }
+    }
+
+    List<Frame.Remote> remotes(String host) {
+        return Frame.parseRemotes(p.getString("remotes:" + host, "{}"));
+    }
 
     boolean autostart() { return p.getBoolean("autostart", true); }
 

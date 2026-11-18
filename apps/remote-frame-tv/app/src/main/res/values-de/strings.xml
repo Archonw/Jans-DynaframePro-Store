@@ -19,6 +19,6 @@
     <string name="login_needed">Anmeldung nötig</string>
     <string name="loading">Verbinde mit %1$s…</string>
     <string name="error_retry">%1$s antwortet nicht (%2$s). Neuer Versuch in 10 s. Zurück = Rahmenliste.</string>
-    <string name="back_hint">Zurück-Taste: Rahmenliste</string>
+    <string name="back_hint">Zurück-Taste: Rahmenliste · links/rechts: anderer Remote Frame</string>
     <string name="open">Anzeigen</string>
 </resources>

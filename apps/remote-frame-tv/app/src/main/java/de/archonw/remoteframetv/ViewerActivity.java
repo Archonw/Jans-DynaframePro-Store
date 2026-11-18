@@ -37,6 +37,25 @@ public class ViewerActivity extends Activity {
     private String name;
     private final Handler handler = new Handler();
     private boolean failed;
+    private String host;
+    private Store store;
+    private final java.util.List<Frame.Remote> remotes = new java.util.ArrayList<>();
+
+    /** Gets the remote-frame list from inside the page, so it works with the frame's login cookie too. */
+    private final class Bridge {
+        @android.webkit.JavascriptInterface
+        public void remotes(final String json) {
+            handler.post(new Runnable() {
+                @Override public void run() {
+                    java.util.List<Frame.Remote> rs = Frame.parseRemotes(json);
+                    if (rs.isEmpty()) return;
+                    remotes.clear();
+                    remotes.addAll(rs);
+                    if (host != null) store.saveRemotes(host, rs);
+                }
+            });
+        }
+    }
 
     private final Runnable retry = new Runnable() {
         @Override public void run() {
@@ -55,6 +74,9 @@ public class ViewerActivity extends Activity {
         super.onCreate(saved);
         url = getIntent().getStringExtra("url");
         name = getIntent().getStringExtra("name");
+        host = getIntent().getStringExtra("host");
+        store = new Store(this);
+        if (host != null) remotes.addAll(store.remotes(host));
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON
                 | WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
@@ -77,6 +99,7 @@ public class ViewerActivity extends Activity {
         if (Build.VERSION.SDK_INT >= 21) CookieManager.getInstance().setAcceptThirdPartyCookies(web, true);
 
         web.setWebChromeClient(new WebChromeClient());
+        web.addJavascriptInterface(new Bridge(), "RemoteFrameTV");
         web.setWebViewClient(new WebViewClient() {
             @Override
             public void onReceivedSslError(WebView view, SslErrorHandler h, SslError error) {
@@ -93,7 +116,10 @@ public class ViewerActivity extends Activity {
                     // The page's own full-screen button is useless on a TV and covers the scene.
                     view.evaluateJavascript("(function(){var s=document.createElement('style');"
                             + "s.textContent='.remote-frame-fullscreen,[class*=fullscreen-btn],[aria-label*=ullscreen]{display:none!important}';"
-                            + "document.head.appendChild(s);})()", null);
+                            + "document.head.appendChild(s);"
+                            + "fetch(location.origin+'/engine-proxy/remote-frame/settings',{cache:'no-store'})"
+                            + ".then(function(r){return r.ok?r.text():null}).then(function(t){if(t)RemoteFrameTV.remotes(t)}).catch(function(){});"
+                            + "})()", null);
                 }
                 if (!failed) handler.postDelayed(hideOverlay, 600);
             }
@@ -210,9 +236,35 @@ public class ViewerActivity extends Activity {
         if (has) immersive();
     }
 
+    /** Left/right: previous/next remote frame of this DynaFrame. */
+    private boolean switchRemote(int step) {
+        if (remotes.size() < 2) return false;
+        java.util.regex.Matcher m = java.util.regex.Pattern.compile("/RemoteFrame/(\\d+)").matcher(url);
+        if (!m.find()) return false;
+        int cur = Integer.parseInt(m.group(1));
+        int idx = 0;
+        for (int i = 0; i < remotes.size(); i++) if (remotes.get(i).id == cur) idx = i;
+        Frame.Remote next = remotes.get((idx + step + remotes.size()) % remotes.size());
+        url = url.substring(0, m.start()) + "/RemoteFrame/" + next.id + url.substring(m.end());
+        if (host != null) store.setLastRemote(host, next.id);
+        Toast.makeText(this, name + " · " + next.label(), Toast.LENGTH_SHORT).show();
+        failed = false;
+        web.loadUrl(url);
+        return true;
+    }
+
     /** Back always returns to the frame list, even while a field of the login page has focus. */
     @Override
     public boolean dispatchKeyEvent(KeyEvent e) {
+        if ((e.getKeyCode() == KeyEvent.KEYCODE_DPAD_LEFT || e.getKeyCode() == KeyEvent.KEYCODE_DPAD_RIGHT)
+                && url.contains("/RemoteFrame/") && remotes.size() > 1) {
+            String cur = web.getUrl();
+            if (cur != null && cur.contains("/RemoteFrame")) {   // not on the login page
+                if (e.getAction() == KeyEvent.ACTION_UP)
+                    switchRemote(e.getKeyCode() == KeyEvent.KEYCODE_DPAD_RIGHT ? 1 : -1);
+                return true;
+            }
+        }
         if (e.getKeyCode() == KeyEvent.KEYCODE_BACK) {
             if (e.getAction() == KeyEvent.ACTION_UP) finish();
             return true;

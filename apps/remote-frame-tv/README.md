@@ -1,9 +1,10 @@
 # Remote Frame TV
 
-Android TV / Fire TV app. It finds every DynaFrame on the home network by itself and shows the one you pick full screen, using DynaFrame's own browser view (`http://<frame>/RemoteFrame`).
+Android TV / Fire TV app. It finds every DynaFrame on the home network by itself and shows the one you pick full screen, using DynaFrame's own browser view (`http://<frame>/RemoteFrame/<id>`).
 
 - Search: asks every address of the TV's network for `/engine-proxy/sync/status` (like the Home Assistant integration) and listens to mDNS. Frames you opened before are remembered and checked first.
 - Pick a frame with the remote and press OK. **Back** returns to the list.
+- DynaFrame 2026.11.18+ can have several remote frames per frame (`/RemoteFrame/<id>`): each gets its own card, and **left/right** switches between them while watching.
 - "Open last frame on start" (on by default): the app goes straight to the last frame.
 - Long press OK (or the menu key) on a frame: remove it from the list.
 - Frames with DynaFrame's WebUI security switched on: the app opens `https://<frame>/RemoteFrame`, DynaFrame shows its admin login once (user name + password with the remote's on-screen keyboard), the app keeps the session cookie and goes on to the frame view. DynaFrame has no viewer key, so after its session ends the login may appear again. The frame's own certificate (local DynaFrame CA) is accepted only for addresses in the home network.

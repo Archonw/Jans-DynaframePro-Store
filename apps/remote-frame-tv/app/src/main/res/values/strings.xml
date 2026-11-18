@@ -20,7 +20,7 @@
     <string name="login_needed">login needed</string>
     <string name="loading">Connecting to %1$s…</string>
     <string name="error_retry">%1$s does not answer (%2$s). Retrying in 10 s. Back = frame list.</string>
-    <string name="back_hint">Back button: frame list</string>
+    <string name="back_hint">Back button: frame list · left/right: other remote frame</string>
     <string name="frame_menu_title">%1$s</string>
     <string name="open">Show</string>
 </resources>
