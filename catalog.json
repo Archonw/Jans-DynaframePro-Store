@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "generated": "2026-11-19T07:45:02Z",
+  "generated": "2026-11-20T07:42:46Z",
   "store": {
     "name": "Jan's Store",
     "author": "Jan",
@@ -678,6 +678,26 @@
       "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/wikipedia-breathes-0.1.1/WikipediaBreathes.zip",
       "size": 188014,
       "checksum": "ee3d54a3f9c2d6258de47f18a29aad3409dfb5d3109a7ba7fbcb666f318a201b"
+    },
+    {
+      "id": "solar-system-live",
+      "type": "integration",
+      "title": "Solar System Live",
+      "author": "Jan",
+      "description": "The Solar System in real time as a model under a lamp. All planets stand at their real position today, computed on the frame (no internet needed), with their large moons, space probes (Voyager, New Horizons, Parker, Webb, JUICE, Europa Clipper and more, fetched daily from NASA JPL Horizons) and comets near the Sun. The camera flies slowly from planet to planet in a miniature model look with real sunlight, Saturn's ring shadows, clouds on Earth and a camera blur, and a panel tells the distance, light travel time and a fact. Sky events of the coming months are announced ahead, played as a time-lapse and shown live: lunar and solar eclipses with real shadow geometry and a small picture of how it looks from your place, transits, oppositions, close planet pairs, morning and evening star, supermoons, meteor showers and comets. Optionally an eclipse is put over the running playlist. Adapts itself to Pi 4 and Pi 5. Landscape and portrait. Pi-hole users: allow ssd.jpl.nasa.gov and ssd-api.jpl.nasa.gov. Installs the plugin together with its scene. English, German or Spanish.",
+      "version": "0.1.4",
+      "updated": "2026-11-20T07:42:46Z",
+      "thumbnails": [
+        "plugin_packs/solar-system-live/thumb-hero.webp",
+        "plugin_packs/solar-system-live/thumb-solar.webp",
+        "plugin_packs/solar-system-live/thumb-saturn.webp",
+        "plugin_packs/solar-system-live/thumb-lunar.webp",
+        "plugin_packs/solar-system-live/thumb-earth.webp",
+        "plugin_packs/solar-system-live/thumb-portrait.webp"
+      ],
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/solar-system-live-0.1.4/SolarSystemLive.zip",
+      "size": 651641,
+      "checksum": "e595aa3d45618a6ecaec2958793e81971a071061d8e2503232b7a66550e21a8c"
     }
   ]
 }
