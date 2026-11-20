@@ -19,6 +19,7 @@ seine Playlists den neuen Namen über `renamed_playlists.py`.
 | `scene-bridge/` | **Pflicht für jede Szene, die Daten von ihrem Plugin holt**: `plugin_bridge.js` vor die Szenen-Skripte (`apply.py <pack>/dynamic`). Sonst bekommt die Szene bei DynaFrames eigenem HTTPS/Login (ab 2026.11.14) keine Daten mehr. Anleitung in `scene-bridge/README.md`. |
 | `ports/` + `PORTS.md` | Für Plugins mit eigener Seite im WLAN (Handy-Seite usw.): Port-Liste, `plugin_ports.py` (belegten Port erkennen, ausweichen, merken, auf der Seite änderbar), Port-Feld für die Plugin-Seite. Pflicht für jedes Plugin, das einen Port öffnet. Anleitung in `ports/README.md`. |
 | `accordion/` | **Pflicht für jede Seite**: Aufklappen (Akkordeon). `apply.py <pack>` hängt `accordion.js`/`.css` an und klappt die Standard-Karten (DynaFrame-Filter, Immich, WebDAV, Ordner, Verbindungen) zu, solange sie nicht gebraucht werden. Anleitung in `accordion/README.md`. |
+| `folder-picker/` | Ordnerliste „Ausgewählte Ordner in DynaFrame“: kurze Namen ab dem Medienordner, nach Medienordner gruppiert, bricht auf dem Handy um; gespeichert bleibt der volle Pfad. `apply.py <pack>`, steckt schon in der Referenz. Anleitung in `folder-picker/README.md`. |
 | `make_zip.py` | ZIP mit richtigen Datei-/Ordnerrechten packen (sonst „Error“ im Store) |
 
 ## Aufbau der Seite (Reihenfolge der Karten)

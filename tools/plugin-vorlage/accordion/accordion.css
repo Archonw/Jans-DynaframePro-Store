@@ -21,6 +21,9 @@
 .card.fold-closed { padding-top: 16px; padding-bottom: 16px; }
 .card.fold-unused.fold-closed > .fold-bar > h2,
 .card.fold-unused.fold-closed > .fold-bar > .card-head h2 { color: var(--muted); }
+/* Karten im Raster der Seite dürfen schmaler werden als Titel + Plakette,
+   sonst wird die Seite auf dem Handy breiter als der Bildschirm */
+.card[data-fold] { min-width: 0; }
 @media (max-width: 520px) {
   .fold-badge { max-width: 45%; }
 }

@@ -1,0 +1,15 @@
+/* ==== folder-picker:start (tools/plugin-vorlage/folder-picker) ==== */
+.checks.fp-list { grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr)); }
+.checks.fp-list label.fp-row { align-items: flex-start; }
+.checks.fp-list .fp-row input { margin-top: 2px; }
+.fp-name { flex: 1; min-width: 0; display: grid; gap: 2px; }
+.fp-name b { font-weight: 600; overflow-wrap: anywhere; }
+.fp-name small { color: var(--muted); font-size: 12.5px; overflow-wrap: anywhere; }
+.fp-group, .fp-wide { grid-column: 1 / -1; }
+.fp-group { display: flex; flex-wrap: wrap; gap: 2px 10px; align-items: baseline; margin: 10px 2px 0; }
+.fp-group:first-child { margin-top: 0; }
+.fp-group b { font-size: 13px; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); }
+.fp-group small { color: var(--muted); font-size: 12px; opacity: .75; overflow-wrap: anywhere; }
+.fp-more { margin: 4px 2px 0; }
+.fp-more a { color: var(--accent); }
+/* ==== folder-picker:end ==== */

@@ -36,6 +36,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from dynaframe_plugin_base import create_plugin  # noqa: E402
 
 import mosaic  # noqa: E402
+import folder_names  # noqa: E402
 import sources  # noqa: E402
 import own_playlist  # noqa: E402
 import texts  # noqa: E402
@@ -805,8 +806,12 @@ def list_folders():
     for row in rows:
         folder = row_dir(row)
         counts[folder] = counts.get(folder, 0) + 1
-    folders = [{"id": f, "name": folder_label(f), "count": n} for f, n in counts.items()]
-    return {"success": True, "folders": sorted(folders, key=lambda f: f["name"].lower())}
+    try:
+        media = dynaframe.media_folders()
+    except Exception:  # Engine weg: Wurzeln raten
+        media = []
+    # Kurze Namen ab dem Medienordner, id bleibt der volle Pfad (folder-picker)
+    return {"success": True, "folders": folder_names.listing(counts, media, settings()["Folders"].splitlines())}
 
 
 # ------------------------------------------------------------ eigene Motive
