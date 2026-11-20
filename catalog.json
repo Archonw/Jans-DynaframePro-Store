@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "generated": "2026-11-20T07:42:46Z",
+  "generated": "2026-11-20T18:30:27Z",
   "store": {
     "name": "Jan's Store",
     "author": "Jan",
@@ -430,8 +430,8 @@
       "title": "Photo Mosaic",
       "author": "Jan",
       "description": "One of your photos, rebuilt from hundreds of your own photos as small tiles, matched by colour. The tiles settle over the picture in a wave, then the camera glides slowly towards a single tile, which turns into the real photo with its date and place, and finally the mosaic fades back to the original. In the endless flow the camera dives into the tile until it fills the screen, and that photo becomes the next mosaic. Tiles and motifs come from a DynaFrame playlist, the whole DynaFrame library or an Immich server (all photos or an album), and can come from different sources. The plugin prepares the tiles once in the background and caches them, so playback stays light on the Pi. Tile size, tint, pace and captions can be set on the plugin page. Installs the plugin together with its scene. English, German or Spanish.",
-      "version": "0.1.15",
-      "updated": "2026-11-17T11:29:36Z",
+      "version": "0.1.16",
+      "updated": "2026-11-20T18:30:27Z",
       "thumbnails": [
         "plugin_packs/photo-mosaic/thumb-hero.webp",
         "plugin_packs/photo-mosaic/thumb-build.webp",
@@ -439,9 +439,9 @@
         "plugin_packs/photo-mosaic/thumb-zoom.webp",
         "plugin_packs/photo-mosaic/thumb-original.webp"
       ],
-      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/photo-mosaic-0.1.15/PhotoMosaic.zip",
-      "size": 112745,
-      "checksum": "9cc19d2e01c921a9ad4ccb7df257aa8244abd10d43a521e855bdea1ad02a5709"
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/photo-mosaic-0.1.16/PhotoMosaic.zip",
+      "size": 115602,
+      "checksum": "737c3f20a67f493551da2e95a29ae69fe922555216d7ce167a84db6ebae2e4a5"
     },
     {
       "id": "on-this-day",
@@ -503,17 +503,17 @@
       "title": "Photo Universe",
       "author": "Jan",
       "description": "Your photos as a galaxy: every photo is a star, and photos with more rating stars shine brighter. The stars form constellations by year, place or person, and the camera flies through the galaxy, steers towards a star and opens the photo with its date, place, rating and the people in it. By year, time spirals outwards through the galaxy; taking turns, the stars drift into new constellations now and then. Photos come from the whole DynaFrame library, chosen folders or playlists, or an Immich server (people from Immich's face recognition), with the same filters as Photo Mosaic. The plugin reads the photo list in the background; the galaxy is drawn with WebGL on the frame. Installs the plugin together with its scene. English, German or Spanish.",
-      "version": "0.1.5",
-      "updated": "2026-11-17T11:29:36Z",
+      "version": "0.1.6",
+      "updated": "2026-11-20T18:30:27Z",
       "thumbnails": [
         "plugin_packs/photo-universe/thumb-hero.webp",
         "plugin_packs/photo-universe/thumb-constellation.webp",
         "plugin_packs/photo-universe/thumb-photo.webp",
         "plugin_packs/photo-universe/thumb-places.webp"
       ],
-      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/photo-universe-0.1.5/PhotoUniverse.zip",
-      "size": 163958,
-      "checksum": "1f351418679ee28f7d9eb7cc3c3cb84a8ede28cc1c0caf4443f6adf90696e14f"
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/photo-universe-0.1.6/PhotoUniverse.zip",
+      "size": 166771,
+      "checksum": "361c07b011dc1a89244904676aacc916f88d9ab97a2606ad6b43361039220443"
     },
     {
       "id": "photo-quiz",
@@ -597,8 +597,8 @@
       "title": "Contact Sheet",
       "author": "Jan",
       "description": "Your photos on an endless analogue film strip, running sideways or from top to bottom: 35 mm frames with sprocket holes, small frame numbers and subtle edge printing with date and place. The strip stops on a photo for a few seconds (if you like, a red grease pencil marks it, with 15 different strokes and changing doodles such as stars, hearts, ticks or a quick word, so it never looks the same twice), then starts slowly and often spools a long way at full speed, smeared by motion blur, before it brakes and stops on the next photo; sometimes it moves just one frame on. On a light table, contact sheet paper, a wooden table or a dark surface, in colour or black and white, with film grain. Portrait photos are cropped or turned into the frame like on real film. Photos come from the whole DynaFrame library, chosen folders or playlists, or an Immich server, with the same filters as Photo Mosaic. Drawn on the graphics chip and only while the strip moves, so it stays light on a Pi 4. Installs the plugin together with its scene. English, German or Spanish.",
-      "version": "0.1.4",
-      "updated": "2026-11-17T11:29:36Z",
+      "version": "0.1.5",
+      "updated": "2026-11-20T18:30:27Z",
       "thumbnails": [
         "plugin_packs/contact-sheet/thumb-hero.webp",
         "plugin_packs/contact-sheet/thumb-motion.webp",
@@ -606,9 +606,9 @@
         "plugin_packs/contact-sheet/thumb-wood.webp",
         "plugin_packs/contact-sheet/thumb-dark.webp"
       ],
-      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/contact-sheet-0.1.4/ContactSheet.zip",
-      "size": 188076,
-      "checksum": "e0712eedf1623bbaaf6ebae260b0e6d0d0a5821a5f3c83580b1e80cb6fdf6538"
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/contact-sheet-0.1.5/ContactSheet.zip",
+      "size": 190892,
+      "checksum": "510dd9a5dd2c5212dc9cf12c7cea2dc95814ce4fee82aaf2fc3f9bb0f211eb2c"
     },
     {
       "id": "cloud-folder-sync",
@@ -650,17 +650,17 @@
       "title": "Photo Table",
       "author": "Jan, inspired by Geektoolkit",
       "description": "Lots of your photos lie scattered on a table as prints. The whole table swings far around, sometimes more, sometimes less, to the left and to the right, and every time it stops you see a whole new part of the table with new photos, with one large photo lying on top in the middle, sometimes straighter, sometimes more tilted, while the photos underneath lie every which way. Choose a wooden table, linen or a dark table, white borders or instant-photo frames with month, year and place in handwriting, the print size, how close the prints lie, the pause between turns, how far and which way it turns. Photos come from the whole DynaFrame library, chosen folders or playlists, or an Immich server, with the same filters as Photo Mosaic. Drawn on the graphics chip and only while the table turns, so it stays light on a Pi 4. Installs the plugin together with its scene. English, German or Spanish. Inspired by Geektoolkit.",
-      "version": "0.1.3",
-      "updated": "2026-11-18T07:58:38Z",
+      "version": "0.1.4",
+      "updated": "2026-11-20T18:30:27Z",
       "thumbnails": [
         "plugin_packs/photo-table/thumb-hero.webp",
         "plugin_packs/photo-table/thumb-turn.webp",
         "plugin_packs/photo-table/thumb-linen.webp",
         "plugin_packs/photo-table/thumb-dark.webp"
       ],
-      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/photo-table-0.1.3/PhotoTable.zip",
-      "size": 210624,
-      "checksum": "256c378a420be1acbfd16c7874a852e10e4821b9383c680ea9a6ea376213c5b6"
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/photo-table-0.1.4/PhotoTable.zip",
+      "size": 213439,
+      "checksum": "12183521111f2b5e7fa44a096518790394a76e6bd7c444a23b9a59250d99d9c5"
     },
     {
       "id": "wikipedia-breathes",
