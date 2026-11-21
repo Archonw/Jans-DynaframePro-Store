@@ -21,6 +21,17 @@
  * Startet das Plugin neu (neuer zufälliger Port), schlägt ein fetch fehl; dann wird die
  * Adresse neu geholt und der Aufruf einmal wiederholt. Alle 30 s wird sie aufgefrischt.
  *
+ * Nach einem Neustart des Rahmens startet DynaFrame die Playlist nach ~40 s, die Plugins
+ * aber erst nach 180 s und dann einzeln alle 30 s (appsettings Plugins.StartupDelaySeconds /
+ * StartupBetweenPluginsDelaySeconds). Mit vielen Plugins kommt das eigene erst nach
+ * Minuten dran, solange meldet die Szene "antwortet nicht" (Contact Sheet, 21.11.2026).
+ * Darum: meldet advanced-page available:false und steht das Plugin in GET /plugins als
+ * eingeschaltet, aber nicht laufend, bittet die Brücke die Engine mit
+ * POST /plugins/<Plugin>/start, es sofort zu starten (höchstens alle 45 s je Plugin).
+ * Ausgeschaltete Plugins werden nie gestartet. Solange das läuft, steht in
+ * window.__dfrPluginBridge.starting[<Plugin>] die Zeit des Starts; Szenen können damit
+ * "startet gerade …" statt "antwortet nicht" zeigen (bridge.isStarting(<Plugin>)).
+ *
  * Einbau: tools/plugin-vorlage/scene-bridge/apply.py <pack>/dynamic/index.html
  */
 (function () {
@@ -29,9 +40,13 @@
 
   const loopback = /^(127\.\d+\.\d+\.\d+|localhost|\[::1\])$/i.test(location.hostname);
   const onEngine = location.protocol === "http:" && location.port === "8001";
-  const bridge = window.__dfrPluginBridge = { active: false, urls: {}, rewrite: (u) => u };
+  const bridge = window.__dfrPluginBridge = {
+    active: false, urls: {}, starting: {}, rewrite: (u) => u,
+    isStarting: (id) => Date.now() - (bridge.starting[id] || 0) < 120000
+  };
   if (!loopback || !onEngine) return;
 
+  const origFetch = window.fetch.bind(window);
   const MARK = /\/Plugins\/Advanced\/([A-Za-z0-9_.-]+)\/(.*)$/;
   const cache = bridge.urls;              // Plugin -> { url, at }
   const TTL = 30000;
@@ -44,6 +59,8 @@
       if (xhr.status !== 200) return "";
       const data = JSON.parse(xhr.responseText || "{}");
       const url = String(data.localUrl || data.LocalUrl || "");
+      if (!url) wakePlugin(id, data);
+      else delete bridge.starting[id];
       return /^http:\/\/(127\.\d+\.\d+\.\d+|localhost|\[::1\]):\d+\//i.test(url) ? url : "";
     } catch (_) {
       return "";
@@ -56,9 +73,34 @@
       if (!response.ok) return "";
       const data = await response.json();
       const url = String(data.localUrl || data.LocalUrl || "");
+      if (!url) wakePlugin(id, data);
+      else delete bridge.starting[id];
       return /^http:\/\/(127\.\d+\.\d+\.\d+|localhost|\[::1\]):\d+\//i.test(url) ? url : "";
     } catch (_) {
       return "";
+    }
+  }
+
+  // Plugin noch nicht gestartet (Rahmen gerade neu gestartet): Engine bitten, es jetzt zu starten
+  const woken = {};                       // Plugin -> Zeit des letzten Versuchs
+  async function wakePlugin(id, page) {
+    if (!page || page.available || (page.declared === false)) return;
+    if (Date.now() - (woken[id] || 0) < 45000) return;
+    woken[id] = Date.now();
+    try {
+      const response = await origFetch("/plugins", { cache: "no-store" });
+      if (!response.ok) return;
+      const list = await response.json();
+      const rows = Array.isArray(list) ? list : (list.plugins || list.items || []);
+      const lower = id.toLowerCase();
+      const row = rows.find((r) => r && String(r.name || r.pluginName || r.id || "").toLowerCase() === lower);
+      if (!row || row.enabled !== true || row.running === true) return;
+      bridge.starting[id] = Date.now();
+      const started = await origFetch(`/plugins/${encodeURIComponent(id)}/start`, { method: "POST", cache: "no-store" });
+      console.info(`[plugin_bridge] ${id} war noch nicht gestartet, Start angefordert: ${started.status}`);
+      if (!started.ok) delete bridge.starting[id];
+    } catch (error) {
+      console.warn(`[plugin_bridge] ${id} starten: ${error}`);
     }
   }
 
@@ -84,7 +126,6 @@
   bridge.rewrite = rewrite;
 
   // fetch: umschreiben, bei Netzfehler Adresse neu holen und einmal wiederholen
-  const origFetch = window.fetch.bind(window);
   window.fetch = async function (resource, init) {
     const isRequest = typeof Request !== "undefined" && resource instanceof Request;
     const raw = isRequest ? resource.url : String(resource);

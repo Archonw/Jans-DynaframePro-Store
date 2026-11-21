@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "generated": "2026-11-21T07:43:15Z",
+  "generated": "2026-11-21T17:37:16Z",
   "store": {
     "name": "Jan's Store",
     "author": "Jan",
@@ -44,16 +44,16 @@
       "title": "Jellyfin Now Playing",
       "author": "Jan",
       "description": "Shows what a chosen Jellyfin user is watching or listening to, on the whole screen, for as long as it plays: cover, backdrop, title, episode, year, genres, plot and progress. Installs the plugin together with its scene. All settings on its own plugin page, in German, English or Spanish.",
-      "version": "0.4.4",
-      "updated": "2026-11-16T18:34:36Z",
+      "version": "0.4.5",
+      "updated": "2026-11-21T17:37:16Z",
       "thumbnails": [
         "plugin_packs/jellyfin/thumb-v2.webp",
         "plugin_packs/jellyfin/thumb-film.webp",
         "plugin_packs/jellyfin/thumb-serie-hoch.webp"
       ],
-      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/jellyfin-now-playing-0.4.4/JellyfinNowPlaying.zip",
-      "size": 80935,
-      "checksum": "5c111e6cabb3307ac1b1ad96d76da019d476f99f28a391ec2cfc2d7176ce2a4b"
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/jellyfin-now-playing-0.4.5/JellyfinNowPlaying.zip",
+      "size": 81732,
+      "checksum": "3514caa457d7c4400039768253afdb10e4fff8f79e1a6799b8247c68b2cf2869"
     },
     {
       "id": "fussball-live",
@@ -61,8 +61,8 @@
       "title": "Football Live",
       "author": "Jan",
       "description": "Live scores, matchdays and tables for Bundesliga, Champions League, English, Scottish and Spanish leagues and cups, the World Cup and more. Installs the plugin together with its scene and can show it over the running playlist every few minutes. Pick your club to show its crest in the background and its colours as accent. English, German or Spanish.",
-      "version": "0.4.23",
-      "updated": "2026-11-16T18:34:36Z",
+      "version": "0.4.24",
+      "updated": "2026-11-21T17:37:16Z",
       "thumbnails": [
         "plugin_packs/fussball-live/thumb-hero.webp",
         "plugin_packs/fussball-live/thumb-landscape.webp",
@@ -70,9 +70,9 @@
         "plugin_packs/fussball-live/thumb-bl2.webp",
         "plugin_packs/fussball-live/thumb-ucl.webp"
       ],
-      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/fussball-live-0.4.23/FussballLive.zip",
-      "size": 1097046,
-      "checksum": "d734f4a363ef5a6e09ec0a9a361a6b3daa8a6bad8395020cfaf0e2d4029d0cfe"
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/fussball-live-0.4.24/FussballLive.zip",
+      "size": 1097842,
+      "checksum": "076d9753d403b9013ef8211ba51a53c9364b775403eed679a105ca9ae68f5999"
     },
     {
       "id": "american-football-live",
@@ -80,16 +80,16 @@
       "title": "American Football Live",
       "author": "Jan",
       "description": "Live scores, weeks and standings for the NFL, College Football (Top 25, SEC, Big Ten, Big 12, ACC), UFL and CFL. Installs the plugin together with its scene and can show it over the running playlist every few minutes or on a touchdown. Pick your team to show its logo in the background and its colours as accent. English, German or Spanish.",
-      "version": "0.2.17",
-      "updated": "2026-11-16T18:34:36Z",
+      "version": "0.2.18",
+      "updated": "2026-11-21T17:37:16Z",
       "thumbnails": [
         "plugin_packs/american-football-live/thumb-hero.webp",
         "plugin_packs/american-football-live/thumb-landscape.webp",
         "plugin_packs/american-football-live/thumb-portrait.webp"
       ],
-      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/american-football-live-0.2.17/AmericanFootballLive.zip",
-      "size": 87152,
-      "checksum": "0d01cbd1baab7ab9ecefd542003befd0a3a343eb59d96855babbc0e20cc47f05"
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/american-football-live-0.2.18/AmericanFootballLive.zip",
+      "size": 87947,
+      "checksum": "a41ef003f8b02523d0be00b56759e4749aa1191df912846fdb6f467589fa2c86"
     },
     {
       "id": "world-map-live",
@@ -97,14 +97,14 @@
       "title": "World Map Live",
       "author": "Jan",
       "description": "A calm world map with borders, day and night and the day-night line that shows real aircraft, ships, lightning strikes and the ISS live: aircraft from the OpenSky Network (no account needed), ships from up to five sources you can switch on and off (AISStream.io with a free API key, Kystverket for Norway and Digitraffic for the Baltic Sea without sign-up, AISHub, or your own AIS receiver), lightning from the volunteer network Blitzortung.org, the ISS orbit from CelesTrak. Whole world or Europe, DACH, North America, South America, East Asia, Australia and Oceania. German, English or Spanish.",
-      "version": "0.4.6",
-      "updated": "2026-11-15T08:00:52Z",
+      "version": "0.4.7",
+      "updated": "2026-11-21T17:37:16Z",
       "thumbnails": [
         "plugin_packs/world-map-live/thumb.webp"
       ],
-      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/world-map-live-0.4.6/WorldMapLive.zip",
-      "size": 174750,
-      "checksum": "9d0fe5b27141de2e29d41e06ad97ff146f15a8a71c7301a51bbb147abb4bce6c"
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/world-map-live-0.4.7/WorldMapLive.zip",
+      "size": 175546,
+      "checksum": "920c6521a46391d52d710f34cc2d6c57c826dd6b9c7996cc6e8a53d41de3ecd9"
     },
     {
       "id": "biathlon-live",
@@ -112,17 +112,17 @@
       "title": "Biathlon Live",
       "author": "Jan",
       "description": "Biathlon results with shooting, live standings during a race, schedule, next venue and World Cup standings from the IBU (biathlonresults.com): World Cup, World Championships, IBU Cup and more. A rebuild of the MagicMirror module MMM-Biathlon by 2hdlockness. Installs the plugin together with its scene and can show it over the running playlist every few minutes, at race start or when a result is in. Pick your nation to highlight its athletes. English, German or Spanish.",
-      "version": "0.1.11",
-      "updated": "2026-11-16T18:34:36Z",
+      "version": "0.1.12",
+      "updated": "2026-11-21T17:37:16Z",
       "thumbnails": [
         "plugin_packs/biathlon-live/thumb.webp",
         "plugin_packs/biathlon-live/thumb-landscape.webp",
         "plugin_packs/biathlon-live/thumb-live.webp",
         "plugin_packs/biathlon-live/thumb-portrait.webp"
       ],
-      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/biathlon-live-0.1.11/BiathlonLive.zip",
-      "size": 220447,
-      "checksum": "ac02bfd583c060f8cff3fc27c54ee2940f657264fd48d86834f40d8d805df7c9"
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/biathlon-live-0.1.12/BiathlonLive.zip",
+      "size": 221243,
+      "checksum": "87df91398a0d7d20677f03926b757054850bb1fe0010a8f8f7a22ab357051627"
     },
     {
       "id": "travel-map",
@@ -130,14 +130,14 @@
       "title": "Travel Map",
       "author": "Jan",
       "description": "A world map in the style of an old globe, studded with push pins where your photos were taken. The places come from the photos' GPS data: a DynaFrame playlist, the whole DynaFrame media library (plus extra folders such as a mounted NAS) or your Immich server (all photos or an album). Every collection gets its own pin colour and shape (push pin, thumbtack, flag, long pin); close pins are merged. The pins go in one by one in the order the photos were taken, then a photo is shown at its pin now and then with place and date. Oval world map or three globes, or only the area with pins. German, English or Spanish.",
-      "version": "0.1.30",
-      "updated": "2026-11-17T11:29:36Z",
+      "version": "0.1.31",
+      "updated": "2026-11-21T17:37:16Z",
       "thumbnails": [
         "plugin_packs/travel-map/thumb.webp"
       ],
-      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/travel-map-0.1.30/TravelMap.zip",
-      "size": 1636588,
-      "checksum": "60f6dc9707ddd53597d7ca72775be0589d754b901d34356101512a8e977b1487"
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/travel-map-0.1.31/TravelMap.zip",
+      "size": 1637385,
+      "checksum": "ac9f3a054a2a3a1c3b7a5055b838834600dae07ebaa7af129fe75faedeb66ab6"
     },
     {
       "id": "phone-photos",
@@ -145,14 +145,14 @@
       "title": "Photo Cast",
       "author": "Jan",
       "description": "Show the photo or video you are looking at on your phone on the frame right away, on iPhone and Android without an extra app: from the share menu of the Photos app or WhatsApp (iPhone shortcut), from an Android share app, or from the frame's phone page (QR code). Photos fill the screen for a few minutes, videos play once with sound, several take turns, then your playlist carries on. Phones pair once with a code shown on the frame, so nobody else on the Wi-Fi can send. German, English or Spanish.",
-      "version": "0.4.6",
-      "updated": "2026-11-16T18:34:36Z",
+      "version": "0.4.7",
+      "updated": "2026-11-21T17:37:16Z",
       "thumbnails": [
         "plugin_packs/foto-cast/thumb-foto-cast.webp"
       ],
-      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/phone-photos-0.4.6/FotoCast.zip",
-      "size": 114960,
-      "checksum": "dfc68a8d9a2dcaa1a4cdc2c17e5301805a464d7d073acf1cbe9e40121e83d298"
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/phone-photos-0.4.7/FotoCast.zip",
+      "size": 115756,
+      "checksum": "e5c4bf7d9b95983be2baa084b2c78b36b9ef1b7a0a509429a62dc9a6bcea4bd1"
     },
     {
       "id": "youtube-cast",
@@ -160,14 +160,14 @@
       "title": "YouTube Cast",
       "author": "Jan",
       "description": "Cast YouTube videos from your phone to the frame, like to a TV: tap the cast button in the YouTube app and choose the frame (Android and iPhone, on the same Wi-Fi or once linked with a TV code). The app becomes the remote for pause, seek and volume. Links can also be sent from a phone page or the iPhone share menu. Afterwards your playlist carries on. German, English or Spanish.",
-      "version": "0.1.5",
-      "updated": "2026-11-16T18:34:36Z",
+      "version": "0.1.6",
+      "updated": "2026-11-21T17:37:16Z",
       "thumbnails": [
         "plugin_packs/youtube-cast/thumb.webp"
       ],
-      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/youtube-cast-0.1.5/YouTubeCast.zip",
-      "size": 101276,
-      "checksum": "6f6d0021fb0c3185bc2fad2881e11081c482419043368a74c4de26f75fd94492"
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/youtube-cast-0.1.6/YouTubeCast.zip",
+      "size": 102073,
+      "checksum": "9c5ec8cb7a3b719a4a246e7dae96479d74e2c2c9a64c079213cfbbb35ff1fbd0"
     },
     {
       "id": "magic-frame",
@@ -175,14 +175,14 @@
       "title": "Dynaframe's Magic Mirror",
       "author": "Jan",
       "description": "Inspired by MagicMirror² (github.com/MagicMirrorOrg/MagicMirror); not an official MagicMirror² project. Pick modules and place each one top, bottom, left, right or centre. Or switch the whole scene to a skin (Retro LCD clock, Colour grid, or add-on skins from the catalog, the store or a ZIP file) and choose what each of its fields shows. More modules (Guest Wi-Fi QR, WebUntis, Music Assistant, Jellyfin, river level) from the built-in module catalog. Build your own or port MagicMirror² modules, also with an AI: https://github.com/Archonw/Jans-DynaframePro-Store/blob/main/plugin_packs/magic-frame/MODULES.md",
-      "version": "0.7.4",
-      "updated": "2026-11-16T18:34:36Z",
+      "version": "0.7.5",
+      "updated": "2026-11-21T17:37:16Z",
       "thumbnails": [
         "plugin_packs/magic-frame/thumb.webp"
       ],
-      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/magic-frame-0.7.4/MagicFrame.zip",
-      "size": 163604,
-      "checksum": "47c06a6472803787fc0d09f6bd93953614831f4236ffd2901e14ba4efd9892e5"
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/magic-frame-0.7.5/MagicFrame.zip",
+      "size": 164401,
+      "checksum": "4e7f03173fc72ce5887c7828d7bca707b59dccfb1ef54124b42dc4a8b08246c4"
     },
     {
       "id": "magic-mirror-module-homeassistant",
@@ -340,16 +340,16 @@
       "title": "Network Overview",
       "author": "Jan",
       "description": "Your home network as a living map: which devices are online (LAN, Wi-Fi, guests), internet speed and today's data volume from your FRITZ!Box, queries and blocked ads from up to three Pi-holes (keepalived pairs are recognised), and storage, disk temperatures, CPU, RAM and containers from your Unraid server (7.2 or later, or any server with Glances). The plugin keeps a short history and points out what stands out today: a new device, a hot disk, a Pi-hole that does not answer, more blocked or downloaded than usual. Everything stays in your home network. German, English or Spanish.",
-      "version": "0.1.6",
-      "updated": "2026-11-15T08:00:52Z",
+      "version": "0.1.7",
+      "updated": "2026-11-21T17:37:16Z",
       "thumbnails": [
         "plugin_packs/network-overview/thumb.webp",
         "plugin_packs/network-overview/thumb-landscape.webp",
         "plugin_packs/network-overview/thumb-portrait.webp"
       ],
-      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/network-overview-0.1.6/NetworkOverview.zip",
-      "size": 136548,
-      "checksum": "8912f0e51d7f280ef270b41af60387fe7c3f04f21b394e3ce30140a992b3af98"
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/network-overview-0.1.7/NetworkOverview.zip",
+      "size": 137344,
+      "checksum": "d23a9b7f2eaf8344400643fd9a82e3a1328b2bc85492ffacce4c89c98c51bb6f"
     },
     {
       "id": "magic-mirror-module-fuelprices",
@@ -372,8 +372,8 @@
       "title": "Ticker Wall",
       "author": "Jan",
       "description": "Turn the frame into a news-channel and trading-floor wall: news feeds, stock prices, crypto, currencies, world clocks, weather and earthquakes, all scrolling at once. Far too much to follow, and that's the point. Ticker Wall also analyses the headlines: a topic radar of what many sources report right now, breaking-news detection, the news pace of the day and a market mood gauge with gainers and losers. Optional alerts bring the wall over the playlist: keywords in the news, breaking news, price rules (NVDA > 150, TSLA ± 5%), big index moves, market opening bells and strong earthquakes. Two looks (news channel or trading terminal), landscape and portrait, region presets for the US, UK, Germany, Spain or international. Free sources; stock prices need a free Finnhub key. Installs the plugin together with its scene. English, German or Spanish.",
-      "version": "0.1.9",
-      "updated": "2026-11-16T18:34:36Z",
+      "version": "0.1.10",
+      "updated": "2026-11-21T17:37:16Z",
       "thumbnails": [
         "plugin_packs/ticker-wall/thumb.webp",
         "plugin_packs/ticker-wall/thumb-news.webp",
@@ -381,9 +381,9 @@
         "plugin_packs/ticker-wall/thumb-alert.webp",
         "plugin_packs/ticker-wall/thumb-portrait.webp"
       ],
-      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/ticker-wall-0.1.9/TickerWall.zip",
-      "size": 248913,
-      "checksum": "1e338b5344110b13ff4879ad13b1829ec5f5712272cdf88184735e85fd0bac07"
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/ticker-wall-0.1.10/TickerWall.zip",
+      "size": 249709,
+      "checksum": "3b108ec2a999e319d8816bd5a5610ba0013488f21b5ed07f82e8bad971e2d117"
     },
     {
       "id": "halloween-scare",
@@ -391,8 +391,8 @@
       "title": "Halloween Scare",
       "author": "Jan",
       "description": "This pack is a demo: it shows how a plugin can react to triggers from Home Assistant (motion sensors, doorbells, switches, events) and take over the screen for a moment. Halloween is just the example. A Halloween jump scare for your frame. It shows your photos as usual until a motion sensor or the doorbell in your Home Assistant goes off. Then one of four scares comes over the playlist: a haunted portrait whose eyes find you before it turns into a screaming ghoul, a pale ghost standing in the photo that is on screen right now before it jumps at you, the picture breaking up like an old TV while a dark figure comes closer with every glitch, or a monster grabbing the edge of the frame and roaring \"Trick or treat!\". Every scare has a gentle version for children. The frame plays the screams and noises itself, right on cue, and sets the volume back afterwards. Pause between scares, chance per trigger, quiet hours, \"only around Halloween\" and an arm switch; Home Assistant automations can start a scare with the halloween_scare event. All pictures and sounds are made by the plugin itself. You can also add your own pictures and videos (e.g. photorealistic images or jump-scare clips with sound), with an idle video that loops until the trigger cuts to the scare. Installs the plugin together with its scene. English, German or Spanish.",
-      "version": "0.1.8",
-      "updated": "2026-11-16T18:34:36Z",
+      "version": "0.1.9",
+      "updated": "2026-11-21T17:37:16Z",
       "thumbnails": [
         "plugin_packs/halloween-scare/thumb.webp",
         "plugin_packs/halloween-scare/thumb-portrait.webp",
@@ -401,9 +401,9 @@
         "plugin_packs/halloween-scare/thumb-monster.webp",
         "plugin_packs/halloween-scare/thumb-gentle.webp"
       ],
-      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/halloween-scare-0.1.8/HalloweenScare.zip",
-      "size": 1711845,
-      "checksum": "e5bfcbecb8d59cc7d6480a08c32d16aab1cdd7ffd89c4ab54423ce2f4ae79e50"
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/halloween-scare-0.1.9/HalloweenScare.zip",
+      "size": 1712640,
+      "checksum": "739ae9bfd29f53769a4094659384a9723bad276d5c677f4e289986cfdff3ae23"
     },
     {
       "id": "growing-up",
@@ -411,8 +411,8 @@
       "title": "Growing Up",
       "author": "Jan",
       "description": "Watch your children (or anyone) grow up on the frame. Growing Up takes people from your own Immich server, picks the best face per month, quarter or year from all their photos and cuts out portraits lined up on the face. The scene plays them as a time-lapse with age and date, as a contact sheet of all years, as then and now, and shows siblings side by side at the same age. On birthdays it can come over the playlist with congratulations. Limit it to chosen albums, star ratings or favourites so nothing private shows. Photos stay on your Immich server; the frame keeps only the small portraits. Installs the plugin together with its scene. English, German or Spanish.",
-      "version": "0.1.8",
-      "updated": "2026-11-16T18:34:36Z",
+      "version": "0.1.9",
+      "updated": "2026-11-21T17:37:16Z",
       "thumbnails": [
         "plugin_packs/growing-up/thumb.webp",
         "plugin_packs/growing-up/thumb-film.webp",
@@ -420,9 +420,9 @@
         "plugin_packs/growing-up/thumb-sameage.webp",
         "plugin_packs/growing-up/thumb-portrait.webp"
       ],
-      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/growing-up-0.1.8/GrowingUp.zip",
-      "size": 87937,
-      "checksum": "420f0c0e6287731fb9d1df43e3b217aa9ed91df0b4825f0081b369fe096d8d40"
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/growing-up-0.1.9/GrowingUp.zip",
+      "size": 88733,
+      "checksum": "472a333a9eba697e6340bbfe06726ee66192800bf6a25293b1c1b41295e3cbe4"
     },
     {
       "id": "photo-mosaic",
@@ -430,8 +430,8 @@
       "title": "Photo Mosaic",
       "author": "Jan",
       "description": "One of your photos, rebuilt from hundreds of your own photos as small tiles, matched by colour. The tiles settle over the picture in a wave, then the camera glides slowly towards a single tile, which turns into the real photo with its date and place, and finally the mosaic fades back to the original. In the endless flow the camera dives into the tile until it fills the screen, and that photo becomes the next mosaic. Tiles and motifs come from a DynaFrame playlist, the whole DynaFrame library or an Immich server (all photos or an album), and can come from different sources. The plugin prepares the tiles once in the background and caches them, so playback stays light on the Pi. Tile size, tint, pace and captions can be set on the plugin page. Installs the plugin together with its scene. English, German or Spanish.",
-      "version": "0.1.16",
-      "updated": "2026-11-20T18:30:27Z",
+      "version": "0.1.17",
+      "updated": "2026-11-21T17:37:16Z",
       "thumbnails": [
         "plugin_packs/photo-mosaic/thumb-hero.webp",
         "plugin_packs/photo-mosaic/thumb-build.webp",
@@ -439,9 +439,9 @@
         "plugin_packs/photo-mosaic/thumb-zoom.webp",
         "plugin_packs/photo-mosaic/thumb-original.webp"
       ],
-      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/photo-mosaic-0.1.16/PhotoMosaic.zip",
-      "size": 115602,
-      "checksum": "737c3f20a67f493551da2e95a29ae69fe922555216d7ce167a84db6ebae2e4a5"
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/photo-mosaic-0.1.17/PhotoMosaic.zip",
+      "size": 116398,
+      "checksum": "6cc6973ac18742ded714c8fb9367969fefdd3abcef3168a237810cf8cb84d56d"
     },
     {
       "id": "on-this-day",
@@ -449,8 +449,8 @@
       "title": "On This Day",
       "author": "Jan",
       "description": "Your photos of this day in earlier years, shown as a journey through time. Next to every photo you see the weather back then at that very place and hour (from the photo's date, time and GPS, via the free Open-Meteo archive back to 1940) and the weather today, with how much warmer or colder it was. A timeline shows the temperature of every year. After the last year a summary shows one photo per year, the temperatures of all years next to today's, the warmest, coldest and wettest year and the place you were most often on this day. Two views: time travel (one photo after another with slow zoom) or side by side (all years as photo cards). Photo duration, transition, photos per year and the days around today are adjustable. The photos come from a DynaFrame playlist, the whole DynaFrame library or an Immich server (all photos or an album), with Immich filters for albums, stars, favourites and archived photos. Installs the plugin together with its scene. English, German or Spanish.",
-      "version": "0.1.10",
-      "updated": "2026-11-17T11:29:36Z",
+      "version": "0.1.11",
+      "updated": "2026-11-21T17:37:16Z",
       "thumbnails": [
         "plugin_packs/on-this-day/thumb.webp",
         "plugin_packs/on-this-day/thumb-journey.webp",
@@ -458,9 +458,9 @@
         "plugin_packs/on-this-day/thumb-wall.webp",
         "plugin_packs/on-this-day/thumb-portrait.webp"
       ],
-      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/on-this-day-0.1.10/OnThisDay.zip",
-      "size": 239837,
-      "checksum": "0ab56b56263dea0b5c8bf4cf484a1306955ccd1cc00afef864d7b637a7b1d7ed"
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/on-this-day-0.1.11/OnThisDay.zip",
+      "size": 240633,
+      "checksum": "4d4f30635c77780bc41760119589c265adc0006c1916406c6dc5d6d70ecf0cb7"
     },
     {
       "id": "color-calendar",
@@ -468,8 +468,8 @@
       "title": "Colour Calendar",
       "author": "Jan",
       "description": "Your year as a calendar of colours. Every day becomes a cell in the colour of the photos you took that day, so summers, holidays, winters and Christmas show up as a band of colour. The photos come from a DynaFrame playlist, the whole DynaFrame media library (WebDAV too, plus extra folders) or your Immich server (all photos or chosen albums; Immich's ThumbHash gives the colours without downloading a single image). Immich photos can be filtered by stars, favourites and archive; hidden and locked photos never show. Four shapes: months, weeks like a wall planner, a ring (several years as rings inside each other) or stripes with one band per year. Last 12 months, this year, a year of your choice or several years; dark or light, squares or dots, vivid colours and the colour of each month. Now and then a day lights up and slowly scrolls through its photos, shown whole and uncropped, side by side or one above the other (you choose how many photos or how long, and how fast), with the date and its colours: at random, day by day or this day in earlier years. Installs the plugin together with its scene. English, German or Spanish.",
-      "version": "0.1.13",
-      "updated": "2026-11-17T11:29:36Z",
+      "version": "0.1.14",
+      "updated": "2026-11-21T17:37:16Z",
       "thumbnails": [
         "plugin_packs/color-calendar/thumb.webp",
         "plugin_packs/color-calendar/thumb-focus.webp",
@@ -478,9 +478,9 @@
         "plugin_packs/color-calendar/thumb-weeks.webp",
         "plugin_packs/color-calendar/thumb-portrait.webp"
       ],
-      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/color-calendar-0.1.13/ColorCalendar.zip",
-      "size": 230498,
-      "checksum": "7b8dd7fa7b9bf5d449dddb424f91a1af25ae1ddf7ef27f165624ffbca6afd57b"
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/color-calendar-0.1.14/ColorCalendar.zip",
+      "size": 231294,
+      "checksum": "57c79f71f9479caf43566f6f31d31c38708bd2877cfb43ea3968c04ddee0e681"
     },
     {
       "id": "playlist-music",
@@ -503,17 +503,17 @@
       "title": "Photo Universe",
       "author": "Jan",
       "description": "Your photos as a galaxy: every photo is a star, and photos with more rating stars shine brighter. The stars form constellations by year, place or person, and the camera flies through the galaxy, steers towards a star and opens the photo with its date, place, rating and the people in it. By year, time spirals outwards through the galaxy; taking turns, the stars drift into new constellations now and then. Photos come from the whole DynaFrame library, chosen folders or playlists, or an Immich server (people from Immich's face recognition), with the same filters as Photo Mosaic. The plugin reads the photo list in the background; the galaxy is drawn with WebGL on the frame. Installs the plugin together with its scene. English, German or Spanish.",
-      "version": "0.1.6",
-      "updated": "2026-11-20T18:30:27Z",
+      "version": "0.1.7",
+      "updated": "2026-11-21T17:37:16Z",
       "thumbnails": [
         "plugin_packs/photo-universe/thumb-hero.webp",
         "plugin_packs/photo-universe/thumb-constellation.webp",
         "plugin_packs/photo-universe/thumb-photo.webp",
         "plugin_packs/photo-universe/thumb-places.webp"
       ],
-      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/photo-universe-0.1.6/PhotoUniverse.zip",
-      "size": 166771,
-      "checksum": "361c07b011dc1a89244904676aacc916f88d9ab97a2606ad6b43361039220443"
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/photo-universe-0.1.7/PhotoUniverse.zip",
+      "size": 167566,
+      "checksum": "b636b39ec6f5edde1c4d1883308d459c2801076c64b45a2e747d5f2ec9ed090a"
     },
     {
       "id": "photo-quiz",
@@ -521,8 +521,8 @@
       "title": "Photo Quiz",
       "author": "Jan",
       "description": "A guessing game with your own photos for the whole family. The TV shows a photo, at first pixelated, zoomed in or blurred and getting clearer, and everyone guesses on their phone when (the year) and where (a tap on the map) it was taken. Join by scanning the QR code on the TV, no app needed. Up to three hints appear during the round: season and time of day, the weather back then, the camera, how far and in which direction from home, the country. The reveal shows date, place and a map with everyone's guesses and points; after the last round the final standings crown the winner. Play the year only, the place only or both; rounds, time per round and the reveal effect are adjustable. Start it as a playlist or straight from a phone (the frame switches to the quiz and back afterwards). Photos come from the DynaFrame library (with filters for stars, dates, camera and more), a playlist, folders or an Immich server (with album, star, favourite and archive filters). Installs the plugin together with its scene. English, German or Spanish.",
-      "version": "0.1.7",
-      "updated": "2026-11-17T11:29:36Z",
+      "version": "0.1.8",
+      "updated": "2026-11-21T17:37:16Z",
       "thumbnails": [
         "plugin_packs/photo-quiz/thumb.webp",
         "plugin_packs/photo-quiz/thumb-guess.webp",
@@ -531,9 +531,9 @@
         "plugin_packs/photo-quiz/thumb-final.webp",
         "plugin_packs/photo-quiz/thumb-tv.webp"
       ],
-      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/photo-quiz-0.1.7/PhotoQuiz.zip",
-      "size": 571686,
-      "checksum": "426d0247789168e1a59f7232c3815ea1ac77f6901a7873516141a987634b53dc"
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/photo-quiz-0.1.8/PhotoQuiz.zip",
+      "size": 572482,
+      "checksum": "0eb508ed4814805b726710c190adf11a1bd6e71107bfc1a3876d055f8428dc87"
     },
     {
       "id": "travel-scrapbook",
@@ -541,8 +541,8 @@
       "title": "Travel Scrapbook",
       "author": "Jan",
       "description": "Finds your trips by itself (several days far from home, from the GPS and date of your photos; your home is found automatically, also if you moved) and turns every trip into a scrapbook page: pasted prints chosen by stars (DynaFrame's media database or Immich), a small hand-drawn route map with the places and the way home, a ticket with days, kilometres and photos, a postmark, the weather of every day from the free Open-Meteo archive and handwritten notes (hottest day, rainy days, stations, five-star photos). The frame shows one holiday after another, matching the season, newest, oldest or random, with an optional cover page of all trips. On the plugin page you see all trips and can give each one your own title, a note in blue ink, or leave it out. Paper: kraft, cream or black photo album; landscape and portrait. Photos from a DynaFrame playlist, the whole DynaFrame library or an Immich server, with filters. Installs the plugin together with its scene. English, German or Spanish.",
-      "version": "0.1.5",
-      "updated": "2026-11-17T11:29:36Z",
+      "version": "0.1.6",
+      "updated": "2026-11-21T17:37:16Z",
       "thumbnails": [
         "plugin_packs/travel-scrapbook/thumb.webp",
         "plugin_packs/travel-scrapbook/thumb-trip.webp",
@@ -550,9 +550,9 @@
         "plugin_packs/travel-scrapbook/thumb-black.webp",
         "plugin_packs/travel-scrapbook/thumb-portrait.webp"
       ],
-      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/travel-scrapbook-0.1.5/TravelScrapbook.zip",
-      "size": 1507443,
-      "checksum": "4cf99ade403e587b365c95d9780218d874847ca47c98de688a7ec0da28b6caf5"
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/travel-scrapbook-0.1.6/TravelScrapbook.zip",
+      "size": 1508239,
+      "checksum": "33716f6948fe7658d86da2e80fbff4a966d01a8f06099dee5e7021f5df7f261b"
     },
     {
       "id": "party-wall",
@@ -560,8 +560,8 @@
       "title": "Party Wall",
       "author": "Jan",
       "description": "A photo wall for your party. Guests scan the QR code on the TV, upload photos of the evening from their phone (no app needed) and react with emojis that fly across the TV with their name. The TV shows the photos one by one, new ones first, with the QR code, the guest count and the current favourites beside them; every few minutes the top five take the stage. At the end of the evening a recap counts down the most popular photos to number one and closes with a collage of the night. Guests can browse the gallery, ask for a photo on the TV and save photos to their phone. You can approve photos before they appear, hide or delete them, download all photos as a ZIP and keep several parties apart. Three looks (party, elegant, bright). Installs the plugin together with its scene. English, German or Spanish.",
-      "version": "0.1.5",
-      "updated": "2026-11-16T18:34:36Z",
+      "version": "0.1.6",
+      "updated": "2026-11-21T17:37:16Z",
       "thumbnails": [
         "plugin_packs/party-wall/thumb.webp",
         "plugin_packs/party-wall/thumb-wall.webp",
@@ -570,9 +570,9 @@
         "plugin_packs/party-wall/thumb-recap.webp",
         "plugin_packs/party-wall/thumb-end.webp"
       ],
-      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/party-wall-0.1.5/PartyWall.zip",
-      "size": 315165,
-      "checksum": "469a9480307f8c356ed48f58fa995debc614bac778fbd1991f8ea7ca3b27864b"
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/party-wall-0.1.6/PartyWall.zip",
+      "size": 315961,
+      "checksum": "1750da518f020546747c305f34c9ce8e3ca16b8d17a8754cfae887a925347f51"
     },
     {
       "id": "sing-along",
@@ -580,16 +580,16 @@
       "title": "Sing-along",
       "author": "Jan",
       "description": "Karaoke on the side: while music plays via Music Assistant, Spotify or Jellyfin, the frame shows the lyrics line by line in time with the song, with the album cover and the song's progress. The current line lights up from left to right like in a karaoke bar, instrumental breaks show three dots that count down to the next line. By itself it slides in over your photos while a song with lyrics plays and hands the screen back when the music stops (with 'Allow takeover'), or it plays in its own Sing-along playlist. Lyrics come from LRCLIB, a free collection of synced lyrics without account or key; songs found once are remembered on the frame. Music Assistant and Jellyfin are read from your own servers (settings are taken over from Playlist Music or Jellyfin Now Playing if they have them), Spotify either from Playlist Music on this frame without any setup or from your Spotify account with your own free Spotify app. Three layouts, three text sizes and an offset for speakers with delay. A connections card shows whether LRCLIB and the music sources can be reached. Allow lrclib.net in a Pi-hole. Installs the plugin together with its scene. English, German or Spanish.",
-      "version": "0.1.6",
-      "updated": "2026-11-17T11:29:36Z",
+      "version": "0.1.7",
+      "updated": "2026-11-21T17:37:16Z",
       "thumbnails": [
         "plugin_packs/sing-along/thumb.webp",
         "plugin_packs/sing-along/thumb-backdrop.webp",
         "plugin_packs/sing-along/thumb-lyrics.webp"
       ],
-      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/sing-along-0.1.6/SingAlong.zip",
-      "size": 94741,
-      "checksum": "240efbb3fb5f7c7401dd0f204acac82f65584184fbf84a5d727ddcc30ae19ab3"
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/sing-along-0.1.7/SingAlong.zip",
+      "size": 95537,
+      "checksum": "b8f5d9507b2c34a9f5c319b53c5cc59049fab55cb9d77e60d92c05d6d8dd58c2"
     },
     {
       "id": "contact-sheet",
@@ -597,8 +597,8 @@
       "title": "Contact Sheet",
       "author": "Jan",
       "description": "Your photos on an endless analogue film strip, running sideways or from top to bottom: 35 mm frames with sprocket holes, small frame numbers and subtle edge printing with date and place. The strip stops on a photo for a few seconds (if you like, a red grease pencil marks it, with 15 different strokes and changing doodles such as stars, hearts, ticks or a quick word, so it never looks the same twice), then starts slowly and often spools a long way at full speed, smeared by motion blur, before it brakes and stops on the next photo; sometimes it moves just one frame on. On a light table, contact sheet paper, a wooden table or a dark surface, in colour or black and white, with film grain. Portrait photos are cropped or turned into the frame like on real film. Photos come from the whole DynaFrame library, chosen folders or playlists, or an Immich server, with the same filters as Photo Mosaic. Drawn on the graphics chip and only while the strip moves, so it stays light on a Pi 4. Installs the plugin together with its scene. English, German or Spanish.",
-      "version": "0.1.5",
-      "updated": "2026-11-20T18:30:27Z",
+      "version": "0.1.6",
+      "updated": "2026-11-21T17:37:16Z",
       "thumbnails": [
         "plugin_packs/contact-sheet/thumb-hero.webp",
         "plugin_packs/contact-sheet/thumb-motion.webp",
@@ -606,9 +606,9 @@
         "plugin_packs/contact-sheet/thumb-wood.webp",
         "plugin_packs/contact-sheet/thumb-dark.webp"
       ],
-      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/contact-sheet-0.1.5/ContactSheet.zip",
-      "size": 190892,
-      "checksum": "510dd9a5dd2c5212dc9cf12c7cea2dc95814ce4fee82aaf2fc3f9bb0f211eb2c"
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/contact-sheet-0.1.6/ContactSheet.zip",
+      "size": 191908,
+      "checksum": "9c5daae589bbfcda67cb0f123a4c8d6a619fccee2b8922ca2f2011b7e6e253fd"
     },
     {
       "id": "cloud-folder-sync",
@@ -631,8 +631,8 @@
       "title": "Secret Santa",
       "author": "Jan",
       "description": "Secret Santa for the family, run by your frame. Everyone scans the QR code on the TV and joins on their phone (no app), with a wish list and things they would rather not get. The frame draws in secret, as one big chain if you like, never inside the same household and without last year's pairs. Each person sees only on their own phone whom they give to, in a sealed envelope that closes again when the phone is put away. The TV never shows who drew whom: it shows who has joined, a countdown to the gift giving, the budget, and how many have opened their lot or have their gift ready. Givers can ask their person anonymous questions. At the end the frame reveals the pairs one by one with a drum roll and closes the circle. New round next year with the same people. Opens on its own with 'Allow takeover'. Phones connect on port 8155. Installs the plugin together with its scene. English, German or Spanish.",
-      "version": "0.1.4",
-      "updated": "2026-11-17T11:29:36Z",
+      "version": "0.1.5",
+      "updated": "2026-11-21T17:37:16Z",
       "thumbnails": [
         "plugin_packs/secret-santa/thumb.webp",
         "plugin_packs/secret-santa/thumb-signup.webp",
@@ -640,9 +640,9 @@
         "plugin_packs/secret-santa/thumb-phone.webp",
         "plugin_packs/secret-santa/thumb-ring.webp"
       ],
-      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/secret-santa-0.1.4/SecretSanta.zip",
-      "size": 1713142,
-      "checksum": "b9a36bf4447ad9bc2a29c33d1ee7690c10e2cc2f2c8ce4a9ae5606dbc9237054"
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/secret-santa-0.1.5/SecretSanta.zip",
+      "size": 1713937,
+      "checksum": "308817980ce9155fefc42c646fcabad91ccd7501b5751916aa2af6bb7ab7633f"
     },
     {
       "id": "photo-table",
@@ -650,17 +650,17 @@
       "title": "Photo Table",
       "author": "Jan, inspired by Geektoolkit",
       "description": "Lots of your photos lie scattered on a table as prints. The whole table swings far around, sometimes more, sometimes less, to the left and to the right, and every time it stops you see a whole new part of the table with new photos, with one large photo lying on top in the middle, sometimes straighter, sometimes more tilted, while the photos underneath lie every which way. Choose a wooden table, linen or a dark table, white borders or instant-photo frames with month, year and place in handwriting, the print size, how close the prints lie, the pause between turns, how far and which way it turns. Photos come from the whole DynaFrame library, chosen folders or playlists, or an Immich server, with the same filters as Photo Mosaic. Drawn on the graphics chip and only while the table turns, so it stays light on a Pi 4. Installs the plugin together with its scene. English, German or Spanish. Inspired by Geektoolkit.",
-      "version": "0.1.4",
-      "updated": "2026-11-20T18:30:27Z",
+      "version": "0.1.5",
+      "updated": "2026-11-21T17:37:16Z",
       "thumbnails": [
         "plugin_packs/photo-table/thumb-hero.webp",
         "plugin_packs/photo-table/thumb-turn.webp",
         "plugin_packs/photo-table/thumb-linen.webp",
         "plugin_packs/photo-table/thumb-dark.webp"
       ],
-      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/photo-table-0.1.4/PhotoTable.zip",
-      "size": 213439,
-      "checksum": "12183521111f2b5e7fa44a096518790394a76e6bd7c444a23b9a59250d99d9c5"
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/photo-table-0.1.5/PhotoTable.zip",
+      "size": 214235,
+      "checksum": "f84a198e7f79d0baaf989a37bba520e335109ae19b4d25d047946278884f1c94"
     },
     {
       "id": "wikipedia-breathes",
@@ -668,16 +668,16 @@
       "title": "Wikipedia Breathes",
       "author": "Jan",
       "description": "Watch Wikipedia breathe. Every change to any Wikipedia worldwide arrives live from the Wikimedia EventStreams, many per second, and lights up on a world map where its language is spoken: English in the US, the UK, India and Australia, German in Germany, Austria and Switzerland, and so on. Big edits make big lights, removed text and deleted pages glow red, new articles get a golden ring, busy language areas softly pulse. A ticker shows what is being edited right now, a side panel the changes per minute, the breathing curve of the last five minutes and the busiest languages. Map of the whole world or one continent, landscape and portrait. The plugin only reads the stream while the scene is on screen and thins it out so the Pi stays smooth (Pi-hole users: allow stream.wikimedia.org). Installs the plugin together with its scene. English, German or Spanish. Not affiliated with the Wikimedia Foundation.",
-      "version": "0.1.1",
-      "updated": "2026-11-19T07:45:02Z",
+      "version": "0.1.2",
+      "updated": "2026-11-21T17:37:16Z",
       "thumbnails": [
         "plugin_packs/wikipedia-breathes/thumb-hero.webp",
         "plugin_packs/wikipedia-breathes/thumb-portrait.webp",
         "plugin_packs/wikipedia-breathes/thumb-page.webp"
       ],
-      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/wikipedia-breathes-0.1.1/WikipediaBreathes.zip",
-      "size": 188014,
-      "checksum": "ee3d54a3f9c2d6258de47f18a29aad3409dfb5d3109a7ba7fbcb666f318a201b"
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/wikipedia-breathes-0.1.2/WikipediaBreathes.zip",
+      "size": 188811,
+      "checksum": "52baf48144fb8a3610e2cc4bbc34f3a1347edcbc216d89170ccb3f952d831d20"
     },
     {
       "id": "solar-system-live",
@@ -685,8 +685,8 @@
       "title": "Solar System Live",
       "author": "Jan",
       "description": "The Solar System in real time as a model under a lamp. All planets stand at their real position today, computed on the frame (no internet needed), with their large moons, space probes (Voyager, New Horizons, Parker, Webb, JUICE, Europa Clipper and more, fetched daily from NASA JPL Horizons) and comets near the Sun. The camera flies slowly from planet to planet in a miniature model look with real sunlight, Saturn's ring shadows, clouds on Earth and a camera blur, and a panel tells the distance, light travel time and a fact. Sky events of the coming months are announced ahead, played as a time-lapse and shown live: lunar and solar eclipses with real shadow geometry and a small picture of how it looks from your place, transits, oppositions, close planet pairs, morning and evening star, supermoons, meteor showers and comets. Optionally an eclipse is put over the running playlist. Adapts itself to Pi 4 and Pi 5. Landscape and portrait. Pi-hole users: allow ssd.jpl.nasa.gov and ssd-api.jpl.nasa.gov. Installs the plugin together with its scene. English, German or Spanish.",
-      "version": "0.1.4",
-      "updated": "2026-11-20T07:42:46Z",
+      "version": "0.1.5",
+      "updated": "2026-11-21T17:37:16Z",
       "thumbnails": [
         "plugin_packs/solar-system-live/thumb-hero.webp",
         "plugin_packs/solar-system-live/thumb-solar.webp",
@@ -695,9 +695,9 @@
         "plugin_packs/solar-system-live/thumb-earth.webp",
         "plugin_packs/solar-system-live/thumb-portrait.webp"
       ],
-      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/solar-system-live-0.1.4/SolarSystemLive.zip",
-      "size": 651641,
-      "checksum": "e595aa3d45618a6ecaec2958793e81971a071061d8e2503232b7a66550e21a8c"
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/solar-system-live-0.1.5/SolarSystemLive.zip",
+      "size": 652437,
+      "checksum": "0c7205a9aef4419bce1eb25aca7985e0c04ee9d5b000e61beb361bd535bb27ca"
     },
     {
       "id": "guestbook",
@@ -705,8 +705,8 @@
       "title": "Guestbook",
       "author": "Jan",
       "description": "A guestbook on your frame. Visitors scan the QR code on the TV (no app needed), take a selfie and write a greeting; the frame turns every visit into a page of an open guestbook, polaroid on the left, handwritten greeting on the right, and greets new entries right away. Years later it remembers: 'Three years ago today Aunt Anke came to visit', with her selfie and greeting, once a day at a time you choose or simply between the pages. Party mode for many guests at once: a live guest wall with the event name, a spotlight on each new arrival, and at the end a recap with all greetings and a collage of the evening. Guests may change or delete their own entry for two days and can browse the book on their phone. You can approve entries before they appear, fix names, greetings and dates, print QR cards and the whole book, and download selfies and greetings as a ZIP. Three looks (paper, evening, party). Opens on its own with 'Allow takeover'. Phones connect on port 8135. Installs the plugin together with its scene. English, German or Spanish.",
-      "version": "0.1.4",
-      "updated": "2026-11-21T07:43:15Z",
+      "version": "0.1.5",
+      "updated": "2026-11-21T17:37:16Z",
       "thumbnails": [
         "plugin_packs/guestbook/thumb.webp",
         "plugin_packs/guestbook/thumb-book.webp",
@@ -714,9 +714,9 @@
         "plugin_packs/guestbook/thumb-party.webp",
         "plugin_packs/guestbook/thumb-recap.webp"
       ],
-      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/guestbook-0.1.4/Guestbook.zip",
-      "size": 377968,
-      "checksum": "79621112f836fdf66affa45fa9c6f9b452d349d3b5941a62d6e0bd863f924ef6"
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/guestbook-0.1.5/Guestbook.zip",
+      "size": 378765,
+      "checksum": "eaa37e84767673d3ce56470318c2eac75b7f31e46e700f8debb0259236a98f92"
     }
   ]
 }
