@@ -1,0 +1,40 @@
+plugins { id "com.android.application" }
+
+def v = new Properties()
+file("../version.properties").withInputStream { v.load(it) }
+
+android {
+    namespace "de.archonw.framecompanion"
+    compileSdk 34
+    defaultConfig {
+        applicationId "de.archonw.framecompanion"
+        minSdk 24          // Android 7 and newer
+        targetSdk 34
+        versionCode Integer.parseInt(v.getProperty("versionCode"))
+        versionName v.getProperty("versionName")
+    }
+    signingConfigs {
+        release {
+            // Key and password come only from GitHub secrets (workflow), never from the repo.
+            def ks = System.getenv("RFTV_KEYSTORE")
+            if (ks) {
+                storeFile file(ks)
+                storePassword System.getenv("RFTV_KEYSTORE_PASSWORD")
+                keyAlias "remoteframetv"
+                keyPassword System.getenv("RFTV_KEYSTORE_PASSWORD")
+            }
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.release
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildFeatures { buildConfig true }
+    lint { abortOnError false; checkReleaseBuilds false }
+}

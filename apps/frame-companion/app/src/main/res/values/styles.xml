@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Glass look: dark warm background, gold accent, cream text (Frame Companion 0.5.0) -->
+    <style name="Companion" parent="@android:style/Theme.Material.NoActionBar">
+        <item name="android:colorAccent">#D8A13B</item>
+        <item name="android:colorPrimary">#1F1A14</item>
+        <item name="android:colorPrimaryDark">#100D0A</item>
+        <item name="android:colorBackground">#100D0A</item>
+        <item name="android:windowBackground">@drawable/window_bg</item>
+        <item name="android:textColorPrimary">#F7F1E6</item>
+        <item name="android:alertDialogTheme">@style/Companion.Dialog</item>
+    </style>
+
+    <style name="Companion.Dialog" parent="@android:style/Theme.Material.Dialog.Alert">
+        <item name="android:colorAccent">#D8A13B</item>
+        <item name="android:windowBackground">@drawable/dialog_bg</item>
+        <item name="android:textColorPrimary">#F7F1E6</item>
+        <item name="android:textColorSecondary">#B8F7F1E6</item>
+        <item name="android:textColorAlertDialogListItem">#F7F1E6</item>
+        <item name="android:backgroundDimAmount">0.6</item>
+    </style>
+</resources>

@@ -100,6 +100,15 @@ Install on a Fire TV: allow the app *Downloader* to install apps (Settings → M
 
 More (adb, Android TV, updates): [apps/remote-frame-tv](apps/remote-frame-tv/README.md).
 
+## Frame Companion: your frame on the phone
+
+An **Android** app for DynaFrame. It finds your frames in the home network by itself. Send photos and videos (also from the gallery's Share menu), control what is playing, pick playlists and Quick Mix sources, set up photo sources, open Remote Frames, and manage plugins and the store, all in one place. Frames with DynaFrame's login need a Frame API key once.
+
+Install: open this link on the phone and allow installing from your browser (Android 7 or newer):
+`https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/frame-companion-latest/FrameCompanion.apk`
+
+More (login, updates): [apps/frame-companion](apps/frame-companion/README.md).
+
 ## Help and feedback
 
 Problems, questions or ideas? Open an [issue](https://github.com/Archonw/Jans-DynaframePro-Store/issues). Most packs also have a "report a problem" link on their settings page that fills in the pack name for you.

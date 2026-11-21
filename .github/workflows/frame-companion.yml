@@ -1,0 +1,71 @@
+# Baut die Android-Handy-App "Frame Companion" (apps/frame-companion) und legt
+# für jede neue Version (apps/frame-companion/version.properties) ein GitHub Release
+# frame-companion-<version> mit der APK an. Bestehende Releases werden nie überschrieben.
+name: Frame Companion
+
+on:
+  push:
+    branches: [main]
+    paths: ["apps/frame-companion/**", ".github/workflows/frame-companion.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  apk:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: "8.9"
+      - name: APK bauen (signiert mit dem Schlüssel von Remote Frame TV aus den Secrets)
+        working-directory: apps/frame-companion
+        env:
+          RFTV_KEYSTORE_B64: ${{ secrets.RFTV_KEYSTORE_B64 }}
+          RFTV_KEYSTORE_PASSWORD: ${{ secrets.RFTV_KEYSTORE_PASSWORD }}
+        run: |
+          if [ -z "$RFTV_KEYSTORE_B64" ] || [ -z "$RFTV_KEYSTORE_PASSWORD" ]; then
+            echo "::error::Secrets RFTV_KEYSTORE_B64 / RFTV_KEYSTORE_PASSWORD fehlen: keine APK ohne richtigen Schlüssel."
+            exit 1
+          fi
+          export RFTV_KEYSTORE="$RUNNER_TEMP/fc.jks"
+          echo "$RFTV_KEYSTORE_B64" | base64 -d > "$RFTV_KEYSTORE"
+          gradle --no-daemon assembleRelease
+          rm -f "$RFTV_KEYSTORE"
+          test -f app/build/outputs/apk/release/app-release.apk
+      - name: Release anlegen
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          v=$(grep '^versionName=' apps/frame-companion/version.properties | cut -d= -f2)
+          tag="frame-companion-$v"
+          apk="FrameCompanion-$v.apk"
+          cp apps/frame-companion/app/build/outputs/apk/release/app-release.apk "$apk"
+          sha256sum "$apk"
+          if gh release view "$tag" >/dev/null 2>&1; then
+            echo "Release $tag gibt es schon, wird nicht überschrieben."
+          else
+            gh release create "$tag" "$apk" --target "$GITHUB_SHA" \
+              --title "Frame Companion $v" \
+              --notes "Android phone app for DynaFrame: finds frames on the network, sends photos and videos (also from the Share menu) and controls playback, screen, volume and playlists. Install: see apps/frame-companion/README.md"
+          fi
+          # Fester Link, der immer die neueste APK liefert:
+          # releases/download/frame-companion-latest/FrameCompanion.apk
+          cp "$apk" FrameCompanion.apk
+          if ! gh release view frame-companion-latest >/dev/null 2>&1; then
+            gh release create frame-companion-latest --target "$GITHUB_SHA" --latest=false \
+              --title "Frame Companion (always the newest version)" \
+              --notes "Fixed download link for the newest Frame Companion: https://github.com/${GITHUB_REPOSITORY}/releases/download/frame-companion-latest/FrameCompanion.apk"
+          fi
+          gh release upload frame-companion-latest FrameCompanion.apk --clobber
+          gh release edit frame-companion-latest --notes "Fixed download link for the newest Frame Companion (now $v): https://github.com/${GITHUB_REPOSITORY}/releases/download/frame-companion-latest/FrameCompanion.apk"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: FrameCompanion
+          path: apps/frame-companion/app/build/outputs/apk/release/app-release.apk
