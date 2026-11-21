@@ -14,6 +14,10 @@ Android phone app for DynaFrame. It finds the frames in your home network by its
 - Look ("glass", 0.5.0): the picture on the frame, blurred, behind every screen; frosted cards, iOS-style switches, a floating tab bar Send / Control / Playlists / Sources / More, DynaFrame's gold accent. Fonts: Inter (SIL OFL 1.1, `assets/Inter-*.otf`, subset to Latin); icons: Bootstrap Icons (MIT, `assets/bootstrap-icons.ttf`).
 - Languages: German, English, Spanish (follows the phone).
 
+## Screenshots
+
+<img src="screenshots/frames.webp" width="270" alt="Frames and Remote Frames found in the home network"> <img src="screenshots/store.webp" width="270" alt="Store with all packs of the frame's stores">
+
 ## Frames with DynaFrame's own login (HTTPS)
 
 When DynaFrame's WebUI login is switched on, the app needs a key once:

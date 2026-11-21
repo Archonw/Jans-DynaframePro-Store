@@ -107,6 +107,8 @@ An **Android** app for DynaFrame. It finds your frames in the home network by it
 Install: open this link on the phone and allow installing from your browser (Android 7 or newer):
 `https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/frame-companion-latest/FrameCompanion.apk`
 
+<img src="apps/frame-companion/screenshots/frames.webp" width="220" alt="Frame Companion: frames"> <img src="apps/frame-companion/screenshots/store.webp" width="220" alt="Frame Companion: store">
+
 More (login, updates): [apps/frame-companion](apps/frame-companion/README.md).
 
 ## Help and feedback
