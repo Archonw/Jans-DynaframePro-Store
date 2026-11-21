@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "generated": "2026-11-20T18:30:27Z",
+  "generated": "2026-11-21T07:43:15Z",
   "store": {
     "name": "Jan's Store",
     "author": "Jan",
@@ -698,6 +698,25 @@
       "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/solar-system-live-0.1.4/SolarSystemLive.zip",
       "size": 651641,
       "checksum": "e595aa3d45618a6ecaec2958793e81971a071061d8e2503232b7a66550e21a8c"
+    },
+    {
+      "id": "guestbook",
+      "type": "integration",
+      "title": "Guestbook",
+      "author": "Jan",
+      "description": "A guestbook on your frame. Visitors scan the QR code on the TV (no app needed), take a selfie and write a greeting; the frame turns every visit into a page of an open guestbook, polaroid on the left, handwritten greeting on the right, and greets new entries right away. Years later it remembers: 'Three years ago today Aunt Anke came to visit', with her selfie and greeting, once a day at a time you choose or simply between the pages. Party mode for many guests at once: a live guest wall with the event name, a spotlight on each new arrival, and at the end a recap with all greetings and a collage of the evening. Guests may change or delete their own entry for two days and can browse the book on their phone. You can approve entries before they appear, fix names, greetings and dates, print QR cards and the whole book, and download selfies and greetings as a ZIP. Three looks (paper, evening, party). Opens on its own with 'Allow takeover'. Phones connect on port 8135. Installs the plugin together with its scene. English, German or Spanish.",
+      "version": "0.1.4",
+      "updated": "2026-11-21T07:43:15Z",
+      "thumbnails": [
+        "plugin_packs/guestbook/thumb.webp",
+        "plugin_packs/guestbook/thumb-book.webp",
+        "plugin_packs/guestbook/thumb-phone.webp",
+        "plugin_packs/guestbook/thumb-party.webp",
+        "plugin_packs/guestbook/thumb-recap.webp"
+      ],
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/guestbook-0.1.4/Guestbook.zip",
+      "size": 377968,
+      "checksum": "79621112f836fdf66affa45fa9c6f9b452d349d3b5941a62d6e0bd863f924ef6"
     }
   ]
 }
