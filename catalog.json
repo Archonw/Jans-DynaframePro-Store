@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "generated": "2026-11-22T07:42:44Z",
+  "generated": "2026-11-22T18:39:07Z",
   "store": {
     "name": "Jan's Store",
     "author": "Jan",
@@ -61,8 +61,8 @@
       "title": "Football Live",
       "author": "Jan",
       "description": "Live scores, matchdays and tables for Bundesliga, Champions League, English, Scottish and Spanish leagues and cups, the World Cup and more. Installs the plugin together with its scene and can show it over the running playlist every few minutes. Pick your club to show its crest in the background and its colours as accent. English, German or Spanish.",
-      "version": "0.4.24",
-      "updated": "2026-11-21T17:37:16Z",
+      "version": "0.4.26",
+      "updated": "2026-11-22T18:39:07Z",
       "thumbnails": [
         "plugin_packs/fussball-live/thumb-hero.webp",
         "plugin_packs/fussball-live/thumb-landscape.webp",
@@ -70,9 +70,9 @@
         "plugin_packs/fussball-live/thumb-bl2.webp",
         "plugin_packs/fussball-live/thumb-ucl.webp"
       ],
-      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/fussball-live-0.4.24/FussballLive.zip",
-      "size": 1097842,
-      "checksum": "076d9753d403b9013ef8211ba51a53c9364b775403eed679a105ca9ae68f5999"
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/fussball-live-0.4.26/FussballLive.zip",
+      "size": 1098378,
+      "checksum": "af4037b185dd7909b0d2c15edbf67973eb15a08121969348cd2f56e28214c44d"
     },
     {
       "id": "american-football-live",
@@ -597,8 +597,8 @@
       "title": "Contact Sheet",
       "author": "Jan",
       "description": "Your photos on an endless analogue film strip, running sideways or from top to bottom: 35 mm frames with sprocket holes, small frame numbers and subtle edge printing with date and place. The strip stops on a photo for a few seconds (if you like, a red grease pencil marks it, with 15 different strokes and changing doodles such as stars, hearts, ticks or a quick word, so it never looks the same twice), then starts slowly and often spools a long way at full speed, smeared by motion blur, before it brakes and stops on the next photo; sometimes it moves just one frame on. On a light table, contact sheet paper, a wooden table or a dark surface, in colour or black and white, with film grain. Portrait photos are cropped or turned into the frame like on real film. Photos come from the whole DynaFrame library, chosen folders or playlists, or an Immich server, with the same filters as Photo Mosaic. Drawn on the graphics chip and only while the strip moves, so it stays light on a Pi 4. Installs the plugin together with its scene. English, German or Spanish.",
-      "version": "0.1.6",
-      "updated": "2026-11-21T17:37:16Z",
+      "version": "0.1.7",
+      "updated": "2026-11-22T18:39:07Z",
       "thumbnails": [
         "plugin_packs/contact-sheet/thumb-hero.webp",
         "plugin_packs/contact-sheet/thumb-motion.webp",
@@ -606,9 +606,9 @@
         "plugin_packs/contact-sheet/thumb-wood.webp",
         "plugin_packs/contact-sheet/thumb-dark.webp"
       ],
-      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/contact-sheet-0.1.6/ContactSheet.zip",
-      "size": 191908,
-      "checksum": "9c5daae589bbfcda67cb0f123a4c8d6a619fccee2b8922ca2f2011b7e6e253fd"
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/contact-sheet-0.1.7/ContactSheet.zip",
+      "size": 192577,
+      "checksum": "cca92d0e0712182251948dbc495ae0104d274b9915093aae4e22eb1a138166c1"
     },
     {
       "id": "cloud-folder-sync",
