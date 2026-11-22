@@ -34,6 +34,7 @@ Integrations bring their own scene and can show themselves over the running slid
 | | Pack | What it does |
 |---|---|---|
 | <img src="plugin_packs/american-football-live/thumb-hero.webp" width="220"> | **American Football Live** | Live scores, weeks and standings for the NFL, College Football (Top 25 and major conferences), UFL and CFL. Can pop up on a touchdown. |
+| <img src="plugin_packs/back-then/thumb.webp" width="220"> | **Back Then** | Your old photos next to what was going on in the world that year. |
 | <img src="plugin_packs/biathlon-live/thumb.webp" width="220"> | **Biathlon Live** | Results with shooting, live standings during a race, schedule and World Cup standings from the IBU. Highlights the athletes of your nation. |
 | <img src="plugin_packs/color-calendar/thumb.webp" width="220"> | **Colour Calendar** | Your year as a calendar of colours: every day becomes a cell in the colour of that day's photos, as months, weeks, rings or stripes. Photos from a playlist, the media library or Immich. |
 | <img src="plugin_packs/contact-sheet/thumb-hero.webp" width="220"> | **Contact Sheet** | Your photos on an endless analogue film strip that stops, spools far with motion blur and brakes at the next photo. |

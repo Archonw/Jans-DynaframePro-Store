@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "generated": "2026-11-21T17:37:16Z",
+  "generated": "2026-11-22T07:42:44Z",
   "store": {
     "name": "Jan's Store",
     "author": "Jan",
@@ -717,6 +717,24 @@
       "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/guestbook-0.1.5/Guestbook.zip",
       "size": 378765,
       "checksum": "eaa37e84767673d3ce56470318c2eac75b7f31e46e700f8debb0259236a98f92"
+    },
+    {
+      "id": "back-then",
+      "type": "integration",
+      "title": "Back Then",
+      "author": "Jan",
+      "description": "Your old photos next to what was going on in the world that year. For each year the scene shows a few of your photos together with the key events (from Wikidata, ranked by how many Wikipedia languages cover them), the number one hit in the week of the photo (Germany, Austria, Switzerland, USA, UK), the head of government on that day, what bread, milk, butter, eggs, petrol or a stamp cost then and today (German and US price statistics, inflation for other countries), famous people born that year and, if you enter your people, how old everyone was. Two looks: a page from an old almanac next to the photo, or the front page of a newspaper from back then. Data for 1945 to 2025 is bundled, so it works offline; other years come live from Wikidata. Photos from the DynaFrame library, a playlist or Immich, with filters for stars, camera, albums and more. Installs the plugin together with its scene. English, German or Spanish.",
+      "version": "0.1.6",
+      "updated": "2026-11-22T07:42:44Z",
+      "thumbnails": [
+        "plugin_packs/back-then/thumb.webp",
+        "plugin_packs/back-then/thumb-almanac.webp",
+        "plugin_packs/back-then/thumb-newspaper.webp",
+        "plugin_packs/back-then/thumb-portrait.webp"
+      ],
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/back-then-0.1.6/BackThen.zip",
+      "size": 491208,
+      "checksum": "51775c9fa7fd3b169a86db0b84991a008232570e55cef84ed6332226ece7ab51"
     }
   ]
 }
