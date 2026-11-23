@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "generated": "2026-11-22T18:39:07Z",
+  "generated": "2026-11-23T07:40:21Z",
   "store": {
     "name": "Jan's Store",
     "author": "Jan",
@@ -735,6 +735,28 @@
       "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/back-then-0.1.6/BackThen.zip",
       "size": 491208,
       "checksum": "51775c9fa7fd3b169a86db0b84991a008232570e55cef84ed6332226ece7ab51"
+    },
+    {
+      "id": "color-reveal",
+      "type": "integration",
+      "title": "Color Reveal",
+      "author": "Jan",
+      "description": "Black and white turns to colour. Every photo starts in black and white and slowly fills with colour within a few seconds: restrained and calm, used sparingly it looks lovely. Choose how the colour comes in: evenly over the whole photo, from the light (highlights first, shadows last), from the most colourful spot of the photo outwards (a red dress, a blue door), like a soft brush stroke, or changing with every photo. Set how long the black and white lasts and how long the colour takes, how much colour there is at the end (full or muted), the black-and-white look (neutral, rich contrast or warm like a silver print), back to black and white before the next photo, and leave out photos that are already black and white. Full screen, whole photo or in a frame with mat like a print on the wall; optional very slow zoom and date taken. Photos from a DynaFrame playlist, the whole DynaFrame library or an Immich server, with filters. The colour is drawn by the graphics chip, so it stays smooth on a Pi 4. Installs the plugin together with its scene. Landscape and portrait; English, German or Spanish.",
+      "version": "0.1.4",
+      "updated": "2026-11-23T07:40:21Z",
+      "thumbnails": [
+        "plugin_packs/color-reveal/thumb-hero.webp",
+        "plugin_packs/color-reveal/thumb-steps.webp",
+        "plugin_packs/color-reveal/thumb-fade.webp",
+        "plugin_packs/color-reveal/thumb-light.webp",
+        "plugin_packs/color-reveal/thumb-focus.webp",
+        "plugin_packs/color-reveal/thumb-brush.webp",
+        "plugin_packs/color-reveal/thumb-gallery.webp",
+        "plugin_packs/color-reveal/thumb-portrait.webp"
+      ],
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/color-reveal-0.1.4/ColorReveal.zip",
+      "size": 227464,
+      "checksum": "9e93a133327873cdab0707795ba8d61d5297ecfd3bc67345b0088266dfac50eb"
     }
   ]
 }
