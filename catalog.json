@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "generated": "2026-11-23T07:40:21Z",
+  "generated": "2026-11-24T07:41:17Z",
   "store": {
     "name": "Jan's Store",
     "author": "Jan",
@@ -757,6 +757,24 @@
       "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/color-reveal-0.1.4/ColorReveal.zip",
       "size": 227464,
       "checksum": "9e93a133327873cdab0707795ba8d61d5297ecfd3bc67345b0088266dfac50eb"
+    },
+    {
+      "id": "endless-stairs",
+      "type": "integration",
+      "title": "Endless Stairs",
+      "author": "Jan",
+      "description": "You slowly climb an endless staircase. On the wall to your left hang your photos in all kinds of picture frames, as in a family home: black, white, oak, walnut, silver and gold, small and large, sometimes two above each other. The right wall is closed, with a simple handrail. After every flight of about ten pictures (adjustable) the stairs reach a landing, turn right and go on up, without end. New photos are always hung around the corner, so you never see them appear. Now and then (or at every picture) you stop, turn to a picture and look at it for a few seconds. Two stairwells: light (grey plaster, oak steps, black handrail) or dark (green striped wallpaper, stair runner, gold frames with picture lights). Pace adjustable. Photos come from the whole DynaFrame library, chosen folders or playlists, or an Immich server, with the same filters as Photo Mosaic. Drawn in 3D on the graphics chip (three.js); lowers its resolution by itself if a frame is too slow. Installs the plugin together with its scene. English, German or Spanish.",
+      "version": "0.1.3",
+      "updated": "2026-11-24T07:41:17Z",
+      "thumbnails": [
+        "plugin_packs/endless-stairs/thumb-light.webp",
+        "plugin_packs/endless-stairs/thumb-dark.webp",
+        "plugin_packs/endless-stairs/thumb-turn.webp",
+        "plugin_packs/endless-stairs/thumb-stop.webp"
+      ],
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/endless-stairs-0.1.3/EndlessStairs.zip",
+      "size": 313304,
+      "checksum": "aeb23ba259aac3acf46446265ebabc8fe6a81b33c9c8c9da3d06d8e1bc174a09"
     }
   ]
 }
