@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "generated": "2026-11-26T06:37:51Z",
+  "generated": "2026-11-26T07:40:20Z",
   "store": {
     "name": "Jan's Store",
     "author": "Jan",
@@ -793,6 +793,24 @@
       "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/photo-scanner-0.1.2/PhotoScanner.zip",
       "size": 305863,
       "checksum": "ca2aa8fa69841c223b16e24af8f3038bbf63ef14e36a2341514def2ab46d8a67"
+    },
+    {
+      "id": "satellite-swarm",
+      "type": "integration",
+      "title": "Satellite Swarm",
+      "author": "Jan",
+      "description": "All active satellites live. From CelesTrak's open orbit data the frame computes where all of the roughly 10,000 active satellites are right now: Starlink (fresh launches still fly as a string of pearls), OneWeb, GPS, Galileo, GLONASS and BeiDou in their high shells, weather and Earth observation satellites, space stations and the geostationary ring 36,000 km up. Shown as a swarm around the Earth, with day and night by the real sun and satellites in the Earth's shadow glowing fainter, or as the sky above your home with everything that is above your horizon right now. For the ISS, Tiangong, Hubble and fresh Starlink trains the plugin predicts the passes over your place and the scene announces them: \"In 5 minutes the ISS passes over you\", \"Right now the ISS is passing over you, look south-west\", and whether you can see it with the naked eye. Optionally a pass is put over the running playlist for a few minutes. The positions are computed on the graphics chip, so the Pi stays smooth. Landscape and portrait. Pi-hole users: allow celestrak.org. Installs the plugin together with its scene. English, German or Spanish.",
+      "version": "0.1.4",
+      "updated": "2026-11-26T07:40:20Z",
+      "thumbnails": [
+        "plugin_packs/satellite-swarm/thumb-hero.webp",
+        "plugin_packs/satellite-swarm/thumb-sky.webp",
+        "plugin_packs/satellite-swarm/thumb-far.webp",
+        "plugin_packs/satellite-swarm/thumb-portrait.webp"
+      ],
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/satellite-swarm-0.1.4/SatelliteSwarm.zip",
+      "size": 214011,
+      "checksum": "40090edad2342bd1fb9c9251df833edf4e3b68d124dc2c57eb61079be7a3dfb4"
     }
   ]
 }

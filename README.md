@@ -55,6 +55,7 @@ Integrations bring their own scene and can show themselves over the running slid
 | <img src="plugin_packs/photo-scanner/thumb-hero.webp" width="220"> | **Photo Scanner** | Your photos, scanned like in a science fiction film. |
 | <img src="plugin_packs/photo-table/thumb-hero.webp" width="220"> | **Photo Table** | Lots of your photos lie scattered on a table as prints. |
 | <img src="plugin_packs/photo-universe/thumb-hero.webp" width="220"> | **Photo Universe** | Your photos as a galaxy: every photo is a star, and photos with more rating stars shine brighter. |
+| <img src="plugin_packs/satellite-swarm/thumb-hero.webp" width="220"> | **Satellite Swarm** | All active satellites live. |
 | <img src="plugin_packs/secret-santa/thumb.webp" width="220"> | **Secret Santa** | Secret Santa for the family, run by your frame. |
 | <img src="plugin_packs/sing-along/thumb.webp" width="220"> | **Sing-along** | Karaoke on the side: while music plays via Music Assistant, Spotify or Jellyfin, the frame shows the lyrics line by line in time with the song, with the album cover and the song's progress. |
 | <img src="plugin_packs/solar-system-live/thumb-hero.webp" width="220"> | **Solar System Live** | The Solar System in real time as a model under a lamp. |
