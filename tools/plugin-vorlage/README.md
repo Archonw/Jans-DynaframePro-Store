@@ -20,6 +20,7 @@ seine Playlists den neuen Namen über `renamed_playlists.py`.
 | `ports/` + `PORTS.md` | Für Plugins mit eigener Seite im WLAN (Handy-Seite usw.): Port-Liste, `plugin_ports.py` (belegten Port erkennen, ausweichen, merken, auf der Seite änderbar), Port-Feld für die Plugin-Seite. Pflicht für jedes Plugin, das einen Port öffnet. Anleitung in `ports/README.md`. |
 | `accordion/` | **Pflicht für jede Seite**: Aufklappen (Akkordeon). `apply.py <pack>` hängt `accordion.js`/`.css` an und klappt die Standard-Karten (DynaFrame-Filter, Immich, WebDAV, Ordner, Verbindungen) zu, solange sie nicht gebraucht werden. Anleitung in `accordion/README.md`. |
 | `folder-picker/` | Ordnerliste „Ausgewählte Ordner in DynaFrame“: kurze Namen ab dem Medienordner, nach Medienordner gruppiert, bricht auf dem Handy um; gespeichert bleibt der volle Pfad. `apply.py <pack>`, steckt schon in der Referenz. Anleitung in `folder-picker/README.md`. |
+| `photo-privacy/` | **Pflicht für jedes Plugin, das Fotopositionen (GPS) an einen Online-Dienst schickt** (Ortsnamen, Wetter/Höhe von damals, Sehenswürdigkeiten, Kartenkacheln am Fotoort): Schalter „Fotopositionen bleiben auf dem Rahmen“. `apply.py <pack> --uses places,weather,…` baut Einstellung und Karte ein (vor „Eine Playlist dafür“), die Sperren vor jeder Anfrage setzt man von Hand. Anleitung in `photo-privacy/README.md`. |
 | `make_zip.py` | ZIP mit richtigen Datei-/Ordnerrechten packen (sonst „Error“ im Store) |
 
 ## Aufbau der Seite (Reihenfolge der Karten)
@@ -33,6 +34,7 @@ seine Playlists den neuen Namen über `renamed_playlists.py`.
    - **Volle Auflösung für WebDAV-Fotos**: nur wenn das Plugin Fotos größer als 512 px braucht.
    - **Weitere Ordner auf dem Rahmen**: nur bei der Quelle „Alle Fotos in DynaFrame“.
    - **Aufklappen** (Jans Regel 17.11.2026): Quellen-Karten, Filter, freiwillige Logins und „Erweitert“ sind zugeklappt, solange sie nicht gebraucht werden, mit Plakette in der Kopfzeile („Nur mit Immich als Quelle nötig“, „2 aktiv“, „Optional“). Kopf, Status, Haupt-Karte und „Eine Playlist dafür“ bleiben offen. Baustein `accordion/`.
+4b. **Fotopositionen** (nur bei Plugins, die Fotopositionen nach draußen schicken): kleine offene Karte mit dem Schalter, Baustein `photo-privacy/`.
 5. **Eine Playlist dafür**: immer die letzte Karte, wenn das Plugin eine Szene hat. Auswahl Nein / Ja, anlegen, ggf. Dauer, Hinweis, Statuszeile (`playlistNote`), Backend über `own_playlist.py`.
 6. **Support-Fuß** (`<footer class="support">`): Issue-Link `https://github.com/Archonw/Jans-DynaframePro-Store/issues/new?title=[Name Version] `, Buy me a coffee mit QR. Unverändert aus der Referenz kopieren.
 

@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "generated": "2026-11-26T06:22:25Z",
+  "generated": "2026-11-26T06:37:51Z",
   "store": {
     "name": "Jan's Store",
     "author": "Jan",
@@ -130,14 +130,14 @@
       "title": "Travel Map",
       "author": "Jan",
       "description": "A world map in the style of an old globe, studded with push pins where your photos were taken. The places come from the photos' GPS data: a DynaFrame playlist, the whole DynaFrame media library (plus extra folders such as a mounted NAS) or your Immich server (all photos or an album). Every collection gets its own pin colour and shape (push pin, thumbtack, flag, long pin); close pins are merged. The pins go in one by one in the order the photos were taken, then a photo is shown at its pin now and then with place and date. Oval world map or three globes, or only the area with pins. German, English or Spanish.",
-      "version": "0.1.31",
-      "updated": "2026-11-21T17:37:16Z",
+      "version": "0.1.32",
+      "updated": "2026-11-26T06:37:51Z",
       "thumbnails": [
         "plugin_packs/travel-map/thumb.webp"
       ],
-      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/travel-map-0.1.31/TravelMap.zip",
-      "size": 1637385,
-      "checksum": "ac9f3a054a2a3a1c3b7a5055b838834600dae07ebaa7af129fe75faedeb66ab6"
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/travel-map-0.1.32/TravelMap.zip",
+      "size": 1640450,
+      "checksum": "bce8bf7d94658220bad9e64476a37b280c3339c9426600ada112cde86b240eb5"
     },
     {
       "id": "phone-photos",
@@ -449,8 +449,8 @@
       "title": "On This Day",
       "author": "Jan",
       "description": "Your photos of this day in earlier years, shown as a journey through time. Next to every photo you see the weather back then at that very place and hour (from the photo's date, time and GPS, via the free Open-Meteo archive back to 1940) and the weather today, with how much warmer or colder it was. A timeline shows the temperature of every year. After the last year a summary shows one photo per year, the temperatures of all years next to today's, the warmest, coldest and wettest year and the place you were most often on this day. Two views: time travel (one photo after another with slow zoom) or side by side (all years as photo cards). Photo duration, transition, photos per year and the days around today are adjustable. The photos come from a DynaFrame playlist, the whole DynaFrame library or an Immich server (all photos or an album), with Immich filters for albums, stars, favourites and archived photos. Installs the plugin together with its scene. English, German or Spanish.",
-      "version": "0.1.11",
-      "updated": "2026-11-21T17:37:16Z",
+      "version": "0.1.12",
+      "updated": "2026-11-26T06:37:51Z",
       "thumbnails": [
         "plugin_packs/on-this-day/thumb.webp",
         "plugin_packs/on-this-day/thumb-journey.webp",
@@ -458,9 +458,9 @@
         "plugin_packs/on-this-day/thumb-wall.webp",
         "plugin_packs/on-this-day/thumb-portrait.webp"
       ],
-      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/on-this-day-0.1.11/OnThisDay.zip",
-      "size": 240633,
-      "checksum": "4d4f30635c77780bc41760119589c265adc0006c1916406c6dc5d6d70ecf0cb7"
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/on-this-day-0.1.12/OnThisDay.zip",
+      "size": 243728,
+      "checksum": "7d0066eb3c0a3838283def0d859a18da4dcbda5c6881ccd841ebebcd941bdc6c"
     },
     {
       "id": "color-calendar",
@@ -521,8 +521,8 @@
       "title": "Photo Quiz",
       "author": "Jan",
       "description": "A guessing game with your own photos for the whole family. The TV shows a photo, at first pixelated, zoomed in or blurred and getting clearer, and everyone guesses on their phone when (the year) and where (a tap on the map) it was taken. Join by scanning the QR code on the TV, no app needed. Up to three hints appear during the round: season and time of day, the weather back then, the camera, how far and in which direction from home, the country. The reveal shows date, place and a map with everyone's guesses and points; after the last round the final standings crown the winner. Play the year only, the place only or both; rounds, time per round and the reveal effect are adjustable. Start it as a playlist or straight from a phone (the frame switches to the quiz and back afterwards). Photos come from the DynaFrame library (with filters for stars, dates, camera and more), a playlist, folders or an Immich server (with album, star, favourite and archive filters). Installs the plugin together with its scene. English, German or Spanish.",
-      "version": "0.1.8",
-      "updated": "2026-11-21T17:37:16Z",
+      "version": "0.1.9",
+      "updated": "2026-11-26T06:37:51Z",
       "thumbnails": [
         "plugin_packs/photo-quiz/thumb.webp",
         "plugin_packs/photo-quiz/thumb-guess.webp",
@@ -531,9 +531,9 @@
         "plugin_packs/photo-quiz/thumb-final.webp",
         "plugin_packs/photo-quiz/thumb-tv.webp"
       ],
-      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/photo-quiz-0.1.8/PhotoQuiz.zip",
-      "size": 572482,
-      "checksum": "0eb508ed4814805b726710c190adf11a1bd6e71107bfc1a3876d055f8428dc87"
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/photo-quiz-0.1.9/PhotoQuiz.zip",
+      "size": 575931,
+      "checksum": "e35dcaa7a808ae72a223c39b09e3e5bcda0ce47fc8ad03b3bd2ef9ca9131bf24"
     },
     {
       "id": "travel-scrapbook",
@@ -541,8 +541,8 @@
       "title": "Travel Scrapbook",
       "author": "Jan",
       "description": "Finds your trips by itself (several days far from home, from the GPS and date of your photos; your home is found automatically, also if you moved) and turns every trip into a scrapbook page: pasted prints chosen by stars (DynaFrame's media database or Immich), a small hand-drawn route map with the places and the way home, a ticket with days, kilometres and photos, a postmark, the weather of every day from the free Open-Meteo archive and handwritten notes (hottest day, rainy days, stations, five-star photos). The frame shows one holiday after another, matching the season, newest, oldest or random, with an optional cover page of all trips. On the plugin page you see all trips and can give each one your own title, a note in blue ink, or leave it out. Paper: kraft, cream or black photo album; landscape and portrait. Photos from a DynaFrame playlist, the whole DynaFrame library or an Immich server, with filters. Installs the plugin together with its scene. English, German or Spanish.",
-      "version": "0.1.6",
-      "updated": "2026-11-21T17:37:16Z",
+      "version": "0.1.7",
+      "updated": "2026-11-26T06:37:51Z",
       "thumbnails": [
         "plugin_packs/travel-scrapbook/thumb.webp",
         "plugin_packs/travel-scrapbook/thumb-trip.webp",
@@ -550,9 +550,9 @@
         "plugin_packs/travel-scrapbook/thumb-black.webp",
         "plugin_packs/travel-scrapbook/thumb-portrait.webp"
       ],
-      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/travel-scrapbook-0.1.6/TravelScrapbook.zip",
-      "size": 1508239,
-      "checksum": "33716f6948fe7658d86da2e80fbff4a966d01a8f06099dee5e7021f5df7f261b"
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/travel-scrapbook-0.1.7/TravelScrapbook.zip",
+      "size": 1511319,
+      "checksum": "29b89ed7064961f4bf610c70b49c92dbef3a9287af87da82b1f50bc9329c16f2"
     },
     {
       "id": "party-wall",

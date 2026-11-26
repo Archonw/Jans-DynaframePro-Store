@@ -1,0 +1,41 @@
+{
+  "de": {
+    "title": "Fotopositionen",
+    "label": "Fotopositionen bleiben auf dem Rahmen",
+    "hint": "Ist der Haken gesetzt, schickt das Plugin die GPS-Position deiner Fotos an keinen Online-Dienst mehr. Das betrifft: {uses}. Was schon geladen ist, bleibt; für neue Fotos fehlt es dann. Deine Heimat ist kein Foto und bleibt erlaubt.",
+    "places": "Ortsnamen (OpenStreetMap)",
+    "weather": "Wetter von damals (Open-Meteo)",
+    "elevation": "Höhe über dem Meer (Open-Meteo)",
+    "sights": "Sehenswürdigkeiten und Ortsinfos (Wikipedia, Wikidata, OpenStreetMap)",
+    "guide": "Achtung: Der Reiseführer lebt von diesen Infos. Mit Haken gibt es sie nur noch zu Orten, die er schon kennt; neue Orte zeigt er nur mit dem Namen aus dem Foto.",
+    "on": "An: keine Fotoposition verlässt den Rahmen.",
+    "off": "",
+    "map": "Kartenkacheln am Fotoort (CARTO; die Karte zeigt dann nur Küstenlinien)"
+  },
+  "en": {
+    "title": "Photo locations",
+    "label": "Keep photo locations on the frame",
+    "hint": "When ticked, the plugin no longer sends the GPS position of your photos to any online service. This affects: {uses}. Anything already loaded stays; new photos go without it. Your home is not a photo and stays allowed.",
+    "places": "place names (OpenStreetMap)",
+    "weather": "weather back then (Open-Meteo)",
+    "elevation": "elevation (Open-Meteo)",
+    "sights": "sights and place info (Wikipedia, Wikidata, OpenStreetMap)",
+    "guide": "Note: the travel guide lives on this info. When ticked it only has it for places it already knows; new places show just the name stored in the photo.",
+    "on": "On: no photo location leaves the frame.",
+    "off": "",
+    "map": "map tiles at the photo place (CARTO; the map then shows coastlines only)"
+  },
+  "es": {
+    "title": "Ubicaciones de las fotos",
+    "label": "Las ubicaciones de las fotos se quedan en el marco",
+    "hint": "Si está marcado, el plugin ya no envía la posición GPS de tus fotos a ningún servicio en línea. Afecta a: {uses}. Lo que ya está cargado se queda; las fotos nuevas no lo tendrán. Tu casa no es una foto y sigue permitida.",
+    "places": "nombres de lugares (OpenStreetMap)",
+    "weather": "el tiempo de entonces (Open-Meteo)",
+    "elevation": "altitud (Open-Meteo)",
+    "sights": "lugares de interés e información (Wikipedia, Wikidata, OpenStreetMap)",
+    "guide": "Ojo: la guía de viaje vive de esta información. Con la casilla marcada solo la tiene para lugares que ya conoce; los lugares nuevos muestran solo el nombre guardado en la foto.",
+    "on": "Activado: ninguna ubicación de foto sale del marco.",
+    "off": "",
+    "map": "teselas del mapa en el lugar de la foto (CARTO; el mapa muestra entonces solo las costas)"
+  }
+}
