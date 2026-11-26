@@ -790,7 +790,7 @@
         "plugin_packs/photo-scanner/thumb-green.webp",
         "plugin_packs/photo-scanner/thumb-portrait.webp"
       ],
-      "download_url": "plugin_packs/photo-scanner/PhotoScanner.zip",
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/photo-scanner-0.1.2/PhotoScanner.zip",
       "size": 305863,
       "checksum": "ca2aa8fa69841c223b16e24af8f3038bbf63ef14e36a2341514def2ab46d8a67"
     }
