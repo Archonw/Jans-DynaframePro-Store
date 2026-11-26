@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "generated": "2026-11-26T05:56:16Z",
+  "generated": "2026-11-26T06:22:25Z",
   "store": {
     "name": "Jan's Store",
     "author": "Jan",
@@ -61,8 +61,8 @@
       "title": "Football Live",
       "author": "Jan",
       "description": "Live scores, matchdays and tables for Bundesliga, Champions League, English, Scottish and Spanish leagues and cups, the World Cup and more. Installs the plugin together with its scene and can show it over the running playlist every few minutes. Pick your club to show its crest in the background and its colours as accent. English, German or Spanish.",
-      "version": "0.4.26",
-      "updated": "2026-11-22T18:39:07Z",
+      "version": "0.4.27",
+      "updated": "2026-11-26T06:22:25Z",
       "thumbnails": [
         "plugin_packs/fussball-live/thumb-hero.webp",
         "plugin_packs/fussball-live/thumb-landscape.webp",
@@ -70,9 +70,9 @@
         "plugin_packs/fussball-live/thumb-bl2.webp",
         "plugin_packs/fussball-live/thumb-ucl.webp"
       ],
-      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/fussball-live-0.4.26/FussballLive.zip",
-      "size": 1098378,
-      "checksum": "af4037b185dd7909b0d2c15edbf67973eb15a08121969348cd2f56e28214c44d"
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/fussball-live-0.4.27/FussballLive.zip",
+      "size": 1098833,
+      "checksum": "a3eceb7feab6bf4038b635d7b4353e8f3dc971c8a0e2e6f9448603fbdffb9cd4"
     },
     {
       "id": "american-football-live",
