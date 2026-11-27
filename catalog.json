@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "generated": "2026-11-26T17:18:27Z",
+  "generated": "2026-11-27T07:45:14Z",
   "store": {
     "name": "Jan's Store",
     "author": "Jan",
@@ -811,6 +811,26 @@
       "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/satellite-swarm-0.1.4/SatelliteSwarm.zip",
       "size": 214011,
       "checksum": "40090edad2342bd1fb9c9251df833edf4e3b68d124dc2c57eb61079be7a3dfb4"
+    },
+    {
+      "id": "life-lines",
+      "type": "integration",
+      "title": "Life Lines",
+      "author": "Jan",
+      "description": "Your life as a metro map. The years are drawn as a line diagram: lines stand for people or places, stations for trips, big days and moves, and where lines meet there are photos together. A train travels along the map and stops at every station for a moment with a few photos, name, dates and who was there; every visit shows other photos. Trips are found from the GPS data and dates of your photos (also several homes when you moved), big days from days with many photos at home (birthdays, Christmas, New Year's Eve and Easter are recognised), people from Immich's face recognition (also for photos from DynaFrame), with one person's life as the main line, place names from the photos, folders or OpenStreetMap. Lines for people, places you return to or both, landscape or portrait, light like a printed map or dark, with an overview and legend now and then. The photos come from a DynaFrame playlist, the whole DynaFrame library or an Immich server (all photos or an album), with filters for stars, favourites, albums and more. Installs the plugin together with its scene. English, German or Spanish.",
+      "version": "0.1.9",
+      "updated": "2026-11-27T07:45:14Z",
+      "thumbnails": [
+        "plugin_packs/life-lines/thumb.webp",
+        "plugin_packs/life-lines/thumb-stop.webp",
+        "plugin_packs/life-lines/thumb-overview.webp",
+        "plugin_packs/life-lines/thumb-photos.webp",
+        "plugin_packs/life-lines/thumb-dark.webp",
+        "plugin_packs/life-lines/thumb-portrait.webp"
+      ],
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/life-lines-0.1.9/LifeLines.zip",
+      "size": 181153,
+      "checksum": "53c7836e9bda284f25dde2c33857b2ca3170a6709d790cb2c42eedf6e5dd26ca"
     }
   ]
 }
