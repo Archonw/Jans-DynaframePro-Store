@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "generated": "2026-11-27T07:45:14Z",
+  "generated": "2026-11-28T07:40:36Z",
   "store": {
     "name": "Jan's Store",
     "author": "Jan",
@@ -831,6 +831,26 @@
       "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/life-lines-0.1.9/LifeLines.zip",
       "size": 181153,
       "checksum": "53c7836e9bda284f25dde2c33857b2ca3170a6709d790cb2c42eedf6e5dd26ca"
+    },
+    {
+      "id": "calendar-page",
+      "type": "integration",
+      "title": "Calendar Page",
+      "author": "Jan",
+      "description": "Your frame becomes a wall calendar: every month gets a beautiful page with photos from the same month in earlier years (the best one of each year, with the date, the place and how many years ago), the family's appointments from calendar links (Google, Nextcloud, iCloud, Outlook and other iCal/ICS links) or Home Assistant calendars, each in its own colour, birthdays with the person's face from Immich, public holidays worked out on the frame and school holidays from the free OpenHolidays service. Today is circled, a \"Coming up\" list shows the next days. On the first of the month, and optionally on birthdays, the new page is shown over your playlist (takeover). On the plugin page you choose the look (cream paper, white paper or a dark evening page), country and state, calendars, birthdays and which photos may be used. Photos from the whole DynaFrame library, a DynaFrame playlist or an Immich server, with filters. Installs the plugin together with its scene. Landscape and portrait; English, German or Spanish.",
+      "version": "0.1.8",
+      "updated": "2026-11-28T07:40:36Z",
+      "thumbnails": [
+        "plugin_packs/calendar-page/thumb.webp",
+        "plugin_packs/calendar-page/thumb-month.webp",
+        "plugin_packs/calendar-page/thumb-birthday.webp",
+        "plugin_packs/calendar-page/thumb-december.webp",
+        "plugin_packs/calendar-page/thumb-night.webp",
+        "plugin_packs/calendar-page/thumb-portrait.webp"
+      ],
+      "download_url": "https://github.com/Archonw/Jans-DynaframePro-Store/releases/download/calendar-page-0.1.8/CalendarPage.zip",
+      "size": 273357,
+      "checksum": "3136e399b97d0c026b7d529a489094c98d0685b427560f694729d79de60989fa"
     }
   ]
 }
